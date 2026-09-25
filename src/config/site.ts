@@ -43,16 +43,17 @@ export const siteConfig = {
   ],
 };
 
-/** Header navigation. Add or remove entries freely; the header renders them in order. */
+/** Navigation d'en-tête. Ajoutez ou supprimez des entrées librement ; l'en-tête les rend dans l'ordre. */
 export const navigation = [
-  { label: "Archive", href: "/posts/" },
-  { label: "Categories", href: "/categories/" },
-  { label: "About", href: "/about/" },
+  { label: "Accueil", href: "/" },
+  { label: "Articles", href: "/posts/" },
+  { label: "Sujets", href: "/categories/" },
+  { label: "À propos", href: "/about/" },
 ];
 
-/** Secondary navigation rendered in the footer. */
+/** Navigation secondaire rendue dans le pied de page. */
 export const footerNavigation = [
   { label: "Contact", href: "/contact/" },
-  { label: "Privacy", href: "/privacy/" },
+  { label: "Confidentialité", href: "/privacy/" },
   { label: "RSS", href: "/rss.xml" },
 ];
