@@ -1,20 +1,20 @@
 export const siteConfig = {
   /** Wordmark shown in the header and footer. Monograph uses text, never a logo image. */
-  name: "Monograph",
-  tagline: "A quiet place for long-form writing",
-  title: "Monograph - A minimal Astro blog theme",
+  name: "Typographe",
+  tagline: "Un endroit calme pour l'écriture longue et soignée en français",
+  title: "Typographe - Un thème Astro minimaliste pour écrire en français",
   description:
-    "A text-first Astro theme for essays, notes, and long-form writing, with a command-palette search and a light/dark reading mode.",
-  siteUrl: "https://typographe.pages.dev",
-  authorName: "Andrei Alba",
-  email: "hello@example.com",
-  language: "en",
-  dateLocale: "en-US",
-  locale: "en_US",
+    "Un thème Astro qui privilégie le texte d’abord pour les essais, les notes et l'écriture longue, avec une recherche de palette de commandes et un mode de lecture clair/sombre.", 
+  siteUrl : "https://typographe.pages.dev",
+  authorName: "André Vincent",
+  email: "allo@exemple.com",
+  language: "fr",
+  dateLocale: "fr-CA",
+  locale: "fr_CA",
   socialImage: "/og-image.png",
   /** Shown in the home sidebar "About" card. */
   about:
-    "Monograph is a reading-first Astro theme. Notes on building software, published when there is something worth saying.",
+    "Typographe privilégie le texte d’abord. Notes sur la création de logiciels, publiées lorsqu'il y a quelque chose qui vaut la peine d'être dit.",
   /**
    * Both forms below ship enabled with an empty `action`, which makes them fully
    * interactive demos that submit nowhere: a small script confirms the submit
@@ -26,14 +26,14 @@ export const siteConfig = {
     action: "",
     method: "post",
     emailFieldName: "email",
-    title: "Get new posts by email",
-    description: "One email when something new goes up. No spam, unsubscribe anytime.",
+    title: "Recevez les nouveaux articles par courriel",
+    description: "Un courriel quand quelque chose de nouveau se passe. Pas de spam, désabonnez-vous à tout moment.",
   },
   contact: {
     enabled: true,
     action: "",
     method: "post",
-    responseTime: "Replies usually go out within two business days.",
+    responseTime: "Les réponses sont généralement données dans les deux jours ouvrables.",
   },
   socials: [
     { label: "Instagram", href: "https://instagram.com" },
