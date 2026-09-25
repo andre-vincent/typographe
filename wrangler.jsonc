@@ -1,6 +1,6 @@
 {
-  "name": "monograph",
-  "compatibility_date": "2026-07-09",
+  "name": "typographe",
+  "compatibility_date": "2026-09-25",
   "build": {
     "command": "npm run build",
   },
