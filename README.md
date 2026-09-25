@@ -1,4 +1,4 @@
-# Monograph - Minimal Astro Blog Theme
+# TYPOGRAPHE - Thème Astro minimaliste pour Blog axé sur la typographie soignée en français
 
 [![Monograph theme preview](/preview.webp)](https://monograph.xocoweb.workers.dev/)
 
@@ -11,7 +11,9 @@
 
 Monograph is a free Astro theme for essays, notes, and long-form writing. It is text-first by design: the feed is a reading list rather than a card grid, so titles and excerpts carry the page and covers appear on the post itself. Type is monochrome with a single ink-blue accent held back for links, dates, and hover states, articles read in one centred column, and every hover runs on the same easing curve so nothing calls attention to itself. Categories, navigation, and SEO defaults come from a small set of config files, content is Markdown or MDX validated by Astro content collections, and the output is static: fast pages, crawlable articles, and no framework islands to hydrate.
 
-## Features
+Typograhe est la version francisé de Monograph qui est un thème Astro gratuit pour les essais, les notes et l'écriture longue. C'est d'abord le texte par conception : le flux est une liste de lecture plutôt qu'une grille de cartes, de sorte que les titres et les extraits portent la page et les couvertures apparaissent sur le message lui-même. Le thème est monochrome avec un seul accent de couleur bleu pour les liens, les dates et les états de survol, les articles lus dans une colonne centrée, et chaque survol s'exécute sur la même courbe d'assouplissement, donc rien n'attire l'attention sur lui-même. Les catégories, la navigation et les valeurs par défaut du référencement proviennent d'un petit ensemble de fichiers de configuration, le contenu est validé Markdown ou MDX par les collections de contenu Astro, et la sortie est statique : pages rapides, articles explorables et pas d'îlots de cadre à hydrater.
+
+## Caractéristiques
 
 - Text-first front page: a large latest post, a whitespace-separated feed with no thumbnails, and a sticky sidebar holding the about blurb, a subscribe form, featured posts, and categories with post counts
 - Article pages with a single 720px reading column, a byline that reads "By author in category", a share row above the feature image, copy-link, previous/next navigation, and related posts
