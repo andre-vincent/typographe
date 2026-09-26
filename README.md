@@ -7,7 +7,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Configured-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-84cc16?style=for-the-badge)](./LICENSE)
 
-**Live preview:** https://monograph.xocoweb.workers.dev/
+**Live preview:** [https://typographe.pages.dev](https://typographe.pages.dev)/
 
 Monograph is a free Astro theme for essays, notes, and long-form writing. It is text-first by design: the feed is a reading list rather than a card grid, so titles and excerpts carry the page and covers appear on the post itself. Type is monochrome with a single ink-blue accent held back for links, dates, and hover states, articles read in one centred column, and every hover runs on the same easing curve so nothing calls attention to itself. Categories, navigation, and SEO defaults come from a small set of config files, content is Markdown or MDX validated by Astro content collections, and the output is static: fast pages, crawlable articles, and no framework islands to hydrate.
 
