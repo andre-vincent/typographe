@@ -93,7 +93,7 @@ const structuredData = {
       <header class="canvas pt-10 md:pt-14">
         <p class="meta post-meta">
           <span class="post-meta__byline">
-            By <a href={authorHref} class="link-sweep post-meta__link">{data.author.name}</a> in{" "}
+            Par <a href={authorHref} class="link-sweep post-meta__link">{data.author.name}</a> dans{" "}
             <a href={categoryHref(data.category)} class="link-sweep post-meta__link">{data.category}</a>
           </span>
           <span class="post-meta__dates">
@@ -112,14 +112,14 @@ const structuredData = {
         )}
 
         <div class="mt-8 flex flex-wrap items-center gap-2 border-t border-border pt-6" role="group" aria-labelledby="share-heading">
-          <h2 id="share-heading" class="eyebrow mr-1">Share</h2>
+          <h2 id="share-heading" class="eyebrow mr-1">Partager</h2>
           {shareLinks.map((link) => (
             <a
               href={link.href}
               target="_blank"
               rel="noreferrer"
               class="share-btn"
-              aria-label={`Share ${data.title} on ${link.label}`}
+              aria-label={`Share ${data.title} sur ${link.label}`}
             >
               <LocalIcon name={link.icon} className="h-4 w-4" />
             </a>
@@ -129,7 +129,7 @@ const structuredData = {
             class="share-btn"
             data-copy-link
             data-copy-url={articleUrl}
-            aria-label={`Copy link to ${data.title}`}
+            aria-label={`Copier le lien vers ${data.title}`}
           >
             <LocalIcon name="link-45deg" className="h-4 w-4" />
           </button>
@@ -173,7 +173,7 @@ const structuredData = {
               {older && (
                 <a href={postHref(older)} class="link-title link-nudge">
                   <span class="eyebrow">
-                    <span class="link-nudge__arrow link-nudge__arrow--prev">&larr;</span> Previous
+                    <span class="link-nudge__arrow link-nudge__arrow--prev">&larr;</span> Précédent
                   </span>
                   <span class="link-title__text mt-2 block font-semibold leading-snug">{older.data.title}</span>
                 </a>
@@ -183,7 +183,7 @@ const structuredData = {
               {newer && (
                 <a href={postHref(newer)} class="link-title link-nudge">
                   <span class="eyebrow">
-                    Next <span class="link-nudge__arrow link-nudge__arrow--next">&rarr;</span>
+                    Suivant <span class="link-nudge__arrow link-nudge__arrow--next">&rarr;</span>
                   </span>
                   <span class="link-title__text mt-2 block font-semibold leading-snug">{newer.data.title}</span>
                 </a>
@@ -196,7 +196,7 @@ const structuredData = {
 
     {related.length > 0 && (
       <section class="canvas mt-[var(--space-section)]" aria-labelledby="keep-reading">
-        <h2 id="keep-reading" class="section-title">Keep reading</h2>
+        <h2 id="keep-reading" class="section-title">Articles connexes</h2>
         <div class="grid gap-7">
           {related.map((item) => <PostCard post={item} variant="compact" headingLevel="h3" />)}
         </div>
@@ -214,11 +214,11 @@ const structuredData = {
         if (!url) return;
 
         try {
-          if (!navigator.clipboard?.writeText) throw new Error("Clipboard API unavailable");
+          if (!navigator.clipboard?.writeText) throw new Error("Le Presse-papier est inaccessible");
           await navigator.clipboard.writeText(url);
-          if (status) status.textContent = "Link copied";
+          if (status) status.textContent = "Lien copié";
         } catch {
-          if (status) status.textContent = "Copy failed";
+          if (status) status.textContent = "La copie a échoué";
         }
       });
     });
@@ -238,7 +238,7 @@ const structuredData = {
       button.type = "button";
       button.className = "code-copy-button";
       button.setAttribute("aria-describedby", labelId);
-      button.textContent = "Copy";
+      button.textContent = "Copier";
       liveRegion.id = labelId;
       liveRegion.className = "sr-only";
       liveRegion.setAttribute("aria-live", "polite");
@@ -248,16 +248,16 @@ const structuredData = {
 
       button.addEventListener("click", async () => {
         try {
-          if (!navigator.clipboard?.writeText) throw new Error("Clipboard API unavailable");
+          if (!navigator.clipboard?.writeText) throw new Error("Le Presse-papier est inaccessible");
           await navigator.clipboard.writeText(code?.textContent ?? pre.textContent ?? "");
-          button.textContent = "Copied";
-          liveRegion.textContent = "Code copied";
+          button.textContent = "Copié";
+          liveRegion.textContent = "Le code est copié";
         } catch {
-          button.textContent = "Failed";
-          liveRegion.textContent = "Copy failed";
+          button.textContent = "Échec";
+          liveRegion.textContent = "La copie a échoué";
         }
         window.setTimeout(() => {
-          button.textContent = "Copy";
+          button.textContent = "Copier";
         }, 1800);
       });
     });
