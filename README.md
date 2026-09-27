@@ -1,4 +1,6 @@
-# TYPOGRAPHE - Thème Astro minimaliste pour Blog axé sur la typographie soignée en français
+# TYPOGRAPHE
+
+## Un thème Astro minimaliste pour Blog axé sur la typographie soignée en français
 
 [![Monograph theme preview](/preview.webp)](https://monograph.xocoweb.workers.dev/)
 
