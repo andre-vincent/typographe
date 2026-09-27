@@ -2,15 +2,10 @@
 title: "Les 15 règles d’une typographie soignée en Français"
 excerpt: "En design comme en rédaction, la qualité d’un texte ne dépend pas seulement du choix des mots, mais aussi de sa présentation visuelle. Une typographie soignée renforce la lisibilité, crédibilise le message et témoigne d’un grand professionnalisme."
 category: "Reliability"
-date: 2026-07-01
+date: 2026-09-27
 author:
   name: "André Vincent"
   role: "Webmestre de ce site. Typographe, enseignant et syndicaliste."
-cover:
-  src: "./cover.jpg"
-  alt: "À venir. Photo de fontes typographiques."
-  creditName: "Crédit photo : Martin Martz via Unsplash"
-  creditUrl: "https://unsplash.com/photos/a-blue-and-orange-background-with-wavy-shapes-W0NRebXbsjM"
 featured: true
 ---
 
