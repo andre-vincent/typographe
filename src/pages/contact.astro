@@ -10,25 +10,25 @@ const allPosts = visiblePosts(await getCollection("posts"));
 const contact = siteConfig.contact;
 const action = contact.action.trim();
 const isEnabled = contact.enabled;
-/* No endpoint configured: keep the form usable and confirm the submit locally
-   rather than posting the page to nowhere. */
+/* Aucun point de terminaison configuré : gardez le formulaire utilisable et confirmez la soumission localement
+   plutôt que de poster la page nulle part. */
 const isDemo = isEnabled && action.length === 0;
 ---
 
-<BaseLayout title="Contact" description={`Get in touch with ${siteConfig.name}.`}>
+<BaseLayout title="Contact" description={`Contactez-nous à ${siteConfig.name}.`}>
   <SiteHeader posts={allPosts} />
   <main id="content" class="outer">
     <div class="canvas">
       <header class="pagehead">
         <p class="eyebrow">Contact</p>
-        <h1 class="pagehead-title">Get in touch</h1>
+        <h1 class="pagehead-title">Contactez-nous</h1>
         <p class="pagehead-description">
-          Corrections, questions, and requests all land in the same inbox. {contact.responseTime}
+          Les corrections, les questions et les demandes se retrouvent toutes dans la même boîte de réception. {contact.responseTime}
         </p>
         {
           siteConfig.email && (
             <p class="mt-4 text-sm text-muted-foreground">
-              Prefer email? Write to <a href={`mailto:${siteConfig.email}`} class="text-accent underline underline-offset-2">{siteConfig.email}</a>.
+              Préférez-vous le courrier électronique ? Écrire à <a href={`mailto:${siteConfig.email}`} class="text-accent underline underline-offset-2">{siteConfig.email}</a>.
             </p>
           )
         }
@@ -41,12 +41,12 @@ const isDemo = isEnabled && action.length === 0;
         data-contact-form={isDemo ? "" : undefined}
       >
         <div class="grid gap-2">
-          <label class="text-sm font-semibold" for="contact-name">Name</label>
+          <label class="text-sm font-semibold" for="contact-name">Nom</label>
           <input id="contact-name" name="name" type="text" autocomplete="name" required disabled={!isEnabled} class="field" />
         </div>
 
         <div class="grid gap-2">
-          <label class="text-sm font-semibold" for="contact-email">Email</label>
+          <label class="text-sm font-semibold" for="contact-email">Courriel</label>
           <input id="contact-email" name="email" type="email" autocomplete="email" required disabled={!isEnabled} class="field" />
         </div>
 
@@ -57,7 +57,7 @@ const isDemo = isEnabled && action.length === 0;
 
         <div class="flex flex-wrap items-center gap-4">
           <button type="submit" disabled={!isEnabled} class="btn btn-solid">
-            {isEnabled ? "Send message" : "Form unavailable"}
+            {isEnabled ? "Envoyer le message" : "Formulaire indisponible"}
           </button>
           <p class="contact-status text-sm leading-relaxed text-muted-foreground" role="status" aria-live="polite" data-contact-status></p>
         </div>
@@ -65,7 +65,7 @@ const isDemo = isEnabled && action.length === 0;
         {
           !isEnabled && (
             <p class="text-sm leading-relaxed text-muted-foreground">
-              This form is disabled until a form endpoint is configured in <code>siteConfig.contact</code>.
+              Ce formulaire est désactivé jusqu'à ce qu'un point de terminaison de formulaire soit configuré dans <code>siteConfig.contact</code>.
             </p>
           )
         }
@@ -83,7 +83,7 @@ const isDemo = isEnabled && action.length === 0;
             const status = form.querySelector("[data-contact-status]");
             if (status) {
               status.textContent =
-                "Thanks. This demo form is not connected to an endpoint yet, so nothing was sent.";
+                "Merci. Ce formulaire de démonstration n'est pas encore connecté à un point de terminaison, donc rien n'a été envoyé.";
             }
             form.reset();
           });
