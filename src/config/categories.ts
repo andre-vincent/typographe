@@ -15,7 +15,7 @@ export const categories = [
   "AI",
   "Design Systems",
   "Typographie",
-  "Mise en page",
+  "Mise en page"
 ] as const;
 
 export type Category = (typeof categories)[number];
