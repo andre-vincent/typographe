@@ -14,6 +14,8 @@ export const categories = [
   "Security",
   "AI",
   "Design Systems",
+  "Typographie"
+  "Mise en page"
 ] as const;
 
 export type Category = (typeof categories)[number];
@@ -21,12 +23,12 @@ export type Category = (typeof categories)[number];
 export const categorySlug = (category: string) =>
   category
     .toLowerCase()
-    .replace(/&/g, "and")
+    .replace(/&/g, "et")
     .replace(/[^a-z0-9\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
 
-/** One line per category, shown on its archive page and in listings. */
+/** Une ligne par catégorie, affichée sur sa page d'archive et dans les listes. */
 export const categoryDescriptions: Record<Category, string> = {
   Engineering: "Contracts, tooling, and the day-to-day craft of shipping software.",
   Reliability: "Incidents, observability, and the habits that keep systems honest.",
@@ -34,4 +36,6 @@ export const categoryDescriptions: Record<Category, string> = {
   Security: "Authentication, privacy, and threat work explained for product teams.",
   AI: "Evaluations, model behavior, and applied automation that holds up in production.",
   "Design Systems": "Tokens, components, and the systems work that keeps interfaces coherent.",
+  "Typographie": "Lisibilité, accessibilité, règles de composition, hiérarchie, polices, etc.",
+  "Mise en page": "Sémantique, intrinsèque, fluide et adaptive qui s'adapte à toute dimension d’écran.",
 };
