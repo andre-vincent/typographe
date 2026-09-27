@@ -128,3 +128,9 @@ design and feature work is not included.
 
 MIT — free for personal and commercial projects. See [LICENSE](./LICENSE), which also lists the
 licenses of the bundled fonts, icons, and demo images.
+
+## À compléter
+- [x] Franciser l’interface et les menu
+- [ ] Finir de franciser les pages statiques
+- [ ] Intégrer le script de correction typographique
+- [ ] Modifier les polices adaptées au français
