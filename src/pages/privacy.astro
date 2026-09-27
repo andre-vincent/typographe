@@ -14,39 +14,35 @@ const allPosts = visiblePosts(await getCollection("posts"));
   <main id="content" class="outer">
     <div class="canvas">
       <header class="pagehead">
-        <p class="eyebrow">Privacy</p>
-        <h1 class="pagehead-title">Privacy policy</h1>
+        <p class="eyebrow">Confidentialité</p>
+        <h1 class="pagehead-title">Politique de confidentialité</h1>
         <p class="pagehead-description">
-          Starter copy describing what a publication may collect and how it is used. Replace it with
-          your own policy before going live.
+          Exemple démarrage décrivant ce qu'une publication peut collecter et comment elle est utilisée. Remplacez-le par votre propre politique avant de mettre en ligne.
         </p>
       </header>
 
       <div class="prose">
-        <h2>What is collected</h2>
+        <h2>Ce qui est collecté</h2>
         <p>
-          This site is statically generated and sets no cookies of its own. If the newsletter or
-          contact form is connected to a provider, that provider receives the details you submit.
+          Ce site est généré de manière statique et n’installe pas de cookies propres. Si l’infolettre ou le formulaire de contact est connecté à un fournisseur, ce fournisseur reçoit les détails que vous soumettez.
         </p>
 
-        <h2>How it is used</h2>
+        <h2>Comment est-ce utilisé ?</h2>
         <p>
-          Submitted details are used only to reply to you or to send the emails you asked for. They
-          are not sold or shared for advertising.
+          Les détails soumis ne sont utilisés que pour vous répondre ou pour envoyer les courriels que vous avez demandés. Ils ne sont pas vendus ou partagés à des fins publicitaires.
         </p>
 
-        <h2>Your reading preference</h2>
+        <h2>Vos préférences de lecture</h2>
         <p>
-          The light or dark reading mode you pick is stored in your browser's local storage under
-          <code>monograph-theme</code>. It never leaves your device and you can clear it at any time.
+          Le mode de lecture clair ou sombre que vous choisissez est stocké dans le stockage local de votre navigateur sous <code>typo-fr-theme</code>. Il demeure sur votre appareil et vous pouvez l’effacer à tout moment.       
         </p>
 
         <h2>Contact</h2>
         {
           siteConfig.email ? (
-            <p>For privacy requests, email <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.</p>
+            <p>Pour les demandes concernant la confidentialité, envoyez un courriel à <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.</p>
           ) : (
-            <p>Add a privacy contact address in <code>src/config/site.ts</code> before publishing.</p>
+            <p>Ajoutez une adresse de contact de confidentialité dans <code>src/config/site.ts</code> avant de mettre en ligne.</p>
           )
         }
       </div>
