@@ -8,7 +8,7 @@ export { categories, categorySlug, type Category };
 export const authorSlug = (author: string) =>
   author
     .toLowerCase()
-    .replace(/&/g, "and")
+    .replace(/&/g, "et")
     .replace(/[^a-z0-9\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
