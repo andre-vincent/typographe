@@ -69,8 +69,8 @@ const schema = structuredData ?? defaultStructuredData;
     <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
     <script is:inline>
       /*
-       * Runs before first paint so the stored reading mode is applied without a
-       * flash. Falls back to the system preference until the reader picks a side.
+       * S’applique avant le premier affichage afin que le mode clair/sombre stocké soit appliqué sans flash. 
+       * Retombe à la préférence du système jusqu'à ce que le lecteur choisisse un mode.
        */
       (() => {
         const storageKey = "monograph-theme";
@@ -88,7 +88,7 @@ const schema = structuredData ?? defaultStructuredData;
           const isDark = theme === "dark";
           document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
             button.setAttribute("aria-checked", String(isDark));
-            button.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+            button.setAttribute("aria-label", isDark ? "Basculer en mode clair" : "Basculer en mode sombre");
           });
         };
 
@@ -129,7 +129,7 @@ const schema = structuredData ?? defaultStructuredData;
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#content">Skip to content</a>
+    <a class="skip-link" href="#content">Aller au contenu</a>
     <slot />
   </body>
 </html>
