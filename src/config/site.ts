@@ -16,10 +16,7 @@ export const siteConfig = {
   about:
     "Typographe privilégie le texte d’abord. Notes sur la création de logiciels, publiées lorsqu'il y a quelque chose qui vaut la peine d'être dit.",
   /**
-   * Both forms below ship enabled with an empty `action`, which makes them fully
-   * interactive demos that submit nowhere: a small script confirms the submit
-   * and clears the fields. Paste your provider's endpoint into `action` to send
-   * real submissions, or set `enabled: false` to disable the controls outright.
+   * Les deux formulaires ci-dessous sont activés avec une `action` vide, ce qui en fait des démos entièrement interactives qui ne se soumettent nulle part : un petit script confirme la soumission et efface les champs. Collez le point de terminaison de votre fournisseur dans `action` pour envoyer de vraies soumissions, ou définissez `enabled: false` pour désactiver les contrôles purement et simplement.
    */
   newsletter: {
     enabled: true,
@@ -33,7 +30,7 @@ export const siteConfig = {
     enabled: true,
     action: "",
     method: "post",
-    responseTime: "Les réponses sont généralement données dans les deux jours ouvrables.",
+    responseTime: "Les réponses sont généralement envoyées dans les deux jours ouvrables.",
   },
   socials: [
     { label: "Instagram", href: "https://instagram.com" },
