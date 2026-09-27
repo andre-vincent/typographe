@@ -9,8 +9,8 @@ author:
 cover:
   src: "./cover.jpg"
   alt: "Polices de caractères en bois, marron et noir."
-  creditName: "Crédits photo à Bruno Martins sur Unsplash" 
-  creditUrl: "https://unsplash.com/fr/photos/croix-en-bois-marron-et-noir-4cwf-iW6I1Q"  
+  creditName: "Crédits photo à Bruno Martins sur Unsplash."
+  creditUrl: "https://unsplash.com/fr/photos/croix-en-bois-marron-et-noir-4cwf-iW6I1Q"
 featured: true
 ---
 
