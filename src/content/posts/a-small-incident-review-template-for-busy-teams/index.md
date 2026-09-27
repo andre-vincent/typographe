@@ -1,37 +1,37 @@
 ---
-title: "A Small Incident Review Template for Busy Teams"
-excerpt: "A lightweight review format that helps teams learn from outages without turning every incident into a courtroom."
+title: "Un modèle d'examen des petits incidents pour les équipes occupées"
+excerpt: "Un format d'examen léger qui aide les équipes à tirer les leçons des pannes sans transformer chaque incident en salle d'audience."
 category: "Reliability"
 date: 2026-07-03
 author:
-  name: "Evan Brooks"
-  role: "Security and reliability"
+  name: "Jo Blo"
+  role: "Sécurité et fiabilité"
 cover:
   src: "./cover.jpg"
-  alt: "Purple, white, and orange abstract light"
-  creditName: "Credits to mymind via Unsplash"
+  alt: "Lumière abstraite violette, blanche et orange"
+  creditName: "Crédits à mymind via Unsplash"
   creditUrl: "https://unsplash.com/photos/purple-white-and-orange-light-tZCrFpSNiIQ"
 featured: false
 ---
 
-Incident reviews fail when they are too heavy to run consistently. A small team does not need a fifty-question form after every alert. It needs a repeatable way to understand what happened, what helped, and what should change.
+Les examens des incidents échouent lorsqu'ils sont trop lourds pour être exécutés de manière cohérente. Une petite équipe n'a pas besoin d'un formulaire de cinquante questions après chaque alerte. Il faut un moyen reproductible de comprendre ce qui s'est passé, ce qui a aidé et ce qui devrait changer.
 
-Use the smallest template that creates learning.
+Utilisez le plus petit modèle qui crée l'apprentissage.
 
-## What happened?
+## Que s'est-il passé ?
 
-Write a timeline in plain language. Include detection, user impact, mitigation, recovery, and any confusing signals. Avoid turning the timeline into a debate about who should have known what.
+Rédigez une chronologie dans un langage simple. Inclure la détection, l'impact sur l'utilisateur, l'atténuation, la récupération et tout signal confus. Évitez de transformer la chronologie en un débat sur qui aurait dû savoir quoi.
 
-The timeline is shared memory. Keep it factual.
+La chronologie est une mémoire partagée. Gardez-le factuel.
 
-## Why did it make sense at the time?
+## Pourquoi cela avait-il un sens à l'époque ?
 
-This question prevents blame from sneaking in through the side door. Engineers made decisions with the information they had. Capture that information, including dashboards, runbooks, assumptions, and alerts that were missing or noisy.
+Cette question empêche les blâmes de se faufiler par la porte latérale. Les ingénieurs ont pris des décisions avec les informations qu'ils avaient. Capturez ces informations, y compris les tableaux de bord, les runbooks, les hypothèses et les alertes qui étaient manquantes ou bruyantes.
 
-If a decision looks strange after the incident, that is usually where the system can improve.
+Si une décision semble étrange après l'incident, c'est généralement là que le système peut s'améliorer.
 
-## What will we change?
+## Qu'allons-nous changer ?
 
-Pick one to three actions. Each action needs an owner, a due date, and a reason. "Improve monitoring" is not an action. "Alert when queue age exceeds five minutes for ten minutes" is.
+Choisissez une à trois actions. Chaque action nécessite un propriétaire, une date d'échéance et une raison. "Améliorer la surveillance" n'est pas une action. "Alerte lorsque l'âge de la file d'attente dépasse cinq minutes pour dix minutes" est.
 
-Reviews are not valuable because they produce documents. They are valuable because they make the next incident smaller, shorter, or easier to understand.
+Les avis n'ont pas de valeur parce qu'ils produisent des documents. Ils sont précieux parce qu'ils rendent le prochain incident plus petit, plus court ou plus facile à comprendre.
