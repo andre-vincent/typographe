@@ -121,16 +121,17 @@ newsletter and contact forms, search, reading mode, motion, theme tokens, fonts,
 
 ## Support
 
-Monograph is free and provided as-is. Bug reports and questions are welcome as GitHub issues; custom
-design and feature work is not included.
+Le modèle (thème) TYPOGRAPHE est gratuit et fourni en l’état. Les rapports de bogues et les questions sont les bienvenus en tant que problèmes GitHub ; la conception personnalisée et le travail des fonctionnalités ne sont pas inclus.
 
 ## License
 
-MIT — free for personal and commercial projects. See [LICENSE](./LICENSE), which also lists the
-licenses of the bundled fonts, icons, and demo images.
+MIT - gratuit pour les projets personnels et commerciaux. Voir [LICENSE](. /LICENSE), qui répertorie également les licences des polices, des icônes et des images de démonstration groupées.
 
 ## À compléter
-- [x] Franciser l’interface et les menu
-- [ ] Finir de franciser les pages statiques
-- [ ] Intégrer le script de correction typographique
-- [ ] Modifier les polices adaptées au français
+- [x] Franciser l’interface et les menu de navigation.
+- [ ] Finir de franciser les pages statiques.
+- [ ] Intégrer le script de correction typographique pour le français.
+- [ ] Modifier les polices adaptées au français.
+- [ ] Autoriser chaque post à avoir plus d’un auteur.
+
+
