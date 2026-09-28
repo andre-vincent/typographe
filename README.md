@@ -114,14 +114,12 @@ automatically.
 | `/about/`, `/contact/`, `/privacy/`                             | Starter static pages           |
 | `/rss.xml`, `/sitemap.xml`, `/robots.txt`, `/search-index.json` | Feeds and generated endpoints  |
 
-## Customization
+## Personnalisation
 
-See [CUSTOMIZATION.md](./CUSTOMIZATION.md) for site settings, navigation, categories, authors, the
-newsletter and contact forms, search, reading mode, motion, theme tokens, fonts, and icons.
-
+Voir [PERSONNALISATION.md](./PERSONNALISATION.md) Pour les paramètres du site, la navigation, les catégories, les auteurs, le bulletin d'information et les formulaires de contact, la recherche, le mode de lecture, le mouvement, les jetons de thème, les polices et les icônes.
 ## Support
 
-Le modèle (thème) TYPOGRAPHE est gratuit et fourni en l’état. Les rapports de bogues et les questions sont les bienvenus en tant que problèmes ([issues](https://github.com/andre-vincent/typographe/issues)) GitHub ; la conception personnalisée et le travail des fonctionnalités ne sont pas inclus.
+Le modèle (thème) TYPOGRAPHE est gratuit et fourni en l’état. Les rapports de bogues et les questions sont les bienvenus en tant que problèmes ([issues](https://github.com/andre-vincent/typographe/issues)) GitHub. Le service après don, la conception personnalisée et le travail sur des fonctionnalités ne sont pas inclus.
 
 ## License
 
