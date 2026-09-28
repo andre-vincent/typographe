@@ -1,6 +1,6 @@
-# Customization Guide
+# Guide de personnalisation
 
-Use this guide when adapting Monograph for a real blog.
+Utilisez ce guide lors de l'adaptation de TYPOGRAPHE pour un vrai site Web de production.
 
 ## Site Settings
 
