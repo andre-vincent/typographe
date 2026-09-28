@@ -11,7 +11,7 @@ export const categories = [
   "Engineering",
   "Reliability",
   "Cloud",
-  "Security",
+  "Écoresponsable",
   "AI",
   "Design Systems",
   "Typographie",
