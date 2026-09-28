@@ -9,11 +9,9 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-Configured-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-84cc16?style=for-the-badge)](./LICENSE)
 
-**Live preview:** [https://typographe.pages.dev](https://typographe.pages.dev)/
+**Aperçu en direct :** [https://typographe.pages.dev](https://typographe.pages.dev)/
 
-Monograph is a free Astro theme for essays, notes, and long-form writing. It is text-first by design: the feed is a reading list rather than a card grid, so titles and excerpts carry the page and covers appear on the post itself. Type is monochrome with a single ink-blue accent held back for links, dates, and hover states, articles read in one centred column, and every hover runs on the same easing curve so nothing calls attention to itself. Categories, navigation, and SEO defaults come from a small set of config files, content is Markdown or MDX validated by Astro content collections, and the output is static: fast pages, crawlable articles, and no framework islands to hydrate.
-
-Typograhe est la version francisé de Monograph qui est un thème Astro gratuit pour les essais, les notes et l'écriture longue. C'est d'abord le texte par conception : le flux est une liste de lecture plutôt qu'une grille de cartes, de sorte que les titres et les extraits portent la page et les couvertures apparaissent sur le message lui-même. Le thème est monochrome avec un seul accent de couleur bleu pour les liens, les dates et les états de survol, les articles lus dans une colonne centrée, et chaque survol s'exécute sur la même courbe d'assouplissement, donc rien n'attire l'attention sur lui-même. Les catégories, la navigation et les valeurs par défaut du référencement proviennent d'un petit ensemble de fichiers de configuration, le contenu est validé Markdown ou MDX par les collections de contenu Astro, et la sortie est statique : pages rapides, articles explorables et pas d'îlots de cadre à hydrater.
+TYPOGRAPHE est la version francisée de Monograph qui est un thème Astro gratuit pour les essais, les notes et l'écriture longue. C'est d'abord le texte par conception : le flux est une liste de lecture plutôt qu'une grille de cartes, de sorte que les titres et les extraits portent la page et les couvertures apparaissent sur le message lui-même. Le thème est monochrome avec un seul accent de couleur bleu pour les liens, les dates et les états de survol, les articles lus dans une colonne centrée, et chaque survol s'exécute sur la même courbe d'assouplissement, donc rien n'attire l'attention sur lui-même. Les catégories, la navigation et les valeurs par défaut du référencement proviennent d'un petit ensemble de fichiers de configuration, le contenu est validé Markdown ou MDX par les collections de contenu Astro, et la sortie est statique : pages rapides, articles explorables et pas d'îlots de cadre à hydrater.
 
 ## Caractéristiques
 
@@ -127,6 +125,7 @@ MIT - gratuit pour les projets personnels et commerciaux. Voir [LICENSE](. /LICE
 
 ## À compléter
 - [x] Franciser l’interface et les menu de navigation.
+- [x] Adapter les favicons (.svg et .ico)
 - [ ] Finir de franciser les pages statiques.
 - [ ] Intégrer le script de correction typographique pour le français.
 - [ ] Modifier les polices adaptées au français.
