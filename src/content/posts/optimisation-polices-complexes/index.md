@@ -1,32 +1,28 @@
 ---
 title: "Optimisation des polices complexes pour le français"
-excerpt: "Flags make releases safer until they become permanent branches in the product. Add ownership and removal dates before they calcify."
-category: "Engineering"
-date: 2026-07-10
+excerpt: "Pour une typographie soignée en français, nous devons utiliser des polices de caractères complexes. Mais ces polices sont souvent très lourdes et peuvent ralentir les performances d’affichage. Voici une méthode pour les optimiser.."
+category: "Typographie"
+date: 2026-09-29
 author:
-  name: "Iris Novak"
-  role: "Cloud and platform"
+  name: "André Vincent"
+  role: "Typographe - Enseignant en communication graphique."
 cover:
   src: "./cover.jpg"
-  alt: "Blue and purple abstract fluid shapes with neon glow"
-  creditName: "Credits to BoliviaInteligente via Unsplash"
+  alt: "Formes fluides abstraites bleues et violettes avec lueur néon"
+  creditName: "Crédits photo à BoliviaInteligente via Unsplash"
   creditUrl: "https://unsplash.com/photos/abstract-blue-and-purple-fluid-shapes-with-neon-glow-46MZbf_9P5I"
 featured: false
 ---
 
-# Optimisation des polices complexes pour le français
-
-C’est tout à fait possible, et c’est même la technique d’optimisation ultime pour l’hébergement local de polices web complexes.
-
-Par défaut, si vous téléchargez une police variable complète, elle contient des milliers de glyphes pour couvrir des centaines de langues (cyrillique, vietnamien, grec, etc.), ce qui alourdit considérablement le fichier `.woff2`. Vous pouvez **extraire uniquement les caractères nécessaires au français** tout en préservant à 100 % les **axes de variation** (`wght`, `opsz`, etc.) et les **fonctionnalités OpenType** natives (`smcp`, `sups`, `onum`).
+Par défaut, si vous téléchargez une police variable complète, elle contient des milliers de glyphes pour couvrir des centaines de langues (cyrillique, vietnamien, grec, etc.), ce qui alourdit considérablement le fichier `.woff2`. Vous pouvez **extraire uniquement les caractères nécessaires au français** tout en préservant à 100 % les **axes de variation** (`wght`, `opsz`, etc.) et les **fonctionnalités OpenType** natives (`smcp`, `sups`, `onum`) indispensables pour une typographie soignée en français.
 
 ---
 
-### Le piège à éviter : le *Layout Closure*
+## Le piège à éviter : le *Layout Closure*
 
 Lorsque l’on réduit une police, la majorité des outils automatiques suppriment les glyphes cachés. Or, les fonctionnalités OpenType (comme le passage en petites capitales `smcp`) font appel à des **glyphes alternatifs dissimulés** (les versions réduites de vos lettres). Si vous dites à un logiciel de ne garder *que* les lettres standards de « A à Z », il va détruire les glyphes de petites capitales correspondants.
 
-### La solution : `pyftsubset` (FontTools)
+## La solution : `pyftsubset` (FontTools)
 
 L’outil de référence absolu pour réussir cette opération s’appelle **FontTools** (un utilitaire en ligne de commande basé sur Python). C’est le seul capable de recalculer parfaitement les tables internes d’une police variable.
 
