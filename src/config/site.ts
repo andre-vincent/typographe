@@ -1,10 +1,10 @@
 export const siteConfig = {
-  /** Wordmark shown in the header and footer. Monograph uses text, never a logo image. */
+  /** Le nom s’affiche dans l’entête  et le pied de page de toutes la pages. Logo inutile. */
   name: "Typographe",
   tagline: "Un endroit calme pour l'écriture longue et soignée en français",
   title: "Typographe - Un thème Astro minimaliste pour écrire en français",
   description:
-    "Un thème Astro qui privilégie le texte d’abord pour les essais, les notes et l'écriture longue, avec une recherche de palette de commandes et un mode de lecture clair/sombre.", 
+    "Un thème Astro qui privilégie le texte d’abord pour les essais, les notes et l'écriture longue, dans une typographie soignée, avec un formulaire de recherche et un mode de lecture clair/sombre.", 
   siteUrl : "https://typographe.pages.dev",
   authorName: "André Vincent",
   email: "allo@exemple.com",
@@ -14,7 +14,7 @@ export const siteConfig = {
   socialImage: "/og-image.png",
   /** Shown in the home sidebar "About" card. */
   about:
-    "Typographe privilégie le texte d’abord. Notes sur la création de logiciels, publiées lorsqu'il y a quelque chose qui vaut la peine d'être dit.",
+    "Ce site privilégie le texte d’abord et la typographie soignée pour des écrits en français. Particulièrement lorsqu'il y a quelque chose qui vaut la peine d'être dit sur des sujets précis.",
   /**
    * Les deux formulaires ci-dessous sont activés avec une `action` vide, ce qui en fait des démos entièrement interactives qui ne se soumettent nulle part : un petit script confirme la soumission et efface les champs. Collez le point de terminaison de votre fournisseur dans `action` pour envoyer de vraies soumissions, ou définissez `enabled: false` pour désactiver les contrôles purement et simplement.
    */
