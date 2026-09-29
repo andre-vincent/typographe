@@ -14,9 +14,7 @@ cover:
 featured: true
 ---
 
-# Guide d’Écoconception Web : Critères et Analyse Technologique
-
-**Introduction**
+**Introduction**. 
 À l’ère de la sobriété numérique, concevoir un site internet ne se limite plus à l’esthétique ou à la vitesse de chargement : il s’agit d’une démarche environnementale cruciale. Ce document rassemble les critères fondamentaux qui définissent un site écoresponsable et évalue l’efficacité d’une infrastructure moderne basée sur le framework Astro, GitHub et Cloudflare Pages face à un système traditionnel comme WordPress.
 
 ---
