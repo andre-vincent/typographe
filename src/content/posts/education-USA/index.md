@@ -1,7 +1,7 @@
 ---
 title: "USA : un peuple de plus en plus ignorant"
 excerpt: "Plusieurs s’étonnent qu’un peuple aussi éduqué soit aussi ignorant au point d’élire un président aussi rétrograde et fier de son ignorance. Des explications s’imposent."
-category: "Typographie"
+category: "Éducation"
 date: 2026-10-2
 author:
   name: "André Vincent"
