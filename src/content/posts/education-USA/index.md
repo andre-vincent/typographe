@@ -2,15 +2,14 @@
 title: "USA : un peuple de plus en plus ignorant"
 excerpt: "Plusieurs s’étonnent qu’un peuple aussi éduqué soit aussi ignorant au point d’élire un président aussi rétrograde et fier de son ignorance. Des explications s’imposent."
 category: "Typographie"
-date: 2026-09-27
+date: 2026-10-2
 author:
   name: "André Vincent"
   role: "Webmestre de ce site. Typographe, enseignant et syndicaliste."
 cover:
   src: "./cover.jpg"
-  alt: "Polices de caractères en bois, marron et noir."
-  creditName: "Image généré par IA"
-  creditUrl: "https://unsplash.com/fr/photos/croix-en-bois-marron-et-noir-4cwf-iW6I1Q"
+  alt: "Illustration du système de Vouchers."
+  creditName: "Image générée par IA"
 featured: false
 ---
 
