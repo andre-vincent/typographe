@@ -9,7 +9,7 @@
  */
 export const categories = [
   "Engineering",
-  "Reliability",
+  "Éducation",
   "Cloud",
   "Écoresponsable",
   "AI",
