@@ -41,11 +41,11 @@ const description = categoryDescriptions[category];
   <main id="content" class="outer">
     <div class="canvas">
       <header class="pagehead">
-        <p class="eyebrow">Category</p>
+        <p class="eyebrow">Sujets</p>
         <h1 class="pagehead-title">{category}</h1>
         <p class="pagehead-description">{description}</p>
         <p class="meta mt-5">
-          <span>{posts.length} {posts.length === 1 ? "post" : "posts"}</span>
+          <span>{posts.length} {posts.length === 1 ? "post" : "articles"}</span>
         </p>
       </header>
 
@@ -53,7 +53,7 @@ const description = categoryDescriptions[category];
         {posts.map((post) => <PostCard post={post} />)}
       </div>
 
-      <a href="/categories/" class="btn btn-outline btn-block mt-16">All categories</a>
+      <a href="/categories/" class="btn btn-outline btn-block mt-16">Tous les sujets</a>
     </div>
   </main>
   <SiteFooter />
