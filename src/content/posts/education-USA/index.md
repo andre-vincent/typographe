@@ -1,6 +1,6 @@
 ---
 title: "USA : un peuple de plus en plus ignorant"
-excerpt: "Plusieurs s’étonnent qu’un peuple aussi éduqué soit aussi ignorant au point d’élire un président aussi rétrograde et fier de son ignorance. Des explications s’imposent."
+excerpt: "Plusieurs s’étonnent qu’un peuple aussi éduqué soit aussi ignorant au point d’élire un président aussi rétrograde et fier de son ignorance. Des explications s’imposent si on ne veux pas se ramasser un jour avec un petit Trump à la tête du Québec."
 category: "Éducation"
 date: 2026-10-2
 author:
@@ -149,23 +149,44 @@ Leurs griefs se résument en quatre points fondamentaux :
 4. **L’absence de comptes à rendre (*Accountability*) :** Les syndicats jugent inadmissible que des milliards de dollars de taxes soient versés à des entités privées exemptées des contrôles pédagogiques et des certifications imposées aux profs du public.
 
 ---
+## 8. Éclairage comparatif : Les « Vouchers » américains et « l’école à trois vitesses » au Québec
 
-## Note
+Bien que les contextes juridiques et historiques diffèrent, le système des *vouchers* américains présente des similitudes frappantes avec le modèle éducatif du Québec, souvent qualifié par les sociologues et les syndicats locaux d’« école à trois vitesses » [^17]. Dans les deux cas, le financement public est utilisé pour encourager le libre choix, au détriment de la mixité sociale de l'école publique régulière.
 
-[^1]: Rapport d’actualité concernant l’erreur cartographique par IA du département d’État américain en juillet 2026.
+### Comparaison des structures éducatives
+
+| Caractéristique | Système des Vouchers américains | École à trois vitesses au Québec |
+| :--- | :--- | :--- |
+| **Niveau 1 : L'élite sélective** | **Écoles privées traditionnelles** indépendantes, financées par les *vouchers* et les contributions des parents riches. | **Écoles privées subventionnées** par l'État à hauteur de 60 % [^18], qui sélectionnent les élèves sur examen et frais de scolarité. |
+| **Niveau 2 : La filière publique sélective** | **Charter Schools** ou **Magnet Schools** publiques à projet particulier (parfois sur critères). | **Projets particuliers sélectifs** au public (Sport-études, BI, science) avec frais d’entrée facturés aux parents [^19]. |
+| **Niveau 3 : Le filet de sécurité** | **L'école publique de quartier**, sous-financée, accueillant les élèves restants et les cas complexes. | **L'école publique régulière**, qui héberge une majorité d'élèves en difficulté (HDAA) sans sélection [^17]. |
+
+### Convergences et divergences des deux modèles
+
+* **Le siphonnage des élèves performants :** Tout comme le mécanisme de *Cream-Skimming* observé aux États-Unis avec les *vouchers*, le modèle québécois opère une sélection précoce (dès la fin du primaire). Les élèves au profil académique fort ou issus de milieux favorisés migrent vers le privé subventionné ou les projets publics sélectifs. L'école publique régulière se retrouve ainsi vidée de ses leaders positifs [^17].
+* **La fuite des fonds publics :** Aux États-Unis, le *voucher* déplace l'argent des taxes vers le privé. Au Québec, le gouvernement attribue directement des subventions publiques massives aux établissements privés (environ un demi-milliard de dollars par an) [^18]. Le Québec détient ainsi le record canadien de la plus forte proportion d'élèves du secondaire inscrits au privé (plus de 20 % à l'échelle provinciale, et jusqu'à près de 40 % à Montréal) [^17].
+* **La différence majeure de contrôle étatique :** Contrairement au système américain où les écoles privées à *vouchers* échappent à presque tout contrôle (notamment en Floride ou en Arizona), les écoles privées du Québec sont obligées de suivre le programme du ministère de l’Éducation (MEQ) et de faire passer les mêmes examens ministériels que le public. Le recul académique y est donc moins lié à une fragmentation des programmes qu'à une ghettoïsation sociale des établissements [^19].
+
+---
+
+## Notes
+
+[^1]: Rapport d'actualité concernant l'erreur cartographique par IA du département d’État américain en juillet 2026.
 [^2]: Enquête sur la culture géographique et les relations internationales menée par la [National Geographic Society](https://nationalgeographic.com).
 [^3]: Rapport global sur les connaissances mondiales des adultes américains du [Council on Foreign Relations](https://cfr.org).
-[^4]: Analyse des facteurs de l’analphabétisme géographique disponible sur [Phys.org](https://phys.org).
-[^5]: Données démographiques sur le niveau d’études atteint publiées par le [U.S. Census Bureau](https://census.gov).
-[^6]: Étude du National Bureau of Economic Research (NBER) sur l’impact des chaînes de tutorat privées, reprise par [EdTech Innovation Hub](https://edtechinnovationhub.com).
-[^7]: Guide explicatif et arguments de l’organisation pro-choix [EdChoice - School Vouchers](https://edchoice.org).
-[^8]: Analyse de la Harvard Graduate School of Education sur l’*Educational Choice for Children Act* via [Harvard EdCast](https://harvard.edu).
-[^9]: Rapport d’analyse de la TCU College of Education intitulé [Understanding School Vouchers](https://tcu.edu).
+[^4]: Analyse des facteurs de l'analphabétisme géographique disponible sur [Phys.org](https://phys.org).
+[^5]: Données démographiques sur le niveau d'études atteint publiées par le [U.S. Census Bureau](https://census.gov).
+[^6]: Étude du National Bureau of Economic Research (NBER) sur l'impact des chaînes de tutorat privées, reprise par [EdTech Innovation Hub](https://edtechinnovationhub.com).
+[^7]: Guide explicatif et arguments de l'organisation pro-choix [EdChoice - School Vouchers](https://edchoice.org).
+[^8]: Analyse de la Harvard Graduate School of Education sur l'*Educational Choice for Children Act* via [Harvard EdCast](https://harvard.edu).
+[^9]: Rapport d'analyse de la TCU College of Education intitulé [Understanding School Vouchers](https://tcu.edu).
 [^10]: Analyse critique des politiques de School Choice par la [Brookings Institution](https://brookings.edu).
-[^11]: Chronique politique et éditorial d’analyse des politiques des États démocrates face aux vouchers publiée sur [Yahoo News](https://yahoo.com).
-[^12]: Analyse financière de Fitch Ratings sur les vulnérabilités budgétaires liées aux modèles de l’Arizona et de la Floride : [Fitch Ratings Report](https://fitchratings.com).
-[^13]: Étude de l’Economic Policy Institute sur les préjudices des vouchers envers l’école publique : [EPI Report](https://epi.org).
+[^11]: Chronique politique et éditorial d'analyse des politiques des États démocrates face aux vouchers publiée sur [Yahoo News](https://yahoo.com).
+[^12]: Analyse financière de Fitch Ratings sur les vulnérabilités budgétaires liées aux modèles de l'Arizona et de la Floride : [Fitch Ratings Report](https://fitchratings.com).
+[^13]: Étude de l'Economic Policy Institute sur les préjudices des vouchers envers l'école publique : [EPI Report](https://epi.org).
 [^14]: Reportage vidéo et témoignages sur les droits de sélection des écoles privées partagés sur [Instagram](https://instagram.com).
 [^15]: Position officielle et revue des enjeux juridiques (loi IDEA) par la [National Education Association (NEA)](https://nea.org).
-[^16]: Communiqué de presse conjoint de l’AFT et de la NEA appelant au rejet du plan Trump sur les vouchers : [American Federation of Teachers (AFT)](https://aft.org).
-
+[^16]: Communiqué de presse conjoint de l'AFT et de la NEA appelant au rejet du plan Trump sur les vouchers : [American Federation of Teachers (AFT)](https://aft.org).
+[^17]: Rapport d'analyse sociologique du Conseil supérieur de l'éducation sur l'équité du système scolaire au Québec.
+[^18]: Étude de l'Institut de recherche et d'informations socioéconomiques (IRIS) sur le financement public des écoles privées au Québec.
+[^19]: Analyse de la Fédération autonome de l'enseignement (FAE) concernant la ségrégation provoquée par les projets particuliers sélectifs dans le réseau public.
