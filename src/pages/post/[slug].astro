@@ -107,7 +107,7 @@ const structuredData = {
 
         {data.updatedDate && (
           <p class="meta mt-5">
-            <span>Updated <time datetime={data.updatedDate.toISOString()}>{formatDate(data.updatedDate)}</time></span>
+            <span>Mis à jour <time datetime={data.updatedDate.toISOString()}>{formatDate(data.updatedDate)}</time></span>
           </p>
         )}
 
@@ -119,7 +119,7 @@ const structuredData = {
               target="_blank"
               rel="noreferrer"
               class="share-btn"
-              aria-label={`Share ${data.title} sur ${link.label}`}
+              aria-label={`Partager ${data.title} sur ${link.label}`}
             >
               <LocalIcon name={link.icon} className="h-4 w-4" />
             </a>
