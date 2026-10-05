@@ -33,7 +33,7 @@ export const readingMinutes = (post: Post) => {
   return Math.max(1, Math.round(words / 220));
 };
 
-export const readingLabel = (post: Post) => `${readingMinutes(post)} min read`;
+export const readingLabel = (post: Post) => `${readingMinutes(post)} min de lecture`;
 
 export const getFeatured = (posts: Post[], limit = 5) =>
   visiblePosts(posts)
