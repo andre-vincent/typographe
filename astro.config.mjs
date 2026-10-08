@@ -9,6 +9,9 @@ import { codeThemes, codeDefaultColor } from "./src/config/code.ts";
 
 import mdx from "@astrojs/mdx";
 
+// Import propre du plugin de typographie française
+import { rehypeFrenchTypography } from "./src/plugins/rehype-french-typo.js";
+
 const shikiConfig = /** @type {const} */ ({
   themes: codeThemes,
   defaultColor: codeDefaultColor,
@@ -24,7 +27,10 @@ export default defineConfig({
   ],
   markdown: {
     processor: unified({
-      rehypePlugins: [rehypeSlug],
+      rehypePlugins: [
+        rehypeSlug,
+        rehypeFrenchTypography // Appel du plugin proprement à la suite des autres traitements HTML
+      ],
     }),
     shikiConfig,
   },
