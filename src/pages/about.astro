@@ -31,15 +31,15 @@ const authors = getAllAuthors(allPosts);
 
         <h2>Comment c'est écrit</h2>
         <p>
-Chaque article vise à être reproductible et fiable. Si quelque chose est erroné ou incorrect, sur simple signalement à l'auteur, des corrections seront apportées le plus promptement possible, avec la date de mise à jour affichée en haut de l'article.
+Chaque article vise à être reproductible et fiable. Si quelque chose est erroné ou incorrect, sur simple signalement à l’auteur, des corrections seront apportées le plus promptement possible, avec la date de mise à jour affichée en haut de l'article.
         </p>
 
-        <h2>Qui l'écrit ?</h2>
+        <h2>Qui écrit ici ?</h2>
         <ul>
           {
             authors.map((author) => (
               <li>
-                <a href={`/author/${authorSlug(author.name)}/`}>{author.name}</a> — {author.role} ({author.posts.length} {author.posts.length === 1 ? "post" : "posts"})
+                <a href={`/author/${authorSlug(author.name)}/`}>{author.name}</a> — {author.role} ({author.posts.length} {author.posts.length === 1 ? "article" : "articles"})
               </li>
             ))
           }
