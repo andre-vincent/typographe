@@ -127,7 +127,7 @@ MIT - gratuit pour les projets personnels et commerciaux. Voir [LICENSE](. /LICE
 - [x] Franciser l’interface et les menu de navigation.
 - [ ] Adapter les favicons (.svg et .ico) de M à Ty
 - [ ] Finir de franciser les pages statiques.
-- [ ] Intégrer le script de correction typographique pour le français.
+- [x] Intégrer le script de correction typographique pour le français.
 - [ ] Modifier les polices adaptées au français.
 - [ ] Autoriser chaque post à avoir plus d’un auteur.
 
