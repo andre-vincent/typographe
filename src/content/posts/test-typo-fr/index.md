@@ -1,11 +1,15 @@
 ---
 title: "Page de test de la typographie française"
-description: "Validation des espaces insécables, nombres et exclusions"
+excerpt: "Validation des espaces insécables, nombres et exclusions"
+category: "Typographie"
+date: 2026-10-08
+author:
+  name: "André Vincent"
+  role: "Webmestre de ce site. Typographe, enseignant et syndicaliste."
+featured: false
 ---
 
-# Page de test ortho-typographique
-
-Ce fichier permet de valider visuellement si le plugin applique correctement les règles de l'Imprimerie nationale et de l'OQLF sur Cloudflare Pages.
+Ce fichier permet de valider visuellement si le plugin applique correctement les règles de l'*Imprimerie nationale* et du *Ramat de la typographie* sur Cloudflare Pages.
 
 ## 1. Ponctuation double et apostrophes
 * Est-ce que le système fonctionne comme prévu ? (Attendu : espace insécable fine devant ?)
