@@ -6,7 +6,7 @@ date: 2026-10-08
 author:
   name: "VLADIMIR DE THÉZIER"
   role: "L’auteur est idéateur-recherchiste."
-featured: false
+featured: true
 ---
 
 Photo: Karoline Boucher La Presse canadienne Le chef du Parti conservateur du Québec, Éric Duhaime, lors de son discours de victoire lundi soir à Lévis.  
