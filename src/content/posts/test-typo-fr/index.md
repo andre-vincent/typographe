@@ -6,7 +6,7 @@ date: 2026-10-08
 author:
   name: "André Vincent"
   role: "Webmestre de ce site. Typographe, enseignant et syndicaliste."
-featured: false
+featured: true
 ---
 
 Ce fichier permet de valider visuellement si le plugin applique correctement les règles de l'*Imprimerie nationale* et du *Ramat de la typographie* sur Cloudflare Pages.
