@@ -9,7 +9,7 @@ import { codeThemes, codeDefaultColor } from "./src/config/code.ts";
 
 import mdx from "@astrojs/mdx";
 
-// Import propre du plugin de typographie française
+// Importation sécurisée du plugin
 import { rehypeFrenchTypography } from "./src/plugins/rehype-french-typo.js";
 
 const shikiConfig = /** @type {const} */ ({
@@ -29,7 +29,7 @@ export default defineConfig({
     processor: unified({
       rehypePlugins: [
         rehypeSlug,
-        rehypeFrenchTypography // Appel du plugin proprement à la suite des autres traitements HTML
+        rehypeFrenchTypography // Placé à la fin pour nettoyer l'HTML généré
       ],
     }),
     shikiConfig,
