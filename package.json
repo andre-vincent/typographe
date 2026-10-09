@@ -1,9 +1,9 @@
 {
-  "name": "monograph-astro-theme",
-  "description": "A text-first Astro blog theme with command-palette search and a light/dark reading mode.",
+  "name": "typographe-astro-theme",
+  "description": "Un thème de blog Astro francisé et adapté pour une typographie soignée en français. Inspiré du thème Monograph.",
   "type": "module",
   "version": "1.0.0",
-  "author": "Andrei Alba",
+  "author": "Andrei Alba et André Vincent",
   "license": "MIT",
   "private": false,
   "keywords": [
@@ -15,17 +15,17 @@
     "writing",
     "tailwindcss"
   ],
-  "homepage": "https://monograph.xocoweb.workers.dev/",
+  "homepage": "https://typographe.pages.dev/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xocothemes/monograph.git"
+    "url": "https://github.com/andre-vincent/typographe.git"
   },
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "pip install fonttools brotli && python3 subset-fonts.py && astro build",
     "check": "astro check",
     "release:check": "npm run check && npm run build && npm run format:check",
     "preview": "astro preview",
