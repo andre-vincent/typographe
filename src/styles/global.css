@@ -54,17 +54,6 @@
   font-display: swap;
 }
 
-
-/* --- Version VARIABLE (Si vous conservez aussi le fichier variable) --- */
-@font-face {
-  font-family: 'Bona Nova Variable';
-  src: url('/src/fonts/BonaNova-Variable.woff2') format('woff2 supports variations'),
-       url('/src/fonts/BonaNova-Variable.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 /*
  * Bridges the palette below into Tailwind, which turns each entry into
  * utilities (`text-accent`, `border-border`, `bg-muted`, and so on). Add a
