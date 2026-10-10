@@ -2,7 +2,7 @@
 title: "Page de test de la typographie française"
 excerpt: "Validation des espaces insécables, nombres et exclusions"
 category: "Typographie"
-date: 2026-10-08
+date: 2026-10-10
 author:
   name: "André Vincent"
   role: "Webmestre de ce site. Typographe, enseignant et syndicaliste."
