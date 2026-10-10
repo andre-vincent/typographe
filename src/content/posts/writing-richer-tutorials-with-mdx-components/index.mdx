@@ -1,50 +1,46 @@
 ---
-title: "Writing Richer Tutorials with MDX Components"
-excerpt: "Monograph renders posts as MDX. Here is what that unlocks for tutorials: callout boxes and tabbed code samples, written like this article."
-category: "Engineering"
+title: "Rédaction de guides et tutoriels plus riches avec des composants MDX"
+excerpt: "En ajoutant .mdx au nom de votre fichier plutôt que .md, vous débloquez la possibilité d'enrichir votre article avec des blocs spéciaux ou des blocs d'onglets comme dans la présente page."
+category: "Typographie"
 date: 2026-07-16
 author:
   name: "Leah Morgan"
   role: "Design systems and craft"
 cover:
   src: "./cover.jpg"
-  alt: "Abstract purple and blue mesh gradient"
-  creditName: "Credits to MagicPattern via Unsplash"
+  alt: "Gradient de maille abstraite violet et bleu"
+  creditName: "Crédits à MagicPattern via Unsplash"
   creditUrl: "https://unsplash.com/photos/a-blurry-image-of-a-purple-and-blue-background-8h_tctpq4h0"
 featured: true
 ---
 
-Plain Markdown is fine for prose, but tutorials usually need more: a warning that stands apart from the surrounding paragraph, or install steps that differ by package manager. Posts in `src/content/posts` can now be `.mdx` files, which means a post can drop in components alongside regular Markdown without any extra imports.
+Plain Markdown est bien pour la prose, mais les tutoriels ont généralement besoin de plus : un avertissement qui se démarque du paragraphe environnant, ou des étapes d'installation qui diffèrent selon le gestionnaire de paquets. Les messages dans `src/content/posts` peuvent maintenant être des fichiers `.mdx`, ce qui signifie qu'un message peut déposer dans des composants à côté de Markdown régulier sans aucune importation supplémentaire.
 
-This article is itself an `.mdx` file, and every box below is real output, not a screenshot.
+Cet article est lui-même un fichier `.mdx`, et chaque boîte ci-dessous est une sortie réelle, pas une capture d'écran.
 
-## Callouts
+## Appels
 
-Use `<Callout>` to flag something the reader shouldn't skim past. The `type` prop picks the color and default label; `title` overrides the label if you need something more specific.
+Utilisez `<Callout>` pour signaler quelque chose que le lecteur ne devrait pas survoler. L'accessoire `type` choisit la couleur et l'étiquette par défaut ; `title` remplace l'étiquette si vous avez besoin de quelque chose de plus spécifique.
 
 <Callout type="note">
-  Callouts accept regular Markdown in their body, including `inline code`, **bold text**, and
-  [links](/).
+  Les appels acceptent une écriture Markdown régulière dans leur corps, y compris `code en ligne`, **texte en gras** et [liens](/).
 </Callout>
 
 <Callout type="tip">
-  Skip the `type` prop entirely for a plain note, or set it to `tip`, `warning`, or `danger`
-  depending on how loud the moment needs to be.
+  Sautez entièrement L'attribut `type` pour une note simple, ou définissez-le sur `tip`, `warning` ou `danger` selon l'intention voulue.
 </Callout>
 
 <Callout type="warning" title="Before you continue">
-  `title` is optional. Pass it when the default label ("Note", "Tip", "Warning", "Important")
-  doesn't fit what you're saying.
+  `title` est facultatif. Passez-le lorsque l'étiquette par défaut ("Note", "Conseil", "Avertissement", "Important") ne correspond pas à ce que vous dites.
 </Callout>
 
 <Callout type="danger">
-  Reserve this one for actions that are hard to undo, like deleting content or shipping a breaking
-  config change.
+  Réservez celui-ci pour les actions difficiles à annuler, comme la suppression de contenu ou l'envoi d'un changement de configuration de rupture.
 </Callout>
 
-## Tabbed code samples
+## Exemples de code à onglets
 
-Use `<CodeGroup>` with `<CodeGroupItem>` children to show the same step across a few variants, like package managers, without repeating the surrounding prose three times.
+Utilisez `<CodeGroup>` avec les enfants `<CodeGroupItem>` pour afficher la même étape sur quelques variantes, comme les gestionnaires de paquets, sans répéter la prose environnante trois fois.
 
 <CodeGroup>
 <CodeGroupItem label="npm">
@@ -73,11 +69,10 @@ yarn dev
 </CodeGroupItem>
 </CodeGroup>
 
-The tabs are progressive enhancement: a small inline script builds the tab list and hides the inactive panels on load. Without JavaScript, every panel still renders in order with a visible label, so the content stays readable either way.
+Les onglets sont une amélioration progressive : un petit script en ligne construit la liste des onglets et cache les panneaux inactifs au chargement. Sans JavaScript, chaque panneau s'affiche toujours dans l'ordre avec une étiquette visible, de sorte que le contenu reste lisible de toute façon.
 
-## Syntax highlighting
-
-Ordinary fenced code blocks don't need a component at all. Markdown and MDX posts both render through Shiki with a dual light/dark theme, so a plain code block already follows whichever color mode the reader has picked:
+## Mise en évidence de la syntaxe
+Les blocs de code clôturés ordinaires n'ont pas du tout besoin d'un composant. Les articles .md et .mdx sont tous deux rendus via Shiki avec un double thème clair/sombre, de sorte qu'un bloc de code simple suit déjà le mode de couleur que le lecteur a choisi :
 
 ```ts
 export function greet(name: string) {
@@ -85,6 +80,6 @@ export function greet(name: string) {
 }
 ```
 
-## Where the components live
+## Où les composants sont-ils situés?
 
-Both components are plain `.astro` files in `src/components/mdx`, styled with the same tokens as the rest of the theme, so they pick up light and dark mode automatically. Add more the same way: build the `.astro` component, then make it available to posts through the `components` prop passed to `<Content />` in `src/pages/post/[slug].astro`.
+Les deux composants sont des fichiers `.astro` simples dans `src/components/mdx`, stylisés avec les mêmes jetons que le reste du thème, de sorte qu'ils captent automatiquement le mode clair et sombre. Ajoutez-en plus de la même manière : construisez le composant `.astro`, puis rendez-le disponible pour les messages via l'accessoire `components` transmis à `<Content />` dans `src/pages/post/[slug].astro`.
