@@ -1,6 +1,6 @@
 ---
-title: "Pour en finir avec le «populisme»"
-excerpt: "Cessons d’utiliser «populiste» comme synonyme de démagogue, de réactionnaire, d’anti-intellectuel ou d’autoritaire."
+title: "Pour en finir avec le « populisme »"
+excerpt: "Cessons d’utiliser « populiste » comme synonyme de démagogue, de réactionnaire, d’anti-intellectuel ou d’autoritaire."
 category: "Éducation"
 date: 2026-10-08
 author:
