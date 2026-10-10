@@ -54,27 +54,32 @@ export function rehypeFrenchTypography() {
       // NETTOYAGE ET CORRECTIONS CHIRURGICALES
       // ==========================================
 
-      // A. Ponctualité Haute (?, !, ;) -> Remplacement global de toute espace existante (\s*)
-      // Nettoie l'absence d'espace ("Quoi?") et écrase les espaces incorrectes ("Quoi  ?") par une espace fine insécable
-      value = value.replace(/([^.\s\p{P}])\s*([?!;])/gu, `$1${NARROW_NBSP}$2`);
+      // A. Ponctuation Haute (?, !, ;) -> Remplacement global
+      // Gère les lettres, chiffres, parenthèses ) et crochets ]. Évite les espaces multiples.
+      value = value.replace(/([A-Za-z0-9À-ÿ)\]])\s*([?!;])/g, `$1${NARROW_NBSP}$2`);
 
-      // B. Le Deux-points (:) -> Remplacement global (\s*) par une espace forte insécable
-      value = value.replace(/([^.\s\p{P}])\s*(:)/gu, `$1${NBSP}$2`);
+      // B. Le Deux-points (:) -> Remplacement par une espace forte insécable
+      // S'assure de ne pas casser les URLs (http://, https://) ou les heures (14:30)
+      value = value.replace(/([A-Za-zÀ-ÿ)\]])\s*:(?!\/\/)/g, `$1${NBSP}:`);
 
-      // C. Guillemets français (« ») -> Capture le texte et écrase impitoyablement les espaces internes incorrectes
-      // Corrige : "test", «test», «  test  » ou «&nbsp;test» en plaçant systématiquement une espace fine insécable
-      value = value.replace(/"\s*([^"]+?)\s*"/g, `«${NARROW_NBSP}$1${NARROW_NBSP}»`);
-      value = value.replace(/«\s*([^»]+?)\s*»/g, `«${NARROW_NBSP}$1${NARROW_NBSP}»`);
+      // C. Guillemets français (« ») et conversion des guillemets droits (" ")
+      // Étape 1 : Convertit les "..." textuels en vrais guillemets français
+      value = value.replace(/"([^"]+?)"/g, `«$1»`);
+      // Étape 2 : Nettoie et applique l'espace fine insécable à l'intérieur de tous les chevrons français
+      value = value.replace(/«\s*/g, `«${NARROW_NBSP}`);
+      value = value.replace(/\s*»/g, `${NARROW_NBSP}»`);
 
       // D. Grands Nombres (Contextuel TD)
-      value = value.replace(/\b\d{4,}\b/g, (match) => {
-        const numLength = match.length;
+      // Utilise un lookbehind (?<=\d) pour isoler les nombres sans casser les chaînes de texte complexes
+      value = value.replace(/(?<=\d)\d{3,}/g, (match, offset, fullText) => {
+        // Récupère le nombre complet auquel appartient ce fragment pour valider sa taille globale
+        const fullNum = fullText.match(new RegExp(`\\d{${match.length + 1},}`))?.[0] || match;
+        const numLength = fullNum.length;
+
         if (isInsideTd) {
           return match.replace(/\B(?=(\d{3})+(?!\d))/g, NARROW_NBSP);
-        } else {
-          if (numLength > 4) {
-            return match.replace(/\B(?=(\d{3})+(?!\d))/g, NARROW_NBSP);
-          }
+        } else if (numLength > 4) {
+          return match.replace(/\B(?=(\d{3})+(?!\d))/g, NARROW_NBSP);
         }
         return match;
       });
@@ -86,8 +91,8 @@ export function rehypeFrenchTypography() {
       value = value.replace(/(\d)\s*(h)\s*(\d+)/gi, `$1${NBSP}$2${NBSP}$3`);
       value = value.replace(/(\d)\s*(h)\b/gi, `$1${NBSP}$2`);
 
-      // F. Apostrophes & Éléments de structure
-      value = value.replace(/(\p{L})'(\p{L})/gu, '\$1’\$2');
+      // F. Apostrophes courbes (uniquement entre 2 lettres) & Éléments de structure
+      value = value.replace(/([a-zA-ZÀ-ÿ])'([a-zA-ZÀ-ÿ])/g, '\$1’\$2');
       value = value.replace(/\.{3}/g, '…');
 
       node.type = 'text';
