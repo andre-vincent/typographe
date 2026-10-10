@@ -2,19 +2,13 @@
 
 Utilisez ce guide lors de l'adaptation de TYPOGRAPHE pour un vrai site Web de production.
 
-## Site Settings
+## Paramètres du site
 
-Edit [src/config/site.ts](./src/config/site.ts) first. It holds the wordmark, default metadata,
-canonical domain, language and date locale, the sidebar about blurb, social links, and the
-newsletter and contact form settings.
+Modifiez d'abord [src/config/site.ts](./src/config/site.ts). Il contient le nom du site, les métadonnées par défaut, le domaine canonique, la langue, la région et le format de la date selon la région, la barre latérale sur le texte, les liens sociaux, les paramètres de l’infolettre et du formulaire de contact.
 
-Set `siteConfig.siteUrl` before building for production. Canonical URLs, social image URLs, RSS,
-`robots.txt`, the sitemap, and JSON-LD all derive from it.
+Définissez `siteConfig.siteUrl` avant de construire pour la production. Les URL canoniques, les URL d'images sociales, RSS, `robots.txt`, le plan du site et JSON-LD en découlent tous.
 
-The header shows `siteConfig.name` as plain text. There is no logo slot by design — if you want an
-image mark, replace the `.wordmark` anchor in
-[src/components/SiteHeader.astro](./src/components/SiteHeader.astro) and the matching one in
-[src/components/SiteFooter.astro](./src/components/SiteFooter.astro).
+L'en-tête affiche pour `siteConfig.name` le nom du site en texte brut. L’utilisation d’un logo devant le nom du site n’est pas prévu dans cette conception graphique du site - si vous voulez un logo ou une image de marque, remplacez l'ancre `.wordmark` dans [src/components/SiteHeader.astro](./src/components/SiteHeader.astro) et celle correspondante dans [src/components/SiteFooter.astro](./src/components/SiteFooter.astro).
 
 ## Navigation
 
