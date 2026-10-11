@@ -11,7 +11,13 @@
 
 **Aperçu en direct :** [https://typographe.pages.dev](https://typographe.pages.dev)/
 
-TYPOGRAPHE est la version francisée de Monograph qui est un thème Astro gratuit pour les essais, les notes et l'écriture longue. C'est d'abord le texte par conception : le flux est une liste de lecture plutôt qu'une grille de cartes, de sorte que les titres et les extraits portent la page et les couvertures apparaissent sur le message lui-même. Le thème est monochrome avec un seul accent de couleur bleu pour les liens, les dates et les états de survol, les articles lus dans une colonne centrée, et chaque survol s'exécute sur la même courbe d'assouplissement, donc rien n'attire l'attention sur lui-même. Les catégories, la navigation et les valeurs par défaut du référencement proviennent d'un petit ensemble de fichiers de configuration, le contenu est validé Markdown ou MDX par les collections de contenu Astro, et la sortie est statique : pages rapides, articles explorables et pas d'îlots de cadre à hydrater.
+TYPOGRAPHE est la version francisée de Monograph qui est un thème Astro pour les essais, les notes et l'écriture longue. Ce thème (modèle ou gabarit) privilégie d'abord le texte et par conséquent une typographie française soignée. 
+
+Le thème est monochrome avec un seul accent de couleur bleu pour les liens. 
+
+Les métadonnées (auteur, dates, sujets, temps de lecture) s’affichent discrètement aux endroits appropriés. 
+
+Les sujets, la navigation et les valeurs par défaut du référencement proviennent d’un petit ensemble de fichiers de configuration, le contenu est valide en Markdown ou MDX avec des pages récapitulatives ou archives avec des collections de contenu Astro, et le rendu des pages est statique et rapide : code sémantique et accessible, contenu découvrable et répondant à toutes les bonnes pratiques.
 
 ## Caractéristiques
 
