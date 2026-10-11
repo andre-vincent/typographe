@@ -7,7 +7,7 @@ author:
   name: "André Vincent"
   role: "Webmestre de ce site. Typographe, enseignant et syndicaliste."
 cover:
-  src: ".image_1500157e.jpg"
+  src: "./image_1500157e.jpg"
   alt: "Infographie illustrant les liens financiers et stratégiques entre les universités du Québec et le complexe militaro-industriel américain."
   creditName: "Infographie générée par IA (Banana Split)"
   featured: true
