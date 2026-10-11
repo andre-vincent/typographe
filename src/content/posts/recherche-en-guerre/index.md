@@ -7,11 +7,10 @@ author:
   name: "André Vincent"
   role: "Webmestre de ce site. Typographe, enseignant et syndicaliste."
 cover:
-  src: "./cover.jpg"
+  src: ".image_1500157e.jpg"
   alt: "Infographie illustrant les liens financiers et stratégiques entre les universités du Québec et le complexe militaro-industriel américain."
   creditName: "Infographie générée par IA (Banana Split)"
-  creditUrl: "https://unsplash.com/fr/photos/croix-en-bois-marron-et-noir-4cwf-iW6I1Q"
-featured: true
+  featured: true
 ---
 
 *Article en partie rédigé avec assistance d’IA
