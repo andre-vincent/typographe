@@ -3,7 +3,7 @@
 export function rehypeFrenchTypography() {
   const ignoredNames = new Set([
     'code', 'pre', 'style', 'script', 'textarea', 'kbd', 'samp',
-    'CodeBlock', 'TabbedCodeGroup' // Composants natifs de Monograph
+    'CodeBlock', 'TabbedCodeGroup' // Composants natifs de Typographe
   ]);
 
   const NARROW_NBSP = '\u202F'; // Espace fine insécable
