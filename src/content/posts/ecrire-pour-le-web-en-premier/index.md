@@ -10,7 +10,7 @@ cover:
   src: "./cover.jpg"
   alt: "Flux de production moderne"
   creditName: "Généré par IA Banana"
-  creditUrl: "https://unsplash.com/photos/purple-white-and-orange-light-tZCrFpSNiIQ"
+  creditUrl: "https://gemini.google/ch/overview/image-generation/?hl=fr-CH"
 featured: false
 ---
 
