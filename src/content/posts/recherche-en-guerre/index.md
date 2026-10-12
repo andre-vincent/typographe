@@ -160,7 +160,7 @@ Les stratagèmes du Pentagone (financements DARPA, droits de regard, rachats via
 
 ---
 
-## Notes de bas de page
+## Notes
 
 [^1]: **Tracxn Profiles**: [In-Q-Tel - Venture Capital Profile](https://tracxn.com/d/venture-capital/inqtel/__ncyOatblZk9suUG1SKwkii9UoqRqgFQIbGfAjkGRY-M). Analyse des participations financières mondiales du bras de capital-risque de la communauté du renseignement américaine.
 [^2]: **Innovation, Sciences et Développement économique Canada**: [Canada's National Artificial Intelligence Strategy: AI for All](https://ised-isde.canada.ca/site/ised/en/canadas-national-artificial-intelligence-strategy-ai-all). Présentation de la stratégie nationale de 2 milliards de dollars et du volet d'investissement en capital *Canadian Tech Growth Fund*.
