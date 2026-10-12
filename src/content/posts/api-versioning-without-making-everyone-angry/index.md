@@ -7,8 +7,8 @@ author:
   name: "Evan Brooks"
   role: "Security and reliability"
 cover:
-  src: "https://picsum.photos/id/24/900/600"
-  alt: "Purple and blue abstract light streaks"
+  src: "./cover.jpg"
+  alt: "Image d’un livre ouvert"
   creditName: "Credits à Alejandro Escamilla via Lorem Picsum"
   creditUrl: "https://fastly.picsum.photos/id/24/4855/1803.jpg?hmac=ICVhP1pUXDLXaTkgwDJinSUS59UWalMxf4SOIWb9Ui4"
 featured: false
