@@ -7,10 +7,10 @@ author:
   name: "Evan Brooks"
   role: "Security and reliability"
 cover:
-  src: "./cover.jpg"
+  src: "https://picsum.photos/id/24/200/300.webp"
   alt: "Purple and blue abstract light streaks"
-  creditName: "Credits to Wolfgang Vrede via Unsplash"
-  creditUrl: "https://unsplash.com/photos/abstract-purple-and-blue-light-streaks-with-a-glass-orb-7HRu1KzpLjg"
+  creditName: "Credits à Alejandro Escamilla via Lorem Picsum"
+  creditUrl: "https://fastly.picsum.photos/id/24/4855/1803.jpg?hmac=ICVhP1pUXDLXaTkgwDJinSUS59UWalMxf4SOIWb9Ui4"
 featured: false
 ---
 
