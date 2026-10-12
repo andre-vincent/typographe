@@ -179,7 +179,7 @@ Bien que les contextes juridiques et historiques diffèrent, le système des *vo
 [^6]: Étude du National Bureau of Economic Research (NBER) sur l'impact des chaînes de tutorat privées, reprise par [EdTech Innovation Hub](https://edtechinnovationhub.com).
 [^7]: Guide explicatif et arguments de l'organisation pro-choix [EdChoice - School Vouchers](https://edchoice.org).
 [^8]: Analyse de la Harvard Graduate School of Education sur l'*Educational Choice for Children Act* via [Harvard EdCast](https://harvard.edu).
-[^9]: Rapport d'analyse de la TCU College of Education intitulé [Understanding School Vouchers](https://tcu.edu).
+[^9]: Rapport d'analyse de la TCU College of Education intitulé [Understanding School Vouchers](https://coe.tcu.edu/news/2024/understanding-school-vouchers-2025.php).
 [^10]: Analyse critique des politiques de School Choice par la [Brookings Institution](https://brookings.edu).
 [^11]: Chronique politique et éditorial d'analyse des politiques des États démocrates face aux vouchers publiée sur [Yahoo News](https://yahoo.com).
 [^12]: Analyse financière de Fitch Ratings sur les vulnérabilités budgétaires liées aux modèles de l'Arizona et de la Floride : [Fitch Ratings Report](https://fitchratings.com).
