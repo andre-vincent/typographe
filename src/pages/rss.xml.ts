@@ -14,11 +14,8 @@ const escapeXml = (value: string) =>
 export async function GET() {
   const posts = visiblePosts(await getCollection("posts")).slice(0, 20);
   
-  // 1. Initialiser le conteneur Astro
   const container = await AstroContainer.create();
   
-  // 2. IMPORTANT POUR ASTRO 5/7 : Ajouter explicitement le moteur de rendu Markdown sous le capot
-  // Cela résout définitivement l'erreur "NoMatchingRenderer" lors du build isolé du RSS
   await container.addServerRenderer({
     name: "astro:jsx",
     serverEntrypoint: "astro/jsx/server.js",
@@ -27,7 +24,6 @@ export async function GET() {
   const itemPromises = posts.map(async (post) => {
     const url = new URL(postHref(post), siteConfig.siteUrl).toString();
     
-    // Rendu natif et parfait du Markdown (y compris notes de bas de page et syntaxes complexes)
     const { Content } = await render(post);
     const htmlContent = await container.renderToString(Content);
 
