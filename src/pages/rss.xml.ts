@@ -1,7 +1,6 @@
 import { getCollection } from "astro:content";
 import { siteConfig } from "@/config/site";
 import { postHref, visiblePosts } from "@/lib/posts";
-// Étape 1 : Importer le compilateur standard et officiel
 import { marked } from "marked";
 
 const escapeXml = (value: string) =>
@@ -12,15 +11,24 @@ const escapeXml = (value: string) =>
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
 
+// Fonction pour réparer les guillemets HTML cassés par le plugin de typographie
+function fixHtmlAttributes(html: string): string {
+  // Cette regex cible les attributs HTML (comme href=, src=, class=) 
+  // qui ont été transformés à tort avec des chevrons « » et les remet en guillemets droits " "
+  return html.replace(/(href|src|class|target|alt)=\s*«\u202F?([^»]+?)\u202F?»/g, '\$1="\$2"');
+}
+
 export async function GET() {
   const posts = visiblePosts(await getCollection("posts")).slice(0, 20);
 
-  // Étape 2 : Configurer marked pour qu'il s'exécute de manière synchrone et propre
   const items = posts.map((post) => {
     const url = new URL(postHref(post), siteConfig.siteUrl).toString();
     
-    // marked.parseSync convertit instantanément le Markdown complexe en HTML parfait
-    const htmlContent = marked.parseSync(post.body || "");
+    // 1. Génération du HTML standard par marked
+    let htmlContent = marked.parseSync(post.body || "");
+    
+    // 2. Correction locale pour immuniser le RSS contre le bogue du plugin typo
+    htmlContent = fixHtmlAttributes(htmlContent);
 
     return `<item>
   <title>${escapeXml(post.data.title)}</title>
