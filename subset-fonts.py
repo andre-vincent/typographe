@@ -3,7 +3,7 @@ import subprocess
 
 # 1. Chemins des dossiers (compatibles avec la structure Astro)
 SOURCE_DIR = "src/fonts/src"
-OUTPUT_DIR = "src/fonts"
+OUTPUT_DIR = "public/fonts"
 
 # 2. Liste complète des caractères (FR, EN, ES, PT) + Ponctuation standard et fine
 # Inclut : ÀÈÌÒÙÁÉÍÓÚÝÂÊÎÔÛÄËÏÖÜÇÑÃÕ¡¿ŒœÆæ...
