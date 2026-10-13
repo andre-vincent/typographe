@@ -2,42 +2,40 @@ import { getCollection } from "astro:content";
 import { siteConfig } from "@/config/site";
 import { postHref, visiblePosts } from "@/lib/posts";
 
-// Fonction isolée pour compiler le Markdown en HTML propre
-function inlineMarkdownToHtml(markdown: string): string {
+// Convertisseur Markdown vers HTML textuel ultra-propre
+function cleanMarkdownToHtml(markdown: string): string {
   if (!markdown) return "";
   
-  // Remplacement sécurisé des sauts de ligne pour uniformiser
-  let html = markdown.replace(\(/\r\)?\n/g, "\n");
+  // Remplacement classique des sauts de ligne Windows
+  let html = markdown.split("\(\r\\)n").join("\n");
 
-  // 1. Protection des blocs de code
+  // 1. Blocs de code et code en ligne
   html = html.replace(/```([\s\S]*?)```/g, "<pre><code>\$1</code></pre>");
   html = html.replace(/`([^`]+?)`/g, "<code>\$1</code>");
 
-  // 2. Traitement des titres (début de ligne)
+  // 2. Titres (H1, H2, H3)
   html = html.replace(/^### (.*?)\$/gm, "<h3>\$1</h3>");
-  html = html.replace(/^## (.*?)\$/gm, "<h2>\$1</h2>");
+  html = html.replace(/^## (.*?)\$/gm, "<h2>\$2</h2>");
   html = html.replace(/^# (.*?)\$/gm, "<h1>\$1</h1>");
 
-  // 3. Traitement des styles inline (Gras, Italique)
+  // 3. Formats Typographiques (Gras & Italique)
   html = html.replace(/\*\*\*(.*?)\*\*\*/g, "<strong><em>\$1</em></strong>");
   html = html.replace(/\*\*(.*?)\*\*/g, "<strong>\$1</strong>");
   html = html.replace(/__(.*?)__/g, "<strong>\$1</strong>");
   html = html.replace(/\*(.*?)\*/g, "<em>\$1</em>");
   html = html.replace(/_(.*?)_/g, "<em>\$1</em>");
 
-  // 4. Traitement des notes de bas de page [^1]
+  // 4. Notes de bas de page [^1] et Liens [Texte](URL)
   html = html.replace(/\[\^(.*?)\]/g, "<sup>\$1</sup>");
-
-  // 5. Traitement sécurisé des liens [texte](url)
   html = html.replace(/\[(.*?)\](.*?)/g, '<a href="\$2">\$1</a>');
 
-  // 6. Traitement des listes à puces simples
+  // 5. Listes à puces
   html = html.replace(/^\s*-\s+(.*?)\$/gm, "<li>\$1</li>");
   html = html.replace(/^\s*\*\s+(.*?)\$/gm, "<li>\$1</li>");
 
-  // 7. Découpage et structuration en paragraphes <p>
+  // 6. Envelopper les lignes standards dans des paragraphes <p>
   return html
-    .split(/\n\s*\n/)
+    .split("\n\n")
     .map((block) => {
       const trimmed = block.trim();
       if (!trimmed) return "";
@@ -70,10 +68,10 @@ export async function GET() {
     .map((post) => {
       const url = new URL(postHref(post), siteConfig.siteUrl).toString();
 
-      // 1. Conversion autonome du corps de l'article
-      const fullHtmlContent = inlineMarkdownToHtml(post.body || "");
+      // Rendu du texte de l'article au complet
+      const fullHtmlContent = cleanMarkdownToHtml(post.body || "");
       
-      // 2. Gestion de l'auteur (frontmatter ou configuration générale)
+      // Extraction sécurisée des informations de l'auteur
       const authorEmail = siteConfig.author?.email || "contact@exemple.com";
       const authorName = post.data.author || siteConfig.author?.name || siteConfig.name;
       const formattedAuthor = `${authorEmail} (${authorName})`;
