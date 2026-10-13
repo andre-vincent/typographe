@@ -1,7 +1,6 @@
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content"; // Étape 1 : Importer 'render' ici
 import { siteConfig } from "@/config/site";
 import { postHref, visiblePosts } from "@/lib/posts";
-// Étape 1 : Importer la fonction d'Astro pour compiler le Markdown en HTML
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 
 const escapeXml = (value: string) =>
@@ -15,15 +14,13 @@ const escapeXml = (value: string) =>
 export async function GET() {
   const posts = visiblePosts(await getCollection("posts")).slice(0, 20);
   
-  // Initialisation du container Astro pour faire le rendu des composants/markdown
   const container = await AstroContainer.create();
 
-  // Étape 2 : Utiliser Promise.all car la compilation HTML est asynchrone (async/await)
   const itemPromises = posts.map(async (post) => {
     const url = new URL(postHref(post), siteConfig.siteUrl).toString();
     
-    // Compilation du contenu Markdown de l'article en HTML propre
-    const { Content } = await post.render();
+    // Étape 2 : Utiliser la nouvelle syntaxe globale render(post)
+    const { Content } = await render(post);
     const htmlContent = await container.renderToString(Content);
 
     return `<item>
@@ -39,7 +36,6 @@ export async function GET() {
   const itemsArray = await Promise.all(itemPromises);
   const items = itemsArray.join("\n");
 
-  // Étape 3 : Ajouter les espaces de noms (namespaces) requis pour le content:encoded dans la balise <rss>
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" 
   xmlns:content="http://purl.org"
