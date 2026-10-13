@@ -1,7 +1,7 @@
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import { siteConfig } from "@/config/site";
 import { postHref, visiblePosts } from "@/lib/posts";
-import { marked } from "marked";
+import { experimental_AstroContainer as AstroContainer } from "astro/container";
 
 const escapeXml = (value: string) =>
   value
@@ -11,24 +11,25 @@ const escapeXml = (value: string) =>
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
 
-// Fonction pour réparer les guillemets HTML cassés par le plugin de typographie
-function fixHtmlAttributes(html: string): string {
-  // Cette regex cible les attributs HTML (comme href=, src=, class=) 
-  // qui ont été transformés à tort avec des chevrons « » et les remet en guillemets droits " "
-  return html.replace(/(href|src|class|target|alt)=\s*«\u202F?([^»]+?)\u202F?»/g, '\$1="\$2"');
-}
-
 export async function GET() {
   const posts = visiblePosts(await getCollection("posts")).slice(0, 20);
+  
+  // 1. Initialiser le conteneur Astro
+  const container = await AstroContainer.create();
+  
+  // 2. IMPORTANT POUR ASTRO 5/7 : Ajouter explicitement le moteur de rendu Markdown sous le capot
+  // Cela résout définitivement l'erreur "NoMatchingRenderer" lors du build isolé du RSS
+  await container.addServerRenderer({
+    name: "astro:jsx",
+    serverEntrypoint: "astro/jsx/server.js",
+  });
 
-  const items = posts.map((post) => {
+  const itemPromises = posts.map(async (post) => {
     const url = new URL(postHref(post), siteConfig.siteUrl).toString();
     
-    // 1. Génération du HTML standard par marked
-    let htmlContent = marked.parseSync(post.body || "");
-    
-    // 2. Correction locale pour immuniser le RSS contre le bogue du plugin typo
-    htmlContent = fixHtmlAttributes(htmlContent);
+    // Rendu natif et parfait du Markdown (y compris notes de bas de page et syntaxes complexes)
+    const { Content } = await render(post);
+    const htmlContent = await container.renderToString(Content);
 
     return `<item>
   <title>${escapeXml(post.data.title)}</title>
@@ -38,7 +39,10 @@ export async function GET() {
   <description>${escapeXml(post.data.excerpt)}</description>
   <content:encoded><![CDATA[${htmlContent}]]></content:encoded>
 </item>`;
-  }).join("\n");
+  });
+
+  const itemsArray = await Promise.all(itemPromises);
+  const items = itemsArray.join("\n");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org">
