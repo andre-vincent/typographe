@@ -51,28 +51,22 @@ export async function GET() {
       const url = new URL(postHref(post), siteConfig.siteUrl).toString();
       const fullHtmlContent = cleanMarkdownToHtml(post.body || "");
       
-      // =========================================================
-      // EXTRACTION DYNAMIQUE ET SÉCURISÉE DE L'AUTEUR
-      // =========================================================
       let authorName = "";
 
       if (post.data.author) {
         if (typeof post.data.author === "string") {
-          // Cas standard : l'auteur est une simple chaîne de texte
           authorName = post.data.author;
         } else if (typeof post.data.author === "object") {
-          // Cas de relation ou objet imbriqué : on cherche .id, .name ou .slug
           authorName = post.data.author.name || post.data.author.id || post.data.author.slug || "";
         }
       }
 
-      // Si aucune donnée n'est trouvée dans l'article, on utilise les fallbacks globaux
       if (!authorName) {
         authorName = siteConfig.author?.name || siteConfig.name || "Rédacteur";
       }
 
-      const authorEmail = siteConfig.author?.email || "contact@exemple.com";
-      const formattedAuthor = `${authorEmail} (${authorName})`;
+      // Format masqué anonyme conforme aux spécifications RSS 2.0 pour la balise <author>
+      const formattedAuthor = `no-reply@exemple.com (${authorName})`;
 
       return `<item>
   <title>${escapeXml(post.data.title)}</title>
