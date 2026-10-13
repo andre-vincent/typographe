@@ -13,7 +13,7 @@ cover:
   featured: true
 ---
 
-*Article en partie rédigé avec assistance d’IA
+*Article en partie rédigé avec assistance de l’IA. Sources vérifiées par l’auteur.
 
 ## 1. Les stratagèmes du Pentagone pour s’infiltrer dans le capital-actions des jeunes pousses canadiennes
 
