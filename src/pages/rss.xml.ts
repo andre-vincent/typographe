@@ -65,16 +65,12 @@ export async function GET() {
         authorName = siteConfig.author?.name || siteConfig.name || "Rédacteur";
       }
 
-      // Format masqué anonyme conforme aux spécifications RSS 2.0 pour la balise <author>
-      const formattedAuthor = `no-reply@exemple.com (${authorName})`;
-
       return `<item>
   <title>${escapeXml(post.data.title)}</title>
   <link>${url}</link>
   <guid isPermaLink="true">${url}</guid>
   <pubDate>${post.data.date ? post.data.date.toUTCString() : new Date().toUTCString()}</pubDate>
   <dc:creator>${escapeXml(authorName)}</dc:creator>
-  <author>${escapeXml(formattedAuthor)}</author>
   <description>${escapeXml(post.data.excerpt || "")}</description>
   <content:encoded><![CDATA[${fullHtmlContent}]]></content:encoded>
 </item>`;
@@ -83,9 +79,9 @@ export async function GET() {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" 
-  xmlns:content="http://purl.org"
-  xmlns:dc="http://purl.org"
-  xmlns:atom="http://w3.org"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
 >
 <channel>
   <title>${escapeXml(siteConfig.name)}</title>
