@@ -7,9 +7,10 @@ OUTPUT_DIR = "public/fonts"
 
 # 2. Liste complète des caractères (FR, EN, ES, PT) + Ponctuation standard et fine
 # Inclut : ÀÈÌÒÙÁÉÍÓÚÝÂÊÎÔÛÄËÏÖÜÇÑÃÕ¡¿ŒœÆæ...
+)
 UNICODES_LIST = (
     "U+0020-007F,U+00A0-00FF,U+0100-017F,U+2000-206F,U+2070-209F,"
-    "U+20A0-20CF,U+2100-214F,U+2200-22FF"
+    "U+20A0-20CF,U+2100-214F,U+2200-22FF,U+FB00-FB4F"
 )
 
 def subset_fonts():
