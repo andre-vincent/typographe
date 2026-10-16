@@ -137,4 +137,7 @@ MIT - gratuit pour les projets personnels et commerciaux. Voir [LICENSE](. /LICE
 - [ ] Modifier les polices adaptées au français.
 - [ ] Autoriser chaque post à avoir plus d’un auteur.
 
+## Logo
+![Logo du site](logo.svg)
+
 
