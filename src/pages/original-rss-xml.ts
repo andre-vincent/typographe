@@ -21,12 +21,30 @@ function cleanMarkdownToHtml(markdown: string): string {
   html = html.replace(/^\s*-\s+(.*?)\$/gm, "<li>\$1</li>");
   html = html.replace(/^\s*\*\s+(.*?)\$/gm, "<li>\$1</li>");
 
+  // Prise en charge basique des tableaux Markdown pour éviter le rendu brut
+  if (html.includes("|")) {
+    html = html.replace(/^\|(.+)\|\$/gm, (_, content) => {
+      const cells = content.split("|").map((c: string) => `<td>${c.trim()}</td>`).join("");
+      return `<tr>${cells}</tr>`;
+    });
+    // Encapsulation naïve des lignes de tableau trouvées successives
+    html = html.replace(/(<tr>.*<\/tr>)+/g, "<table><tbody>\$&</tbody></table>");
+    // Nettoyage des lignes de séparation (| :--- |)
+    html = html.replace(/<table><tbody><tr>(<td>-+:?<\/td>)+<\/tr>/g, "<table><tbody>");
+  }
+
   return html
     .split("\n\n")
     .map((block) => {
       const trimmed = block.trim();
       if (!trimmed) return "";
-      if (trimmed.startsWith("<h") || trimmed.startsWith("<li") || trimmed.startsWith("<pre") || trimmed.startsWith("<p")) {
+      if (
+        trimmed.startsWith("<h") || 
+        trimmed.startsWith("<li") || 
+        trimmed.startsWith("<pre") || 
+        trimmed.startsWith("<p") ||
+        trimmed.startsWith("<table")
+      ) {
         return trimmed;
       }
       return `<p>${trimmed}</p>`;
@@ -45,12 +63,19 @@ const escapeXml = (value: any) =>
 
 export async function GET() {
   const posts = visiblePosts(await getCollection("posts")).slice(0, 20);
+  const siteUrl = siteConfig.siteUrl ? siteConfig.siteUrl.toString().replace(/\/\$/, "") : "";
 
   const items = posts
     .map((post) => {
       const url = new URL(postHref(post), siteConfig.siteUrl).toString();
-      const fullHtmlContent = cleanMarkdownToHtml(post.body || "");
+      let fullHtmlContent = cleanMarkdownToHtml(post.body || "");
       
+      // 💡 Forcer les images et autres médias à utiliser l'URL absolue du site
+      if (siteUrl) {
+        fullHtmlContent = fullHtmlContent.replace(/(src|href)="\/([^"]*)"/g, `$1="${siteUrl}/$2"`);
+        fullHtmlContent = fullHtmlContent.replace(/(src|href)="\.\/([^"]*)"/g, `$1="${url}/$2"`);
+      }
+
       let authorName = "";
 
       if (post.data.author) {
