@@ -1,5 +1,5 @@
-<svg xmlns="http://w3.org" viewBox="0 0 32 32" width="32" height="32" role="img" aria-labelledby="fav-title"><title id="fav-title">Typographe</title>
-    <style>
+<svg xmlns="http://w3.org" viewBox="0 0 512 512" width="100%" height="100%">
+  <style>
     .logo-text {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-weight: 700;
