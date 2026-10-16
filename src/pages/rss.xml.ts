@@ -1,4 +1,6 @@
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
+// 💡 Importation directe d'un parseur Markdown ultra-rapide (zéro installation requise)
+import { marked } from 'https://esm.sh';
 
 export async function GET(context) {
   const posts = await getCollection('blog');
@@ -18,17 +20,19 @@ export async function GET(context) {
     <language>fr-fr</language>`;
 
   for (const post of sortedPosts) {
-    // 💡 Utilisation de la méthode moderne d'Astro pour appliquer vos plugins Rehype
-    const rendered = await render(post);
-    let htmlContent = rendered.html;
+    // 1. Extraction du corps Markdown de l'article (géré par Monograph selon sa structure)
+    const markdownBody = post.body || '';
+    
+    // 2. Conversion forcée du Markdown (titres, tableaux, listes) en vrai HTML
+    let htmlContent = await marked.parse(markdownBody);
 
-    // Transformation des URLs relatives en absolues pour les médias
+    // 3. Transformation des URLs relatives en absolues pour les médias
     if (siteUrl) {
       htmlContent = htmlContent.replace(/(src|href)="\/([^"]*)"/g, `$1="${siteUrl}/$2"`);
       htmlContent = htmlContent.replace(/(src|href)="\.\/([^"]*)"/g, `$1="${siteUrl}/blog/${post.id}/$2"`);
     }
 
-    // Échappement des caractères spéciaux
+    // Échappement des caractères spéciaux pour le titre et la description
     const title = post.data.title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
     const description = post.data.description.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
