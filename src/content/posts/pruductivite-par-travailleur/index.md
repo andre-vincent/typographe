@@ -13,7 +13,7 @@ cover:
   creditUrl: "https://gemini.google/ch/overview/image-generation/?hl=fr-CH"
 featured: true
 ---
-
+> Article rédigé avec l’assistance de l’IA. Sources vérifiées par l’auteur.
 ## 1. La méthode de mesure internationale et ses limites
 
 ### 1.1. Le cadre méthodologique standard
