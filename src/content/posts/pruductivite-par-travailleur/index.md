@@ -2,20 +2,17 @@
 title: "Productivité des travailleurs par heure travaillée"
 excerpt: "Mythes et réalité à propos du manque de productivité des travailleurs de certains pays"
 category: "Typographie"
-date: 2026-09-27
+date: 2026-10-17
 author:
   name: "André Vincent"
   role: "Webmestre de ce site. Typographe, enseignant et syndicaliste."
-featured: true
----
-
-<!—
 cover:
   src: "./cover.jpg"
   alt: "Polices de caractères en bois, marron et noir."
-  creditName: "Crédits photo à Bruno Martins sur Unsplash."
-  creditUrl: "https://unsplash.com/fr/photos/croix-en-bois-marron-et-noir-4cwf-iW6I1Q"
-—>
+  creditName: "Image générée par l’IA Banana Split."
+  creditUrl: "https://gemini.google/ch/overview/image-generation/?hl=fr-CH"
+featured: true
+---
 
 ## 1. La méthode de mesure internationale et ses limites
 
