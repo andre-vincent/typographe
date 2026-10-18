@@ -1,11 +1,10 @@
 /**
- * The site's categories. Every post belongs to exactly one of these, so keep the
- * list short — six is the practical ceiling before the sidebar stops reading as
- * a menu. Rename or replace entries here, then update the `category` value in
- * each post's frontmatter to match; the build fails on any mismatch.
+ * Les catégories du site. Chaque article appartient à une seule catégorie. Gardez la
+ * liste courte — six ou sept est la limite pratique avant que la barre latérale ne devienne illisible.
+ * Renommez ou remplacez les entrées ici, puis mettez à jour la valeur `category` dans le frontmatter
+ * de chaque article pour qu'elle corresponde ; le build échouera en cas d'incohérence.
  *
- * Order matters: it is the order used on the categories index and in the home
- * sidebar.
+ * L'ordre compte : c'est l'ordre utilisé sur l'index des catégories et dans la barre latérale d'accueil.
  */
 export const categories = [
   "Politique",
@@ -29,12 +28,11 @@ export const categorySlug = (category: string) =>
 
 /** Une ligne par catégorie, affichée sur sa page d'archive et dans les listes. */
 export const categoryDescriptions: Record<Category, string> = {
-  Engineering: "Contracts, tooling, and the day-to-day craft of shipping software.",
-  Reliability: "Incidents, observability, and the habits that keep systems honest.",
-  Cloud: "Infrastructure, cost, and deploy pipelines that stay out of the way.",
-  Security: "Authentication, privacy, and threat work explained for product teams.",
-  AI: "Evaluations, model behavior, and applied automation that holds up in production.",
-  "Design Systems": "Tokens, components, and the systems work that keeps interfaces coherent.",
+  "Politique": "Analyse des affaires publiques, des institutions, des gouvernances et des dynamiques citoyennes.",
+  "Éducation": "Pédagogie, apprentissage, systèmes éducatifs et outils pour la transmission des savoirs.",
+  "Économie": "Décryptage des marchés, des tendances financières, du commerce et des politiques monétaires.",
+  "AI": "Évaluations, comportements des modèles et automatisation appliquée viable en production.",
+  "Design Web": "Conception d'interfaces utilisateurs, expérience produit, ergonomie et architectures d'information.",
   "Typographie": "Lisibilité, accessibilité, règles de composition, hiérarchie, polices, etc.",
   "Mise en page": "Sémantique, intrinsèque, fluide et adaptive qui s'adapte à toute dimension d’écran.",
 };
