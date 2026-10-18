@@ -21,8 +21,51 @@ La méthode internationale standardisée pour mesurer la productivité horaire d
 
 Selon les méthodologies de l'OCDE [^1] et de l'OIT [^2], il est économiquement impossible d'isoler une "pure performance" physique ou intellectuelle d'un individu sans la lier à la valeur marchandise finale produite (le PIB). L'efficacité d'un travailleur ne dépend qu'en infime partie de ses capacités intrinsèques ; elle est structurellement déterminée par les investissements en capital fixe, l'infrastructure technologique mise à sa disposition, la qualité des réseaux de transport et l'organisation managériale du travail.
 
-* [POSITION DU TABLEAU 1 : "Productivité du travail par heure travaillée dans le G7"]
-* [POSITION DU TABLEAU 2 : "Productivité du travail par heure travaillée dans le G20"]
+# Synthèse Macroéconomique - Partie 1 : Productivité Globale du G7 et du G20
+
+## 1. Productivité Horaire au sein du G7
+La méthode internationale standardisée pour mesurer la productivité horaire d'un travailleur est le **PIB généré par heure travaillée** (en parité de pouvoir d'achat, ou PPA, exprimé en dollars). L'OCDE [^1] et l'OIT [^2] précisent qu'il est économiquement impossible d'isoler la "pure performance" physique ou intellectuelle d'un individu sans la lier à la valeur produite (le PIB), car celle-ci dépend fortement des investissements en capital, des technologies utilisées et de l'organisation du travail.
+
+| Pays | Productivité horaire moyenne ($ PPA par heure) | Évolution récente de la productivité | Volume d'heures annuelles par travailleur | Rang au sein du G7 |
+| :--- | :--- | :--- | :--- | :--- |
+| 🇺🇸 **États-Unis** | **~83,5 $** | En forte hausse (+2,2 %) | Élevé (~1 811 h/an) | **1er** |
+| 🇩🇪 **Allemagne** | **~82,5 $** | En légère contraction (-0,4 %) | Très faible (~1 341 h/an) | **2e** |
+| 🇫🇷 **France** | **~77,7 $** | Quasi-stagne (+0,4 %) | Faible (~1 490 h/an) | **3e** |
+| 🇬🇧 **Royaume-Uni** | **~71,0 $** | En baisse (-0,7 %) | Modéré (~1 660 h/an) | **4e** |
+| 🇮🇹 **Italie** | **~69,5 $** | En nette baisse (-1,4 %) | Modéré (~1 690 h/an) | **5e** |
+| 🇨🇦 **Canada** | **~68,0 $** | Stable (proche de 0 %) | Élevé (~1 700 h/an) | **6e** |
+| 🇯🇵 **Japon** | **~49,5 $** | En baisse (-1,3 %) | Élevé (~1 620 h/an) | **7e** |
+
+* **La déconnexion entre heures et efficacité :** Des pays comme la France ou l'Allemagne affichent une excellente productivité par heure travaillée tout en maintenant des temps de travail annuels très bas.
+* **L'exception américaine :** Les États-Unis mènent la course en combinant un nombre d'heures travaillées annuel élevé et une efficacité horaire de premier plan, dopée par les investissements technologiques [^1].
+
+---
+
+## 2. Élargissement aux Pays du G20
+L'élargissement au G20 (qui intègre les économies émergentes majeures) accentue de façon spectaculaire la relation inverse entre le nombre d'heures travaillées et l'efficacité horaire.
+
+| Rang | Pays | Productivité horaire moyenne ($ PPA par heure) | Volume d'heures annuelles moyen par travailleur | Profil économique dominant de la productivité |
+| :--- | :--- | :--- | :--- | :--- |
+| **1** | 🇺🇸 États-Unis | **~84,1 $** | Élevé (~1 713 h) | Haute technologie, finance, avance en IA |
+| **2** | 🇩🇪 Allemagne | **~82,5 $** | Très faible (~1 302 h) | Industrie à haute valeur ajoutée, robotisation |
+| **3** | 🇫🇷 France | **~77,7 $** | Faible (~1 431 h) | Énergie, infrastructures, services qualifiés |
+| **4** | 🇬🇧 Royaume-Uni | **~71,0 $** | Modéré (~1 608 h) | Services financiers et tertiaires |
+| **5** | 🇮🇹 Italie | **~69,5 $** | Modéré (~1 662 h) | Tissu de PME manufacturières spécialisées |
+| **6** | 🇨🇦 Canada | **~68,0 $** | Élevé (~1 631 h) | Ressources naturelles, services |
+| **7** | 🇦🇺 Australie | **~79,0 $** | Modéré (~1 672 h) | Secteur minier ultra-capitalistique |
+| **8** | 🇪🇸 Espagne | **~58,5 $** | Modéré (~1 640 h) | Tourisme, agriculture, services |
+| **9** | 🇰🇷 Corée du Sud | **~49,8 $** | Très élevé (~1 946 h) | Conglomérats tech mais tertiaire en retard |
+| **10** | 🇯🇵 Japon | **~49,5 $** | Élevé (~1 633 h) | Culture du présentéisme, services peu numérisés |
+| **11** | 🇸🇦 Arabie saoudite | **~45,0 $** | Très élevé (~2 103 h) | Économie dépendante du secteur pétrolier |
+| **12** | 🇹🇷 Turquie | **~41,2 $** | Élevé (~1 786 h) | Secteur manufacturier et textile en transition |
+| **13** | 🇷🇺 Russie | **~31,0 $** | Très élevé (~2 062 h) | Secteur extractif, rigidités structurelles |
+| **14** | 🇦🇷 Argentine | **~26,5 $** | Modéré (~1 544 h) | Instabilité monétaire freinant l'investissement |
+| **15** | 🇲🇽 Mexique | **~22,2 $** | Extrêmement élevé (~2 116 h) | Importante économie informelle, usines d'assemblage |
+| **16** | 🇧🇷 Brésil | **~21,0 $** | Élevé (~1 651 h) | Secteur agricole puissant, faible efficacité tertiaire |
+| **17** | 🇿🇦 Afrique du Sud | **~19,5 $** | Extrêmement élevé (~2 164 h) | Crise énergétique chronique, chômage structurel |
+| **18** | 🇨🇳 Chine | **~16,5 $** | Extrêmement élevé (~2 323 h) | Transition rapide vers la robotique industrielle |
+| **19** | 🇮🇩 Indonésie | **~14,0 $** | Très élevé (~1 990 h) | Transition de l'agriculture vers les services basiques |
+| **20** | 🇮🇳 Inde | **~10,5 $** | Le plus élevé (~2 383 h) | Forte proportion d'emplois agricoles peu mécanisés |
 
 ## 2. Les enseignements clés des dynamiques du G7 et du G20
 
@@ -131,8 +174,8 @@ La haute finance capte la valeur à deux niveaux. En interne, elle a été la pr
 Dans l'économie réelle, les agences de développement logiciel, les cabinets de conseil, le marketing digital et les services clients tirent un profit immédiat exceptionnel. Ils utilisent l'IA pour décupler la vitesse d'exécution de leurs équipes. Le service étant facturé au même prix au client final alors que le temps de travail humain nécessaire a été divisé par trois, le taux de plus-value sectoriel y subit une hausse verticale.
 —-
 ## Notes
-[^1]: [Compendium des indicateurs de productivité de l'OCDE](https://oecd.org).
-[^2]: [Base de données de l'Organisation Internationale du Travail (OIT) - Statistiques de productivité](https://ilo.org).
+[^1]: [Compendium des indicateurs de productivité de l'OCDE](https://www.oecd.org/fr/data/dashboards/oecd-dashboard-of-productivity-indicators.html)
+[^2]: [Base de données de l'Organisation Internationale du Travail (OIT) - Statistiques de productivité](https://rshiny.ilo.org/dataexplorer99/?lang=fr&segment=indicator&id=SDG_B821_NOC_RT_A&channel=ilostat).
 [^3]: Daron Acemoglu et James A. Robinson, *Prospérité, puissance et pauvreté : Pourquoi certains pays réussissent et d'autres échouent*, Éditions de l'Aube.
 [^4]: [FMI - Base de données des Perspectives de l'économie mondiale](https://imf.org).
 [^5]: [Fédération Internationale de la Robotique (IFR) - Rapports sur la robotique industrielle mondiale](https://ifr.org).
