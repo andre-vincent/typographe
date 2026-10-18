@@ -1,7 +1,7 @@
 ---
 title: "Guide d’écoconception Web : critères et analyse technologique"
 excerpt: "Ce document rassemble les critères fondamentaux qui définissent un site écoresponsable et évalue l’efficacité d’une infrastructure moderne versus un système traditionnel tel Wordpress."
-category: "Écoresponsable"
+category: "Design Web"
 date: 2026-09-28
 author:
   name: "André Vincent"
