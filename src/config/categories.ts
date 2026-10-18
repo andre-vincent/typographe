@@ -8,12 +8,11 @@
  * sidebar.
  */
 export const categories = [
-  "Engineering",
+  "Politique",
   "Éducation",
-  "Cloud",
-  "Écoresponsable",
+  "Économie",
   "AI",
-  "Design Systems",
+  "Design Web",
   "Typographie",
   "Mise en page"
 ] as const;
