@@ -89,7 +89,7 @@ L’italique répond à des règles strictes. On l’utilise principalement pour
 
 Les abréviations en français suivent des normes précises pour éviter les confusions :
 
-- **Monsieur / Madame** : S’abrègent en **M.** (et non Mr.) et **Mme** (sans point à la fin car la dernière lettre du mot est présente).
+- **Monsieur / Madame** : S’abrègent en **M.** (et non Mr.) et **M<sup>me</sup>** (sans point à la fin car la dernière lettre du mot est présente).
 - **Numéro** : S’abrège en **n°** (et non No.).
 - **Et cætera** : S’écrit **etc.** (toujours suivi d’un point, jamais de points de suspension car cela constituerait un pléonasme).
 
