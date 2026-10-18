@@ -6,8 +6,6 @@ SOURCE_DIR = "src/fonts/src"
 OUTPUT_DIR = "public/fonts"
 
 # 2. Liste complète des caractères (FR, EN, ES, PT) + Ponctuation standard et fine
-# Inclut : ÀÈÌÒÙÁÉÍÓÚÝÂÊÎÔÛÄËÏÖÜÇÑÃÕ¡¿ŒœÆæ...
-
 UNICODES_LIST = (
     "U+0020-007F,U+00A0-00FF,U+0100-017F,U+2000-206F,U+2070-209F,"
     "U+20A0-20CF,U+2100-214F,U+2200-22FF,U+FB00-FB4F"
@@ -41,12 +39,14 @@ def subset_fonts():
 
         print(f"Traitement de {file_name}...")
 
-        # Commande pyftsubset
+        # Commande pyftsubset optimisée pour l'OpenType
         cmd = [
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
             "--layout-features=*",      # Conserve TOUTES les OpenType Features
+            "--glyph-names",            # RECOMMANDÉ : Conserve le nom des glyphes pour éviter de casser l'OpenType
+            "--legacy-cmap",            # RECOMMANDÉ : Assure une compatibilité maximale des tables d'encodage
             "--flavor=woff2",           # Sortie au format WOFF2 ultra-compressé
             f"--output-file={output_path}"
         ]
@@ -59,3 +59,4 @@ def subset_fonts():
 
 if __name__ == "__main__":
     subset_fonts()
+    
