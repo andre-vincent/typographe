@@ -173,16 +173,10 @@ La haute finance capte la valeur à deux niveaux. En interne, elle a été la pr
 ### 4. Les services de pointe à forte intensité cognitive locale
 Dans l'économie réelle, les agences de développement logiciel, les cabinets de conseil, le marketing digital et les services clients tirent un profit immédiat exceptionnel. Ils utilisent l'IA pour décupler la vitesse d'exécution de leurs équipes. Le service étant facturé au même prix au client final alors que le temps de travail humain nécessaire a été divisé par trois, le taux de plus-value sectoriel y subit une hausse verticale.
 
----
-title: "L'indice de captation de la plus-value : Analyse critique des déséquilibres du G20"
-description: "Modélisation conceptuelle des transferts mondiaux de valeur ajoutée et impact de l'intelligence artificielle sur l'échange inégal."
-pubDate: 2026-10-17
-category: "Macroéconomie"
-tags: ["G20", "PPA", "Marx", "Plus-value", "Intelligence artificielle", "Astro"]
-layout: "../../layouts/MarkdownLayout.astro"
----
-
-## 1. L'impossible mesure comptable directe à l'échelle macroéconomique
+## L'indice de captation de la plus-value : Analyse critique des déséquilibres du G20
+> Modélisation conceptuelle des transferts mondiaux de valeur ajoutée et impact de l'intelligence artificielle sur l'échange inégal.
+> 
+### 1. L'impossible mesure comptable directe à l'échelle macroéconomique
 
 D’un point de vue strictement mathématique et méthodologique, il est impossible d'établir un taux de captation de la plus-value rigoureusement exact uniquement à partir des données macroéconomiques mondiales standardisées (comme le PIB nominal, le PIB PPA et le volume d'heures travaillées). 
 
@@ -190,7 +184,7 @@ Pour modéliser le taux de plus-value pur au sens de la théorie de Karl Marx ($
 
 Cependant, en croisant les indicateurs d'ajustement des prix intérieurs et l'intensité du temps de travail, il devient tout à fait possible de concevoir un **indice de vulnérabilité à la captation internationale de la valeur**. Cet outil conceptuel permet de cartographier avec précision les nations qui déploient une force de travail physique réelle dont la valeur est ensuite structurellement captée par les marchés financiers ou les monopoles technologiques du Nord global.
 
-## 2. La formule conceptuelle de l'indice de captation
+### 2. La formule conceptuelle de l'indice de captation
 
 Pour évaluer ces transferts sans dépendre des bilans comptables microscopiques des entreprises, le modèle s'appuie sur le rapport structurel suivant :
 
@@ -201,50 +195,39 @@ Le comportement de cet indice révèle la nature profonde de l'insertion d'un pa
 * **Un indice hautement élevé (Profil du Sud global) :** Signifie que l'économie nationale déploie un effort de travail physique immense (heures annuelles très élevées) et produit des marchandises tangibles essentielles, mais que la valeur financière de ce travail est dépréciée lors de sa conversion sur le marché des devises mondiales. La captation de sa plus-value par des agents extérieurs est maximale.
 * **Un indice très faible (Profil du Nord global) :** Indique que le pays parvient à centraliser et à s'approprier la valeur générée à l'échelle mondiale grâce à ses positions monopolistiques (monnaies de réserve, brevets, infrastructures logistiques ou algorithmiques). L'économie se positionne en bénéficiaire net du transfert de plus-value.
 
-## 3. Typologie de la captation au sein du G20
+## Typologie de la captation au sein du G20
 
 L'application de cette grille de lecture aux données harmonisées du G20 permet de segmenter les puissances économiques en trois catégories distinctes.
 
-### 3.1. Les pays à surexploitation et fuite maximale de la plus-value
+### 1. Les pays à surexploitation et fuite maximale de la plus-value
 Ce groupe réunit les grandes économies émergentes à forte intensité de main-d'œuvre, telles que l'**Inde**, l'**Indonésie**, le **Mexique** et le **Brésil**. 
 
 Ces pays se caractérisent par les volumes d'heures annuelles par travailleur les plus massifs du G20. Le coût nécessaire à la reproduction de leur force de travail (alimentation, logement, services de base locaux) y est structurellement bas, ce qui explique l'importance de leur PIB PPA. 
 
 Cependant, l'orientation de leur appareil productif vers l'extraction de matières premières ou l'assemblage industriel intermédiaire, combinée à la faiblesse structurelle de leurs monnaies, maintient la valeur nominale de leur production à des niveaux infimes. Un donneur d'ordre du Nord global achète le fruit de ce sursurnaturel à bas prix nominal pour le revendre sur les marchés occidentaux en réalisant une marge commerciale ou technologique colossale. Leur taux de fuite de la plus-value vers l'extérieur est le plus prononcé de l'économie mondiale.
 
-### 3.2. La Chine : Le modèle de transition vers la souveraineté de la valeur
+### 2. La Chine : Le modèle de transition vers la souveraineté de la valeur
 La **Chine** occupe une position intermédiaire et unique sur l'échiquier mondial. Historiquement ancrée dans la catégorie des pays soumis à une forte fuite de valeur, sa stratégie de montée en gamme technologique lui permet d'inverser cette dynamique.
 
 Bien que son écart entre PIB PPA et PIB nominal reste significatif (reflétant des coûts intérieurs maîtrisés), l'économie chinoise intègre désormais des chaînes de valeur entières de haute technologie (véhicules électriques, batteries, infrastructures de télécommunication). En imposant ses propres brevets et ses propres standards, la Chine retient la plus-value relative au sein de son espace national et l'utilise pour financer son propre appareil de capital fixe (robotisation lourde), brisant ainsi le mécanisme classique de l'échange inégal colonial.
 
-### 3.3. Les pays bénéficiaires nets et aspirateurs de plus-value
+### 3. Les pays bénéficiaires nets et aspirateurs de plus-value
 Ce bloc rassemble le cœur des puissances occidentales matures, mené par les **États-Unis**, l'**Allemagne**, la **France** et le **Royaume-Uni**.
 
 Leurs populations actives affichent des volumes d'heures travaillées faibles tout en représentant un coût nominal très élevé. Ces économies ne subissent pas la captation de valeur ; elles agissent comme les centres de gravitation de la plus-value mondiale. En détenant les monopoles technologiques, les architectures logicielles (États-Unis), les biens d'équipement industriels complexes (Allemagne) ou les centres financiers et industries de prestige (France, Royaume-Uni), ces pays parviennent à échanger une seule heure de leur travail hautement qualifié ou de leur capital algorithmique contre des milliers d'heures de travail physique manuel déployées dans le Sud global.
 
-## 4. L'impact de l'intelligence artificielle sur les taux de captation futurs
+## L'impact de l'intelligence artificielle sur les taux de captation futurs
 
 L'essor à marche forcée de l'intelligence artificielle modifie la donne macroéconomique en introduisant une **rente algorithmique** qui accentue les lignes de fracture existantes.
 
-### 4.1. La captation cognitive asymétrique
+### 1. La captation cognitive asymétrique
 Lorsqu'une entreprise ou une administration située dans un pays du Sud global intègre des outils d'intelligence artificielle conçus et hébergés au Nord pour optimiser sa logistique ou ses services, un mécanisme de transfert automatique s'enclenche. Une fraction de la valeur ajoutée créée localement par le salarié du Sud est immédiatement convertie en redevance (via les abonnements aux API ou aux services Cloud), migrant directement vers les bilans comptables des monopoles technologiques américains ou chinois.
 
-### 4.2. Le risque de blocage du développement industriel
+### 2. Le risque de blocage du développement industriel
 En augmentant massivement l'efficacité du capital fixe dans les économies avancées, l'IA réduit drastiquement l'avantage comparatif historique du Sud global basé sur les bas coûts salariaux de la main-d'œuvre humaine. Ce phénomène menace de court-circuiter le modèle classique de développement par l'industrialisation légère, enfermant les économies intermédiaires dans une situation de dépendance technologique et d'importation permanente de capital intellectuel [^8] [^9] [^10].
 
-
-————-
-
----
-title: "L'indice de captation de la plus-value : Modélisation et typologie au sein du G20"
-description: "Application d'un indicateur de vulnérabilité aux transferts mondiaux de valeur et classification des pays du G20 et de l'Espagne."
-pubDate: 2026-10-18
-category: "Macroéconomie"
-tags: ["G20", "Échange inégal", "Plus-value", "Modélisation", "Astro"]
-layout: "../../layouts/MarkdownLayout.astro"
----
-
-## 1. L'indice de vulnérabilité à la captation : Méthodologie
+## L'indice de vulnérabilité à la captation : Méthodologie
+> Application d'un indicateur de vulnérabilité aux transferts mondiaux de valeur et classification des pays du G20 et de l'Espagne.
 
 D’un point de vue strictement mathématique et méthodologique, il est impossible d'établir un taux de captation de la plus-value rigoureusement exact uniquement à partir des données macroéconomiques mondiales standardisées (comme le PIB nominal, le PIB PPA et le volume d'heures travaillées). Pour modéliser le taux de plus-value pur au sens de la théorie de Karl Marx ($s' = s/v$), les chercheurs en économie hétérodoxe doivent s'appuyer sur une variable critique qui n'apparaît pas dans les agrégats de la comptabilité nationale : la répartition précise de la valeur ajoutée sectorielle entre la rémunération réelle du travail (le capital variable, $v$) et les profits nets d'exploitation (la plus-value, $s$).
 
@@ -258,8 +241,6 @@ Le comportement de cet indice révèle la nature profonde de l'insertion d'un pa
 
 * **Un indice hautement élevé (Profil du Sud global) :** Signifie que l'économie nationale déploie un effort de travail physique immense (heures annuelles très élevées) et produit des marchandises tangibles essentielles, mais que la valeur financière de ce travail est dépréciée lors de sa conversion sur le marché des devises mondiales. La captation de sa plus-value par des agents extérieurs est maximale.
 * **Un indice très faible (Profil du Nord global) :** Indique que le pays parvient à centraliser et à s'approprier la valeur générée à l'échelle mondiale grâce à ses positions monopolistiques (monnaies de réserve, brevets, infrastructures logistiques ou algorithmiques). L'économie se positionne en bénéficiaire net du transfert de plus-value.
-
----
 
 ## 2. Cartographie de la captation au sein du G20 et de l'Espagne
 
