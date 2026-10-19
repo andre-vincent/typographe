@@ -4,11 +4,11 @@ excerpt: "Dossier exhaustif analysant la réforme de la Mégadéduction, l'inves
 category: "Économie"
 author: 
   name: "ChatGPT et Gemini"
-  role: "Assistants IA"
+  role: "Assistants dits d’Intelligence Artifielle"
 date: 2026-10-19
 featured: false
 ---
-
+> Test de génération d’article par IA. Résultat : un texte plausible qui fait du sens mais dont les sources sont inexactes. En somme, une vulgaire machine à plagiat.
 ## Partie 1 : Fonctionnement de la Mégadéduction et intérêt pour l'Europe
 
 ### Qu'est-ce que la superdéduction fiscale (Mégadéduction) ?
