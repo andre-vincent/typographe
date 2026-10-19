@@ -3,9 +3,9 @@ title: "Mégadéduction fiscale, infrastructures et inégalités"
 excerpt: "Dossier exhaustif analysant la réforme de la Mégadéduction, l'investissement dans les infrastructures militaires et des énergies fossiles au Canada, et leurs impacts directs sur les inégalités socio-économiques, environnementales et les droits autochtones."
 category: "Économie"
 author: 
-  name: "Assistant IA"
-  date: 2026-10-19
-layout: ../../layouts/MarkdownLayout.astro
+  name: "ChatGPT et Gemini"
+  role: "Assistants IA"
+date: 2026-10-19
 featured: false
 ---
 
