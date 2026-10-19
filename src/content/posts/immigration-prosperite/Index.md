@@ -3,7 +3,7 @@ title: "Intégration migratoire et grands chantiers : Le paradoxe économique du
 excerpt: "Au lieu de se demander frileusement : « Le Québec a-t-il les moyens de maintenir ou d'augmenter ses seuils d’immigration ? », l’analyse rigoureuse de la question suggère plutôt de poser la question inverse : « Le Québec a-t-il réellement les moyens de diminuer ses seuils d’immigration ? »"
 date: 2026-10-19
 category: "Politique"
-Author: 
+author: 
   name: "André Vincent"
   role: "Webmestre de ce site. Typographe, enseignant, syndicaliste"
 feature: true
