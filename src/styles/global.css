@@ -32,7 +32,7 @@
 /* 1. Regular (Normal, Droit) */
 @font-face {
   font-family: 'Bona Nova';
-  src: url('/fonts/BonaNova-Regular.woff2') format('woff2');
+  src: url('/fonts/BonaNova-Regular.woff2?v1') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -41,7 +41,7 @@
 /* 2. Italic (Normal, Penché) */
 @font-face {
   font-family: 'Bona Nova';
-  src: url('/fonts/BonaNova-Italic.woff2') format('woff2');
+  src: url('/fonts/BonaNova-Italic.woff2?v1') format('woff2');
   font-weight: 400;
   font-style: italic; /* Indique au navigateur qu'il s'agit du vrai tracé italique */
   font-display: swap;
@@ -50,7 +50,7 @@
 /* 3. Bold (Gras, Droit) */
 @font-face {
   font-family: 'Bona Nova';
-  src: url('/fonts/BonaNova-Bold.woff2') format('woff2');
+  src: url('/fonts/BonaNova-Bold.woff2?v1') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
