@@ -39,5 +39,3 @@ test-results
 *.njsproj
 *.sln
 *.sw?
-
-public/fonts/*.woff2
