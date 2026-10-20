@@ -1,5 +1,5 @@
 ---
-title: "Guide : Écrire pour le web d’abord"
+title: "Guide : écrire pour le web d’abord"
 excerpt: "Dans l’édition traditionnelle, on écrit souvent dans un traitement de texte (comme Word), pour ensuite devoir tout remettre en page pour le web, puis tout recommencer pour les liseuses et encore pour l’impression."
 category: "Typographie"
 date: 2026-09-29
