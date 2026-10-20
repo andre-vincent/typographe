@@ -56,18 +56,20 @@ En appliquant cette méthode sur une police variable riche comme *Fira Sans* ou 
 
 ---
 
-## Automatiser l'optimisation des polices sur Astro et Cloudflare Pages
-> Découvrez comment mettre en place un pipeline de build 100% automatisé avec Python (FontTools) et GitHub Actions pour diviser par 10 le poids de vos polices et obtenir un score de 100% sur Lighthouse.
 
-Avoir un site qui charge à la vitesse de l'éclair est crucial pour l'expérience utilisateur et le SEO. Les polices de caractères (*fonts*) sont souvent les éléments les plus lourds lors du premier chargement. 
+## Automatiser l'optimisation des polices variables sur Astro et Cloudflare Pages
 
-Dans ce tutoriel, nous allons voir comment mettre en place un système **100% automatisé** : vous déposez vos polices brutes (`.ttf` ou `.otf`) sur GitHub depuis votre iPad, et un script s'occupe de les compresser au format ultra-léger **WOFF2**, de configurer un cache agressif pour Cloudflare Pages, et de propulser votre score Lighthouse à **100 partout**.
+Découvrez comment mettre en place un pipeline de build automatisé avec Python (FontTools) et GitHub Actions pour diviser le poids de vos polices variables professionnelles et atteindre 100% sur Lighthouse.
+
+Avoir un site qui charge à la vitesse de l'éclair est crucial pour l'expérience utilisateur et le SEO. Les polices de caractères (*fonts*) sont souvent les éléments les plus lourds lors du premier chargement, en particulier les polices variables professionnelles qui embarquent de nombreux axes de déclinaison.
+
+Dans ce tutoriel, nous allons voir comment mettre en place un système **100% automatisé** : vous déposez vos polices brutes (`.ttf` ou `.otf`) sur GitHub depuis votre iPad, et un script se charge de les compresser au format ultra-léger **WOFF2**, de préserver leurs axes variables, de purger les données obsolètes pour gratter chaque octet, et de configurer un cache agressif pour Cloudflare Pages.
 
 ---
 
 ### L'Architecture du Projet
 
-Pour éviter de ralentir le build de Cloudflare Pages à chaque déploiement, nous allons déléguer la lourde tâche de compression à **GitHub Actions**.
+Pour éviter de ralentir le build de Cloudflare Pages à chaque déploiement, nous déléguons la tâche de compression à **GitHub Actions** en tâche de fond.
 
 * **Dossier Source (`INPUT`) :** `src/fonts/src/` (Contient vos fichiers originaux `.ttf` ou `.otf`)
 * **Dossier de Sortie (`OUTPUT`) :** `public/fonts/` (Accueille les fichiers `.woff2` compressés par le script)
@@ -76,7 +78,10 @@ Pour éviter de ralentir le build de Cloudflare Pages à chaque déploiement, no
 
 ### Étape 1 : Le Script Python (`subset-fonts.py`)
 
-Ce script utilise la puissance de la bibliothèque `fonttools` (`pyftsubset`). Contrairement à une compression basique, il conserve toutes les fonctionnalités typographiques OpenType importantes (ligatures, paires de crénage) et tous les axes des polices variable tout en limitant les caractères aux langues européennes (Français, Anglais, Espagnol, Portugais).
+Ce script utilise la puissance de la bibliothèque `fonttools` (`pyftsubset`). Conçu pour le web moderne et les polices de qualité professionnelle, il applique des optimisations avancées :
+* **Préservation des axes variables** grâce au maintien des contours du glyphe de contrôle `.notdef`.
+* **Suppression du *Hinting*** obsolète sur nos écrans modernes (Retina, 4K, OLED).
+* **Nettoyage des tables de compatibilité historiques** (`legacy-cmap`) et des métadonnées superflues pour réduire le fichier à son strict minimum binaire.
 
 Créez un fichier nommé **`subset-fonts.py`** à la racine de votre projet et collez-y ce code :
 
@@ -114,16 +119,17 @@ def subset_fonts():
 
         print(f"Traitement de {file_name}...")
 
-        # Commande pyftsubset optimisée pour les polices variables et l'OpenType
+        # Commande pyftsubset poussée au maximum pour le web moderne
         cmd = [
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
-            "--layout-features=*",      # Conserve TOUTES les OpenType Features
-            "--glyph-names",            # Conserve le nom des glyphes pour éviter de casser l'OpenType
-            "--legacy-cmap",            # Assure une compatibilité maximale des tables d'encodage
-            "--notdef-outline",         # INDISPENSABLE pour conserver TOUS les axes des polices variables
-            "--flavor=woff2",           # Sortie au format WOFF2 ultra-compressé
+            "--layout-features=*",      # Conserve vos précieuses fonctions OpenType
+            "--glyph-names",            # Conserve le nom des glyphes (requis pour OpenType)
+            "--notdef-outline",         # Conserve tous les axes de votre police variable
+            "--no-hinting",             # GAIN MAJEUR : Supprime le hinting obsolète pour écrans récents
+            "--name-IDs=0,1,2,4,6",     # Nettoie les métadonnées textuelles inutiles (ne garde que l'essentiel)
+            "--flavor=woff2",           # Format WOFF2 ultra-compressé
             f"--output-file={output_path}"
         ]
 
@@ -141,7 +147,7 @@ if __name__ == "__main__":
 
 ### Étape 2 : Automatiser avec GitHub Actions
 
-Nous allons créer un robot (*workflow*) sur GitHub. Dès que vous ajouterez une police dans le dossier source, GitHub va créer une machine virtuelle Linux temporaire, exécuter le script Python, et enregistrer le fichier `.woff2` final dans votre dépôt.
+Nous créons un robot (*workflow*) sur GitHub. Dès que vous ajoutez une police dans le dossier source, GitHub crée une machine virtuelle Linux temporaire, installe les dépendances, exécute le script Python, et enregistre le fichier `.woff2` final dans votre dépôt.
 
 Créez l'arborescence de dossiers suivante à la racine : `.github/workflows/`. À l'intérieur, créez un fichier nommé **`optimize-fonts.yml`** :
 
@@ -189,16 +195,13 @@ jobs:
 
 ### Étape 3 : Ajuster le fichier `.gitignore`
 
-Par défaut, de nombreux projets Astro ignorent les fichiers générés automatiquement. Si votre fichier `.gitignore` contient la ligne `public/fonts/*.woff2`, GitHub Actions refusera d'enregistrer vos polices optimisées.
-
-1. Ouvrez votre fichier **`.gitignore`**.
-2. Assurez-vous de **supprimer** toute règle bloquant le dossier `public/fonts/`.
+Par défaut, de nombreux projets Astro ignorent les fichiers générés automatiquement. Si votre fichier `.gitignore` contient une règle bloquant le dossier `public/fonts/` ou les extensions `.woff2`, retirez-la afin de permettre à GitHub Actions d'enregistrer et de pousser le résultat de la compression.
 
 ---
 
 ### Étape 4 : Configurer le Cache HTTP sur Cloudflare Pages
 
-Les polices optimisées ne changent presque jamais. Il faut ordonner aux serveurs de Cloudflare et aux navigateurs de vos visiteurs de stocker ces polices en mémoire "à vie".
+Puisque vos polices de qualité professionnelle sont optimisées à vie, le navigateur de vos visiteurs ne doit les télécharger qu'une seule et unique fois.
 
 Dans votre dossier **`public/`**, créez un fichier nommé **`_headers`** (sans aucune extension) :
 
@@ -207,31 +210,32 @@ Dans votre dossier **`public/`**, créez un fichier nommé **`_headers`** (sans 
   Cache-Control: public, max-age=31536000, immutable
 ```
 
-* **`max-age=31536000`** : Stocke la police pendant 1 an dans le navigateur.
-* **`immutable`** : Empêche le navigateur de redemander au serveur si le fichier a changé, rendant le chargement instantané lors des visites suivantes.
+* **`max-age=31536000`** : Stocke la police pendant 1 an (31,5 millions de secondes) dans le navigateur.
+* **`immutable`** : Empêche le navigateur de venir vérifier si le fichier a changé sur le serveur, rendant l'accès instantané lors des visites suivantes.
 
 ---
 
 ### Étape 5 : Déclarer les polices en CSS
 
-Dans votre fichier CSS global (par exemple `src/styles/global.css`), déclarez vos polices en utilisant une stratégie de versioning par *Query Parameter* (`?v=1`). Cela vous permettra de forcer la mise à jour du cache si un jour vous modifiez la police.
+Dans votre fichier CSS global, déclarez vos polices en utilisant une stratégie de versioning par *Query Parameter* (`?v=1`). Cela vous permettra de forcer l'invalidation du cache de vos clients si vous appliquez une mise à jour majeure à votre fichier de police dans le futur.
 
 ```css
 @font-face {
-  font-family: 'MaPolicePersonnalisee';
-  src: url('/fonts/ma-font-reduite.woff2?v=1') format('woff2');
-  font-weight: 400;
+  font-family: 'MaPoliceVariable';
+  src: url('/fonts/ma-font-variable.woff2?v=1') format('woff2');
+  font-weight: 100 900; /* Étendue complète des axes de poids supportés */
   font-style: normal;
-  font-display: swap; /* Évite le texte invisible pendant le chargement */
+  font-display: swap;   /* Affiche une police système temporaire pour éviter le texte invisible */
 }
 ```
 
-La propriété **`font-display: swap;`** est cruciale : elle indique au navigateur d'afficher immédiatement le texte avec une police système en attendant que le fichier WOFF2 soit extrait du cache ou téléchargé.
+La propriété **`font-display: swap;`** est cruciale pour les performances : elle indique au navigateur d'afficher immédiatement le contenu textuel en attendant que le fichier WOFF2 soit extrait de la mémoire ou téléchargé.
 
 ---
 
 ### Conclusion
 
-Grâce à ce pipeline moderne, votre projet Astro bénéficie d'une optimisation typographique digne des plus grands sites de tech, le tout gérable facilement depuis une simple interface web ou une tablette. Le résultat parle de lui-même : **un score parfait de 100% sur toutes les métriques Lighthouse !**
+Grâce à ce pipeline moderne, votre projet Astro bénéficie d'une optimisation typographique digne des plus grands sites de tech, sans sacrifier les axes de vos polices variables. Tout est automatisé, écoresponsable, et gérable depuis une simple tablette. Le résultat parle de lui-même : **un score parfait de 100% sur toutes les métriques Lighthouse !**
+
 
 
