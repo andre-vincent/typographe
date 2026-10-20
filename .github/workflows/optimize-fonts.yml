@@ -3,11 +3,11 @@ name: Optimisation automatique des polices
 on:
   push:
     paths:
-      - 'src/fonts/src/**' # Déclenche automatiquement lors d'un ajout/modification
-  workflow_dispatch:      # AJOUT : Permet le déclenchement manuel depuis l'interface GitHub
+      - 'src/fonts/src/**'
+  workflow_dispatch: 
 
 permissions:
-  contents: write
+  contents: write # Important pour donner le droit d'écrire sur votre GitHub
 
 jobs:
   optimize:
@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Installer les dépendances de votre script
+      - name: Installer les dépendances
         run: |
           pip install fonttools brotli
 
@@ -33,5 +33,8 @@ jobs:
       - name: Enregistrer les modifications sur GitHub
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: polices optimisées automatiquement en WOFF2 par le script"
-          file_pattern: 'public/fonts/*.woff2'
+          commit_message: "chore: polices optimisées automatiquement en WOFF2"
+          # CORRECTION 1 : On demande à Git d'ajouter tout le contenu du dossier plutôt qu'un filtre strict
+          file_pattern: 'public/fonts/'
+          # CORRECTION 2 : Désactive le bug d'analyse des dossiers vides au démarrage
+          disable_globbing: true
