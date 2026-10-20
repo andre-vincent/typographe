@@ -40,15 +40,17 @@ def subset_fonts():
         print(f"Traitement de {file_name}...")
 
         # Commande pyftsubset optimisée pour les polices variables et l'OpenType
+        # Commande pyftsubset poussée au maximum pour le web moderne
         cmd = [
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
-            "--layout-features=*",      # Conserve TOUTES les OpenType Features
-            "--glyph-names",            # Conserve le nom des glyphes pour éviter de casser l'OpenType
-            "--legacy-cmap",            # Assure une compatibilité maximale des tables d'encodage
-            "--notdef-outline",         # INDISPENSABLE pour conserver TOUS les axes des polices variables
-            "--flavor=woff2",           # Sortie au format WOFF2 ultra-compressé
+            "--layout-features=*",      # Conserve vos précieuses fonctions OpenType
+            "--glyph-names",            # Conserve le nom des glyphes (requis pour OpenType)
+            "--notdef-outline",         # Conserve tous les axes de votre police variable
+            "--no-hinting",             # GAIN MAJEUR : Supprime le hinting obsolète pour écrans 4K/Retina
+            "--name-IDs=0,1,2,4,6",     # Nettoie les métadonnées textuelles inutiles (ne garde que l'essentiel)
+            "--flavor=woff2",           # Format WOFF2 ultra-compressé
             f"--output-file={output_path}"
         ]
 
