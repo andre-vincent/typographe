@@ -7,7 +7,7 @@ on:
   workflow_dispatch: 
 
 permissions:
-  contents: write # Important pour donner le droit d'écrire sur votre GitHub
+  contents: write
 
 jobs:
   optimize:
@@ -26,15 +26,14 @@ jobs:
         run: |
           pip install fonttools brotli
 
-      - name: Exécuter votre script Python
+      - name: Exécuter votre script Python (Chemin Absolu)
         run: |
+          # On force Python à se baser sur le dossier exact du projet GitHub
+          cd $GITHUB_WORKSPACE
           python subset-fonts.py
 
       - name: Enregistrer les modifications sur GitHub
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: polices optimisées automatiquement en WOFF2"
-          # CORRECTION 1 : On demande à Git d'ajouter tout le contenu du dossier plutôt qu'un filtre strict
-          file_pattern: 'public/fonts/'
-          # CORRECTION 2 : Désactive le bug d'analyse des dossiers vides au démarrage
-          disable_globbing: true
+          file_pattern: 'public/fonts/*.woff2'
