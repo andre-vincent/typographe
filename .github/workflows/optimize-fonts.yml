@@ -1,0 +1,36 @@
+name: Optimisation automatique des polices
+
+on:
+  push:
+    paths:
+      - 'src/fonts/src/**' # Déclenche le script si vous ajoutez une police dans votre dossier source
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le code du projet
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Installer les dépendances de votre script
+        run: |
+          pip install fonttools brotli
+
+      - name: Exécuter votre script Python
+        run: |
+          python subset-fonts.py
+
+      - name: Enregistrer les modifications sur GitHub
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: polices optimisées automatiquement en WOFF2 par le script"
+          file_pattern: 'public/fonts/*.woff2'
