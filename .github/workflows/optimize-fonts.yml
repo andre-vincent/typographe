@@ -3,7 +3,8 @@ name: Optimisation automatique des polices
 on:
   push:
     paths:
-      - 'src/fonts/src/**' # Déclenche le script si vous ajoutez une police dans votre dossier source
+      - 'src/fonts/src/**' # Déclenche automatiquement lors d'un ajout/modification
+  workflow_dispatch:      # AJOUT : Permet le déclenchement manuel depuis l'interface GitHub
 
 permissions:
   contents: write
