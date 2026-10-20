@@ -76,7 +76,7 @@ Pour éviter de ralentir le build de Cloudflare Pages à chaque déploiement, no
 
 ### Étape 1 : Le Script Python (`subset-fonts.py`)
 
-Ce script utilise la puissance de la bibliothèque `fonttools` (`pyftsubset`). Contrairement à une compression basique, il conserve toutes les fonctionnalités typographiques OpenType importantes (ligatures, paires de crénage) tout en limitant les caractères aux langues européennes (Français, Anglais, Espagnol, Portugais).
+Ce script utilise la puissance de la bibliothèque `fonttools` (`pyftsubset`). Contrairement à une compression basique, il conserve toutes les fonctionnalités typographiques OpenType importantes (ligatures, paires de crénage) et tous les axes des polices variable tout en limitant les caractères aux langues européennes (Français, Anglais, Espagnol, Portugais).
 
 Créez un fichier nommé **`subset-fonts.py`** à la racine de votre projet et collez-y ce code :
 
@@ -114,13 +114,15 @@ def subset_fonts():
 
         print(f"Traitement de {file_name}...")
 
+        # Commande pyftsubset optimisée pour les polices variables et l'OpenType
         cmd = [
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
             "--layout-features=*",      # Conserve TOUTES les OpenType Features
-            "--glyph-names",            # Conserve le nom des glyphes pour l'OpenType
-            "--legacy-cmap",            # Assure la compatibilité des tables d'encodage
+            "--glyph-names",            # Conserve le nom des glyphes pour éviter de casser l'OpenType
+            "--legacy-cmap",            # Assure une compatibilité maximale des tables d'encodage
+            "--notdef-outline",         # INDISPENSABLE pour conserver TOUS les axes des polices variables
             "--flavor=woff2",           # Sortie au format WOFF2 ultra-compressé
             f"--output-file={output_path}"
         ]
