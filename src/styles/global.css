@@ -1,0 +1,8 @@
+@layer reset, base, theme, fonts, typo, grid, layout, compo, utils;
+@layer reset { *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; } body { min-height: 100dvh; } }
+@layer theme { :root { color-scheme: light dark; --clr-bg: light-dark(#ffffff, #101012); --clr-text: light-dark(#17171a, #f2f2f3); } }
+@layer fonts { @font-face { font-family: 'Bona Nova'; src: url('/fonts/BonaNova-Regular.woff2?v1') format('woff2'); } }
+@layer typo { :root { --fs-base: clamp(1rem, 1.375rem, 2vw); } body { font-family: sans-serif; } }
+@layer layout { .outer { padding-inline: clamp(1.5rem, 5vw, 2.5rem); } .inner { max-width: 75rem; margin-inline: auto; } }
+@layer typo { .prose { font-size: 1.0625rem; line-height: 1.75; } .prose p { margin: 1.4rem 0; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; } }
