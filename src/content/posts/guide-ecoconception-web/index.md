@@ -160,3 +160,5 @@ Afin de valider l’impact réel de vos optimisations et piloter vos progrès, p
 <a href="https://bff.ecoindex.fr/redirect/?url=https%3A%2F%2Ftypographe.pages.dev%2Fpost%2Fguide-ecoconception-web%2F" target="_blank">
     <img src="https://bff.ecoindex.fr/badge/?theme=dark&url=https%3A%2F%2Ftypographe.pages.dev%2Fpost%2Fguide-ecoconception-web%2F" alt="Ecoindex Badge" />
 </a>
+
+[Lighthouse Score : 100/100](https://pagespeed.web.dev/analysis/https-typographe-pages-dev-post-guide-ecoconception-web/xc223tc7m4?form_factor=desktop)
