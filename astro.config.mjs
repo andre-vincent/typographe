@@ -35,6 +35,6 @@ export default defineConfig({
     shikiConfig,
   },
   vite: {
-    plugins: [tailwindcss()],
+   // plugins: [tailwindcss()],
   },
 });
