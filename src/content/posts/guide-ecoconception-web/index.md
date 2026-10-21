@@ -156,3 +156,6 @@ Afin de valider l’impact réel de vos optimisations et piloter vos progrès, p
 * **[EcoIndex](https://ecoindex.fr) (L’outil français de référence) :** Développé par le collectif Green IT, cet outil évalue la performance environnementale globale d’une page. Il attribue un score de 0 à 100 ainsi qu’une note de A à G en mesurant trois critères techniques précis : le poids de la page, le nombre de requêtes HTTP et la complexité de la structure de votre code (le DOM). Il fournit également une équivalence claire en émissions de gaz à effet de serre (g CO₂e) et en consommation d’eau douce (cl).
 * **[Website Carbon Calculator](https://websitecarbon.com) :** Un outil international très pédagogique qui estime la quantité de CO₂ générée à chaque visite d’une page donnée et calcule des projections annuelles en fonction de votre volume de trafic estimé. Il vous indique de manière visuelle si la page est plus propre ou plus polluante que la moyenne mondiale.
 * **[Simulateur d’ÉcoIndex](https://github.io) :** Pratique en phase de conception, ce simulateur sur GitHub vous permet d’ajuster vos variables (poids, requêtes, DOM) afin d’anticiper la note finale de votre site avant même son déploiement.
+
+  <div id="ecoindex-badge" data-theme="dark"></div>
+<script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer></script>
