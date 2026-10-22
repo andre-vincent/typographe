@@ -8,9 +8,9 @@ author:
   role: "Webmestre de ce site."
 cover:
   src: "./cover.jpg"
-  alt: "Formes abstraites fluides bleu profond et violet"
-  creditName: "Crédits photo : Richard Horvath via Unsplash"
-  creditUrl: "https://unsplash.com/photos/deep-blue-and-purple-flowing-shapes-_nWaeTF6qo0"
+  alt: "Table à dessin"
+  creditName: "Crédits photo : www.aosom.pt"
+  creditUrl: "https://www.aosom.pt/item/homcom-mesa-de-desenho-com-banco-e-2-gavetas-altura-ajustavel-tampo-inclinavel-0-a-60-120-x-60-x-68-92-cm-branco~24R2B57J1KO01.html?utm_source=google&utm_medium=cpc&utm_campaign=google_shopping&utm_campaign=PT%20%5BPmax%5D%20Low%20Funnel_Low&gad_source=1&gad_campaignid=22852368388&gbraid=0AAAAAC_BYgRXTwsFV-J0GLTb8LUB18Kvf&gclid=Cj0KCQjw6ObWBhDDARIsAFdfcUgfb4dZ-tHXXJG_-6fSjjq9Spd2No2WJ-BnQ_KHOI6HzYMUiNpoZ5saAijNEALw_wcB"
 featured: true
 ---
 
