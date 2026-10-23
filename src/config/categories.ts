@@ -14,6 +14,7 @@ export const categories = [
   "Design Web",
   "Typographie",
   "Mise en page"
+  "Notes de lecture"
 ] as const;
 
 export type Category = (typeof categories)[number];
