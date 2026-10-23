@@ -6,11 +6,6 @@ date: 2026-10-23
 author:
   name: Michel Roche
   role: Professeur en sciences politiques à l’Université du Québec à Chicoutimi.
-cover:
-  src: ./cover.jpg
-  alt: Polices de caractères en bois, marron et noir.
-  creditName: Crédits photo à Bruno Martins sur Unsplash.
-  creditUrl: https://unsplash.com/fr/photos/croix-en-bois-marron-et-noir-4cwf-iW6I1Q
 featured: true
 draft: false
 ---
