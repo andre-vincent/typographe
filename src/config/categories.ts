@@ -13,7 +13,7 @@ export const categories = [
   "AI",
   "Design Web",
   "Typographie",
-  "Mise en page"
+  "Mise en page",
   "Notes de lecture"
 ] as const;
 
