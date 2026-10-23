@@ -1,7 +1,7 @@
 ---
 title: "Productivité des travailleurs par heure travaillée"
 excerpt: "Mythes et réalité à propos du manque de productivité des travailleurs de certains pays"
-category: "Typographie"
+category: "Économie"
 date: 2026-10-17
 author:
   name: "André Vincent"
