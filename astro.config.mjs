@@ -2,15 +2,14 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
-import { unified } from "@astrojs/markdown-remark";
 import rehypeSlug from "rehype-slug";
+import mdx from "@astrojs/mdx";
+
 import { siteConfig } from "./src/config/site.ts";
 import { codeThemes, codeDefaultColor } from "./src/config/code.ts";
 
-import mdx from "@astrojs/mdx";
-
-// Importation sécurisée du plugin
-import { rehypeFrenchTypography } from "./src/plugins/rehype-french-typo.js";
+// Importation de votre nouveau plugin Remark converti
+import { remarkFrenchTypography } from "./src/plugins/remark-french-typo.js";
 
 const shikiConfig = /** @type {const} */ ({
   themes: codeThemes,
@@ -23,18 +22,21 @@ export default defineConfig({
     sitemap({
       filter: (page) => page !== new URL("/search/", siteConfig.siteUrl).toString(),
     }),
+    // L'intégration MDX va automatiquement lire et appliquer remarkPlugins ci-dessous
     mdx(),
   ],
   markdown: {
-    processor: unified({
-      rehypePlugins: [
-        rehypeSlug,
-        rehypeFrenchTypography // Placé à la fin pour nettoyer l'HTML généré
-      ],
-    }),
+    // 1. Votre plugin typo traite le texte brut et le frontmatter (title, excerpt) au début
+    remarkPlugins: [
+      remarkFrenchTypography
+    ],
+    // 2. Les plugins de rendu HTML s'exécutent ensuite
+    rehypePlugins: [
+      rehypeSlug
+    ],
     shikiConfig,
   },
   vite: {
-   plugins: [tailwindcss()],
+    plugins: [tailwindcss()],
   },
 });
