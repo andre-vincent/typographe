@@ -17,18 +17,18 @@ export function applyFrenchTypoRules(text, isInsideTd = false) {
   value = value.replace(/\s*»/g, `${NARROW_NBSP}»`);
 
   // D. Grands Nombres
-  value = value.replace(/(?<=\d)\d{3,}/g, (match, offset, fullText) => {
-    const fullNum = fullText.match(new RegExp(`\\d{${match.length + 1},}`))?.[0] || match;
-    const numLength = fullNum.length;
-
+  // Capture les suites de chiffres d'au moins 4 caractères
+  value = value.replace(/\d{4,}/g, (match) => {
     if (isInsideTd) {
+      // Dans un tableau : on sépare systématiquement par lots de 3 (ex: 1200 -> 1 200)
       return match.replace(/\B(?=(\d{3})+(?!\d))/g, NARROW_NBSP);
-    } else if (numLength > 4) {
+    } else if (match.length > 4) {
+      // Hors tableau : on ne sépare que si le nombre a STRICTEMENT plus de 4 chiffres (ex: 9999 reste brut, 12500 -> 12 500)
       return match.replace(/\B(?=(\d{3})+(?!\d))/g, NARROW_NBSP);
     }
     return match;
   });
-
+  
   // E. Unités, Pourcentages, Devises & Horaires
   value = value.replace(/(\d)\s*(%)/g, `$1${NARROW_NBSP}$2`);
   
