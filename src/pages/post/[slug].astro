@@ -37,9 +37,12 @@ interface Props {
 }
 
 const { post, allPosts } = Astro.props;
-const { Content } = await render(post);
+const { Content, remarkPluginFrontmatter } = await render(post);
+
 const mdxComponents = { Callout, CodeGroup, CodeGroupItem };
 const data = post.data;
+const title = remarkPluginFrontmatter?.title ?? data.title;
+const excerpt = remarkPluginFrontmatter?.excerpt ?? data.excerpt;
 const related = getRelated(allPosts, post);
 const { newer, older } = getAdjacent(allPosts, post);
 const authorHref = `/author/${authorSlug(data.author.name)}/`;
@@ -48,7 +51,7 @@ const socialImage = data.cover
   ? new URL(data.cover.src.src, siteConfig.siteUrl).toString()
   : new URL(siteConfig.socialImage, siteConfig.siteUrl).toString();
 const encodedUrl = encodeURIComponent(articleUrl);
-const encodedTitle = encodeURIComponent(data.title);
+const encodedTitle = encodeURIComponent(title);
 const shareLinks: { label: string; icon: "twitter-x" | "facebook" | "linkedin"; href: string }[] = [
   {
     label: "X",
@@ -69,8 +72,8 @@ const shareLinks: { label: string; icon: "twitter-x" | "facebook" | "linkedin"; 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: data.title,
-  description: data.excerpt,
+  headline: title,
+  description: excerpt,
   image: socialImage,
   datePublished: data.date.toISOString(),
   dateModified: (data.updatedDate ?? data.date).toISOString(),
@@ -81,8 +84,8 @@ const structuredData = {
 ---
 
 <BaseLayout
-  title={data.title}
-  description={data.excerpt}
+  title={title}
+  description={excerpt}
   image={socialImage}
   type="article"
   structuredData={structuredData}
@@ -102,8 +105,8 @@ const structuredData = {
           </span>
         </p>
 
-        <h1 class="article-title">{data.title}</h1>
-        <p class="article-excerpt">{data.excerpt}</p>
+        <h1 class="article-title">{title}</h1>
+        <p class="article-excerpt">{excerpt}</p>
 
         {data.updatedDate && (
           <p class="meta mt-5">
