@@ -25,6 +25,40 @@ Ce fichier permet de valider visuellement si le plugin applique correctement les
 * La voiture a roulé 150km à une vitesse contenant 12kg de bagages. (Attendu : espace fine insécable devant km et kg)
 * Le rendez-vous est fixé à 14h30 précises, ou à 18h. (Attendu : espaces insécables fortes autour du h : 14&nbsp;h&nbsp;30)
 
+Voici un récapitulatif exhaustif du comportement de notre script de nettoyage typographique sur les unités de mesure, de devise, de temps et de stockage numérique.
+
+| Catégorie | Écriture en Markdown (Avant) | Rendu Typographique Attendu (Après) | Type d'espace insécable |
+| :--- | :--- | :--- | :--- |
+| **Pourcentages** | `100%` ou `100 %` | 100 % | Fine (`\u202F`) |
+| **Distances** | `12km` ou `12 km` | 12 km | Fine (`\u202F`) |
+| | `5m` ou `5 m` | 5 m | Fine (`\u202F`) |
+| | `45cm` ou `45 cm` | 45 cm | Fine (`\u202F`) |
+| | `8mm` ou `8 mm` | 8 mm | Fine (`\u202F`) |
+| **Poids & Masses** | `2t` ou `2 t` | 2 t | Fine (`\u202F`) |
+| | `50kg` ou `50 kg` | 50 kg | Fine (`\u202F`) |
+| | `350g` ou `350 g` | 350 g | Fine (`\u202F`) |
+| | `500mg` ou `500 mg` | 500 mg | Fine (`\u202F`) |
+| **Volume & Physique**| `1L` ou `1 L` | 1 L | Fine (`\u202F`) |
+| | `60Hz` ou `60 Hz` | 60 Hz | Fine (`\u202F`) |
+| | `90dB` ou `90 dB` | 90 dB | Fine (`\u202F`) |
+| **Électricité** | `230V` ou `230 V` | 230 V | Fine (`\u202F`) |
+| | `90W` ou `90 W` | 90 W | Fine (`\u202F`) |
+| | `4kW` ou `4 kW` | 4 kW | Fine (`\u202F`) |
+| **Stockage Numérique**| `4Go` ou `4 Go` | 4 Go | Fine (`\u202F`) |
+| | `700Mo` ou `700 Mo` | 700 Mo | Fine (`\u202F`) |
+| | `1To` ou `1 To` | 1 To | Fine (`\u202F`) |
+| | `512B` ou `512 B` | 512 B | Fine (`\u202F`) |
+| | `20octets` ou `20 octets`| 20 octets | Fine (`\u202F`) |
+| **Devises** | `45€` ou `45 €` | 45 € | Forte (`\u00A0`) |
+| | `100$` ou `100 $` | 100 $ | Forte (`\u00A0`) |
+| | `10£` ou `10 £` | 10 £ | Forte (`\u00A0`) |
+| | `5000¥` ou `5000 ¥` | 5000 ¥ | Forte (`\u00A0`) |
+| **Horaires** | `14h30` ou `14 h 30` | 14 h 30 | Forte (`\u00A0`) |
+| | `20h` ou `20 h` | 20 h | Forte (`\u00A0`) |
+
+> **Note technique :** Qu'elles soient écrites collées au nombre ou séparées par une espace classique, ces unités informatiques et physiques sont désormais automatiquement uniformisées selon les règles de l'art de l'ortho-typographie française.
+
+
 ## 3. Grands nombres (Hors tableau vs Dans tableau)
 * La population de la ville est de 9999 habitants. (Attendu : RESTE COMPACT - pas d'espace)
 * Le budget total s'élève à 12500 € pour un objectif de 1450250 de clics. (Attendu : séparation par 3 -> 12&#8239;500 et 1&#8239;450&#8239;250)
