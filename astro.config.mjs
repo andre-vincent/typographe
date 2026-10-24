@@ -5,8 +5,6 @@ import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
 import rehypeSlug from "rehype-slug";
 
-import { unified } from "@astrojs/markdown-remark";
-
 import { siteConfig } from "./src/config/site.ts";
 import { codeThemes, codeDefaultColor } from "./src/config/code.ts";
 
@@ -24,19 +22,16 @@ export default defineConfig({
     sitemap({
       filter: (page) => page !== new URL("/search/", siteConfig.siteUrl).toString(),
     }),
-    // L'intégration MDX va automatiquement lire et appliquer remarkPlugins ci-dessous
     mdx(),
   ],
   markdown: {
-    processor: unified({
-      // Déclarez le plugin Remark ici pour respecter la dépréciation d'Astro
-      remarkPlugins: [
-        remarkFrenchTypography
-      ],
-      rehypePlugins: [
-        rehypeSlug
-      ],
-    }),
+    // Remplacement du processeur par la configuration de tableaux native d'Astro
+    remarkPlugins: [
+      remarkFrenchTypography
+    ],
+    rehypePlugins: [
+      rehypeSlug
+    ],
     shikiConfig,
   },
   vite: {
