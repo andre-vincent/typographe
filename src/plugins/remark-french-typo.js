@@ -4,7 +4,6 @@ export function remarkFrenchTypography() {
   const NARROW_NBSP = '\u202F'; // Espace fine insécable
   const NBSP = '\u00A0';        // Espace forte insécable
 
-  // On liste ici les composants MDX dont le contenu textuel NE DOIT PAS être altéré
   const ignoredMdxComponents = new Set(['CodeGroup', 'CodeGroupItem']);
 
   function applyFrenchTypoRules(text, isInsideTd = false) {
@@ -57,24 +56,22 @@ export function remarkFrenchTypography() {
       if (frontmatter.excerpt) frontmatter.excerpt = applyFrenchTypoRules(frontmatter.excerpt);
     }
 
-    // 2. CORPS DU TEXTE (Markdown + MDX)
-    // visit() accepte un troisième paramètre "ancestors" pour remonter l'arbre
-    visit(tree, 'text', (node, ancestors) => {
-      
-      // On vérifie si le nœud de texte est un enfant direct ou indirect d'un composant à ignorer
-      const isInsideIgnoredMdx = ancestors.some((anc) => {
-        return (
-          (anc.type === 'mdxJsxFlowElement' || anc.type === 'mdxJsxTextElement') &&
-          ignoredMdxComponents.has(anc.name)
-        );
-      });
+    // 2. CORPS DU TEXTE
+    // unist-util-visit fournit (node, index, parent)
+    visit(tree, 'text', (node, index, parent) => {
+      if (!parent) return;
 
-      if (isInsideIgnoredMdx) return;
+      // Sécurité : On ignore le texte si le parent immédiat est un composant de code mdx
+      if (
+        (parent.type === 'mdxJsxFlowElement' || parent.type === 'mdxJsxTextElement') &&
+        ignoredMdxComponents.has(parent.name)
+      ) {
+        return;
+      }
 
-      // Détection des cellules de tableaux Markdown standard
-      const isInsideTd = ancestors.some(anc => anc.type === 'tableCell');
+      // Détection si nous sommes dans une cellule de tableau
+      const isInsideTd = parent.type === 'tableCell';
       
-      // Application des règles
       node.value = applyFrenchTypoRules(node.value, isInsideTd);
     });
   };
