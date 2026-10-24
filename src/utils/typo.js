@@ -18,14 +18,24 @@ export function applyFrenchTypoRules(text, isInsideTd = false) {
 
   // D. Grands Nombres
   // Capture les suites de chiffres d'au moins 4 caractères
-  value = value.replace(/\d{4,}/g, (match) => {
-    if (isInsideTd) {
-      // Dans un tableau : on sépare systématiquement par lots de 3 (ex: 1200 -> 1 200)
+  value = value.replace(/\d{4,}/g, (match, offset, fullText) => {
+    // ANALYSE DU CONTEXTE : Est-ce un nombre isolé ou au milieu d'une phrase textuelle ?
+    // On vérifie les caractères immédiatement avant et après le nombre détecté
+    const charBefore = offset > 0 ? fullText[offset - 1] : '';
+    const charAfter = (offset + match.length) < fullText.length ? fullText[offset + match.length] : '';
+    
+    // Si le nombre est entouré de lettres ou de parenthèses (ex: "> 9999)" ou "an 2026"), 
+    // on applique la règle standard hors-tableau (il reste brut s'il fait 4 chiffres)
+    const isEmbeddedInText = /[A-Za-zÀ-ÿ()\[\]<>=]/.test(charBefore) || /[A-Za-zÀ-ÿ()\[\]<>=]/.test(charAfter);
+
+    if (isInsideTd && !isEmbeddedInText) {
+      // Dans un tableau (cellule de données pure) : séparation par lots de 3
       return match.replace(/\B(?=(\d{3})+(?!\d))/g, NARROW_NBSP);
     } else if (match.length > 4) {
-      // Hors tableau : on ne sépare que si le nombre a STRICTEMENT plus de 4 chiffres (ex: 9999 reste brut, 12500 -> 12 500)
+      // Hors tableau (ou si inclus dans du texte d'en-tête) : uniquement si > 4 chiffres
       return match.replace(/\B(?=(\d{3})+(?!\d))/g, NARROW_NBSP);
     }
+    
     return match;
   });
   
