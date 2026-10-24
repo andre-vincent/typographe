@@ -1,5 +1,6 @@
 ---
 import { formatDate, postHref, readingLabel, type Post } from "@/lib/posts";
+import { applyFrenchTypoRules } from "../utils/typo.js"; // 👈 Import de la fonction centrale
 
 interface Props {
   post: Post;
@@ -11,35 +12,15 @@ interface Props {
 const { post, variant = "feed", headingLevel = "h2", dateLabel } = Astro.props;
 const { title: rawTitle, excerpt: rawExcerpt, date, author } = post.data;
 
-// -------------------------------------------------------------------------
-// FONCTION CHIRURGICALE DE NETTOYAGE TYPO (Identique à votre plugin Remark)
-// -------------------------------------------------------------------------
-function formatFrenchTypo(text: string | undefined): string {
-  if (!text || typeof text !== 'string') return text || '';
-  const NARROW_NBSP = '\u202F'; // Espace fine insécable
-  const NBSP = '\u00A0';        // Espace forte insécable
-  
-  let value = text;
-  value = value.replace(/([A-Za-z0-9À-ÿ)\]])\s*([?!;])/g, `$1${NARROW_NBSP}$2`);
-  value = value.replace(/([A-Za-zÀ-ÿ)\]])\s*:(?!\/\/)/g, `$1${NBSP}:`);
-  value = value.replace(/"([^"]+?)"/g, `«$1»`);
-  value = value.replace(/«\s*/g, `«${NARROW_NBSP}`);
-  value = value.replace(/\s*»/g, `${NARROW_NBSP}»`);
-  value = value.replace(/([a-zA-ZÀ-ÿ])'([a-zA-ZÀ-ÿ])/g, '$1’$2');
-  value = value.replace(/\.{3}/g, '…');
-  return value;
-}
-
-// Application immédiate aux variables d'affichage du composant
-const title = formatFrenchTypo(rawTitle);
-const excerpt = formatFrenchTypo(rawExcerpt);
+// Application directe depuis le fichier utilitaire
+const title = applyFrenchTypoRules(rawTitle);
+const excerpt = applyFrenchTypoRules(rawExcerpt);
 
 const href = postHref(post);
 const Heading = headingLevel;
 const isoDate = date.toISOString();
 const readableDate = formatDate(date);
 ---
-
 
 <article class:list={["card", `card-${variant}`]}>
   <a href={href} class="link-title">
