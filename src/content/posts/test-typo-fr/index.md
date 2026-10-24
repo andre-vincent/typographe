@@ -65,11 +65,11 @@ Voici un récapitulatif exhaustif du comportement de notre script de nettoyage t
 
 ### Test dans un tableau HTML :
 
-| Produit | Quantité (Seuil > 999) | Prix |
+| Produit | Quantité (Seuil > 9999) | Prix |
 | :--- | :--- | :--- |
-| Référence A | 950 | 10 € |
-| Référence B | 1250 | 1200 € |
-| Référence C | 15400 | 14500 € |
+| Référence 135 | 950 | 10 € |
+| Référence 259 | 1250 | 1200 € |
+| Référence 371 | 15400 | 14500 € |
 
 *(Attendu dans le tableau ci-dessus : le nombre `1250` doit devenir `1&#8239;250` car il est dans un `<td>`, alors que `9999` plus haut reste inchangé).*
 
