@@ -26,14 +26,15 @@ export default defineConfig({
     mdx(),
   ],
   markdown: {
-    // 1. Votre plugin typo traite le texte brut et le frontmatter (title, excerpt) au début
-    remarkPlugins: [
-      remarkFrenchTypography
-    ],
-    // 2. Les plugins de rendu HTML s'exécutent ensuite
-    rehypePlugins: [
-      rehypeSlug
-    ],
+    processor: unified({
+      // Déclarez le plugin Remark ici pour respecter la dépréciation d'Astro
+      remarkPlugins: [
+        remarkFrenchTypography
+      ],
+      rehypePlugins: [
+        rehypeSlug
+      ],
+    }),
     shikiConfig,
   },
   vite: {
