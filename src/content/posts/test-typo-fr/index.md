@@ -93,21 +93,28 @@ Un texte contenant du code en ligne `let total = 45;` ou une commande `npm run a
 <p lang="en">Is this working properly? "Yes", it is! It costs 50\$ and 100% of features are on. (Attendu : aucune règle française ne s'applique ici).</p>
 
 <style>
-/* Cible uniquement les tableaux situés dans le corps de l'article */
+/* Cible votre tableau dans le corps de l'article */
 .prose table {
   width: 100%;
   border-collapse: collapse;
 }
 
-/* 1. Aligne par défaut toutes les cellules de données (TD) et d'en-tête (TH) à droite */
+/* 1. Alignement et activation des chiffres tabulaires */
 .prose th,
 .prose td {
   text-align: right;
+  /* Active les chiffres à largeur fixe (Tabular Lined Numbers) */
+  font-variant-numeric: tabular-nums;
+  -moz-font-feature-settings: "tnum";
+  -webkit-font-feature-settings: "tnum";
+  font-feature-settings: "tnum";
 }
 
-/* 2. Force la toute première colonne (les noms de produits) à rester alignée à gauche */
+/* 2. Force la première colonne (texte) à gauche et désactive les chiffres tabulaires */
 .prose th:first-child,
 .prose td:first-child {
   text-align: left;
+  font-variant-numeric: normal;
+  font-feature-settings: normal;
 }
 </style>
