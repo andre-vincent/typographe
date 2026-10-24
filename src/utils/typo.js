@@ -31,7 +31,10 @@ export function applyFrenchTypoRules(text, isInsideTd = false) {
 
   // E. Unités, Pourcentages, Devises & Horaires
   value = value.replace(/(\d)\s*(%)/g, `$1${NARROW_NBSP}$2`);
-  value = value.replace(/(\d)\s*\b(m|cm|mm|km|g|kg|mg|t|L|V|W|kW|Hz|dB)\b/g, `$1${NARROW_NBSP}$2`);
+  
+  // Unités physiques ET informatiques (B, octets, ko, Mo, Go, To ajoutés)
+  value = value.replace(/(\d)\s*(m|cm|mm|km|g|kg|mg|t|L|V|W|kW|Hz|dB|B|octets|ko|Mo|Go|To)\b/g, `$1${NARROW_NBSP}$2`);
+  
   value = value.replace(/(\d)\s*([€\$£¥])/g, `$1${NBSP}$2`);
   value = value.replace(/(\d)\s*(h)\s*(\d+)/gi, `$1${NBSP}$2${NBSP}$3`);
   value = value.replace(/(\d)\s*(h)\b/gi, `$1${NBSP}$2`);
