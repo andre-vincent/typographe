@@ -1,3 +1,7 @@
+media:
+  input: "src/assets/images"
+  output: "../../../assets/images"
+
 content:
   - name: posts-md
     label: "Articles (Format .md)"
