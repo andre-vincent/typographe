@@ -1,4 +1,9 @@
-# Déclaration des métadonnées du Frontmatter
+# 1. Définition globale du dossier racine des médias pour le projet
+media:
+  input: "src/content/posts"
+  output: "./"
+
+# 2. Déclaration réutilisable des métadonnées du Frontmatter
 _shared_fields: &shared_fields
   - name: title
     label: "Titre de l'article"
@@ -76,7 +81,7 @@ _shared_fields: &shared_fields
     type: boolean
     default: false
 
-# Configuration des collections avec stockage local des médias
+# 3. Définition des collections
 content:
   - name: posts-md
     label: "Articles (Format .md)"
@@ -84,10 +89,6 @@ content:
     path: src/content/posts
     slug: "{{slug}}/index.md"
     exclude: ["**/*.mdx"]
-    # Enregistre les images du sous-dossier de l'article avec un chemin relatif
-    media:
-      input: "src/content/posts/{{slug}}"
-      output: "./"
     fields:
       - *shared_fields
       - name: body
@@ -100,10 +101,6 @@ content:
     path: src/content/posts
     slug: "{{slug}}/index.mdx"
     exclude: ["**/*.md"]
-    # Enregistre les images du sous-dossier de l'article avec un chemin relatif
-    media:
-      input: "src/content/posts/{{slug}}"
-      output: "./"
     fields:
       - *shared_fields
       - name: body
