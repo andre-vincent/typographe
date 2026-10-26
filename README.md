@@ -17,7 +17,7 @@ Le thème est monochrome avec un seul accent de couleur bleu pour les liens.
 
 Les métadonnées (auteur, dates, sujets, temps de lecture) s’affichent discrètement aux endroits appropriés. 
 
-Les sujets, la navigation et les valeurs par défaut du référencement proviennent d’un petit ensemble de fichiers de configuration, le contenu est valide en Markdown ou MDX avec des pages récapitulatives ou archives avec des collections de contenu Astro, et le rendu des pages est statique et rapide : code sémantique et accessible, contenu découvrable et répondant à toutes les bonnes pratiques.
+Les sujets, la navigation et les valeurs par défaut du référencement proviennent d’un petit ensemble de fichiers de configuration, le contenu est valide en Markdown ou MDX avec des pages récapitulatives ou archives avec des collections de contenu Astro, et le rendu des pages est statique et rapide : code sémantique et accessible (AA), contenu découvrable (SEO) et répondant à toutes les bonnes pratiques.
 
 ## Caractéristiques
 
@@ -40,10 +40,47 @@ Les sujets, la navigation et les valeurs par défaut du référencement provienn
 - Provider-neutral newsletter and contact forms that run as working demos until an endpoint is configured
 - Tailwind CSS 4 tokens in cascade layers, with no external font requests by default
 
+## Caractéristiques (première traduction par IA… pas très réussi - à revoir…)
+- Première page d'accueil du texte : un grand dernier message, un flux séparé par des espaces blancs sans vignettes, et une barre latérale collante contenant le texte à propos, un formulaire d'abonnement, des messages en vedette et des catégories avec le nombre de messages
+
+- Pages d'articles avec une seule colonne de lecture de 720px, une ligne indiquant "Par auteur dans la catégorie", une ligne de partage au-dessus de l'image de la fonctionnalité, un lien de copie, une navigation précédente/suivante et des messages connexes
+
+- Les catégories comme seule taxonomie : une courte liste configurée, un index `/catégories/` avec descriptions et comptages, et une archive générée par catégorie
+
+- Auteur, archive, recherche, à propos, contact, confidentialité et 404 pages, plus RSS, plan du site et `robots.txt`
+
+- Recherche côté client intégrée avec une palette de commandes adaptée au clavier et une page de résultats dédiée - pas de service de recherche et pas de base de données, et rien n'est répertorié jusqu'à la première frappe
+
+- Modes lumineux et sombres conscients du système derrière un interrupteur à bascule d'en-tête, appliqués avant la première peinture avec le choix du lecteur mémorisé
+
+- Temps de lecture calculé à partir du corps du poteau au moment de la construction, donc rien à maintenir à la main
+
+- Contenu Markdown et MDX alimenté par les collections de contenu Astro, avec deux blocs de code en surbrillage syntaxe clair/sombre (plus un bouton de copie), des listes de style et des guillemets de bloc
+
+- Composants de contenu MDX réutilisables - `Callout` (note/astuce/avertissement/danger) et exemples de code `CodeGroup` à onglets - disponibles dans n'importe quel message sans importations
+
+- Validation de la matière première pour les titres, les extraits, les catégories, les dates, les auteurs, les couvertures, les vedettes et les brouillons
+
+- En-tête collant qui se cache lors du défilement vers le bas et glisse vers le haut
+
+- Mouvement de survol retenu sur une courbe d'assouplissement : les titres captent l'accent, les liens en ligne essuient un soulignement, les flèches se penchent vers leur destination et les boutons d'icône se soulèvent
+
+- Images de fonctionnalités facultatives, plafonnées en hauteur et affichées sur le message uniquement, jamais dans un flux
+
+- Site central, navigation, catégorie, réseaux sociaux et paramètres par défaut du référencement
+
+- URL canoniques, génération de sitemap, RSS, Open Graph, cartes Twitter/X et JSON-LD
+
+- Lien de saut accessible, points de repère, étiquettes, bascule de thème `role="switch"`, commandes compatibles avec le clavier, états de mise au point visibles et prise en charge des mouvements réduits
+
+- Bulletin d'information et formulaires de contact neutres vis-à-vis du fournisseur qui s'exécutent comme des démonstrations de travail jusqu'à ce qu'un point de terminaison soit configuré
+
+- Jetons Tailwind CSS 4 en couches en cascade, sans demande de police externe par défaut
+
 ## Tech Stack
 
 - Astro 7
-- Tailwind CSS 4 via the Vite plugin
+- Tailwind CSS 4 via le plugin Vite
 - TypeScript
 - Astro content collections
 - `@astrojs/sitemap`, `@astrojs/mdx`, `rehype-slug`
@@ -108,15 +145,15 @@ automatically.
 
 | Route                                                           | Page                           |
 | --------------------------------------------------------------- | ------------------------------ |
-| `/`                                                             | Latest post, feed, and sidebar |
-| `/posts/[page]`                                                 | Paginated archive              |
+| `/`                                                             | Article récents et barre latérale |
+| `/posts/[page]`                                                 | Archive paginée                |
 | `/post/<slug>/`                                                 | Article                        |
-| `/categories/`                                                  | Category index with counts     |
-| `/category/<slug>/`                                             | Posts in one category          |
-| `/author/`, `/author/<name>/`                                   | Author index and archive       |
-| `/search/`                                                      | Full search page (`?q=...`)    |
-| `/about/`, `/contact/`, `/privacy/`                             | Starter static pages           |
-| `/rss.xml`, `/sitemap.xml`, `/robots.txt`, `/search-index.json` | Feeds and generated endpoints  |
+| `/categories/`                                                  | Index des sujets avec compteur |
+| `/category/<slug>/`                                             | Articles par sujet             |
+| `/author/`, `/author/<name>/`                                   | Index des auteurs et archive   |
+| `/search/`                                                      | Page de recherche (`?q=...`)   |
+| `/about/`, `/contact/`, `/privacy/`                             | Pages statiques                |
+| `/rss.xml`, `/sitemap.xml`, `/robots.txt`, `/search-index.json` | Flux RSS et SEO                |
 
 ## Personnalisation
 
@@ -129,13 +166,20 @@ Le modèle (thème) TYPOGRAPHE est gratuit et fourni en l’état. Les rapports 
 
 MIT - gratuit pour les projets personnels et commerciaux. Voir [LICENSE](. /LICENSE), qui répertorie également les licences des polices, des icônes et des images de démonstration groupées.
 
-## À compléter
+## Modifications apportées à Monograph ou à faire
 - [x] Franciser l’interface et les menu de navigation.
-- [ ] Adapter les favicons (.svg et .ico) de M à Ty
-- [ ] Finir de franciser les pages statiques.
-- [x] Intégrer le script de correction typographique pour le français.
-- [ ] Modifier les polices adaptées au français.
-- [ ] Autoriser chaque post à avoir plus d’un auteur.
+- [x] Franciser les pages statiques.
+- [ ] Franciser le README. (à compléter)
+- [ ] Franciser les items du Frontend. (title, excerpt, etc.)
+- [ ] Franciser les routes des URLs publics. (/about, /post, etc.) 
+- [x] Adapter les favicons (.svg et .ico) de M à Ty.
+- [x] Intégrer le script de correction typographique. (/src/plugins/
+- [x] Optimiser les polices pour le français.
+- [x] Configurer pour l’édition via Pages CMS. (éditeur Markdown visuel)
+- [ ] Ajouter la gestion des media dans la configuration Pages CMS. 
+- [ ] Meilleure gestion des auteurs/autrices : optionnel et multi-auteurs/autrices
+- [ ] Créer un composant ou items optionnels du Frontmatter pour les notes de lecture. (auteur, éditeur, nombre de pages, année de publication, ISBN, image couverture, etc.)
+
 
 ## Logo
 ![Logo du site](logo.svg)
