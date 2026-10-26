@@ -1,4 +1,92 @@
-# Définition des collections (sans ancres YAML pour assurer la stabilité)
+# Configuration globale de l'emplacement des médias
+media:
+  input: "src/assets/images"
+  output: "../../../assets/images"
+
+# Déclaration unique des champs (Frontmatter + Corps) partagés entre MD et MDX
+_configuration_commune: &config_commune
+  fields:
+    - name: title
+      label: "Titre de l'article"
+      type: string
+      required: true
+
+    - name: excerpt
+      label: "Extrait (Résumé)"
+      type: string
+      required: true
+
+    - name: category
+      label: "Catégorie"
+      type: select
+      required: true
+      options:
+        values:
+          - "Politique"
+          - "Éducation"
+          - "Économie"
+          - "AI"
+          - "Design Web"
+          - "Typographie"
+          - "Mise en page"
+
+    - name: date
+      label: "Date de publication"
+      type: date
+      required: true
+
+    - name: updatedDate
+      label: "Date de mise à jour"
+      type: date
+
+    - name: author
+      label: "Auteur"
+      type: object
+      required: true
+      fields:
+        - name: name
+          label: "Nom de l'auteur"
+          type: string
+          required: true
+        - name: role
+          label: "Rôle / Fonction"
+          type: string
+          required: true
+
+    - name: cover
+      label: "Image de couverture (Optionnelle)"
+      type: object
+      fields:
+        - name: src
+          label: "Image"
+          type: image
+          required: true
+        - name: alt
+          label: "Texte alternatif (Accessibilité)"
+          type: string
+          required: true
+        - name: creditName
+          label: "Nom pour le crédit photo"
+          type: string
+        - name: creditUrl
+          label: "Lien du crédit photo"
+          type: string
+
+    - name: featured
+      label: "Mettre en avant (Sidebar)"
+      type: boolean
+      default: false
+
+    - name: draft
+      label: "Brouillon"
+      type: boolean
+      default: false
+
+    - name: body
+      label: "Contenu de l'article"
+      type: rich-text
+
+# Définition des collections
 content:
   - name: posts-md
     label: "Articles (Format .md)"
@@ -6,90 +94,7 @@ content:
     path: src/content/posts
     slug: "{{slug}}/index.md"
     exclude: ["**/*.mdx"]
-    # Force Pages CMS à enregistrer les images dans le sous-dossier actuel
-    media:
-      input: "."
-      output: "./"
-    fields:
-      - name: title
-        label: "Titre de l'article"
-        type: string
-        required: true
-
-      - name: excerpt
-        label: "Extrait (Résumé)"
-        type: string
-        required: true
-
-      - name: category
-        label: "Catégorie"
-        type: select
-        required: true
-        options:
-          values:
-            - "Politique"
-            - "Éducation"
-            - "Économie"
-            - "AI"
-            - "Design Web"
-            - "Typographie"
-            - "Mise en page"
-
-      - name: date
-        label: "Date de publication"
-        type: date
-        required: true
-
-      - name: updatedDate
-        label: "Date de mise à jour"
-        type: date
-
-      - name: author
-        label: "Auteur"
-        type: object
-        required: true
-        fields:
-          - name: name
-            label: "Nom de l'auteur"
-            type: string
-            required: true
-          - name: role
-            label: "Rôle / Fonction"
-            type: string
-            required: true
-
-      - name: cover
-        label: "Image de couverture (Optionnelle)"
-        type: object
-        fields:
-          - name: src
-            label: "Image"
-            type: image
-            required: true
-          - name: alt
-            label: "Texte alternatif (Accessibilité)"
-            type: string
-            required: true
-          - name: creditName
-            label: "Nom pour le crédit photo"
-            type: string
-          - name: creditUrl
-            label: "Lien du crédit photo"
-            type: string
-
-      - name: featured
-        label: "Mettre en avant (Sidebar)"
-        type: boolean
-        default: false
-
-      - name: draft
-        label: "Brouillon"
-        type: boolean
-        default: false
-
-      - name: body
-        label: "Contenu de l'article"
-        type: rich-text
+    <<: *config_commune # Injecte automatiquement tous les champs définis plus haut
 
   - name: posts-mdx
     label: "Articles (Format .mdx)"
@@ -97,87 +102,4 @@ content:
     path: src/content/posts
     slug: "{{slug}}/index.mdx"
     exclude: ["**/*.md"]
-    # Force Pages CMS à enregistrer les images dans le sous-dossier actuel
-    media:
-      input: "."
-      output: "./"
-    fields:
-      - name: title
-        label: "Titre de l'article"
-        type: string
-        required: true
-
-      - name: excerpt
-        label: "Extrait (Résumé)"
-        type: string
-        required: true
-
-      - name: category
-        label: "Catégorie"
-        type: select
-        required: true
-        options:
-          values:
-            - "Politique"
-            - "Éducation"
-            - "Économie"
-            - "AI"
-            - "Design Web"
-            - "Typographie"
-            - "Mise en page"
-
-      - name: date
-        label: "Date de publication"
-        type: date
-        required: true
-
-      - name: updatedDate
-        label: "Date de mise à jour"
-        type: date
-
-      - name: author
-        label: "Auteur"
-        type: object
-        required: true
-        fields:
-          - name: name
-            label: "Nom de l'auteur"
-            type: string
-            required: true
-          - name: role
-            label: "Rôle / Fonction"
-            type: string
-            required: true
-
-      - name: cover
-        label: "Image de couverture (Optionnelle)"
-        type: object
-        fields:
-          - name: src
-            label: "Image"
-            type: image
-            required: true
-          - name: alt
-            label: "Texte alternatif (Accessibilité)"
-            type: string
-            required: true
-          - name: creditName
-            label: "Nom pour le crédit photo"
-            type: string
-          - name: creditUrl
-            label: "Lien du crédit photo"
-            type: string
-
-      - name: featured
-        label: "Mettre en avant (Sidebar)"
-        type: boolean
-        default: false
-
-      - name: draft
-        label: "Brouillon"
-        type: boolean
-        default: false
-
-      - name: body
-        label: "Contenu de l'article"
-        type: rich-text
+    <<: *config_commune # Réutilise exactement la même configuration de champs
