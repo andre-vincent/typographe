@@ -10,10 +10,9 @@ export const categories = [
   "Politique",
   "Éducation",
   "Économie",
-  "AI",
   "Design Web",
   "Typographie",
-  "Mise en page",
+  "Coups de gueule",
   "Notes de lecture"
 ] as const;
 
@@ -32,8 +31,8 @@ export const categoryDescriptions: Record<Category, string> = {
   "Politique": "Analyse des affaires publiques, des institutions, des gouvernances et des dynamiques citoyennes.",
   "Éducation": "Pédagogie, apprentissage, systèmes éducatifs et outils pour la transmission des savoirs.",
   "Économie": "Décryptage des marchés, des tendances financières, du commerce et des politiques monétaires.",
-  "AI": "Évaluations, comportements des modèles et automatisation appliquée viable en production.",
-  "Design Web": "Conception d'interfaces utilisateurs, expérience produit, ergonomie et architectures d'information.",
-  "Typographie": "Lisibilité, accessibilité, règles de composition, hiérarchie, polices, etc.",
-  "Mise en page": "Sémantique, intrinsèque, fluide et adaptive qui s'adapte à toute dimension d’écran.",
+  "Design Web": "Éco-conception d'interfaces utilisateurs, ergonomie de navigation et architectures d'information. Conception intrinsèque, accessible, sémantique, fluide et adaptive",
+  "Typographie": "Lisibilité, accessibilité, règles de composition, hiérarchie, rhytme, polices de caractères, etc.",
+  "Coups de gueule": "Parfois aussi des Coups de cœur. Souvent des auteurs ou des autrices dont j’admire les propos et que je me permet d’inviter sans leur permission.",
+    "Notes de lecture": "Commentaires et critiques de livres et articles qui méritent qu’on s’y intéresse. Souvent par des auteurs ou des autrices dont j’admire les propos ou le style et que je me permet d’inviter ici sans leur permission."
 };
