@@ -1,9 +1,4 @@
-# Configuration globale des médias
-media:
-  input: "src/content/posts"
-  output: "./"
-
-# Définition des collections (sans ancres YAML pour éviter le plantage du CMS)
+# Définition des collections (sans ancres YAML pour assurer la stabilité)
 content:
   - name: posts-md
     label: "Articles (Format .md)"
@@ -11,6 +6,10 @@ content:
     path: src/content/posts
     slug: "{{slug}}/index.md"
     exclude: ["**/*.mdx"]
+    # Force Pages CMS à enregistrer les images dans le sous-dossier actuel
+    media:
+      input: "."
+      output: "./"
     fields:
       - name: title
         label: "Titre de l'article"
@@ -98,6 +97,10 @@ content:
     path: src/content/posts
     slug: "{{slug}}/index.mdx"
     exclude: ["**/*.md"]
+    # Force Pages CMS à enregistrer les images dans le sous-dossier actuel
+    media:
+      input: "."
+      output: "./"
     fields:
       - name: title
         label: "Titre de l'article"
