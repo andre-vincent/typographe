@@ -21,7 +21,7 @@ content:
         required: true
 
       - name: category
-        label: "Catégorie"
+        label: "Sujet"
         type: select
         required: true
         options:
@@ -29,11 +29,11 @@ content:
             - "Politique"
             - "Éducation"
             - "Économie"
-            - "AI"
             - "Design Web"
             - "Typographie"
-            - "Mise en page"
-
+            - "Coups de gueule"
+            - "Notes de lecture"
+            
       - name: date
         label: "Date de publication"
         type: date
