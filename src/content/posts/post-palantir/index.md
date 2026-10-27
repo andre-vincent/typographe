@@ -44,6 +44,6 @@ En rupture avec la rhétorique inclusive habituelle de la Silicon Valley, le man
 
 ---
 
-## Conclusion : L'application industrielle d'une pensée radicale
+## Conclusion : l'application industrielle d'une pensée radicale
 
 Si le manifeste est signé par la direction opérationnelle de Palantir, il matérialise l'agenda politique de long terme de Peter Thiel. À travers l'exploitation de la dépendance croissante des États vis-à-vis des infrastructures logicielles privées (guerre en Ukraine, gestion automatisée des frontières, ciblage militaire par IA), Palantir s'impose non plus comme un simple prestataire, mais comme le pivot d'une transition globale vers un capitalisme de surveillance militarisé, résolument affranchi des freins démocratiques traditionnels.
