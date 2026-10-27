@@ -1,6 +1,6 @@
 ---
 title: "Peter Thiel et le manifeste Palantir : l’avènement de la république technofasciste"
-Date: 2026-10-27
+date: 2026-10-27
 excerpt: "Enquête sur Peter Thiel et le manifeste idéologique de Palantir Technologies : entre idéologie libertarienne, IA militaire et de surveillance et avènement du technoféodalisme."
 author:
   name: "André Vincent"
