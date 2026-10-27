@@ -1,17 +1,18 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
-title: "Peter Thiel et le Manifeste Palantir : L'avènement de la république technologique"
-pubDate: 2026-10-27
-description: "Enquête sur Peter Thiel et le manifeste idéologique de Palantir Technologies : entre ambition libertarienne, IA de dissuasion et avènement du technoféodalisme."
-author: "Journaliste Spécialisé"
-tags: ["technologie", "géopolitique", "peter-thiel", "palantir", "intelligence-artificielle"]
+title: "Peter Thiel et le manifeste Palantir : l’avènement de la république technofasciste"
+Date: 2026-10-27
+excerpt: "Enquête sur Peter Thiel et le manifeste idéologique de Palantir Technologies : entre idéologie libertarienne, IA militaire et de surveillance et avènement du technoféodalisme."
+author:
+  name: "André Vincent"
+  role: "Webmestre de ce site. Typographe, enseignant, syndicaliste"
+category: "Politique"
 ---
 
-# Peter Thiel et le Manifeste Palantir : L'avènement de la république technologique
+# Peter Thiel et le Manifeste Palantir : l'avènement de la république technofasciste
 
 Derrière les algorithmes de traitement de données massives qui équipent les plus puissantes agences de renseignement occidentales se cache une vision radicale du monde. Au cœur de cette architecture d'influence se trouve une figure incontournable de la Silicon Valley : **Peter Thiel**, cofondateur de Palantir Technologies. Récemment, la publication du « Manifeste Palantir » est venue formaliser une doctrine philosophique et militaire qui redéfinit les frontières entre la puissance privée, l'État et la démocratie.
 
-## Portrait de Peter Thiel : L'idéologue de l'ombre
+## Portrait de Peter Thiel : l'idéologue de l'ombre
 
 Né à Francfort en 1967, Peter Thiel est un entrepreneur, investisseur milliardaire et activiste politique américain d'origine allemande et néo-zélandaise. Personnage atypique au sein d'une Silicon Valley traditionnellement progressiste, il incarne un libertarianisme radical. 
 
