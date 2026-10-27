@@ -1,16 +1,16 @@
 ---
 title: "Peter Thiel et le manifeste Palantir : l’avènement de la république technofasciste"
 date: 2026-10-27
-excerpt: "Enquête sur Peter Thiel et le manifeste idéologique de Palantir Technologies : entre idéologie libertarienne, IA militaire et de surveillance et avènement du technoféodalisme."
+excerpt: "Quelques notes sur Peter Thiel et le manifeste de Palantir Technologies : entre idéologie libertarienne, IA militaire et de surveillance et avènement du technoféodalisme."
 author:
   name: "André Vincent"
   role: "Webmestre de ce site. Typographe, enseignant, syndicaliste"
 category: "Politique"
 ---
 
-# Peter Thiel et le Manifeste Palantir : l'avènement de la république technofasciste
+> Rédigé à l’aide de l’IA. L’auteur a vérifié les sources.
 
-Derrière les algorithmes de traitement de données massives qui équipent les plus puissantes agences de renseignement occidentales se cache une vision radicale du monde. Au cœur de cette architecture d'influence se trouve une figure incontournable de la Silicon Valley : **Peter Thiel**, cofondateur de Palantir Technologies. Récemment, la publication du « Manifeste Palantir » est venue formaliser une doctrine philosophique et militaire qui redéfinit les frontières entre la puissance privée, l'État et la démocratie.
+Derrière les algorithmes de traitement de données massives qui équipent les plus puissantes agences de renseignement occidentales se cache une vision radicale du monde. Au cœur de cette architecture d'influence se trouve une figure incontournable de la Silicon Valley : **[Peter Thiel](https://fr.wikipedia.org/wiki/Peter_Thiel)**,  cofondateur de Palantir Technologies. En avril 2026, la publication du **« [Manifeste Palantir](https://legrandcontinent.eu/fr/2026/04/20/le-manifeste-de-palantir-pour-la-domination/) »** est venue formaliser une doctrine philosophique et militaire qui redéfinit les frontières entre la puissance privée, l'État et la démocratie.
 
 ## Portrait de Peter Thiel : l'idéologue de l'ombre
 
@@ -28,7 +28,7 @@ Au-delà des affaires, Thiel est un doctrinaire politique. Affirmant ouvertement
 
 ## Le « Manifeste Palantir » : Les 22 thèses d'un nouvel ordre mondial
 
-Récemment publié sur le réseau social X par l'entreprise, le **« Manifeste Palantir »** synthétise en 22 thèses l'ouvrage *La République technologique*, coécrit par le PDG Alex Karp et le juriste Nicolas W. Zamiska. Ce document jette les bases d'une doctrine sans concession, souvent qualifiée par ses détracteurs de projet « technofasciste » ou « technoféodal ».
+Publié en avril 2026 sur le réseau social X par l'entreprise, le **« Manifeste Palantir »** synthétise en 22 thèses l'ouvrage *La République technologique*, coécrit par le PDG Alex Karp et le juriste Nicolas W. Zamiska. Ce document jette les bases d'une doctrine sans concession, souvent qualifiée par ses détracteurs de projet « technofasciste » ou « technoféodal ».
 
 ### 1. La fin de la dissuasion nucléaire au profit de l'IA militaire
 Le manifeste assène une rupture géopolitique majeure : **l'ère de la dissuasion nucléaire est révolue**, remplacée par la dissuasion algorithmique. La suprématie sur les champs de bataille ne dépendrait plus du matériel militaire traditionnel (les forces matérielles), mais de la puissance des logiciels (*software*). Assumant pleinement le développement d'armes autonomes pilotées par l'intelligence artificielle, le texte évacue le débat éthique pour le ramener à une pure compétition de puissance : la question n'est pas de savoir s'il faut construire ces armes, mais *qui* les contrôlera face à des adversaires sans scrupules.
