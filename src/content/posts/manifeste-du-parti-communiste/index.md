@@ -1,17 +1,16 @@
 ---
-title: "Le manifeste du Parti communiste"
-excerpt: "En design comme en rédaction, la qualité d’un texte ne dépend pas seulement du choix des mots, mais aussi de sa présentation visuelle. Une typographie soignée renforce la lisibilité, crédibilise le message et témoigne d’un grand professionnalisme."
-category: "Typographie"
+title: Le manifeste du Parti communiste
+excerpt: Toujours d’actualité…
+category: Typographie
 date: 2026-09-27
+updatedDate: 2026-10-28
 author:
-  name: "Karl Marx, Friedrich Engels"
-  role: "Franchement, qui ne les connaît pas ?"
+  name: Karl Marx, Friedrich Engels
+  role: Franchement, qui ne les connaît pas ?
 featured: false
 draft: true
 ---
-
-
-__Table des matières__
+**Table des matières**
 
 Préface à l’édition allemande de 1872	3
 Préface à l’édition russe de 1882	4
@@ -25,61 +24,116 @@ Le manifeste du Parti Communiste	13
 I. Bourgeois et prolétaires 	13
 II. Prolétaires et communistes	18
 III. Littérature socialiste et communiste	21
+
 1. Le socialisme réactionnaire	21
+
 a) Le socialisme féodal	21
 b) Le socialisme petit-bourgeois	22
 c) Le socialisme allemand ou socialisme "vrai"	22
+
 2. Le socialisme conservateur ou bourgeois	23
 3. Le socialisme et le communisme critico-utopiques	24
+
 IV. Position des communistes envers les différents partis d’opposition	25
 
 ## Préface à l’édition allemande de 1872
+
 La Ligue des communistes, association ouvrière internationale qui, dans les circonstances d'alors, ne pouvait être évidemment que secrète, chargea les soussignés, délégués au congrès tenu à Londres en novembre 1847, de rédiger un programme détaillé, à la fois théorique et pratique, du Parti et destiné à la publicité. Telle est l'origine de ce Manifeste dont le manuscrit, quelques semaines avant la révolution de Février , fut envoyé à Londres pour y être imprimé. Publié d'abord en allemand, il a eu dans cette langue au moins douze éditions différentes en Allemagne, en Angleterre et en Amérique. Traduit en anglais par Miss Hélène Macfarlane, il parut en 1850, à Londres, dans le Red Republican, et, en 1871, il eut, en Amérique, au moins trois traductions anglaises. Il parut une première fois en français à Paris, peu de temps avant l'insurrection de juin 1848 , et, récemment, dans Le Socialiste de New York. Une traduction nouvelle est en préparation. On en fit une édition en polonais à Londres, peu de temps après la première édition allemande. Il a paru en russe à Genève, après 1860. Il a été également traduit en danois peu après sa publication.
+
+
 Bien que les circonstances aient beaucoup changé au cours des vingt-cinq dernières années, les principes généraux exposés dans ce Manifeste conservent dans leurs grandes lignes, aujourd'hui encore, toute leur exactitude. Il faudrait revoir, çà et là, quelques détails. Le Manifeste explique lui-même que l'application des principes dépendra partout et toujours des circonstances historiques données, et que, par suite, il ne faut pas attribuer trop d'importance aux mesures révolutionnaires énumérées à la fin du chapitre II. Ce passage serait, à bien des égards, rédigé tout autrement aujourd'hui. Etant donné les progrès immenses de la grande industrie dans les vingt-cinq dernières années et les progrès parallèles qu'a accomplis, dans son organisation en parti, la classe ouvrière, étant donné les expériences, d'abord de la révolution de février, ensuite et surtout de la Commune de Paris qui, pendant deux mois, mit pour la première fois aux mains du prolétariat le pouvoir politique, ce programme est aujourd'hui vieilli sur certains points. La Commune, notamment, a démontré que "la classe ouvrière ne peut pas se contenter de prendre telle quelle la machine de l'Etat et de la faire fonctionner pour son propre compte" (voir Der Bürgerkrieg in Frankreich. Adresse des Generalrats der Internationalen Arbeiterassoziation, édition allemande, S. 19, où cette idée est plus longuement développée). En outre, il est évident que la critique de la littérature socialiste présente une lacune pour la période actuelle, puisqu'elle s'arrête à 1847. Et, de même, si les remarques sur la position des communistes à l'égard des différents partis d'opposition (chapitre IV) sont exactes aujourd'hui encore dans leurs principes, elles sont vieillies dans leur application parce que la situation politique s'est modifiée du tout au tout et que l'évolution historique a fait disparaître la plupart des partis qui y sont énumérés.
+
+
 Cependant, le Manifeste est un document historique que nous ne nous attribuons plus le droit de modifier. Une édition ultérieure sera peut-être précédée d'une introduction qui comblera la lacune entre 1847 et nos jours; la réimpression actuelle nous a pris trop à l'improviste pour nous donner le temps de l'écrire.
-Karl Marx, Friedrich Engels
+
+
+Karl Marx, Friedrich Engels,   
 Londres, 24 juin 1872
 
 ## Préface à l’édition russe de 1882
+
 La première édition russe du Manifeste du Parti communiste, traduit par Bakounine, parut peu après 1860  à l'imprimerie du Kolokol . A cette époque une édition russe de cet ouvrage avait tout au plus pour l'Occident l'importance d'une curiosité littéraire. Aujourd'hui, il n'en va plus de même. Combien était étroit le terrain où se propageait le mouvement prolétarien à cette époque (décembre 1847), c'est ce qui ressort parfaitement du dernier chapitre : "Position des communistes envers les différents partis d'opposition dans les divers pays." La Russie et les Etats-Unis notamment n'y sont pas mentionnés. C'était le temps où la Russie formait la dernière grande réserve de la réaction européenne, et où l'émigration aux Etats-Unis absorbait l'excédent des forces du prolétariat européen. Ces deux pays fournissaient à l'Europe des matières premières et lui offraient en même temps des débouchés pour l'écoulement de ses produits industriels. Tous deux servaient donc, de l'une ou l'autre manière, de contrefort à l'organisation sociale de l'Europe. 
+
+
 Que tout cela est changé aujourd'hui ! C'est précisément l'émigration européenne qui a rendu possible le développement colossal de l'agriculture en Amérique du Nord, développement dont la concurrence ébranle dans ses fondements la grande et la petite propriété foncière en Europe. C'est elle qui a, du même coup, donné aux Etats-Unis la possibilité de mettre en exploitation ses énormes ressources industrielles, et cela avec une énergie et à une échelle telles que le monopole industriel de l'Europe occidentale, et notamment celui de l'Angleterre, disparaîtra à bref délai. Ces deux circonstances réagissent à leur tour de façon révolutionnaire sur l'Amérique elle-même. La petite et la moyenne propriété des farmers, cette assise de tout l'ordre politique américain, succombe peu à peu sous la concurrence de fermes gigantesques, tandis que, dans les districts industriels, il se constitue pour la première fois un nombreux prolétariat à côté d'une fabuleuse concentration du Capital. 
+
+
 Passons à la Russie. Au moment de la révolution de 1848-1849, les monarques d'Europe, tout comme la bourgeoisie d'Europe, voyaient dans l'intervention russe le seul moyen de les sauver du prolétariat qui commençait tout juste à prendre conscience de sa force. Le tsar fut proclamé chef de la réaction européenne. Aujourd'hui, il est, à Gatchina, le prisonnier de guerre de la révolution , et la Russie est à l'avant-garde du mouvement révolutionnaire de l'Europe. 
 Le Manifeste communiste avait pour tâche de proclamer la disparition inévitable et prochaine de la propriété bourgeoise. Mais en Russie, à côté de la spéculation capitaliste qui se développe fiévreusement et de la propriété foncière bourgeoise en voie de formation, plus de la moitié du sol est la propriété commune des paysans. Il s'agit, dès lors, de savoir si la communauté paysanne russe, cette forme déjà décomposée de l'antique propriété commune du sol, passera directement à la forme communiste supérieure de la propriété foncière, ou bien si elle doit suivre d'abord le même processus de dissolution qu'elle a subi au cours du développement historique de l'Occident. 
+
+
 La seule réponse qu'on puisse faire aujourd'hui à cette question est la suivante : si la révolution russe donne le signal d'une révolution prolétarienne en Occident, et que toutes deux se complètent, la propriété commune actuelle de la Russie pourra servir de point de départ à une évolution communiste.
-Karl Marx, Friedrich Engels
+
+
+Karl Marx, Friedrich Engels,   
 Londres, 21 janvier 1882
 
 ## Préface à l’édition allemande de 1883
+
 Il me faut malheureusement signer seul la préface de cette édition. Marx, l'homme auquel toute la classe ouvrière d'Europe et d'Amérique doit plus qu'à tout autre, Marx repose au cimetière de Highgate, et sur sa tombe verdit déjà le premier gazon. Après sa mort, il ne saurait être question moins que jamais de remanier ou de compléter le Manifeste. Je crois d'autant plus nécessaire d'établir expressément, une fois de plus, ce qui suit. 
+
+
 L'idée fondamentale et directrice du Manifeste, à savoir que la production économique et la structure sociale qui en résulte nécessairement forment, à chaque époque historique, la base de l'histoire politique et intellectuelle de cette époque; que par suite (depuis la dissolution de la propriété commune du sol des temps primitifs), toute l'histoire a été une histoire de luttes de classes, de luttes entre classes exploitées et classes exploitantes, entre classes dominées et classes dominantes, aux différentes étapes de leur développement social; mais que cette lutte a actuellement atteint une étape où la classe exploitée et opprimée (le prolétariat) ne peut plus se libérer de la classe qui l'exploite et l'opprime (la bourgeoisie), sans libérer en même temps et à tout jamais la société entière de l'exploitation, de l'oppression et des luttes de classes; cette idée maîtresse appartient uniquement et exclusivement à Marx  . 
 Je l'ai souvent déclaré, mais il faut maintenant que cette déclaration figure aussi en tête du Manifeste.
-Friedrich Engels Londres, 28 juin 1883
+
+
+Friedrich Engels,  Londres, 28 juin 1883
 
 ## Préface à l’édition anglaise de 1888
+
 Le Manifeste est le programme de la Ligue des communistes, association ouvrière, d'abord exclusivement allemande, ensuite internationale et qui, dans les conditions politiques qui existaient sur le Continent avant 1848, ne pouvait qu'être une société secrète. Au congrès de la Ligue qui s'est tenu à Londres, en novembre 1847, Marx et Engels se voient confier la tâche de rédiger, aux fins de publication, un ample programme théorique et pratique du Parti. Travail achevé en janvier 1848, et dont le manuscrit allemand fut envoyé à Londres pour y être imprimé, à quelques semaines de la révolution française du 24 février. La traduction française vit le jour à Paris, dès avant l'insurrection de juin 1848. La première traduction anglaise, due à Miss Hélène Macfarlane, parut dans le Red Republican de George Julian Harney, Londres 1850. Ont paru également les éditions danoise et polonaise. 
+
+
 La défaite de l'insurrection parisienne de juin 1848 - la première grande bataille entre prolétariat et bourgeoisie - devait de nouveau, pour une certaine période, refouler à l'arrière-plan les revendications sociales et politiques de la classe ouvrière européenne. Depuis lors, seuls les divers groupes de la classe possédante s'affrontaient de nouveau dans la lutte pour la domination, tout comme avant la révolution de février; la classe ouvrière a dû combattre pour la liberté d'action politique et s'aligner sur les positions extrêmes de la partie radicale des classes moyennes. Tout mouvement prolétarien autonome, pour peu qu'il continuât à donner signe de vie, était écrasé sans merci. Ainsi, la police prussienne réussit à dépister le Comité central de la Ligue des communistes, qui résidait alors à Cologne. Ses membres furent arrêtés et, après dix-huit mois de détention, déférés en jugement, en octobre 1852. Ce fameux "procès des communistes à Cologne" dura du 4 octobre au 12 novembre; sept personnes parmi les prévenus furent condamnées à des peines allant de trois à six ans de forteresse. Immédiatement après le verdict, la Ligue fut officiellement dissoute par les membres demeurés en liberté. Pour ce qui est du Manifeste, on l'eût cru depuis lors voué à l'oubli. 
+
+
 Lorsque la classe ouvrière d'Europe eut repris suffisamment de forces pour un nouvel assaut contre les classes dominantes, naquit l'Association internationale des travailleurs. Cependant, cette Association qui s'était constituée dans un but précis - fondre en un tout les forces combatives du prolétariat d'Europe et d'Amérique ne pouvait proclamer d'emblée les principes posés dans le Manifeste. Le programme de l'Internationale devait être assez vaste pour qu'il fût accepté et par les trade-unions anglaises, et par les adeptes de Proudhon  en France, Belgique, Italie et Espagne, et par les lassaliens  en Allemagne. Marx qui rédigea ce programme de façon à donner satisfaction à tous ces partis, s'en remettait totalement au développement intellectuel de la classe ouvrière, qui devait être à coup sur le fruit de l'action et de la discussion commune. Par eux-mêmes les événements et les péripéties de la lutte contre le Capital- les défaites plus encore que le succès - ne pouvaient manquer de faire sentir aux ouvriers l'insuffisance de toutes leurs panacées et les amener à comprendre à fond les conditions véritables de leur émancipation. Et Marx avait raison. Quand, en 1874, l'Internationale cessa d'exister, les ouvriers n'étaient plus du tout les mêmes que lors de sa fondation en 1864. Le proudhonisme en France, le lassallisme en Allemagne étaient à l'agonie et même les trade-unions anglaises, alors ultra-conservatrices, et ayant depuis longtemps, dans leur majorité, rompu avec l'Internationale, approchaient peu à peu du moment où le président de leur congrès qui s'est tenu l'an dernier à Swansea, pouvait dire en leur nom : "Le socialisme continental a cessé d'être pour nous un épouvantail." A la vérité, les principes du Manifeste avaient pris un large développement parmi les ouvriers de tous les pays. 
+
+
 Ainsi, le Manifeste s'est mis une nouvelle fois au premier plan. Après 1850, le texte allemand fut réédité plusieurs fois en Suisse, Angleterre et Amérique. En 1872, il est traduit en anglais à New York et publié dans Woodhull and Claflin's Weekly. D'après ce texte anglais, Le Socialiste new-yorkais a publié la traduction française. Par la suite, parurent en Amérique au moins encore deux traductions anglaises plus ou moins déformées, dont l'une fut rééditée en Angleterre. La première traduction en russe, faite par Bakounine, fut éditée aux environs de 1863 par l'imprimerie du Kolokol d'Herzen, à Genève; la deuxième traduction, due à l'héroïque Véra Zassoulitch, sortit de même à Genève en 1882. Une nouvelle édition danoise est lancée par la Socialdemokratisk Bibliothek à Copenhague en 1885; une nouvelle traduction française a été publiée par Le Socialiste de Paris, en 1886. D'après cette traduction, a paru une version espagnole, publiée à Madrid en 1886. Point n'est besoin de parler des éditions allemandes réimprimées, on en compte au moins douze. La traduction arménienne, qui devait paraître il y a quelques mois à Constantinople, n'a pas vu le jour, comme on me l'a dit, uniquement parce que l'éditeur avait craint de sortir le livre avec le nom de Marx, tandis que le traducteur refusait de se dire l'auteur du Manifeste. Pour ce qui est des nouvelles traductions en d'autres langues, j'en ai entendu parler, mais n'en ai jamais vu. Ainsi donc, l'histoire du Manifeste reflète notablement celle du mouvement ouvrier contemporain; à l'heure actuelle, il est incontestablement l’œuvre la plus répandue, la plus internationale de toute la littérature socialiste. Le programme commun de millions d'ouvriers, de la Sibérie à la Californie. 
+
+
 Et, cependant, au moment où nous écrivions, nous ne pouvions toutefois l'intituler le Manifeste socialiste. En 1847, on donnait le nom de socialistes, d'une part, aux adeptes des divers systèmes utopiques : les owenistes  en Angleterre et les fouriéristes  en France, et qui n'étaient déjà plus les uns et les autres, que de simples sectes agonisantes; d'autre part, aux médicastres sociaux de tout acabit qui promettaient, sans aucun préjudice pour le Capital et le profit, de guérir toutes les infirmités sociales au moyen de toutes sortes de replâtrage. Dans les deux cas, c'étaient des gens qui vivaient en dehors du mouvement ouvrier et qui cherchaient plutôt un appui auprès des classes "cultivées". Au contraire, cette partie des ouvriers qui, convaincue de l'insuffisance de simples bouleversements politiques, réclamait une transformation fondamentale de la société, s'appelait alors communiste. C'était un communisme à peine dégrossi, purement instinctif, parfois un peu grossier, mais cependant il pressentait l'essentiel et se révéla assez fort dans la classe ouvrière pour donner naissance au communisme utopique : en France, celui de Cabet  et en Allemagne, celui de Weitling  . En 1847, le socialisme signifiait un mouvement bourgeois, le communisme, un mouvement ouvrier. Le socialisme avait, sur le continent tout au moins, ses entrées dans le monde, pour le communisme, c'était exactement le contraire. Et comme, dès ce moment, nous étions d'avis que "l'émancipation des travailleurs doit être l’œuvre des travailleurs eux-mêmes", nous ne pouvions hésiter un instant sur la dénomination à choisir. Depuis, il ne nous est jamais venu à l'esprit de la rejeter. 
+
+
 Bien que le Manifeste soit notre œuvre commune, j'estime néanmoins de mon devoir de constater que la thèse principale, qui en constitue le noyau, appartient à Marx. Cette thèse est qu'à chaque époque historique, le mode prédominant de la production économique et de l'échange et la structure sociale qu'il conditionne, forment la base sur laquelle repose l'histoire politique de ladite époque et l'histoire de son développement intellectuel, base à partir de laquelle seulement elle peut être expliquée; que de ce fait toute l'histoire de l'humanité (depuis la décomposition de la communauté primitive avec sa possession commune du sol) a été une histoire de luttes de classes, de luttes entre classes exploiteuses et exploitées et opprimées; que l'histoire de cette lutte de classes atteint à l'heure actuelle, dans son développement, une étape où la classe exploitée et opprimée - le prolétariat - ne peut plus s'affranchir du joug de la classe qui l'exploite et l'opprime - la bourgeoisie - sans affranchir du même coup, une fois pour toutes, la société entière de toute exploitation, oppression, division en classes et lutte de classes. 
+
+
 Cette idée qui selon moi est appelée à marquer pour la science historique le même progrès que la théorie de Darwin pour la biologie, nous nous en étions tous deux approchés peu à peu, plusieurs années déjà avant 1845. Jusqu'où j'étais allé moi-même dans cette direction, de mon propre gré, on peut en juger par mon livre La situation de la classe laborieuse en Angleterre . Quand au printemps 1845 je revis Marx à Bruxelles, il l'avait déjà élaborée et il me l'a exposée à peu près aussi clairement que je l'ai fait ici, moi-même.
+
+
 Je reproduis les lignes suivantes empruntées à notre préface commune à l'édition allemande de 1872 : 
 "Bien que les circonstances aient beaucoup changé au cours des vingt dernières années, les principes généraux exposés dans ce Manifeste conservent dans leurs grandes lignes, aujourd'hui encore, toute leur exactitude. Il faudrait revoir, çà et là, quelques détails. Le Manifeste explique lui-même que l'application des principes dépendra partout et toujours des circonstances historiques données, et que, par suite, il ne faut pas attribuer trop d'importance aux mesures révolutionnaires énumérées à la fin du chapitre II. Ce passage serait, à bien des égards, rédigé tout autrement aujourd'hui. Etant donné les progrès immenses de la grande industrie dans les vingt-cinq dernières années et les progrès parallèles qu'a accomplis, dans son organisation en parti, la classe ouvrière, étant donné les expériences, d'abord de la révolution de Février, ensuite et surtout de la Commune de Paris qui, pendant deux mois, mit pour la première fois aux mains du prolétariat le pouvoir politique, ce programme est aujourd'hui vieilli sur certains points. La Commune, notamment, a démontré que "la classe ouvrière ne peut pas se contenter de prendre telle quelle la machine d'Etat et de la faire fonctionner pour son propre compte" (voir The Civil War in France; Address of the General Council of the International Working-men's Association. London Truelove, 1871, p. 15, où cette idée est plus longuement développée). En outre, il est évident que la critique de la littérature socialiste présente une lacune pour la période actuelle, puisqu'elle s'arrête à 1847. Et, de même, si les remarques sur la position des communistes à l'égard des différents partis d'opposition (chapitre IV) sont exactes aujourd'hui encore dans leurs principes, elles sont vieillies dans leur application parce que la situation politique s'est modifiée du tout au tout et que l'évolution historique a fait disparaître la plupart des partis qui y sont énumérés. 
+
+
 Cependant, le Manifeste est un document historique que nous n'avons plus le droit de modifier."
 La traduction que nous présentons est de M. Samuel Moore, traducteur de la plus grande partie du Capital de Marx. Nous l'avons revue ensemble et j'ai ajouté quelques remarques explicatives d'ordre historique.
+
+
 Friedrich Engels Londres, 30 janvier 1888
 
 ## Préface à l’édition allemande de 1890
+
 Depuis que j'ai écrit les lignes qui précèdent, une nouvelle édition allemande du Manifeste est devenue nécessaire. Il convient en outre de mentionner ici qu'il s'est produit bien des choses autour du Manifeste. 
 Une deuxième traduction russe, par Véra Zassoulitch, parut à Genève en 1882; nous en rédigeâmes, Marx et moi, la préface. Malheureusement, j'ai égaré le manuscrit allemand original et je suis obligé de retraduire du russe, ce qui n'est d'aucun profit pour le texte même. Voici cette préface : 
 "La première édition russe du Manifeste du Parti communiste, traduit par Bakounine, parut peu après 1860 à l'imprimerie du Kolokol. A cette époque, une édition russe de cet ouvrage avait tout au plus pour l'Occident l'importance d'une curiosité littéraire. Aujourd'hui, il n'en va plus de même.
+
+
 Combien était étroit le terrain où se propageait le mouvement prolétarien à cette époque (décembre 1847), c'est ce qui ressort parfaitement du dernier chapitre : "Position des communistes envers les différents partis d'opposition dans les divers pays." La Russie et les Etats-Unis notamment n'y sont pas mentionnés C’était le temps où la Russie formait la dernière grande réserve de la réaction européenne, et où l'émigration aux Etats-Unis absorbait l'excédent des forces du prolétariat européen. Ces deux pays fournissaient à l'Europe des matières premières et lui offraient en même temps des débouchés pour l'écoulement de ses produits industriels. Tous deux servaient donc, de l'une ou l'autre manière, de contrefort à l'organisation sociale de l'Europe.
+
+
 Que tout cela est changé aujourd'hui ! C'est précisément l'émigration européenne qui a rendu possible le développement colossal de l'agriculture en Amérique du Nord, développement dont la concurrence ébranle dans ses fondements la grande et la petite propriété foncière en Europe. C'est elle qui a, du même coup, donné aux Etats-Unis la possibilité de mettre en exploitation ses énormes ressources industrielles, et cela avec une énergie et à une échelle telles que le monopole industriel de l'Europe occidentale, et notamment celui de l'Angleterre, disparaîtra à bref délai. Ces deux circonstances réagissent à leur tour de façon révolutionnaire sur l'Amérique elle-même. La petite et la moyenne propriété des farmers, cette assise de tout l'ordre politique américain, succombe peu a peu sous la concurrence de fermes gigantesques, tandis que, dans les districts industriels, il se constitue pour la première fois un nombreux prolétariat à côté d'une fabuleuse concentration du Capital.
+
+
 Passons à la Russie. Au moment de la révolution de 1848-1849, les monarques d'Europe, tout comme la bourgeoisie d'Europe, voyaient dans l'intervention russe le seul moyen de les sauver du prolétariat qui commençait tout juste à prendre conscience de sa force. Le tsar fut proclamé chef de la réaction européenne. Aujourd'hui, il est, à Gatchina, le prisonnier de guerre de la révolution, et la Russie est à l'avant-garde du mouvement révolutionnaire de l'Europe.
+
+
 Le Manifeste communiste avait pour tâche de proclamer la disparition inévitable et prochaine de la propriété bourgeoise. Mais en Russie, à côté de la spéculation capitaliste qui se développe fiévreusement et de la propriété foncière bourgeoise en voie de formation, plus de la moitié du sol est la propriété commune des paysans. Il s'agit, dès lors, de savoir si la communauté paysanne russe, cette forme déjà décomposée de l'antique propriété commune du sol, passera directement à la forme communiste supérieure de la propriété foncière, ou bien si elle doit suivre d'abord le même processus de dissolution qu'elle a subi au cours du développement historique de l'Occident. 
+
+
 La seule réponse qu'on puisse faire aujourd'hui à cette question est la suivante : si la révolution russe donne le signal d'une révolution ouvrière en Occident, et que toutes deux se complètent, la propriété commune actuelle de la Russie pourra servir de point de départ à une évolution communiste."
 Karl Marx, Friedrich Engels Londres, 21 janvier 1882
- 
+
 Une nouvelle traduction polonaise parut, à la même époque, à Genève : Manifest Kommunistyczny. 
 Depuis, une nouvelle traduction danoise a paru dans la Socialdemokratisk Bibliothek, Copenhague, 1885. Elle n'est malheureusement pas tout à fait complète; quelques passages essentiels, qui semblent avoir arrêté le traducteur, ont été omis, et çà et là, on peut relever des traces de négligences, dont l'effet est d'autant plus regrettable qu'on voit, d'après le reste, que la traduction aurait pu, avec un peu plus de soin, être excellente. 
 En 1886 parut une nouvelle traduction française dans Le Socialiste de Paris; c'est jusqu'ici la meilleure. 
@@ -94,6 +148,7 @@ Que Marx n'est-il à côté de moi, pour voir cela de ses propres yeux !
 Friedrich Engels Londres, 1er mai 1890
 
 ## Préface à l’édition polonaise de 1892
+
 Qu'il ait été nécessaire de faire paraître une nouvelle édition polonaise du Manifeste du Parti communiste, permet de faire maintes conclusions. 
 D'abord, il faut constater que le Manifeste est devenu, ces derniers temps, une sorte d'illustration du progrès de la grande industrie sur le continent européen. A mesure que celle-ci évolue dans un pays donné, les ouvriers de ce pays ont de plus en plus tendance à voir clair dans leur situation, en tant que classe ouvrière, par rapport aux classes possédantes; le mouvement socialiste prend de l'extension parmi eux et le Manifeste devient l'objet d'une demande accrue. Ainsi, d'après le nombre d'exemplaires diffusés dans la langue du pays, il est possible de déterminer avec assez de précision non seulement l'état du mouvement ouvrier, mais aussi le degré d'évolution de la grande industrie dans ce pays. 
 La nouvelle édition polonaise du Manifeste est donc une preuve du progrès décisif de l'industrie de la Pologne. Que ce progrès ait effectivement eu lieu durant les dix années qui se sont écoulées depuis que la dernière édition a vu le jour, nul doute ne saurait subsister. Le Royaume de Pologne, la Pologne du Congrès , s'est transformé en une vaste région industrielle de l'empire de Russie. Tandis que la grande industrie russe est dispersée dans maints endroits, une partie tout près du golfe de Finlande, une autre dans la région centrale (Moscou, Vladimir), la troisième sur les côtes de la mer Noire et de la mer d'Azov, etc., l'industrie polonaise se trouve concentrée sur une étendue relativement faible et éprouve aussi bien les avantages que les inconvénients de cette concentration. Ces avantages furent reconnus par les fabricants concurrents de Russie lorsque, malgré leur désir ardent de russifier tous les Polonais, ils réclamèrent l'institution de droits protecteurs contre la Pologne. Quant aux inconvénients - pour les fabricants polonais comme pour le gouvernement russe - , ils se traduisent par une rapide diffusion des idées socialistes parmi les ouvriers polonais et par une demande accrue pour le Manifeste.
@@ -101,6 +156,7 @@ Cependant, cette évolution rapide de l'industrie polonaise qui a pris le pas su
 Friedrich Engels Londres, 10 février 1892
 
 ## Préface à l’édition italienne de 1893
+
 Au lecteur italien 
 La publication du Manifeste du Parti communiste a presque exactement coïncidé avec la date du 18 mars 1848, avec les révolutions de Milan et de Berlin, soulèvements armés de deux nations, dont l'une est située au centre du continent européen, l'autre, au centre des pays méditerranéens, deux nations affaiblies Jusque-là par leur morcellement et les dissensions internes, ce qui les fit tomber sous la domination étrangère. Tandis que l'Italie était soumise à l'empereur d'Autriche, l'Allemagne n'en subissait pas moins le joug, tout aussi sensible encore que moins direct, du tsar de toutes les Russies. Les conséquences des événements du 18 mars 1848 délivrèrent l'Italie et l'Allemagne de cette infamie; si, de 1848 à 1871, ces deux grandes nations furent rétablies et purent recouvrer, de l'une ou de l'autre façon, leur indépendance, cela tient, selon Marx, au fait que ceux-là mêmes qui avaient écrasé la révolution de 1848, étaient devenus, bien malgré eux, ses commis. 
 Partout cette révolution fut l’œuvre de la classe ouvrière : c'est elle qui dressa les barricades et offrit sa vie en sacrifice. Cependant, seuls les ouvriers parisiens en renversant le gouvernement, étaient tout à fait décidés à renverser aussi le régime bourgeois. Mais, bien qu'ils fussent conscients de l'antagonisme inéluctable entre leur propre classe et la bourgeoisie, ni le progrès économique du pays, ni la formation intellectuelle de la masse des ouvriers français n'avaient pas encore atteint le niveau qui eut pu favoriser la transformation sociale. C'est bien pourquoi les fruits de la révolution devaient revenir en fin de compte à la classe capitaliste. Dans les autres pays - Italie, Allemagne, Autriche - les ouvriers, dès le début, ne firent qu'aider la bourgeoisie à accéder au pouvoir Mais il n'est pas un seul où la domination de la bourgeoisie soit possible sans l'indépendance nationale. Aussi la révolution de 1848 devait-elle déboucher sur l'unité et l'indépendance des nations qui en étaient privées jusque-là : l'Italie, l'Allemagne, la Hongrie. Maintenant, c'est le tour de la Pologne. 
@@ -108,8 +164,9 @@ Ainsi, si la révolution de 1848 n'était pas une révolution socialiste, elle a
 Donc, les combats de 1848 n'ont pas été vains. De même les quarante-cinq années qui nous séparent de cette période révolutionnaire. Ses fruits commencent à mûrir, et je voudrais seulement que la parution de cette traduction italienne fût bon signe, signe avant-coureur de la victoire du prolétariat italien, de même que la parution de l'original a été le précurseur de la révolution internationale.
 Le Manifeste rend pleine justice au rôle révolutionnaire que le capitalisme a joué dans le passé. L'Italie fut la première nation capitaliste. La fin du moyen âge féodal, le début de l'ère capitaliste moderne trouvent leur expression dans une figure colossale. C'est l'Italien Dante, le dernier poète du moyen âge et en même temps le premier poète des temps nouveaux. Maintenant, comme en 1300, s'ouvre une ère historique nouvelle. L'Italie nous donnera-t-elle un nouveau Dante qui perpétuera l'éclosion de cette ère nouvelle, prolétarienne ?
 Friedrich Engels Londres, 1er février 1893
- 
+
 ## Le manifeste du Parti Communiste
+
 Un spectre hante l'Europe : le spectre du communisme. Toutes les puissances de la vieille Europe se sont unies en une Sainte-Alliance pour traquer ce spectre : le pape et le tsar, Metternich et Guizot  , les radicaux de France et les policiers d'Allemagne.
 Quelle est l'opposition qui n'a pas été accusée de communisme par ses adversaires au pouvoir ? Quelle est l'opposition qui, à son tour, n'a pas renvoyé à ses adversaires de droite ou de gauche l'épithète infamante de communiste ?
 Il en résulte un double enseignement.
@@ -117,7 +174,8 @@ Déjà le communisme est reconnu comme une puissance par toutes les puissances d
 Il est grand temps que les communistes exposent à la face du monde entier, leurs conceptions, leurs buts et leurs tendances; qu'ils opposent au conte du spectre communiste un manifeste du Parti lui-même.
 C'est à cette fin que des communistes de diverses nationalités se sont réunis à Londres et ont rédigé le Manifeste suivant, qui est publié en anglais, français, allemand, italien, flamand et danois.
 
-### I. Bourgeois et prolétaires 
+### I. Bourgeois et prolétaires
+
 L'histoire de toute société jusqu'à nos jours  n'a été que l'histoire de luttes de classes. 
 Homme libre et esclave, patricien et plébéien, baron et serf, maître de jurande  et compagnon, en un mot oppresseurs et opprimés, en opposition constante, ont mené une guerre ininterrompue, tantôt ouverte, tantôt dissimulée, une guerre qui finissait toujours soit par une transformation révolutionnaire de la société tout entière, soit par la destruction des deux classes en lutte. 
 Dans les premières époques historiques, nous constatons presque partout une organisation complète de la société en classes distinctes, une échelle graduée de conditions sociales. Dans la Rome antique, nous trouvons des patriciens, des chevaliers, des plébéiens, des esclaves; au moyen âge, des seigneurs, des vassaux, des maîtres de corporation, des compagnons, des serfs et, de plus, dans chacune de ces classes, une hiérarchie particulière. 
@@ -173,6 +231,7 @@ Toutes les sociétés antérieures, nous l'avons vu, ont reposé sur l'antagonis
 L'existence et la domination de la classe bourgeoise ont pour condition essentielle l'accumulation de la richesse aux mains des particuliers, la formation et l'accroissement du Capital; la condition d'existence du capital, c'est le salariat. Le salariat repose exclusivement sur la concurrence des ouvriers entre eux. Le progrès de l' industrie, dont la bourgeoisie est l'agent sans volonté propre et sans résistance, substitue à l'isolement des ouvriers résultant de leur concurrence, leur union révolutionnaire par l'association. Ainsi, le développement de la grande industrie sape, sous les pieds de la bourgeoisie, le terrain même sur lequel elle a établi son système de production et d'appropriation. Avant tout, la bourgeoisie produit ses propres fossoyeurs. Sa chute et la victoire du prolétariat sont également inévitables.
 
 ### II. Prolétaires et communistes
+
 Quelle est la position des communistes par rapport à l'ensemble des prolétaires ? 
 Les communistes ne forment pas un parti distinct opposé aux autres partis ouvriers. 
 Ils n'ont point d'intérêts qui les séparent de l'ensemble du prolétariat. 
@@ -260,7 +319,9 @@ Les antagonismes des classes une fois disparus dans le cours du développement, 
 A la place de l'ancienne société bourgeoise, avec ses classes et ses antagonismes de classes, surgit une association où le libre développement de chacun est la condition du libre développement de tous.
 
 ### III. Littérature socialiste et communiste
+
 1. Le socialisme réactionnaire
+
 a) Le socialisme féodal
 Par leur position historique, les aristocraties française et anglaise se trouvèrent appelées à écrire des pamphlets contre la société bourgeoise. Dans la révolution française de juillet 1830, dans le mouvement anglais pour la Réforme  elles avaient succombé une fois de plus sous les coups de cette arriviste abhorrée. Pour elles, il ne pouvait plus être question d'une lutte politique sérieuse. Il ne leur restait plus que la lutte littéraire. Or, même dans le domaine littéraire, la vieille phraséologie de la Restauration  était devenue impossible. Pour se créer des sympathies, il fallait que l'aristocratie fît semblant de perdre de vue ses intérêts propres et de dresser son acte d'accusation contre la bourgeoisie dans le seul intérêt de la classe ouvrière exploitée. Elle se ménageait de la sorte la satisfaction de chansonner son nouveau maître et d'oser lui fredonner à l'oreille des prophéties d'assez mauvais augure. 
 Ainsi naquit le socialisme féodal où se mêlaient jérémiades et libelles, échos du passé et grondements sourds de l'avenir. Si parfois sa critique amère, mordante et spirituelle frappait la bourgeoisie au cœur, son impuissance absolue à comprendre la marche de l'histoire moderne était toujours assurée d'un effet comique. 
