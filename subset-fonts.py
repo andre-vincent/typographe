@@ -1,21 +1,19 @@
 import os
 import subprocess
 
-# 1. Chemins des dossiers
 SOURCE_DIR = "src/fonts/src"
 OUTPUT_DIR = "public/fonts"
 
-# 2. Plage Unicode Éditoriale validée (avec Latin Extended-B, sans Maths)
 UNICODES_LIST = (
-    "U+0020-007F,"  # Basic Latin
-    "U+00A0-00FF,"  # Latin-1 Supplement (Accents + Espace insécable U+00A0)
-    "U+0100-017F,"  # Latin Extended-A (Œ, œ)
-    "U+0180-024F,"  # Latin Extended-B (Sécurité typographie ancienne)
-    "U+2000-206F,"  # General Punctuation (Tirets, points de suspension, espace fin insécable U+202F)
-    "U+2070-209F,"  # Superscripts & Subscripts
-    "U+20A0-20CF,"  # Currency Symbols (Euro)
-    "U+2100-214F,"  # Letterlike Symbols
-    "U+FB00-FB4F"   # Alphabetic Presentation Forms (Ligatures EB Garamond)
+    "U+0020-007F,"
+    "U+00A0-00FF,"
+    "U+0100-017F,"
+    "U+0180-024F,"
+    "U+2000-206F,"
+    "U+2070-209F,"
+    "U+20A0-20CF,"
+    "U+2100-214F,"
+    "U+FB00-FB4F"
 )
 
 def subset_fonts():
@@ -37,33 +35,32 @@ def subset_fonts():
     for file_name in files:
         input_path = os.path.join(SOURCE_DIR, file_name)
         
-        # 💡 CORRECTION DU BUG : Utilisation stricte de [0] pour extraire le nom propre
+        # Correction de la destination : pyftsubset gère l'extension woff2 proprement
         base_name = os.path.splitext(file_name)[0]
         output_path = os.path.join(OUTPUT_DIR, f"{base_name}.woff2")
 
-        print(f"Traitement de {file_name} -> {output_path}")
+        print(f"Optimisation de {file_name} vers {output_path}...")
 
         cmd = [
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
-            "--layout-features=*",       # Conserve les fonctionnalités OpenType
+            "--layout-features=*",
             "--notdef-outline",
-            "--no-hinting",              # Gain de poids majeur
-            "--name-IDs=0,1,2,4,6",      # Nettoyage optimal compatible Cloudflare
-            "--flavor=woff2",            # Format WOFF2
-            
-            # Paramètres polices variables (Fraunces / EB Garamond)
-            "--keep-var-composites",     
-            "--layout-scripts=*",        
+            "--no-hinting",
+            "--name-IDs=0,1,2,4,6",
+            "--flavor=woff2",
+            "--keep-var-composites",
+            "--layout-scripts=*",
             f"--output-file={output_path}"
         ]
 
         try:
-            subprocess.run(cmd, check=True)
-            print(f"✓ Succès : {output_path}")
+            # Lancement de la commande
+            result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+            print(f"✓ Succès : {file_name} optimisé.")
         except subprocess.CalledProcessError as e:
-            print(f"✕ Erreur sur {file_name} : {e}")
+            print(f"✕ Erreur sur {file_name} : {e.stderr}")
 
 if __name__ == "__main__":
     subset_fonts()
