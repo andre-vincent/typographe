@@ -7,7 +7,7 @@ on:
   workflow_dispatch: 
 
 permissions:
-  contents: write # Autorise explicitement l'écriture sur le dépôt
+  contents: write
 
 jobs:
   optimize:
@@ -17,7 +17,7 @@ jobs:
       - name: Récupérer le code du projet
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }} # Se positionne dynamiquement sur la bonne branche
+          ref: ${{ github.ref_name }}
 
       - name: Installer Python
         uses: actions/setup-python@v5
@@ -32,8 +32,16 @@ jobs:
         run: |
           python subset-fonts.py
 
+      # 💡 ÉTAPE DE DÉBOGAGE : Affiche ce qui a réellement été créé
+      - name: Vérifier les fichiers générés
+        run: |
+          echo "=== Contenu du dossier source ==="
+          ls -la src/fonts/src || echo "Dossier source introuvable"
+          echo "=== Contenu du dossier de sortie ==="
+          ls -la public/fonts || echo "Dossier de sortie introuvable"
+
       - name: Enregistrer les modifications sur GitHub
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: polices optimisées automatiquement en WOFF2"
-          file_pattern: 'public/fonts/*.woff2'
+          file_pattern: 'public/fonts/*' # Élargi à tous les fichiers du dossier
