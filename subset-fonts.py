@@ -1,9 +1,11 @@
 import os
 import subprocess
 
+# 1. Chemins des dossiers
 SOURCE_DIR = "src/fonts/src"
 OUTPUT_DIR = "public/fonts"
 
+# 2. Plage Unicode Éditoriale validée (avec Latin Extended-B, sans Maths)
 UNICODES_LIST = (
     "U+0020-007F,"
     "U+00A0-00FF,"
@@ -35,23 +37,23 @@ def subset_fonts():
     for file_name in files:
         input_path = os.path.join(SOURCE_DIR, file_name)
         
-        # 💡 CORRECTION : Ajout de [0] pour obtenir "BonaNova-Regular" au lieu du tuple
+        # Extraction propre du nom de fichier
         base_name = os.path.splitext(file_name)[0]
         output_path = os.path.join(OUTPUT_DIR, f"{base_name}.woff2")
 
         print(f"Traitement de {file_name} -> {output_path}")
 
+        # Retour strict à vos arguments d'origine qui fonctionnent sur vos serveurs
         cmd = [
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
-            "--layout-features=*",
-            "--notdef-outline",
-            "--no-hinting",
-            "--name-IDs=0,1,2,4,6",
-            "--flavor=woff2",
-            "--keep-var-composites",
-            "--layout-scripts=*",
+            "--layout-features=*",       # Conserve l'OpenType
+            "--glyph-names",             # Ajout de votre script d'origine
+            "--notdef-outline",          # Conserve les structures
+            "--no-hinting",              # Nettoyage du hinting
+            "--name-IDs=0,1,2,4,6",      # Nettoyage métadonnées
+            "--flavor=woff2",            # Format WOFF2
             f"--output-file={output_path}"
         ]
 
