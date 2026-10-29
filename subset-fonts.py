@@ -1,14 +1,21 @@
 import os
 import subprocess
 
-# 1. Chemins des dossiers (compatibles avec la structure Astro)
+# 1. Chemins des dossiers (compatibles avec la structure de votre dépôt Astro)
 SOURCE_DIR = "src/fonts/src"
 OUTPUT_DIR = "public/fonts"
 
-# 2. Liste complète des caractères (FR, EN, ES, PT) + Ponctuation standard et fine
+# 2. Votre plage Unicode personnalisée (Éditoriale, FR/EN/ES/PT + Latin Extended-B, sans Maths)
 UNICODES_LIST = (
-    "U+0020-007F,U+00A0-00FF,U+0100-017F,U+2000-206F,U+2070-209F,"
-    "U+20A0-20CF,U+2100-214F,U+2200-22FF,U+FB00-FB4F"
+    "U+0020-007F,"  # Basic Latin
+    "U+00A0-00FF,"  # Latin-1 Supplement (Accents + Espace insécable U+00A0 pour votre plugin)
+    "U+0100-017F,"  # Latin Extended-A
+    "U+0180-024F,"  # AJOUTÉ : Latin Extended-B (Sécurité littéraire et historique)
+    "U+2000-206F,"  # General Punctuation (Tirets, points de suspension, espace fin insécable U+202F)
+    "U+2070-209F,"  # Conservé : Superscripts & Subscripts
+    "U+20A0-20CF,"  # Conservé : Currency Symbols (Contient l'Euro €)
+    "U+2100-214F,"  # Conservé : Letterlike Symbols
+    "U+FB00-FB4F"   # Conservé : Alphabetic Presentation Forms (Ligatures physiques d'EB Garamond)
 )
 
 def subset_fonts():
@@ -28,29 +35,31 @@ def subset_fonts():
         print(f"Aucune police (.ttf, .otf) trouvée dans {SOURCE_DIR}")
         return
 
-    print(f"Trouvé {len(files)} police(s) à alléger...")
+    print(f"Optimisation de {len(files)} police(s) pour la typographie éditoriale...")
 
     for file_name in files:
         input_path = os.path.join(SOURCE_DIR, file_name)
         
-        # Remplacer l'extension d'origine par .woff2 pour la sortie
+        # Extraction propre du nom du fichier sans l'extension
         base_name = os.path.splitext(file_name)[0]
         output_path = os.path.join(OUTPUT_DIR, f"{base_name}.woff2")
 
         print(f"Traitement de {file_name}...")
 
-        # Commande pyftsubset optimisée pour les polices variables et l'OpenType
-        # Commande pyftsubset poussée au maximum pour le web moderne
+        # Commande pyftsubset optimisée pour l'environnement Cloudflare Pages
         cmd = [
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
-            "--layout-features=*",      # Conserve vos précieuses fonctions OpenType
-            "--glyph-names",            # Conserve le nom des glyphes (requis pour OpenType)
-            "--notdef-outline",         # Conserve tous les axes de votre police variable
-            "--no-hinting",             # GAIN MAJEUR : Supprime le hinting obsolète pour écrans 4K/Retina
-            "--name-IDs=0,1,2,4,6",     # Nettoie les métadonnées textuelles inutiles (ne garde que l'essentiel)
-            "--flavor=woff2",           # Format WOFF2 ultra-compressé
+            "--layout-features=*",       # Conserve TOUTES les caractéristiques OpenType (ligatures, kerning)
+            "--notdef-outline",          # Conserve le glyphe de secours générique
+            "--no-hinting",              # Gain de poids majeur (suppression du hinting pour écrans modernes)
+            "--name-IDs=0,1,2,4,6",      # Nettoyage des métadonnées validé par votre configuration Cloudflare
+            "--flavor=woff2",            # Format de compression maximal WOFF2
+            
+            # Paramètres de sécurité pour polices variables (Fraunces & EB Garamond) sans dépendance HarfBuzz binaire
+            "--keep-var-composites",     # Empêche la destruction géométrique des glyphes variables
+            "--layout-scripts=*",        # Préserve la logique des scripts de mise en page
             f"--output-file={output_path}"
         ]
 
@@ -62,4 +71,3 @@ def subset_fonts():
 
 if __name__ == "__main__":
     subset_fonts()
-    
