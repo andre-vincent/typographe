@@ -38,7 +38,7 @@ def subset_fonts():
         input_path = os.path.join(SOURCE_DIR, file_name)
         
         # 💡 CORRECTION DU BUG : Utilisation stricte de [0] pour extraire le nom propre
-        base_name = os.path.splitext(file_name)[0]
+        base_name = os.path.splitext(file_name)
         output_path = os.path.join(OUTPUT_DIR, f"{base_name}.woff2")
 
         print(f"Traitement de {file_name} -> {output_path}")
