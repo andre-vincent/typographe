@@ -27,7 +27,7 @@ def subset_fonts():
     files = [f for f in os.listdir(SOURCE_DIR) if f.lower().endswith(('.ttf', '.otf'))]
     
     if not files:
-        print(f"Aucune police (.ttf, .otf) trouvée dans {SOURCE_DIR}")
+        print(f"Aucune police trouvée dans {SOURCE_DIR}")
         return
 
     print(f"Optimisation de {len(files)} police(s)...")
@@ -35,11 +35,11 @@ def subset_fonts():
     for file_name in files:
         input_path = os.path.join(SOURCE_DIR, file_name)
         
-        # Correction de la destination : pyftsubset gère l'extension woff2 proprement
+        # 💡 CORRECTION : Ajout de [0] pour obtenir "BonaNova-Regular" au lieu du tuple
         base_name = os.path.splitext(file_name)[0]
         output_path = os.path.join(OUTPUT_DIR, f"{base_name}.woff2")
 
-        print(f"Optimisation de {file_name} vers {output_path}...")
+        print(f"Traitement de {file_name} -> {output_path}")
 
         cmd = [
             "pyftsubset",
@@ -56,11 +56,10 @@ def subset_fonts():
         ]
 
         try:
-            # Lancement de la commande
-            result = subprocess.run(cmd, capture_output=True, text=True, check=True)
-            print(f"✓ Succès : {file_name} optimisé.")
+            subprocess.run(cmd, check=True)
+            print(f"✓ Succès : {output_path}")
         except subprocess.CalledProcessError as e:
-            print(f"✕ Erreur sur {file_name} : {e.stderr}")
+            print(f"✕ Erreur sur {file_name} : {e}")
 
 if __name__ == "__main__":
     subset_fonts()
