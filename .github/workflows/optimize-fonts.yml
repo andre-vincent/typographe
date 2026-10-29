@@ -16,6 +16,10 @@ jobs:
     steps:
       - name: Récupérer le code du projet
         uses: actions/checkout@v4
+        with:
+          # 💡 CRUCIAL : Force GitHub à se positionner sur la branche principale
+          # pour permettre l'écriture des fichiers.
+          ref: main 
 
       - name: Installer Python
         uses: actions/setup-python@v5
@@ -28,7 +32,6 @@ jobs:
 
       - name: Exécuter votre script Python (Chemin Absolu)
         run: |
-          # On force Python à se baser sur le dossier exact du projet GitHub
           cd $GITHUB_WORKSPACE
           python subset-fonts.py
 
@@ -37,3 +40,5 @@ jobs:
         with:
           commit_message: "chore: polices optimisées automatiquement en WOFF2"
           file_pattern: 'public/fonts/*.woff2'
+          # 💡 SÉCURITÉ : On spécifie explicitement la branche de destination
+          branch: main
