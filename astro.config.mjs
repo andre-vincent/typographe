@@ -22,10 +22,14 @@ export default defineConfig({
     sitemap({
       filter: (page) => page !== new URL("/search/", siteConfig.siteUrl).toString(),
     }),
-    mdx(),
+    // 💡 OPTIMISATION MDX : On lui force à hériter des plugins Remark/Rehype globaux
+    // et à appliquer les règles typographiques avant l'analyse JSX.
+    mdx({
+      extendMarkdownConfig: true,
+    }),
   ],
   markdown: {
-    // Remplacement du processeur par la configuration de tableaux native d'Astro
+    // Exécuté en premier pour traiter le texte brut avant les autres transformations
     remarkPlugins: [
       remarkFrenchTypography
     ],
