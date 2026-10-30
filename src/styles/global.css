@@ -2,7 +2,7 @@
 @source "../**/*.{astro,ts,md,mdx}";
 
 :root {
-  /* Déclaration de base du concept de fluidité */
+  /* AJOUT - Déclaration de base du concept de fluidité */
   font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem);
 }
 
@@ -110,7 +110,7 @@
     Menlo, "Liberation Mono", monospace;
 
   --layout-wide: 75rem;
-  --layout-content: 51ch;
+  --layout-content: 54ch; /* <- original 45rem  */
   --gutter: 1.5rem;
   --space-section: clamp(4rem, 8vw, 7.5rem);
 
