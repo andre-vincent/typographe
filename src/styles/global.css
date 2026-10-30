@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @source "../**/*.{astro,ts,md,mdx}";
 
+:root {
+  /* Déclaration de base du concept de fluidité */
+  font-size: clamp(1rem, 1rem + 0.5vw, 1.5rem);
+}
+
 /*
 @font-face {
   font-family: "Geist";
@@ -939,7 +944,4 @@
     border-color: var(--border-strong);
     color: var(--foreground);
   }
-}
-html {
-  font-size: 120%;
 }
