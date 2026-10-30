@@ -159,7 +159,7 @@
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans);
-    font-size: clamp(1.35rem, 1.1352rem + 0.9545vw, 1.875rem);
+    font-size: 1rem;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
@@ -939,4 +939,7 @@
     border-color: var(--border-strong);
     color: var(--foreground);
   }
+}
+html {
+  font-size: 120%;
 }
