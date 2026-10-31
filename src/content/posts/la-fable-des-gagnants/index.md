@@ -1,6 +1,6 @@
 ---
 title: La fable des gagnants
-excerpt: Pourquoi refuse-t-on de taxer la richesse ? Pourqupo hésiter à faire
+excerpt: Pourquoi refuse-t-on de taxer la richesse ? Pourquoi hésiter à faire
   payer davantage les plus fortunés.
 category: Notes de lecture
 date: 2026-10-23
@@ -15,7 +15,8 @@ draft: false
 
 ---
 
-## La famille des gagnants :  
+## La famille des gagnants :
+
 pourquoi refuse-t-on de taxer la richesse ?
 
 Tel est le titre du livre des professeurs David Robichaud et Patrick Turmel, récemment publié, que je viens de lire. Je vous le recommande chaudement. Il fait la démonstration que nous ne devrions aucunement hésiter à faire payer davantage les plus fortunés (on ne parle pas des salariés, ici). Il est accessible à tous et à toutes et se lit très vite. On constate partout la surenchère pour réduire les dépenses de l'État (sauf le budget militaire) tout en se désolant de la colère grandissante dans la société. Je vous en donne quelques courts extraits :
