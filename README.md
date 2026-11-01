@@ -171,14 +171,16 @@ MIT - gratuit pour les projets personnels et commerciaux. Voir [LICENSE](. /LICE
 - [x] Franciser les pages statiques.
 - [ ] Franciser le README. (à compléter)
 - [ ] Franciser les items du Frontend. (title, excerpt, etc.)
-- [ ] Franciser les routes des URLs publics. (/about, /post, etc.) 
-- [x] Adapter les favicons (.svg et .ico) de M à Ty.
-- [x] Intégrer le script de correction typographique. (/src/plugins/
-- [x] Optimiser les polices pour le français.
-- [x] Configurer pour l’édition via Pages CMS. (éditeur Markdown visuel)
-- [ ] Ajouter la gestion des media dans la configuration Pages CMS. 
+- [ ] Franciser les routes des URLs publics. (/about, /post, etc.)
+- [ ] Ajouter raccourcis Markdown (Remark ou Rehype) pour exposant (^] et petite capitale [~~]
+- [x] Adapter les favicons (.svg et .ico) de M à Ty. (à peaufiner les dimensions)
+- [x] Intégrer le script de correction typographique. (/src/plugins/)
+- [x] Optimiser les polices pour le français. (/src/fonts/src/) -> (/src/public/fonts/)
+- [x] Configurer pour l’édition via PagesCMS. (éditeur Markdown visuel)
+- [ ] Modifier le chemin des media dans configuration de PagesCMS /.pages.ts
 - [ ] Meilleure gestion des auteurs/autrices : optionnel et multi-auteurs/autrices
 - [ ] Créer un composant ou items optionnels du Frontmatter pour les notes de lecture. (auteur, éditeur, nombre de pages, année de publication, ISBN, image couverture, etc.)
+- [ ] Ajouter Tags ou multi-catégories (sujets)
 
 
 ## Logo
