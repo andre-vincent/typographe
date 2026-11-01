@@ -182,6 +182,9 @@ MIT - gratuit pour les projets personnels et commerciaux. Voir [LICENSE](. /LICE
 - [ ] Créer un composant ou items optionnels du Frontmatter pour les notes de lecture. (auteur, éditeur, nombre de pages, année de publication, ISBN, image couverture, etc.)
 - [ ] Ajouter Tags ou multi-catégories (sujets)
 - [ ] Modifier la page RSS. Ajouter auteur, category, texte complet de l’article, etc.
+- [ ] GROS CHANTIER
+  - [ ] Reconstruire l’architecture HTML plus intrinsèque et sans classes (classless), DIV, SPAN et Media Query
+  - [ ] Refaire complètement les styles, virer Tailwind, sans classes (ou strict minimum), voir PicoCSS, Blades CSS, mes autres expériences sur GitHub ou Codepen
 
 
 ## Logo
