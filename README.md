@@ -172,7 +172,7 @@ MIT - gratuit pour les projets personnels et commerciaux. Voir [LICENSE](. /LICE
 - [ ] Franciser le README. (à compléter)
 - [ ] Franciser les items du Frontend. (title, excerpt, etc.)
 - [ ] Franciser les routes des URLs publics. (/about, /post, etc.)
-- [ ] Ajouter raccourcis Markdown (Remark ou Rehype) pour exposant (^] et petite capitale [~~]
+- [ ] Ajouter raccourcis Markdown (Remark ou Rehype) pour exposant (^] et petites capitales [~~]
 - [x] Adapter les favicons (.svg et .ico) de M à Ty. (à peaufiner les dimensions)
 - [x] Intégrer le script de correction typographique. (/src/plugins/)
 - [x] Optimiser les polices pour le français. (/src/fonts/src/) -> (/src/public/fonts/)
@@ -181,6 +181,7 @@ MIT - gratuit pour les projets personnels et commerciaux. Voir [LICENSE](. /LICE
 - [ ] Meilleure gestion des auteurs/autrices : optionnel et multi-auteurs/autrices
 - [ ] Créer un composant ou items optionnels du Frontmatter pour les notes de lecture. (auteur, éditeur, nombre de pages, année de publication, ISBN, image couverture, etc.)
 - [ ] Ajouter Tags ou multi-catégories (sujets)
+- [ ] Modifier la page RSS. Ajouter auteur, category, texte complet de l’article, etc.
 
 
 ## Logo
