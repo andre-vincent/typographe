@@ -20,7 +20,7 @@ draft: false
 ---
 > Article en partie rédigé avec assistance de l’IA. Sources vérifiées par l’auteur.
 
-## 1. Les stratagèmes du Pentagone pour s’infiltrer dans le capital-actions des jeunes pousses canadiennes
+## Les stratagèmes du Pentagone pour s’infiltrer dans le capital-actions des jeunes pousses canadiennes
 
 L’infiltration et le financement par le Pentagone ou la communauté du renseignement des États-Unis dans le capital-actions des jeunes pousses (*startups*) canadiennes spécialisées en intelligence artificielle (IA), en infonuagique (*cloud*) et en numérique ne relèvent pas de méthodes d'espionnage classiques. Il s'agit plutôt d'une **stratégie de capital-risque militaro-industrielle sophistiquée et légale**, conçue pour capter l’innovation logicielle à la racine avant qu’elle ne soit commercialisée à grande échelle. 
 
@@ -58,7 +58,7 @@ Le cœur de cette riposte est le **Canadian Tech Growth Fund**[^2], conçu expli
 
 ---
 
-## 2. L’infiltration américaine dans la recherche universitaire canadienne
+## L’infiltration américaine dans la recherche universitaire canadienne
 
 L’infiltration américaine dans la recherche universitaire canadienne s'appuie sur des mécanismes financiers et institutionnels très similaires à ceux utilisés pour le capital-actions des startups. Le Pentagone, le département de la Défense (DoD) et les agences de renseignement américaines considèrent les universités canadiennes comme une extension naturelle de leur base industrielle et technologique. 
 
@@ -92,7 +92,7 @@ Bien que le Pentagone tente de verrouiller et d'infiltrer la recherche, un phén
 
 ---
 
-## 3. Les domaines de recherche les plus ciblés par la DARPA
+## Les domaines de recherche les plus ciblés par la DARPA
 
 La **DARPA**[^4] dispose d'un budget annuel massif dédié au financement de projets à « haut risque et haut rendement ». Pour maintenir la supériorité stratégique du Pentagone, l'agence structure ses investissements universitaires et industriels autour de grands domaines de rupture technologique. Au Canada, ces priorités ciblent précisément les secteurs d'excellence des universités et des laboratoires d'élite.
 
@@ -132,7 +132,7 @@ Le bureau des technologies biologiques (BTO) de la DARPA cherche à exploiter le
 
 ---
 
-## 4. Universités québécoises et domaines particulièrement ciblés
+## Universités québécoises et domaines particulièrement ciblés
 
 Au Québec, l’infiltration et le ciblage technologique par la DARPA et le Pentagone se concentrent principalement sur trois institutions d’élite : **l’Université de Sherbrooke, l’Université McGill et l’Université de Montréal**. L'agence militaire américaine y exploite des niches d'excellence scientifique uniques au monde.
 
@@ -159,7 +159,7 @@ Avec le **Mila** (Institut québécois d'intelligence artificielle), fondé par 
 
 ---
 
-## 5. Évaluation de l'efficacité des contre-mesures canadiennes
+## Évaluation de l'efficacité des contre-mesures canadiennes
 
 Les contre-mesures canadiennes et québécoises pour protéger la souveraineté technologique et scientifique face à l'influence américaine représentent un effort financier et législatif inédit, mais dont l'efficacité réelle demeure un sujet de débat. Si ces initiatives parviennent à ralentir la fuite immédiate des cerveaux et de la propriété intellectuelle, elles se heurtent à la disproportion colossale des moyens américains.
 
@@ -177,7 +177,7 @@ Les contre-mesures canadiennes et québécoises pour protéger la souveraineté 
 
 ---
 
-## 6. L'impact des alliances stratégiques (NORAD, OTAN, Five Eyes)
+## L'impact des alliances stratégiques (NORAD, OTAN, Five Eyes)
 
 **Les stratagèmes américains ne sont pas affectés négativement par ces contre-mesures.** En réalité, les alliances stratégiques majeures agissent comme un **passe-droit institutionnel et légal** qui neutralise presque entièrement les barrières qu'Ottawa tente d'ériger.
 
