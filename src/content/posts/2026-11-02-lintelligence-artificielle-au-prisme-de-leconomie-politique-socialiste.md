@@ -11,7 +11,7 @@ author:
   name: André Vincent
   role: Webmestre de ce site. Typographe, enseignant et syndicaliste.
 featured: false
-draft: true
+draft: false
 ---
 L’essor de l’intelligence artificielle (IA) ne représente pas seulement une révolution technologique ; il bouleverse les fondements mêmes de l’économie politique. En s’inscrivant dans la continuité des dynamiques internes du capitalisme, l’automatisation cognitive réactive et intensifie les contradictions structurelles formalisées par Karl Marx et enrichies plus tard par Antonio Gramsci.
 
@@ -25,21 +25,18 @@ $$\text{Composition Organique} = \frac{c}{v}$$
 
 ### L'élévation massive du capital constant ($c$)
 
-* **Substitution du travail par la technique :** Chez Karl Marx, le développement du capitalisme pousse historiquement à remplacer le travail vivant par du travail mort (les machines). L'IA pousse cette logique à un niveau supérieur : elle mécanise non seulement des tâches manuelles ou répétitives, mais s'attaque désormais aux activités cognitives, intellectuelles et de services.
-
-* **Alourdissement des investissements technologiques :** L'IA nécessite des infrastructures massives (centres de données, puissance de calcul, licences de logiciels propriétaires, puces avancées de type GPU) qui font exploser la part du capital constant dans la valeur totale engagée par les entreprises.
+- **Substitution du travail par la technique :** Chez Karl Marx, le développement du capitalisme pousse historiquement à remplacer le travail vivant par du travail mort (les machines). L'IA pousse cette logique à un niveau supérieur : elle mécanise non seulement des tâches manuelles ou répétitives, mais s'attaque désormais aux activités cognitives, intellectuelles et de services.
+- **Alourdissement des investissements technologiques :** L'IA nécessite des infrastructures massives (centres de données, puissance de calcul, licences de logiciels propriétaires, puces avancées de type GPU) qui font exploser la part du capital constant dans la valeur totale engagée par les entreprises.
 
 ### La contraction relative du capital variable ($v$)
 
-* **Réduction de la force de travail :** En automatisant l'analyse de données, la rédaction, le codage ou la gestion, l'IA permet à une structure de produire autant (voire beaucoup plus) en employant proportionnellement moins de salariés.
-
-* **Pression sur les salaires :** La part consacrée à l'achat de la force de travail diminue drastiquement par rapport à la masse de capital injectée dans les infrastructures technologiques complexes.
+- **Réduction de la force de travail :** En automatisant l'analyse de données, la rédaction, le codage ou la gestion, l'IA permet à une structure de produire autant (voire beaucoup plus) en employant proportionnellement moins de salariés.
+- **Pression sur les salaires :** La part consacrée à l'achat de la force de travail diminue drastiquement par rapport à la masse de capital injectée dans les infrastructures technologiques complexes.
 
 ### Les contradictions marxistes accentuées par l'IA
 
-* **La crise de la plus-value :** Selon Marx, seule la force de travail humaine vivante est source de plus-value (la valeur créée par le salarié au-delà de son propre salaire et accaparée par le capitaliste). En cherchant à éliminer le travail humain pour accroître sa productivité, le capitalisme se prive à terme de sa propre source de rentabilité.
-
-* **La baisse tendancielle du taux de profit :** En faisant grimper la composition organique du capital (beaucoup plus de capital constant pour de moins en moins de capital variable), l'IA accentue la loi de la baisse tendancielle du taux de profit, menant le système vers des crises de surproduction et une instabilité structurelle profonde [^2].
+- **La crise de la plus-value :** Selon Marx, seule la force de travail humaine vivante est source de plus-value (la valeur créée par le salarié au-delà de son propre salaire et accaparée par le capitaliste). En cherchant à éliminer le travail humain pour accroître sa productivité, le capitalisme se prive à terme de sa propre source de rentabilité.
+- **La baisse tendancielle du taux de profit :** En faisant grimper la composition organique du capital (beaucoup plus de capital constant pour de moins en moins de capital variable), l'IA accentue la loi de la baisse tendancielle du taux de profit, menant le système vers des crises de surproduction et une instabilité structurelle profonde [^2].
 
 ---
 
@@ -61,9 +58,8 @@ Si une entreprise parvenait à éliminer totalement les humains pour ne faire to
 
 L'IA ne fonctionne pas par magie ; elle repose sur du travail humain souvent invisible. La valeur se déplace vers l'amont :
 
-* Les ingénieurs qui conçoivent les modèles et l'architecture des systèmes.
-
-* Le "travail de l'ombre" effectué par des millions de travailleurs du clic (cliqueurs, labellisateurs de données, modérateurs) à bas coût qui entraînent les algorithmes.
+- Les ingénieurs qui conçoivent les modèles et l'architecture des systèmes.
+- Le "travail de l'ombre" effectué par des millions de travailleurs du clic (cliqueurs, labellisateurs de données, modérateurs) à bas coût qui entraînent les algorithmes.
 
 Les géants de la Tech capturent ensuite cette valeur en privatisant et en transformant les données publiques en modèles payants sous forme d'abonnements monopolistiques.
 
