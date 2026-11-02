@@ -25,15 +25,16 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "pip install fonttools brotli && python3 subset-fonts.py && astro build",
+    "prebuild": "pip install fonttools brotli && python3 subset-fonts.py",
+    "build": "astro build",
     "check": "astro check",
     "release:check": "npm run check && npm run build && npm run format:check",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
-  },
-  "overrides": {
+},
+ "overrides": {
     "yaml": "^2.8.3"
   },
   "dependencies": {
