@@ -89,7 +89,7 @@ L'IA n'est pas neutre. Les filtres de modération, l'orientation des réponses e
 
 En combinant Marx et Gramsci, on comprend que l'enjeu de l'IA dépasse la simple question du chômage technologique : c'est une **guerre de position numérique** pour le contrôle de la pensée humaine.
 
-| Concept | Lecture Marxiste (General Intellect) | Lecture Gramscienne (Hégémonie) |
+| Concept | Lecture Marxiste <br>(General Intellect) | Lecture Gramscienne <br>(Hégémonie) |
 | :--- | :--- | :--- |
 | **Le Constat** | Le savoir de l'humanité est confisqué par les serveurs et les algorithmes de quelques monopoles. | L'IA façonne le langage et la culture pour légitimer l'ordre social existant. |
 | **La Sortie de Crise** | Libérer le capital fixe : faire de l'IA un **commun universel** gratuit au service de l'émancipation et de la réduction du temps de travail. | Mener une **guerre de position** numérique : développer des IA open-source, souveraines et critiques pour briser le monopole idéologique. |
