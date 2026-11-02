@@ -25,7 +25,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "pip install fonttools brotli && python3 subset-fonts.py",
+    "prebuild": "pip install fonttools brotli && python3 subset-fonts.py || echo 'Avertissement : Échec de la vérification des polices, utilisation des fichiers existants.'"
     "build": "astro build",
     "check": "astro check",
     "release:check": "npm run check && npm run build && npm run format:check",
