@@ -32,24 +32,30 @@ def subset_fonts():
         print(f"Aucune police trouvée dans {SOURCE_DIR}")
         return
 
-    print(f"Optimisation de {len(files)} police(s)...")
+    print(f"Vérification et optimisation de {len(files)} police(s)...")
 
     for file_name in files:
         input_path = os.path.join(SOURCE_DIR, file_name)
-        
-        # Extraction propre du nom de fichier
         base_name = os.path.splitext(file_name)[0]
         output_path = os.path.join(OUTPUT_DIR, f"{base_name}.woff2")
 
-        print(f"Traitement de {file_name} -> {output_path}")
+        # ⚡ OPTIMISATION : Évite de régénérer si le fichier source n'a pas changé
+        if os.path.exists(output_path):
+            input_mtime = os.path.getmtime(input_path)
+            output_mtime = os.path.getmtime(output_path)
+            if output_mtime > input_mtime:
+                print(f"⏭️ Ignoré : {file_name} est déjà optimisé (public/fonts/{base_name}.woff2)")
+                continue
 
-        # Retour strict à vos arguments d'origine qui fonctionnent sur vos serveurs
+        print(f"🔨 Traitement de {file_name} -> {output_path}")
+
+        # Remplacement de 'pyftsubset' par l'appel direct du module python pour une portabilité maximale
         cmd = [
-            "pyftsubset",
+            "python3", "-m", "fonttools.subset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
             "--layout-features=*",       # Conserve l'OpenType
-            "--glyph-names",             # Ajout de votre script d'origine
+            "--glyph-names",             # Spécifique à votre configuration
             "--notdef-outline",          # Conserve les structures
             "--no-hinting",              # Nettoyage du hinting
             "--name-IDs=0,1,2,4,6",      # Nettoyage métadonnées
