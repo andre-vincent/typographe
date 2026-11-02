@@ -11,7 +11,7 @@ author:
   name: André Vincent
   role: Webmestre de ce site. Typographe, enseignant et syndicaliste.
 featured: false
-draft: false
+draft: true
 ---
 L’essor de l’intelligence artificielle (IA) ne représente pas seulement une révolution technologique ; il bouleverse les fondements mêmes de l’économie politique. En s’inscrivant dans la continuité des dynamiques internes du capitalisme, l’automatisation cognitive réactive et intensifie les contradictions structurelles formalisées par Karl Marx et enrichies plus tard par Antonio Gramsci.
 
