@@ -19,16 +19,16 @@ L’essor de l’intelligence artificielle (IA) ne représente pas seulement une
 
 ## L'impact de l'IA sur la composition organique du capital
 
-L'intelligence artificielle accélère de manière inédite l'augmentation de la **composition organique du capital**. Dans la théorie marxiste, ce concept désigne le rapport entre le **capital constant** (*c*) représenté par les moyens de production comme les machines ou les serveurs) et le **capital variable** (*v*) correspondant à la force de travail humaine engagée) [^1]. 
+L'intelligence artificielle accélère de manière inédite l'augmentation de la **composition organique du capital**. Dans la théorie marxiste, ce concept désigne le rapport entre le **capital constant** (*c*) représenté par les moyens de production comme les machines ou les serveurs) et le **capital variable** (*v*) correspondant à la force de travail humaine engagée) [^1]. 
 
 > Composition Organique = Capital Constant (c) ÷ Capital Variable (v)
 
-### L'élévation massive du capital constant ($c$)
+### L'élévation massive du capital constant (*c*)
 
 - **Substitution du travail par la technique :** Chez Karl Marx, le développement du capitalisme pousse historiquement à remplacer le travail vivant par du travail mort (les machines). L'IA pousse cette logique à un niveau supérieur : elle mécanise non seulement des tâches manuelles ou répétitives, mais s'attaque désormais aux activités cognitives, intellectuelles et de services.
 - **Alourdissement des investissements technologiques :** L'IA nécessite des infrastructures massives (centres de données, puissance de calcul, licences de logiciels propriétaires, puces avancées de type GPU) qui font exploser la part du capital constant dans la valeur totale engagée par les entreprises.
 
-### La contraction relative du capital variable ($v$)
+### La contraction relative du capital variable (*v*)
 
 - **Réduction de la force de travail :** En automatisant l'analyse de données, la rédaction, le codage ou la gestion, l'IA permet à une structure de produire autant (voire beaucoup plus) en employant proportionnellement moins de salariés.
 - **Pression sur les salaires :** La part consacrée à l'achat de la force de travail diminue drastiquement par rapport à la masse de capital injectée dans les infrastructures technologiques complexes.
@@ -36,7 +36,7 @@ L'intelligence artificielle accélère de manière inédite l'augmentation de la
 ### Les contradictions marxistes accentuées par l'IA
 
 - **La crise de la plus-value :** Selon Marx, seule la force de travail humaine vivante est source de plus-value (la valeur créée par le salarié au-delà de son propre salaire et accaparée par le capitaliste). En cherchant à éliminer le travail humain pour accroître sa productivité, le capitalisme se prive à terme de sa propre source de rentabilité.
-- **La baisse tendancielle du taux de profit :** En faisant grimper la composition organique du capital (beaucoup plus de capital constant pour de moins en moins de capital variable), l'IA accentue la loi de la baisse tendancielle du taux de profit, menant le système vers des crises de surproduction et une instabilité structurelle profonde [^2].
+- **La baisse tendancielle du taux de profit :** En faisant grimper la composition organique du capital (beaucoup plus de capital constant pour de moins en moins de capital variable), l'IA accentue la loi de la baisse tendancielle du taux de profit, menant le système vers des crises de surproduction et une instabilité structurelle profonde [^2].
 
 ---
 
@@ -71,7 +71,7 @@ La convergence entre le concept de **General Intellect** chez Karl Marx et la th
 
 ### Le "General Intellect" : L'IA comme cerveau social pétrifié
 
-Dans le célèbre « Fragment sur les machines » des *Grundrisse*, Marx anticipe un stade du capitalisme où la force motrice de la production n'est plus le travail physique direct, mais le *General Intellect* (l'intelligence générale, le savoir social partagé, la science) [^3].
+Dans le célèbre « Fragment sur les machines » des *Grundrisse*, Marx anticipe un stade du capitalisme où la force motrice de la production n'est plus le travail physique direct, mais le *General Intellect* (l'intelligence générale, le savoir social partagé, la science) [^3].
 
 L'IA en est l'incarnation matérielle parfaite. Les grands modèles de langage ont été entraînés en aspirant le savoir cumulé de l'humanité connectée (textes, codes, œuvres d'art). Le capitalisme de la Tech a privatisé cette intelligence collective pour la transformer en un logiciel propriétaire. Le travailleur ne fait plus face à un simple outil, mais au cerveau social de l'humanité, pétrifié sous forme d'algorithme.
 
@@ -89,59 +89,56 @@ L'IA n'est pas neutre. Les filtres de modération, l'orientation des réponses e
 
 En combinant Marx et Gramsci, on comprend que l'enjeu de l'IA dépasse la simple question du chômage technologique : c'est une **guerre de position numérique** pour le contrôle de la pensée humaine.
 
-<!--
+<style>
+  /* 1. Le conteneur gère l'espacement et le scroll horizontal sur mobile */
+  .responsive-table {
+    overflow-x: auto;
+    margin: 2.5rem 0;
+    width: 100%;
+  }
+  
+  /* 2. Le style s'applique à la table Markdown imbriquée */
+  .responsive-table table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+  }
+  
+  /* 3. Les cellules reçoivent la largeur égale et la sécurité relative ch */
+  .responsive-table th, 
+  .responsive-table td {
+    width: 33.33%;
+    min-width: 35ch;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    vertical-align: top;
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .responsive-table th {
+    background-color: rgba(241, 245, 249, 0.5);
+    font-weight: 600;
+  }
+
+  /* 4. Intégration transparente avec le mode sombre du template */
+  :global(.dark) .responsive-table th {
+    background-color: rgba(39, 39, 42, 0.5);
+  }
+  :global(.dark) .responsive-table th,
+  :global(.dark) .responsive-table td {
+    border-color: #27272a;
+  }
+</style>
+
+<div class="responsive-table">
+
 | Concept | Lecture Marxiste <br>(General Intellect) | Lecture Gramscienne <br>(Hégémonie) |
 | :--- | :--- | :--- |
 | **Le Constat** | Le savoir de l'humanité est confisqué par les serveurs et les algorithmes de quelques monopoles. | L'IA façonne le langage et la culture pour légitimer l'ordre social existant. |
 | **La Sortie de Crise** | Libérer le capital fixe : faire de l'IA un **commun universel** gratuit au service de l'émancipation et de la réduction du temps de travail. | Mener une **guerre de position** numérique : développer des IA open-source, souveraines et critiques pour briser le monopole idéologique. |
--->
 
-<!-- L'ajout de my-8 (ou my-12) crée l'espace exact requis au-dessus et en dessous du tableau pour suivre le rythme de lecture du template -->
-<div class="overflow-x-auto my-8 md:my-12 clear-both">
-  <table class="w-full md:table-fixed border-collapse border border-slate-200 dark:border-zinc-800 block md:table">
-    <!-- En-tête (Masqué sur mobile, visible sur desktop/tablette) -->
-    <thead class="hidden md:table-header-group">
-      <tr class="bg-slate-50 dark:bg-zinc-900/50">
-        <th class="w-1/3 border border-slate-200 dark:border-zinc-800 p-3 text-left font-semibold text-sm text-slate-900 dark:text-zinc-100">Concept</th>
-        <th class="w-1/3 border border-slate-200 dark:border-zinc-800 p-3 text-left font-semibold text-sm text-slate-900 dark:text-zinc-100">Lecture Marxiste <br><span class="text-xs font-normal text-slate-500 dark:text-zinc-400">(General Intellect)</span></th>
-        <th class="w-1/3 border border-slate-200 dark:border-zinc-800 p-3 text-left font-semibold text-sm text-slate-900 dark:text-zinc-100">Lecture Gramscienne <br><span class="text-xs font-normal text-slate-500 dark:text-zinc-400">(Hégémonie)</span></th>
-      </tr>
-    </thead>
-    <tbody class="text-sm block md:table-row-group">
-      <!-- Ligne 1 : Le Constat -->
-      <tr class="block md:table-row border-b md:border-b-0 border-slate-200 dark:border-zinc-800 mb-6 md:mb-0">
-        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 font-bold bg-slate-100/70 dark:bg-zinc-900/70 text-slate-900 dark:text-zinc-100">
-          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-500 block mb-1">Concept</span>
-          Le Constat
-        </td>
-        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 align-top text-slate-700 dark:text-zinc-300 lead-relaxed">
-          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400 block mb-1">Lecture Marxiste (General Intellect)</span>
-          Le savoir de l'humanité est confisqué par les serveurs et les algorithmes de quelques monopoles.
-        </td>
-        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 align-top text-slate-700 dark:text-zinc-300 lead-relaxed">
-          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400 block mb-1">Lecture Gramscienne (Hégémonie)</span>
-          L'IA façonne le langage et la culture pour légitimer l'ordre social existant.
-        </td>
-      </tr>
-      <!-- Ligne 2 : La Sortie de Crise -->
-      <tr class="block md:table-row border-b md:border-b-0 border-slate-200 dark:border-zinc-800">
-        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 font-bold bg-slate-100/70 dark:bg-zinc-900/70 text-slate-900 dark:text-zinc-100">
-          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-500 block mb-1">Concept</span>
-          La Sortie de Crise
-        </td>
-        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 align-top text-slate-700 dark:text-zinc-300 lead-relaxed">
-          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400 block mb-1">Lecture Marxiste (General Intellect)</span>
-          Libérer le capital fixe : faire de l'IA un <strong class="font-bold text-slate-900 dark:text-zinc-100">commun universel</strong> gratuit au service de l'émancipation et de la réduction du temps de travail.
-        </td>
-        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 align-top text-slate-700 dark:text-zinc-300 lead-relaxed">
-          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400 block mb-1">Lecture Gramscienne (Hégémonie)</span>
-          Mener une <strong class="font-bold text-slate-900 dark:text-zinc-100">guerre de position</strong> numérique : développer des IA open-source, souveraines et critiques pour briser le monopole idéologique.
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </div>
-
 ---
 
 ## Apports contemporains à la compréhension de l’IA
@@ -158,7 +155,7 @@ Bien qu'ancrés dans la critique radicale, Durand Folco et Martineau proposent t
 
 1. **De la production d'objets à la prédiction comportementale :** Pour Marx, la valeur d'échange prend racine dans le temps de travail cristallisé lors de la transformation physique d'une marchandise. Les auteurs soutiennent que le capital algorithmique extrait sa valeur d'un nouveau gisement : la **prédiction**. La valeur réside désormais dans la capacité des modèles à anticiper, modifier et monétiser les comportements futurs des individus.
 2. **La gouvernance algorithmique et le techno-féodalisme :** Plutôt que de voir l'État comme un simple outil de la bourgeoisie, l'ouvrage décrit l'émergence d'une fusion technocratique. L'État a activement participé à la mise en place de cette infrastructure de surveillance, se rendant dépendant de plateformes privées géantes qui fonctionnent comme de nouveaux fiefs économiques axés sur la captation de rentes plutôt que sur la pure production manufacturière.
-3. **Une écologie politique du silicium :** Face à l'illusion d'une IA "virtuelle" et dématérialisée, les auteurs insistent sur l'ancrage physique destructeur de la technologie. La hausse du capital constant ($c$) se matérialise par l'extraction intensive de métaux rares, le pillage des ressources en eau pour refroidir les serveurs et une empreinte carbone massive. L'IA n'est pas qu'un outil d'exploitation sociale, elle est un vecteur majeur de la crise écologique globale.
+3. **Une écologie politique du silicium :** Face à l'illusion d'une IA "virtuelle" et dématérialisée, les auteurs insistent sur l'ancrage physique destructeur de la technologie. La hausse du capital constant (*c*) se matérialise par l'extraction intensive de métaux rares, le pillage des ressources en eau pour refroidir les serveurs et une empreinte carbone massive. L'IA n'est pas qu'un outil d'exploitation sociale, elle est un vecteur majeur de la crise écologique globale.
 
 ---
 
