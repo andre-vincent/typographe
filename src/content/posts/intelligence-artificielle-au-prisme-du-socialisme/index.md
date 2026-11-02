@@ -1,6 +1,6 @@
 ---
 title: L’Intelligence Artificielle au prisme de l’économie politique socialiste
-excerpt: Une analyse conceptuelle de l’impact de l'IA sur le capitalisme à
+excerpt: Une analyse conceptuelle de l’impact de l’IA sur le capitalisme à
   travers les grilles de lecture de Karl Marx et d’Antonio Gramsci. Analyse de
   concepts comme la composition organique, valeur-travail et «General
   Intellect».
