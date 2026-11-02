@@ -89,57 +89,18 @@ L'IA n'est pas neutre. Les filtres de modération, l'orientation des réponses e
 
 En combinant Marx et Gramsci, on comprend que l'enjeu de l'IA dépasse la simple question du chômage technologique : c'est une **guerre de position numérique** pour le contrôle de la pensée humaine.
 
-<style>
-  /* 1. Le conteneur gère l'espacement et le scroll horizontal sur mobile */
-  .responsive-table {
-    overflow-x: auto;
-    margin: 2.5rem 0;
-    width: 100%;
-  }
-  
-  /* 2. Le style s'applique à la table Markdown imbriquée */
-  .responsive-table table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-  }
-  
-  /* 3. Les cellules reçoivent la largeur égale et la sécurité relative ch */
-  .responsive-table th, 
-  .responsive-table td {
-    width: 33.33%;
-    min-width: 35ch;
-    padding: 0.75rem 1rem;
-    border: 1px solid #e2e8f0;
-    vertical-align: top;
-    text-align: left;
-    line-height: 1.6;
-  }
+#### Le Constat
 
-  .responsive-table th {
-    background-color: rgba(241, 245, 249, 0.5);
-    font-weight: 600;
-  }
+| Lecture Marxiste <br>(General Intellect) | Lecture Gramscienne <br>(Hégémonie) |
+| :--- | :--- |
+| Le savoir de l'humanité est confisqué par les serveurs et les algorithmes de quelques monopoles. | L'IA façonne le langage et la culture pour légitimer l'ordre social existant. |
 
-  /* 4. Intégration transparente avec le mode sombre du template */
-  :global(.dark) .responsive-table th {
-    background-color: rgba(39, 39, 42, 0.5);
-  }
-  :global(.dark) .responsive-table th,
-  :global(.dark) .responsive-table td {
-    border-color: #27272a;
-  }
-</style>
+#### La Sortie de Crise
 
-<div class="responsive-table">
+| Lecture Marxiste <br>(General Intellect) | Lecture Gramscienne <br>(Hégémonie) |
+| :--- | :--- |
+| Libérer le capital fixe : faire de l'IA un **commun universel** gratuit au service de l'émancipation et de la réduction du temps de travail. | Mener une **guerre de position** numérique : développer des IA open-source, souveraines et critiques pour briser le monopole idéologique. |
 
-| Concept | Lecture Marxiste <br>(General Intellect) | Lecture Gramscienne <br>(Hégémonie) |
-| :--- | :--- | :--- |
-| **Le Constat** | Le savoir de l'humanité est confisqué par les serveurs et les algorithmes de quelques monopoles. | L'IA façonne le langage et la culture pour légitimer l'ordre social existant. |
-| **La Sortie de Crise** | Libérer le capital fixe : faire de l'IA un **commun universel** gratuit au service de l'émancipation et de la réduction du temps de travail. | Mener une **guerre de position** numérique : développer des IA open-source, souveraines et critiques pour briser le monopole idéologique. |
-
-</div>
----
 
 ## Apports contemporains à la compréhension de l’IA
 
