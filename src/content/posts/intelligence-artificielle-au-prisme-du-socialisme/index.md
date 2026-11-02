@@ -21,7 +21,7 @@ L’essor de l’intelligence artificielle (IA) ne représente pas seulement une
 
 L'intelligence artificielle accélère de manière inédite l'augmentation de la **composition organique du capital**. Dans la théorie marxiste, ce concept désigne le rapport entre le **capital constant** ($c$, représenté par les moyens de production comme les machines ou les serveurs) et le **capital variable** ($v$, correspondant à la force de travail humaine engagée) [^1]. 
 
-$$\text{Composition Organique} = \frac{c}{v}$$
+$$\text{Composition} \ \text{Organique} = \frac{c}{v}$$
 
 ### L'élévation massive du capital constant ($c$)
 
