@@ -89,10 +89,58 @@ L'IA n'est pas neutre. Les filtres de modération, l'orientation des réponses e
 
 En combinant Marx et Gramsci, on comprend que l'enjeu de l'IA dépasse la simple question du chômage technologique : c'est une **guerre de position numérique** pour le contrôle de la pensée humaine.
 
+<!--
 | Concept | Lecture Marxiste <br>(General Intellect) | Lecture Gramscienne <br>(Hégémonie) |
 | :--- | :--- | :--- |
 | **Le Constat** | Le savoir de l'humanité est confisqué par les serveurs et les algorithmes de quelques monopoles. | L'IA façonne le langage et la culture pour légitimer l'ordre social existant. |
 | **La Sortie de Crise** | Libérer le capital fixe : faire de l'IA un **commun universel** gratuit au service de l'émancipation et de la réduction du temps de travail. | Mener une **guerre de position** numérique : développer des IA open-source, souveraines et critiques pour briser le monopole idéologique. |
+-->
+
+<!-- L'ajout de my-8 (ou my-12) crée l'espace exact requis au-dessus et en dessous du tableau pour suivre le rythme de lecture du template -->
+<div class="overflow-x-auto my-8 md:my-12 clear-both">
+  <table class="w-full md:table-fixed border-collapse border border-slate-200 dark:border-zinc-800 block md:table">
+    <!-- En-tête (Masqué sur mobile, visible sur desktop/tablette) -->
+    <thead class="hidden md:table-header-group">
+      <tr class="bg-slate-50 dark:bg-zinc-900/50">
+        <th class="w-1/3 border border-slate-200 dark:border-zinc-800 p-3 text-left font-semibold text-sm text-slate-900 dark:text-zinc-100">Concept</th>
+        <th class="w-1/3 border border-slate-200 dark:border-zinc-800 p-3 text-left font-semibold text-sm text-slate-900 dark:text-zinc-100">Lecture Marxiste <br><span class="text-xs font-normal text-slate-500 dark:text-zinc-400">(General Intellect)</span></th>
+        <th class="w-1/3 border border-slate-200 dark:border-zinc-800 p-3 text-left font-semibold text-sm text-slate-900 dark:text-zinc-100">Lecture Gramscienne <br><span class="text-xs font-normal text-slate-500 dark:text-zinc-400">(Hégémonie)</span></th>
+      </tr>
+    </thead>
+    <tbody class="text-sm block md:table-row-group">
+      <!-- Ligne 1 : Le Constat -->
+      <tr class="block md:table-row border-b md:border-b-0 border-slate-200 dark:border-zinc-800 mb-6 md:mb-0">
+        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 font-bold bg-slate-100/70 dark:bg-zinc-900/70 text-slate-900 dark:text-zinc-100">
+          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-500 block mb-1">Concept</span>
+          Le Constat
+        </td>
+        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 align-top text-slate-700 dark:text-zinc-300 lead-relaxed">
+          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400 block mb-1">Lecture Marxiste (General Intellect)</span>
+          Le savoir de l'humanité est confisqué par les serveurs et les algorithmes de quelques monopoles.
+        </td>
+        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 align-top text-slate-700 dark:text-zinc-300 lead-relaxed">
+          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400 block mb-1">Lecture Gramscienne (Hégémonie)</span>
+          L'IA façonne le langage et la culture pour légitimer l'ordre social existant.
+        </td>
+      </tr>
+      <!-- Ligne 2 : La Sortie de Crise -->
+      <tr class="block md:table-row border-b md:border-b-0 border-slate-200 dark:border-zinc-800">
+        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 font-bold bg-slate-100/70 dark:bg-zinc-900/70 text-slate-900 dark:text-zinc-100">
+          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-500 block mb-1">Concept</span>
+          La Sortie de Crise
+        </td>
+        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 align-top text-slate-700 dark:text-zinc-300 lead-relaxed">
+          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400 block mb-1">Lecture Marxiste (General Intellect)</span>
+          Libérer le capital fixe : faire de l'IA un <strong class="font-bold text-slate-900 dark:text-zinc-100">commun universel</strong> gratuit au service de l'émancipation et de la réduction du temps de travail.
+        </td>
+        <td class="block md:table-cell border border-slate-200 dark:border-zinc-800 p-3 align-top text-slate-700 dark:text-zinc-300 lead-relaxed">
+          <span class="md:hidden text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-zinc-400 block mb-1">Lecture Gramscienne (Hégémonie)</span>
+          Mener une <strong class="font-bold text-slate-900 dark:text-zinc-100">guerre de position</strong> numérique : développer des IA open-source, souveraines et critiques pour briser le monopole idéologique.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ---
 
