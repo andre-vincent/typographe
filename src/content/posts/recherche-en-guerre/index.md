@@ -5,8 +5,8 @@ excerpt: Comment le Pentagone et les services de renseignements américains
   pointe et la recherche universitaire canadienne pour alimenter leur complexe
   militaro-industriel.
 category: Éducation
-date: 2026-10-11
-updatedDate: 2026-10-30
+date: 2026-11-01
+updatedDate: 2026-11-02
 author:
   name: André Vincent
   role: Webmestre de ce site. Typographe, enseignant et syndicaliste.
