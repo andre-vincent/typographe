@@ -49,9 +49,9 @@ def subset_fonts():
 
         print(f"🔨 Traitement de {file_name} -> {output_path}")
 
-        # Remplacement de 'pyftsubset' par l'appel direct du module python pour une portabilité maximale
+        # Utilisation directe de 'pyftsubset' qui est correctement mappé par asdf/pip sur Cloudflare
         cmd = [
-            "python3", "-m", "fonttools.subset",
+            "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
             "--layout-features=*",       # Conserve l'OpenType
