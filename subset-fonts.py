@@ -39,13 +39,10 @@ def subset_fonts():
         base_name = os.path.splitext(file_name)[0]
         output_path = os.path.join(OUTPUT_DIR, f"{base_name}.woff2")
 
-        # ⚡ OPTIMISATION : Évite de régénérer si le fichier source n'a pas changé
+        # ⚡ VERSION POUR TEMPLATE : Évite de régénérer si le fichier .woff2 existe, tout simplement
         if os.path.exists(output_path):
-            input_mtime = os.path.getmtime(input_path)
-            output_mtime = os.path.getmtime(output_path)
-            if output_mtime > input_mtime:
-                print(f"⏭️ Ignoré : {file_name} est déjà optimisé (public/fonts/{base_name}.woff2)")
-                continue
+            print(f"⏭️ Ignoré : {file_name} possède déjà sa version optimisée ({output_path})")
+            continue
 
         print(f"🔨 Traitement de {file_name} -> {output_path}")
 
