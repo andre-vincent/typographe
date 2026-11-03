@@ -948,3 +948,12 @@
     color: var(--foreground);
   }
 }
+
+/* AJOUT - AV */
+
+/* Force le symbole de retour des notes à rester purement textuel */
+.footnote-backref, 
+[data-footnote-backref] {
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+}
