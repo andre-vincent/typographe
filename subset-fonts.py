@@ -5,17 +5,59 @@ import subprocess
 SOURCE_DIR = "src/fonts/src"
 OUTPUT_DIR = "public/fonts"
 
-# 2. Plage Unicode Éditoriale validée (avec Latin Extended-B, sans Maths)
+# 2. Plage Unicode Éditoriale Française Complète (Haute Qualité Éditoriale)
 UNICODES_LIST = (
-    "U+0020-007F,"
-    "U+00A0-00FF,"
-    "U+0100-017F,"
-    "U+0180-024F,"
-    "U+2000-206F,"
-    "U+2070-209F,"
-    "U+20A0-20CF,"
-    "U+2100-214F,"
-    "U+FB00-FB4F"
+    # --- Ponctuation, Symboles de base et Tilde (ASCII) ---
+    "U+0020-003F,"  # Espace, !, ", #, $, %, &, ', (, ), *, +, ,, -, ., /, 0-9, :, ;, <, =, >, ?
+    "U+0040-007E,"  # @, A-Z, [, \, ], ^, _, `, a-z, {, |, }, ~ (Tilde inclus)
+    
+    # --- Espaces Typographiques fines et insécables ---
+    "U+00A0,"       # Espace insécable (Devant le signe deux-points et les grands nombres)
+    "U+202F,"       # Espace fine insécable (Obligatoire en français avant ;, !, ?)
+    "U+2000-200A,"  # Espaces de tailles diverses (Cadratin, demi-cadratin, tiers de cadratin...)
+    
+    # --- Diacritiques et Lettres Françaises (Minuscules & Majuscules) ---
+    "U+00A2-00A5,"  # Symboles monétaires courants (¢, £, ¤, ¥)
+    "U+00C0,"       # À
+    "U+00C2,"       # Â
+    "U+00C6,"       # Æ
+    "U+00C7,"       # Ç
+    "U+00C8-00CB,"  # È, É, Ê, Ë
+    "U+00CE-00CF,"  # Î, Ï
+    "U+00D4,"       # Ô
+    "U+00F9,"       # Ù
+    "U+00FB-00FC,"  # Û, Ü
+    "U+0152-0153,"  # Œ, œ
+    "U+00E0,"       # à
+    "U+00E2,"       # â
+    "U+00E6,"       # æ
+    "U+00E7,"       # ç
+    "U+00E8-00EB,"  # è, é, ê, ë
+    "U+00EE-00EF,"  # î, ï
+    "U+00F4,"       # ô
+    "U+00F9,"       # ù
+    "U+00FB-00FC,"  # û, ü
+    "U+0178,"       # Ÿ
+    "U+00FF,"       # ÿ
+    
+    # --- Signes de Ponctuation Éditoriale et Tirets ---
+    "U+2010-2011,"  # Trait d'union et trait d'union insécable
+    "U+2013-2014,"  # Tiret demi-cadratin (–) et Tiret cadratin (—)
+    "U+2018-2019,"  # Guillemet-apostrophe et Apostrophe typographique courbe (’)
+    "U+201C-201D,"  # Guillemets anglais doubles (“ ”) pour les citations imbriquées
+    "U+2026,"       # Points de suspension (…)
+    "U+AB00,"       # Guillemet français ouvrant («)
+    "U+00BB,"       # Guillemet français fermant (»)
+    
+    # --- Symboles, Monnaie, Signes d'édition et Indicateurs Ordinaux ---
+    "U+20AC,"       # Symbole Euro (€)
+    "U+2116,"       # Symbole Numéro (№)
+    "U+00AA,"       # Indicateur ordinal féminin (ª) pour "1re" en lettrine
+    "U+00B0,"       # Signe degré (°)
+    "U+00B1,"       # Signe plus-ou-moins (±) pour les approximations (ex: ±50 pages)
+    "U+00B2-00B3,"  # Exposants ² et ³
+    "U+00BC-00BE,"  # Fractions courantes (¼, ½, ¾)
+    "U+00D7"        # Vrai signe mathématique de multiplication (×) pour les dimensions (ex: 14 × 21 cm)
 )
 
 def subset_fonts():
@@ -36,6 +78,8 @@ def subset_fonts():
 
     for file_name in files:
         input_path = os.path.join(SOURCE_DIR, file_name)
+        
+        # Extraction propre du nom (Correction du bug de tuple en ajoutant)
         base_name = os.path.splitext(file_name)[0]
         output_path = os.path.join(OUTPUT_DIR, f"{base_name}.woff2")
 
@@ -46,17 +90,15 @@ def subset_fonts():
 
         print(f"🔨 Traitement de {file_name} -> {output_path}")
 
-        # Utilisation directe de 'pyftsubset' qui est correctement mappé par asdf/pip sur Cloudflare
         cmd = [
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
-            "--layout-features=*",       # Conserve l'OpenType
-            "--glyph-names",             # Spécifique à votre configuration
-            "--notdef-outline",          # Conserve les structures
-            "--no-hinting",              # Nettoyage du hinting
-            "--name-IDs=0,1,2,4,6",      # Nettoyage métadonnées
-            "--flavor=woff2",            # Format WOFF2
+            "--layout-features=*",       # Conserve précieusement le crénage (kern), ligatures et fonctionnalités variables
+            "--notdef-outline",          # Conserve le glyphe par défaut en cas de caractère manquant
+            "--no-hinting",              # Supprime le hinting pour un rendu plus net sur le web moderne
+            "--name-IDs=0,1,2,4,6",      # Supprime les textes de métadonnées superflus
+            "--flavor=woff2",            # Compression maximale en WOFF2
             f"--output-file={output_path}"
         ]
 
