@@ -3,7 +3,7 @@ name: Optimisation automatique des polices
 on:
   push:
     paths:
-      - 'src/fonts/src/**'
+      - 'src/fonts/src/**' # ⚡ Déclenchement précis sur votre vrai dossier source
   workflow_dispatch: 
 
 permissions:
@@ -16,13 +16,12 @@ jobs:
     steps:
       - name: Récupérer le code du projet
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
 
       - name: Installer Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.12'
+          cache: 'pip'
 
       - name: Installer les dépendances
         run: |
@@ -32,16 +31,9 @@ jobs:
         run: |
           python subset-fonts.py
 
-      # 💡 ÉTAPE DE DÉBOGAGE : Affiche ce qui a réellement été créé
-      - name: Vérifier les fichiers générés
-        run: |
-          echo "=== Contenu du dossier source ==="
-          ls -la src/fonts/src || echo "Dossier source introuvable"
-          echo "=== Contenu du dossier de sortie ==="
-          ls -la public/fonts || echo "Dossier de sortie introuvable"
-
       - name: Enregistrer les modifications sur GitHub
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: polices optimisées automatiquement en WOFF2"
-          file_pattern: 'public/fonts/*' # Élargi à tous les fichiers du dossier
+          commit_message: "chore: polices optimisées automatiquement en WOFF2 [skip ci]"
+          file_pattern: 'public/fonts/*.woff2'
+          disable_globbing: false
