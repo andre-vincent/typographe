@@ -724,6 +724,7 @@
    * text pages all render the same reading column.
    */
   .prose {
+    font-family: var(--font-serif);
     font-size: 1.0625rem;
     line-height: 1.75;
     word-break: break-word;
