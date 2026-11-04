@@ -3,7 +3,7 @@ name: Optimisation automatique des polices
 on:
   push:
     paths:
-      - 'src/fonts/src/**' # ⚡ Déclenchement précis sur votre vrai dossier source
+      - 'src/fonts/src/**'
   workflow_dispatch: 
 
 permissions:
@@ -21,7 +21,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: 'pip'
 
       - name: Installer les dépendances
         run: |
@@ -30,6 +29,17 @@ jobs:
       - name: Exécuter le script Python
         run: |
           python subset-fonts.py
+
+      # Étape de vérification pour s'assurer que les fichiers WOFF2 ont été générés
+      - name: Vérifier les fichiers générés
+        run: |
+          echo "=== Contenu du dossier de sortie ==="
+          if [ -d "public/fonts" ]; then
+            ls -la public/fonts
+          else
+            echo "❌ Erreur : Le dossier public/fonts n'a pas été créé."
+            exit 1
+          fi
 
       - name: Enregistrer les modifications sur GitHub
         uses: stefanzweifel/git-auto-commit-action@v5
