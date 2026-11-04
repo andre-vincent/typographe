@@ -1,6 +1,12 @@
 import os
 import subprocess
 
+try:
+    from fontTools.ttLib import TTFont
+except ImportError:
+    print("Dépendance manquante : Veuillez installer fonttools avec 'pip install fonttools'")
+    exit(1)
+
 # 1. Chemins des dossiers
 SOURCE_DIR = "src/fonts/src"
 OUTPUT_DIR = "public/fonts"
@@ -60,6 +66,15 @@ UNICODES_LIST = (
     "U+00D7"        # Vrai signe mathématique de multiplication (×) pour les dimensions (ex: 14 × 21 cm)
 )
 
+def is_variable_font(font_path):
+    """Détecte si la police contient des variations d'axes OpenType via la table fvar."""
+    try:
+        with TTFont(font_path) as font:
+            return "fvar" in font
+    except Exception as e:
+        print(f"⚠️ Impossible d'analyser la police {os.path.basename(font_path)}: {e}")
+        return False
+
 def subset_fonts():
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
@@ -88,7 +103,10 @@ def subset_fonts():
             print(f"⏭️ Ignoré : {file_name} possède déjà sa version optimisée ({output_path})")
             continue
 
-        print(f"🔨 Traitement de {file_name} -> {output_path}")
+        # Détection automatique de la nature de la police
+        is_var = is_variable_font(input_path)
+        font_type_label = "VARIABLE" if is_var else "STATIQUE"
+        print(f"🔨 Traitement [{font_type_label}] : {file_name} -> {output_path}")
 
         cmd = [
             "pyftsubset",
@@ -97,10 +115,17 @@ def subset_fonts():
             "--layout-features=*",       # Conserve le crénage (kern), ligatures et fonctionnalités OpenType
             "--notdef-outline",          # Conserve le glyphe par défaut en cas de caractère manquant
             "--no-hinting",              # Supprime le hinting pour un rendu plus net sur le web moderne
-            "--name-IDs=0,1,2,4,6",      # Supprime les métadonnées superflues
+            "--name-IDs=0,1,2,4,6",      # Supprime les métadonnées de nom superflues
             "--flavor=woff2",            # Compression maximale en WOFF2
             f"--output-file={output_path}"
         ]
+
+        # Injection des arguments si la police est variable pour garder TOUS les axes intacts
+        if is_var:
+            cmd.extend([
+                "--gvar",                # Conserve les variations de géométrie des glyphes
+                "--axes=*"               # Conserve absolument l'ensemble des axes définis (wght, wdth, ital, etc.)
+            ])
 
         try:
             subprocess.run(cmd, check=True)
