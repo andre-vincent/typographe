@@ -43,10 +43,10 @@ UNICODES_LIST = (
     # --- Signes de Ponctuation Éditoriale et Tirets ---
     "U+2010-2011,"  # Trait d'union et trait d'union insécable
     "U+2013-2014,"  # Tiret demi-cadratin (–) et Tiret cadratin (—)
-    "U+2018-2019,"  # Guillemet-apostrophe et Apostrophe typographique courbe (’)
+    "U+2018-201B,"  # Apostrophes et guillemets simples (Courbe ’, inversée, culbutée)
     "U+201C-201D,"  # Guillemets anglais doubles (“ ”) pour les citations imbriquées
     "U+2026,"       # Points de suspension (…)
-    "U+AB00,"       # Guillemet français ouvrant («)
+    "U+00AB,"       # Guillemet français ouvrant («) - Correction de la coquille U+AB00
     "U+00BB,"       # Guillemet français fermant (»)
     
     # --- Symboles, Monnaie, Signes d'édition et Indicateurs Ordinaux ---
@@ -79,11 +79,11 @@ def subset_fonts():
     for file_name in files:
         input_path = os.path.join(SOURCE_DIR, file_name)
         
-        # Extraction propre du nom (Correction du bug de tuple en ajoutant)
+        # Extraction propre du nom
         base_name = os.path.splitext(file_name)[0]
         output_path = os.path.join(OUTPUT_DIR, f"{base_name}.woff2")
 
-        # ⚡ VERSION POUR TEMPLATE : Évite de régénérer si le fichier .woff2 existe, tout simplement
+        # ⚡ VERSION POUR TEMPLATE : Évite de régénérer si le fichier .woff2 existe déjà
         if os.path.exists(output_path):
             print(f"⏭️ Ignoré : {file_name} possède déjà sa version optimisée ({output_path})")
             continue
@@ -94,10 +94,10 @@ def subset_fonts():
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
-            "--layout-features=*",       # Conserve précieusement le crénage (kern), ligatures et fonctionnalités variables
+            "--layout-features=*",       # Conserve le crénage (kern), ligatures et fonctionnalités OpenType
             "--notdef-outline",          # Conserve le glyphe par défaut en cas de caractère manquant
             "--no-hinting",              # Supprime le hinting pour un rendu plus net sur le web moderne
-            "--name-IDs=0,1,2,4,6",      # Supprime les textes de métadonnées superflus
+            "--name-IDs=0,1,2,4,6",      # Supprime les métadonnées superflues
             "--flavor=woff2",            # Compression maximale en WOFF2
             f"--output-file={output_path}"
         ]
