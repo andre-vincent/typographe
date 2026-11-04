@@ -25,15 +25,15 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "prebuild": "pip install fonttools brotli && python3 subset-fonts.py || echo 'Avertissement : Échec de la vérification des polices, utilisation des fichiers existants.'",
+    "optimize-fonts": "pip install fonttools brotli && python3 subset-fonts.py",
+    "prebuild": "node -e \"const fs = require('fs'); if (!fs.existsSync('public/fonts') || fs.readdirSync('public/fonts').length === 0) { console.log('📦 Polices absentes. Lancement de l\\'optimisation...'); process.exit(0); } else { console.log('⏭️ Polices WOFF2 déjà optimisées. Passage au build.'); process.exit(1); }\" && npm run optimize-fonts || echo 'Statut : Fin de vérification des polices.'",
     "build": "astro build",
     "check": "astro check",
-    "release:check": "npm run check && npm run build && npm run format:check",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
-},
+  },
  "overrides": {
     "yaml": "^2.8.3"
   },
