@@ -726,7 +726,7 @@
   .prose {
     font-family: var(--font-serif);
     font-size: 1.0625rem;
-    line-height: 1.75;
+    line-height: 1.6;
     word-break: break-word;
   }
 
@@ -770,7 +770,7 @@
     font-weight: 600;
     letter-spacing: -0.015em;
     scroll-margin-top: 5rem;
-    text-wrqp: balance;
+    text-wrap: balance;
   }
 
   .prose h2 {
