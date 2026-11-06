@@ -1,9 +1,11 @@
 ---
 title: "Guide des abréviations et de la datation en typographie journalistique"
-description: "Maîtriser les abréviations, exposants et règles de datation pour la rédaction de contenu en français sous le framework Astro."
-pubDate: 2026-11-06
-author: "Rédaction"
-tags: ["typographie", "journalisme", "astro", "markdown"]
+excerpt: "Maîtriser les abréviations, exposants et règles de datation pour la rédaction de contenu en français sous le framework Astro."
+date: 2026-11-06
+author: 
+  name: "André Vincent"
+  role: “Webmestre de ce site. Typographe, enseignant, syndicaliste"
+category: "Typographie"
 draft: false
 ---
 
