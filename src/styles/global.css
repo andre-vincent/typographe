@@ -770,11 +770,12 @@
     font-weight: 600;
     letter-spacing: -0.015em;
     scroll-margin-top: 5rem;
+    text-wrqp: balance;
   }
 
   .prose h2 {
     margin: 3rem 0 1rem;
-    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     line-height: 1.25;
   }
 
