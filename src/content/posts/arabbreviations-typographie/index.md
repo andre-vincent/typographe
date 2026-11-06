@@ -1,5 +1,5 @@
 ---
-title: "Guide des abréviations et de la datation en typographie journalistique"
+title: "Guide des abréviations et de la datation en typographie soignée"
 excerpt: "Maîtriser les abréviations, exposants et règles de datation pour la rédaction de contenu en français sous le framework Astro."
 date: 2026-11-06
 author: 
@@ -9,7 +9,7 @@ category: "Typographie"
 draft: false
 ---
 
-En écriture journalistique et typographie française, les formes réduites des mots suivent des règles strictes. Ce guide récapitule les abréviations courantes, la gestion de la datation et leur implémentation technique dans le générateur de site statique (SSG) Astro.
+En typographie soignée en français, les formes réduites des mots suivent des règles strictes. Ce guide récapitule les abréviations courantes, la gestion de la datation et leur implémentation technique dans le générateur de site statique (SSG) Astro.
 
 ## 1. Les abréviations civiles et professionnelles
 
