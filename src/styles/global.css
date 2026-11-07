@@ -742,11 +742,12 @@
     margin: 1.4rem 0;
     color: color-mix(in srgb, var(--foreground) 92%, transparent);
     /* text-wrap: pretty; */
-    /* hyphens: auto; */
+
   }
 
   .prose p {
     text-align: justify;
+    hyphens: auto;
   }
 
   .prose ul,
