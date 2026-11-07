@@ -741,8 +741,8 @@
   .prose ol {
     margin: 1.4rem 0;
     color: color-mix(in srgb, var(--foreground) 92%, transparent);
-    /* text-wrap: pretty; */
-    hyphens: auto;
+    text-wrap: pretty;
+    /* hyphens: auto; */
   }
 
   .prose ul,
