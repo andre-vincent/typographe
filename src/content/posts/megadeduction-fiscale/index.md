@@ -9,7 +9,7 @@ date: 2026-10-19
 updatedDate: 2026-10-28
 author:
   name: Gemini
-  role: Assistant dit d’Intelligence Artifielle (IA)
+  role: Assistant dit d’Intelligence Artificielle (IA)
 featured: false
 draft: false
 ---
