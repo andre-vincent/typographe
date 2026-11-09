@@ -8,12 +8,12 @@ category: Économie
 date: 2026-10-19
 updatedDate: 2026-10-28
 author:
-  name: ChatGPT et Gemini
-  role: Assistants dits d’Intelligence Artifielle
+  name: Gemini
+  role: Assistant dit d’Intelligence Artifielle (IA)
 featured: false
 draft: false
 ---
-> Test de génération d’article par IA. Résultat : un texte plausible qui fait du sens mais dont les sources sont inexactes. En somme, une vulgaire machine à plagiat.
+> Texte rédigé en grande partie par IA servant de test de rédaction en français au format Markdown: titres, sous-titres, paragraphes, listes, blocs de citation, tableaux, notes de bas de pages, etc. Vérification de la correction ortho-typographe automatique selon les règles de la typographie soignée en français.
 
 ## Partie 1 : Fonctionnement de la Mégadéduction et intérêt pour l'Europe
 
