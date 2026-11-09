@@ -80,7 +80,7 @@ L'holarchie repose sur l'unité de l'**holon**, une entité qui manifeste une do
 * **La non-linéarité systémique :** La théorie des systèmes complexes stipule que les propriétés globales d'un écosystème (comme la stabilité d'un biome ou la résilience climatique d'une forêt primaire) sont dites *émergentes*. Elles ne peuvent être déduites de l'étude séparée des organismes qui les composent. Le système s'auto-organise à travers des interactions locales horizontales.
 * **La décentralisation du contrôle :** Il n'existe aucun centre de commandement unique dans la biosphère. La régulation des cycles du carbone, de l'azote ou de l'eau (telle que formalisée par James Lovelock et Lynn Margulis dans l'hypothèse Gaia [^5]) s'effectue par des boucles de rétroaction décentralisées. L'être humain n'est pas le pilote du vaisseau terrestre, mais un composant interne soumis aux rétroactions du système global.
 
-### La double causalité (Ascendante et Descendante)
+### La double causalité (ascendante et descendante)
 L'holarchie fonctionne via une tension permanente entre deux types de causalités :
 * **La causalité ascendante (*Bottom-Up*) :** Les mutations génétiques locales, les comportements individuels et les dynamiques bactériennes modifient à terme les structures macroscopiques globales de l'environnement.
 * **La causalité descendante (*Top-Down*) :** Les lois globales du système (le climat macro, les cycles géologiques, les pressions écologiques) agissent comme des contraintes physiques directes qui dictent les conditions de survie et d'évolution des organismes individuels.
