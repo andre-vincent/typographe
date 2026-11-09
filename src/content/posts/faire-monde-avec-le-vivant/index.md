@@ -1,7 +1,7 @@
 ---
 title: "Faire monde avec le vivant"
 date: 2026-11-09
-excerpt: "Déconstruction du modèle anthropocentrique et confrontation du projet d'horizontalité du vivant aux réalités biologiques et évolutionnaires."
+excerpt: "Déconstruction du modèle anthropocentrique et confrontation du projet d'horizontalité du vivant aux réalités biologiques et évolutionnistes."
 author: 
   name: "Gemini"
   role: "Assistan dit d’Intelligence Artificielle (IA)"
