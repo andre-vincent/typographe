@@ -15,7 +15,8 @@ Ce fichier permet de valider visuellement si le plugin applique correctement les
 * Est-ce que le système fonctionne comme prévu ? (Attendu : espace insécable fine devant ?)
 * C'est incroyable ! (Attendu : espace insécable fine devant !)
 * Veuillez noter ceci : la règle s'applique. (Attendu : espace insécable forte devant :)
-* Il dit : "Le projet Astro est génial". (Attendu : « Le projet Astro est génial » avec espaces)
+* Il dit : "Le projet Astro est génial". (Attendu : « Le projet Astro est génial » guillemets français avec espaces fines insécables.)
+* Il dit : "Le projet <q>Astro</q> est génial". (Attendu : « Le projet <q>Astro</q> est génial » guillemets français avec espaces fines insécables.)
 * C'est l'arbre de l'étudiant d'aujourd'hui, au cœur du bœuf. (Attendu : apostrophes courbes ’ entre deux lettres)
 * Une fin de phrase avec des points de suspension... (Attendu : … en un seul caractère)
 
