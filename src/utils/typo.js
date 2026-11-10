@@ -11,10 +11,12 @@ export function applyFrenchTypoRules(text, isInsideTd = false) {
   // B. Le Deux-points (:)
   value = value.replace(/([A-Za-zÀ-ÿ)\]])\s*:(?!\/\/)/g, `$1${NBSP}:`);
 
-  // C. Guillemets français (« »)
-  value = value.replace(/"([^"]+?)"/g, `«$1»`);
-  value = value.replace(/«\s*/g, `«${NARROW_NBSP}`);
-  value = value.replace(/\s*»/g, `${NARROW_NBSP}»`);
+// C. Guillemets français (« »)
+// 1. Convertit les guillemets droits (") ET les guillemets anglais (“ ”) en guillemets français
+value = value.replace(/["“]([^"“”]+?)[”"]/g, `«$1»`);
+// 2. Applique l'espace fine insécable à l'intérieur (approche esthétique moderne / Le Ramat)
+value = value.replace(/«\s*/g, `«${NARROW_NBSP}`);
+value = value.replace(/\s*»/g, `${NARROW_NBSP}»`);
 
   // D. Grands Nombres
   // Capture les suites de chiffres d'au moins 4 caractères
@@ -38,20 +40,30 @@ export function applyFrenchTypoRules(text, isInsideTd = false) {
     
     return match;
   });
-  
-  // E. Unités, Pourcentages, Devises & Horaires
-  value = value.replace(/(\d)\s*(%)/g, `$1${NARROW_NBSP}$2`);
-  
-  // Unités physiques ET informatiques (B, octets, ko, Mo, Go, To ajoutés)
-  value = value.replace(/(\d)\s*(m|cm|mm|km|g|kg|mg|t|L|V|W|kW|Hz|dB|B|octets|ko|Mo|Go|To)\b/g, `$1${NARROW_NBSP}$2`);
-  
-  value = value.replace(/(\d)\s*([€\$£¥])/g, `$1${NBSP}$2`);
-  value = value.replace(/(\d)\s*(h)\s*(\d+)/gi, `$1${NBSP}$2${NBSP}$3`);
-  value = value.replace(/(\d)\s*(h)\b/gi, `$1${NBSP}$2`);
 
-  // F. Apostrophes courbes & Éléments de structure
-  value = value.replace(/([a-zA-ZÀ-ÿ])'([a-zA-ZÀ-ÿ])/g, '$1’$2');
-  value = value.replace(/\.{3}/g, '…');
+
+  // E. Unités, Pourcentages, Devises & Horaires
+// Pourcentage (%) : Espace fine insécable (approche esthétique moderne / Le Ramat)
+value = value.replace(/(\d)\s*(%)/g, `$1${NARROW_NBSP}$2`);
+
+// Unités physiques, informatiques, temporelles et géométriques
+// Ajouts : s (secondes), min (minutes), °C (degrés Celsius), m², m³
+value = value.replace(/(\d)\s*(m|cm|mm|km|m²|m³|g|kg|mg|t|L|V|W|kW|Hz|dB|B|octets|ko|Mo|Go|To|s|min|°C)\b/g, `$1${NARROW_NBSP}$2`);
+
+// Devises : Espace-mot insécable (Le symbole monétaire agit comme un délimiteur/séparateur de valeur)
+value = value.replace(/(\d)\s*([€\$£¥])/g, `$1${NBSP}$2`);
+
+// Horaires : Passage en espace fine insécable de chaque côté du « h »
+// Évite le grand vide visuel de l'espace-mot tout en maintenant le bloc sémantique soudé
+value = value.replace(/(\d)\s*(h)\s*(\d+)/gi, `$1${NARROW_NBSP}$2${NARROW_NBSP}$3`);
+value = value.replace(/(\d)\s*(h)\b/gi, `$1${NARROW_NBSP}$2`);
+
+// F. Apostrophes courbes & Éléments de structure
+// Remplacement de l'apostrophe droite informatique par l'apostrophe typo
+value = value.replace(/([a-zA-ZÀ-ÿ])'([a-zA-ZÀ-ÿ])/g, "$1’$2");
+
+// Remplacement des trois points juxtaposés par le caractère d'omission unique
+value = value.replace(/\.{3}/g, '…');
 
   return value;
 }
