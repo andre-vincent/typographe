@@ -8,6 +8,7 @@ author:
 category: "Politique"
 ---
 > Quelques commentaires générés par IA à propos du thème principal de La grande transition, édition 2026 qui se tiendra à Montréal (Québec) du 27 au 30 mai 2027 sous le thème: «Faire monde avec le vivant : horizons pour le postcapitalisme.»
+> Cette page de démonstration des capacités du gabarit (template) **Typographe** pour le générateur de site web statique **Astro** compte près de 6000 mots. La page s’affiche au complet en moins d’une seconde sur mobile et moins de 0,3 secondes sur ordinateur. Elle est sémantique et 100% accessible (AA). Elle est naturellement 100% optimisée pour les moteur de recherche (SEO). Elle est éco-responsable. Elle utilise des polices de caractères optimisées pour la langue française. Elle applique automatiquement, grâce à un correcteur ortho-typographique, les meilleures pratiques de la typographie française.
 
 ## Introduction : Les fondements du projet d'horizontalité du vivant
 
