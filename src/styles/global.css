@@ -118,7 +118,7 @@
     Menlo, "Liberation Mono", monospace;
 
   --layout-wide: 75rem;
-  --layout-content: 58ch; /* <- original 45rem  */
+  --layout-content: 55ch; /* <- original 45rem  */
   --gutter: 1.5rem;
   --space-section: clamp(4rem, 8vw, 7.5rem);
 
