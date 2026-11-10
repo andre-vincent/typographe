@@ -973,3 +973,31 @@
   text-decoration: none;
   font-family: system-ui, sans-serif;
 }
+
+/* ==========================================================================
+   Gestion sémantique et typographique des citations (<q>)
+   ========================================================================== */
+
+/* 1. Définition des paires de guillemets (Niveau 1 : français, Niveau 2 : anglais) */
+:root {
+  quotes: "«\202F" "\202F»" "“" "”";
+}
+
+/* 2. Application automatique des guillemets définis sur l'élément sémantique <q> */
+q {
+  quotes: inherit;
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
+
+/* 3. Sécurité : Empêche l'italique automatique sur les citations courtes si indésirable */
+q {
+  font-style: normal;
+}
+
