@@ -118,7 +118,7 @@
     Menlo, "Liberation Mono", monospace;
 
   --layout-wide: 75rem;
-  --layout-content: 55ch; /* <- original 45rem  */
+  --layout-content: 54ch; /* <- original 45rem  */
   --gutter: 1.5rem;
   --space-section: clamp(4rem, 8vw, 7.5rem);
 
@@ -726,7 +726,7 @@
    * text pages all render the same reading column.
    */
   .prose {
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
     font-size: 1.0625rem;
     line-height: 1.4;
     word-break: break-word;
