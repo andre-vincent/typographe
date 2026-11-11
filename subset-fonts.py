@@ -113,23 +113,20 @@ def subset_fonts():
             "pyftsubset",
             input_path,
             f"--unicodes={UNICODES_LIST}",
-            "--layout-features=*",       # Conserve le crénage (kern), ligatures et fonctionnalités OpenType
-            "--notdef-outline",          # Conserve le glyphe par défaut en cas de caractère manquant
-            "--no-hinting",              # Supprime le hinting pour un rendu plus net sur le web moderne
-            "--name-IDs=0,1,2,4,6",      # Supprime les métadonnées de nom superflues
-            "--flavor=woff2",            # Compression maximale en WOFF2
+            "--layout-features=*",  # Conserve le crénage, ligatures, chiffres elzéviriens et axes variables
+            "--notdef-outline",     # Conserve le glyphe par défaut en cas de caractère manquant
+            "--no-hinting",         # Supprime le hinting pour un rendu plus net sur le web moderne
+            "--name-IDs=0,1,2,4,6", # Conserve les métadonnées essentielles (indispensable pour les polices variables)
+            "--flavor=woff2",       # Compression maximale en WOFF2
             f"--output-file={output_path}"
         ]
-
-        # Injection des arguments si la police est variable pour garder TOUS les axes intacts
-        if is_var:
-            cmd.append("--axes=*")
 
         try:
             subprocess.run(cmd, check=True)
             print(f"✓ Succès : {output_path}")
         except subprocess.CalledProcessError as e:
             print(f"✕ Erreur sur {file_name} : {e}")
+            exit(1)
 
 if __name__ == "__main__":
     subset_fonts()
