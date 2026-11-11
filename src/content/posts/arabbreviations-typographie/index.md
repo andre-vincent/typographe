@@ -16,12 +16,12 @@ En typographie soignée en français, les formes réduites des mots suivent des 
 ### Titres civils et civilités
 L'utilisation des exposants (lettres supérieures) est la norme rigoureuse en presse écrite :
 * **M.** : Monsieur (pluriel : **MM.**) — *Attention : « Mr » est un anglicisme à bannir.*
-* **M<sup>me</sup>** : Madame (pluriel : **M<sup>me</sup>s**)
-* **M<sup>lle</sup>** : Mademoiselle (pluriel : **M<sup>lle</sup>s**)
+* **M<sup>me</sup>** : Madame (pluriel : **M<sup>mes</sup>**)
+* **M<sup>lle</sup>** : Mademoiselle (pluriel : **M<sup>lles</sup>**)
 * **Mgr** : Monseigneur
 
 ### Titres professionnels et honorifiques
-* **M<sup>e</sup>** : Maître (avocats, notaires, huissiers ; pluriel : **M<sup>e</sup>s**)
+* **M<sup>e</sup>** : Maître (avocats, notaires, huissiers ; pluriel : **M<sup>es</sup>**)
 * **Dr** : Docteur (le pluriel est **Drs**) — *Pas d'exposant.*
 * **Pr** : Professeur (le pluriel est **Prs**) — *Pas d'exposant.*
 * **PDG** : Président-directeur général
