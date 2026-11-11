@@ -3,8 +3,9 @@ import subprocess
 
 try:
     from fontTools.ttLib import TTFont
+    import brotli
 except ImportError:
-    print("Dépendance manquante : Veuillez installer fonttools avec 'pip install fonttools'")
+    print("Dépendances manquantes : Veuillez installer fonttools et brotli avec 'pip install fonttools brotli'")
     exit(1)
 
 # 1. Chemins des dossiers
@@ -122,10 +123,7 @@ def subset_fonts():
 
         # Injection des arguments si la police est variable pour garder TOUS les axes intacts
         if is_var:
-            cmd.extend([
-                "--gvar",                # Conserve les variations de géométrie des glyphes
-                "--axes=*"               # Conserve absolument l'ensemble des axes définis (wght, wdth, ital, etc.)
-            ])
+            cmd.append("--axes=*")
 
         try:
             subprocess.run(cmd, check=True)
