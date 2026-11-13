@@ -17,6 +17,7 @@ Ce fichier permet de valider visuellement si le plugin applique correctement les
 * Chapitre 1 : la règle s'applique après un chiffre. (Attendu : espace forte insécable `\u00A0` devant :)
 * Il dit : "Le projet Astro est génial". (Attendu : «\u202FLe projet Astro est génial\u202F»)
 * Il dit : "Le projet **Astro** est *vraiment* génial". (Attendu : guillemets français conservés malgré le gras/italique imbriqué)
+* Il dit : "Le projet <q>Astro</q> est vraiment génial". (Attendu : guillemets anglais pour citations imbrigués de 2e niveau)
 * C'est l'arbre de l'**étudiant** d'aujourd'hui. (Attendu : apostrophes courbes ’ y compris avant `**étudiant**`)
 * Une fin de phrase avec des points de suspension... (Attendu : … en un seul caractère)
 
