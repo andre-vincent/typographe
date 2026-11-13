@@ -29,6 +29,8 @@ export default defineConfig({
     }),
   ],
   markdown: {
+    // Désactive les guillemets/tirets anglais par défaut d'Astro au profit de votre plugin français
+    smartypants: false,
     // Exécuté en premier pour traiter le texte brut avant les autres transformations
     remarkPlugins: [
       remarkFrenchTypography
