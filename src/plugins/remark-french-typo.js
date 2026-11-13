@@ -45,7 +45,7 @@ export function remarkFrenchTypography() {
       const currentBlock = [...ancestors].reverse().find((ancestor) => blockTypes.has(ancestor.type));
       let textValue = node.value;
 
-          if (currentBlock && /["“”]/.test(textValue)) {
+      if (currentBlock && /["“”]/.test(textValue)) {
         let isOpen = quoteStateByBlock.get(currentBlock) || false;
         textValue = textValue.replace(/["“”]/g, (quote) => {
           if (quote === '“') {
