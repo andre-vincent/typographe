@@ -1,6 +1,6 @@
 ---
-title: "Page de  «test » de la typographie française"
-excerpt: "Validation des espaces insécables? nombres et exclusions !"
+title: "Page de « test » de la typographie française"
+excerpt: "Validation des espaces insécables ? nombres et exclusions !"
 category: "Typographie"
 date: 2026-10-23
 author:
@@ -11,60 +11,43 @@ featured: true
 
 Ce fichier permet de valider visuellement si le plugin applique correctement les règles de l'*Imprimerie nationale* et du *Ramat de la typographie* sur Cloudflare Pages.
 
-## 1. Ponctuation double et apostrophes
-* Est-ce que le système fonctionne comme prévu ? (Attendu : espace insécable fine devant ?)
-* C'est incroyable ! (Attendu : espace insécable fine devant !)
-* Veuillez noter ceci : la règle s'applique. (Attendu : espace insécable forte devant :)
-* Il dit : "Le projet Astro est génial". (Attendu : « Le projet Astro est génial » guillemets français avec espaces fines insécables.)
-* Il dit : "Le projet <q>Astro</q> est génial". (Attendu : « Le projet <q>Astro</q> est génial » guillemets français avec espaces fines insécables.)
-* C'est l'arbre de l'étudiant d'aujourd'hui, au cœur du bœuf. (Attendu : apostrophes courbes ’ entre deux lettres)
+## 1. Ponctuation double, guillemets et apostrophes
+* Est-ce que le système fonctionne comme prévu ? (Attendu : espace fine insécable `\u202F` devant ?)
+* C'est incroyable ! (Attendu : espace fine insécable `\u202F` devant !)
+* Chapitre 1 : la règle s'applique après un chiffre. (Attendu : espace forte insécable `\u00A0` devant :)
+* Il dit : "Le projet Astro est génial". (Attendu : «\u202FLe projet Astro est génial\u202F»)
+* Il dit : "Le projet **Astro** est *vraiment* génial". (Attendu : guillemets français conservés malgré le gras/italique imbriqué)
+* C'est l'arbre de l'**étudiant** d'aujourd'hui. (Attendu : apostrophes courbes ’ y compris avant `**étudiant**`)
 * Une fin de phrase avec des points de suspension... (Attendu : … en un seul caractère)
 
-## 2. Unités de mesure, devises et pourcentages
-* Le taux de réussite est de 85% ou de 12 %. (Attendu : espace fine insécable devant le %)
-* Le livre coûte 45€ (ou 45 €), ce qui fait environ 50\$. (Attendu : espace insécable forte devant € et \$)
-* La voiture a roulé 150km à une vitesse contenant 12kg de bagages. (Attendu : espace fine insécable devant km et kg)
-* Le rendez-vous est fixé à 14h30 précises, ou à 18h. (Attendu : espaces insécables fortes autour du h : 14&nbsp;h&nbsp;30)
+## 2. Tirets d'incise, civilités, dates et siècles
+* — Bonjour, dit-il en entrant. (Attendu : tiret cadratin suivi d'une espace forte insécable `\u00A0`)
+* Cette règle — à mon **humble** avis — est indispensable. (Attendu : espaces insécables `\u00A0` à l'intérieur des tirets malgré le gras)
+* Veuillez contacter M. Dupont, Mme Martin ou le Dr Lefèvre. (Attendu : espace forte insécable `\u00A0` après M., Mme, Dr)
+* La prise de la Bastille eut lieu le 14 juillet 1789 et la fête du travail le 1er mai. (Attendu : `14\u00A0juillet` et `1er\u00A0mai`)
+* Au XXe siècle, le chapitre 4 et le tome II font référence. (Attendu : `XXe\u00A0siècle`, `chapitre\u00A04`, `tome\u00A0II`)
+* Lien brut à protéger : https://exemple.fr (Attendu : aucune espace insécable devant `?`)
 
-Voici un récapitulatif exhaustif du comportement de notre script de nettoyage typographique sur les unités de mesure, de devise, de temps et de stockage numérique.
+## 3. Unités de mesure, devises et pourcentages
+* Le taux de réussite est de 85% ou de 12 %. (Attendu : espace fine insécable `\u202F` devant %)
+* Le livre coûte 45€ (ou 45 €), soit environ 50\$. (Attendu : espace forte insécable `\u00A0` devant € et \$)
+* L'appartement fait 75m² et la pièce est chauffée à 21°C. (Attendu : espace fine insécable `\u202F` devant m² et °C)
+* Le rendez-vous est fixé à 14h30 précises, ou à 18h. (Attendu : espaces fines insécables autour du h : `14\u202Fh\u202F30` et `18\u202Fh`)
 
-| Catégorie | Écriture en Markdown (Avant) | Rendu Typographique Attendu (Après) | Type d'espace insécable |
+| Catégorie | Écriture Markdown (Avant) | Rendu Attendu (Après) | Espace insécable |
 | :--- | :--- | :--- | :--- |
 | **Pourcentages** | `100%` ou `100 %` | 100 % | Fine (`\u202F`) |
-| **Distances** | `12km` ou `12 km` | 12 km | Fine (`\u202F`) |
-| | `5m` ou `5 m` | 5 m | Fine (`\u202F`) |
-| | `45cm` ou `45 cm` | 45 cm | Fine (`\u202F`) |
-| | `8mm` ou `8 mm` | 8 mm | Fine (`\u202F`) |
-| **Poids & Masses** | `2t` ou `2 t` | 2 t | Fine (`\u202F`) |
-| | `50kg` ou `50 kg` | 50 kg | Fine (`\u202F`) |
-| | `350g` ou `350 g` | 350 g | Fine (`\u202F`) |
-| | `500mg` ou `500 mg` | 500 mg | Fine (`\u202F`) |
-| **Volume & Physique**| `1L` ou `1 L` | 1 L | Fine (`\u202F`) |
-| | `60Hz` ou `60 Hz` | 60 Hz | Fine (`\u202F`) |
-| | `90dB` ou `90 dB` | 90 dB | Fine (`\u202F`) |
-| **Électricité** | `230V` ou `230 V` | 230 V | Fine (`\u202F`) |
-| | `90W` ou `90 W` | 90 W | Fine (`\u202F`) |
-| | `4kW` ou `4 kW` | 4 kW | Fine (`\u202F`) |
-| **Stockage Numérique**| `4Go` ou `4 Go` | 4 Go | Fine (`\u202F`) |
-| | `700Mo` ou `700 Mo` | 700 Mo | Fine (`\u202F`) |
-| | `1To` ou `1 To` | 1 To | Fine (`\u202F`) |
-| | `512B` ou `512 B` | 512 B | Fine (`\u202F`) |
-| | `20octets` ou `20 octets`| 20 octets | Fine (`\u202F`) |
-| **Devises** | `45€` ou `45 €` | 45 € | Forte (`\u00A0`) |
-| | `100$` ou `100 $` | 100 $ | Forte (`\u00A0`) |
-| | `10£` ou `10 £` | 10 £ | Forte (`\u00A0`) |
-| | `5000¥` ou `5000 ¥` | 5000 ¥ | Forte (`\u00A0`) |
-| **Horaires** | `14h30` ou `14 h 30` | 14 h 30 | Forte (`\u00A0`) |
-| | `20h` ou `20 h` | 20 h | Forte (`\u00A0`) |
+| **Distances & Surfaces** | `12km`, `5m`, `45cm`, `8mm` | 12 km, 5 m, 45 cm, 8 mm | Fine (`\u202F`) |
+| | `75m²` ou `2m³` | 75 m² ou 2 m³ | Fine (`\u202F`) |
+| **Poids & Volume** | `2t`, `50kg`, `350g`, `500mg`, `1L` | 2 t, 50 kg, 350 g, 500 mg, 1 L | Fine (`\u202F`) |
+| **Physique & Élec.** | `21°C`, `60Hz`, `90dB`, `230V`, `4kW` | 21 °C, 60 Hz, 90 dB, 230 V, 4 kW | Fine (`\u202F`) |
+| **Stockage** | `4Go`, `700Mo`, `1To`, `512B`, `20octets` | 4 Go, 700 Mo, 1 To, 512 B, 20 octets | Fine (`\u202F`) |
+| **Devises** | `45€`, `100$`, `10£`, `5000¥` | 45 €, 100 $, 10 £, 5000 ¥ | Forte (`\u00A0`) |
+| **Horaires & Durées** | `14h30`, `20h`, `5min`, `30s` | 14 h 30, 20 h, 5 min, 30 s | Fine (`\u202F`) |
 
-> **Note technique :** Qu'elles soient écrites collées au nombre ou séparées par une espace classique, ces unités informatiques et physiques sont désormais automatiquement uniformisées selon les règles de l'art de l'ortho-typographie française.
-
-
-## 3. Grands nombres (Hors tableau vs Dans tableau)
-* La population de la ville est de 9999 habitants. (Attendu : RESTE COMPACT - pas d'espace)
-* Le budget total s'élève à 12500 € pour un objectif de 1450250 de clics. (Attendu : séparation par 3 -> 12&#8239;500 et 1&#8239;450&#8239;250)
-
-### Test dans un tableau HTML :
+## 4. Grands nombres et décimales (Hors tableau vs Dans tableau)
+* La population est de 9999 habitants en 2026. (Attendu : RESTE COMPACT à 4 chiffres hors tableau)
+* Le budget s'élève à 12500 € pour 1450250 clics et π ≈ 3,14159. (Attendu : `12\u202F500`, `1\u202F450\u202F250`, mais `3,14159` intact)
 
 | Produit | Quantité (Seuil > 9999) | Prix |
 | :--- | :--- | :--- |
@@ -72,26 +55,19 @@ Voici un récapitulatif exhaustif du comportement de notre script de nettoyage t
 | Référence 259 | 1250 | 1200 € |
 | Référence 371 | 15400 | 14500 € |
 
-*(Attendu dans le tableau ci-dessus : le nombre `1250` doit devenir `1&#8239;250` car il est dans un `<td>`, alors que `9999` plus haut reste inchangé).*
+## 5. Zones d'exclusion strictes (Ne doivent PAS être modifiées)
 
-## 4. Zones d'exclusion strictes (Ne doivent PAS être modifiées)
-
-### Bloc de code (PRE / CODE)
 ```javascript
-// Les guillemets droits, apostrophes et espaces doivent rester intacts ici !
+// Bloc de code : guillemets, apostrophes et modulo (%) doivent rester bruts
 const message = "Hello World!";
-let condition = (value === 'test');
-let ratio = 100 % 3; // Le modulo ne doit pas recevoir d'espace fine
+let ratio = 100 % 3;
 ```
 
-### Balise en ligne
-Un texte contenant du code en ligne `let total = 45;` ou une commande `npm run astro -- --help` ou un échantillon de touche <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+Un texte contenant du code en ligne `let total = 45;` ou une commande `npm run astro -- --help`.
 
-### Balise avec classe d'exclusion
-<p class="no-typo">Ce paragraphe porte la classe no-typo : il ne doit pas être modifié ! L'apostrophe droite ('), le point d'exclamation ! et le nombre 12500 doivent rester bruts.</p>
+<p class="no-typo">Ce paragraphe porte la classe no-typo : l'apostrophe droite ('), le point ! et le nombre 12500 doivent rester bruts.</p>
 
-### Changement de langue
-<p lang="en">Is this working properly? "Yes", it is! It costs 50\$ and 100% of features are on. (Attendu : aucune règle française ne s'applique ici).</p>
+<p lang="en">Is this working properly? "Yes", it is! It costs 50\$ and 100% of features are on.</p>
 
 <style>
 /* Cible votre tableau dans le corps de l'article */
