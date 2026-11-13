@@ -1,6 +1,6 @@
 ---
 title: "Page de « test » de la typographie française"
-excerpt: "Validation des espaces insécables ? nombres et exclusions !"
+excerpt: "Validation des espaces insécables ? Nombres, dates, unités de mesure, abbéviations, etc. !"
 category: "Typographie"
 date: 2026-10-23
 author:
