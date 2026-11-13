@@ -1,69 +1,91 @@
 export function applyFrenchTypoRules(text, isInsideTd = false) {
-  if (typeof text !== 'string') return text;
-  
-  const NARROW_NBSP = '\u202F'; // Espace fine insécable
-  const NBSP = '\u00A0';        // Espace forte insécable
-  let value = text;
+  if (typeof text !== 'string' || text.length === 0) return text;
 
-  // A. Ponctuation Haute (?, !, ;)
-  value = value.replace(/([A-Za-z0-9À-ÿ)\]])\s*([?!;])/g, `$1${NARROW_NBSP}$2`);
+  const NARROW_NBSP = '\u202F';
+  const NBSP = '\u00A0';
+  const CURLY_APOS = '\u2019';
+  const EM_DASH = '\u2014';
 
-  // B. Le Deux-points (:)
-  value = value.replace(/([A-Za-zÀ-ÿ)\]])\s*:(?!\/\/)/g, `$1${NBSP}:`);
+  const protectedTokens = [];
+  let value = text.replace(/(https?:\/\/[^\s)»"']+|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g, (match) => {
+    const token = `__TYPO_${protectedTokens.length}__`;
+    protectedTokens.push(match);
+    return token;
+  });
 
-// C. Guillemets français (« »)
-// 1. Convertit les guillemets droits (") ET les guillemets anglais (“ ”) en guillemets français
-value = value.replace(/["“]([^"“”]+?)[”"]/g, `«$1»`);
-// 2. Applique l'espace fine insécable à l'intérieur (approche esthétique moderne / Le Ramat)
-value = value.replace(/«\s*/g, `«${NARROW_NBSP}`);
-value = value.replace(/\s*»/g, `${NARROW_NBSP}»`);
+  value = value.replace(/([A-Za-z0-9À-ÿ)\]»])\s*([?!;])/g, `$1${NARROW_NBSP}$2`);
+  value = value.replace(/([A-Za-z0-9À-ÿ)\]»])\s*:(?!\/\/)/g, `$1${NBSP}:`);
 
-  // D. Grands Nombres
-  // Capture les suites de chiffres d'au moins 4 caractères
+  value = value.replace(/[“"]([^“”"]+)[”"]/g, '«$1»');
+  value = value.replace(/«[\s\u00A0\u202F]*/g, `«${NARROW_NBSP}`);
+  value = value.replace(/[\s\u00A0\u202F]*»/g, `${NARROW_NBSP}»`);
+
   value = value.replace(/\d{4,}/g, (match, offset, fullText) => {
-    // ANALYSE DU CONTEXTE : Est-ce un nombre isolé ou au milieu d'une phrase textuelle ?
-    // On vérifie les caractères immédiatement avant et après le nombre détecté
     const charBefore = offset > 0 ? fullText[offset - 1] : '';
     const charAfter = (offset + match.length) < fullText.length ? fullText[offset + match.length] : '';
-    
-    // Si le nombre est entouré de lettres ou de parenthèses (ex: "> 9999)" ou "an 2026"), 
-    // on applique la règle standard hors-tableau (il reste brut s'il fait 4 chiffres)
-    const isEmbeddedInText = /[A-Za-zÀ-ÿ()\[\]<>=]/.test(charBefore) || /[A-Za-zÀ-ÿ()\[\]<>=]/.test(charAfter);
 
-    if (isInsideTd && !isEmbeddedInText) {
-      // Dans un tableau (cellule de données pure) : séparation par lots de 3
+    if (charBefore === ',' || charBefore === '.') return match;
+
+    const isEmbedded = /[A-Za-zÀ-ÿ()\[\]<>=]/.test(charBefore) || /[A-Za-zÀ-ÿ()\[\]<>=]/.test(charAfter);
+
+    if (isInsideTd && !isEmbedded) {
       return match.replace(/\B(?=(\d{3})+(?!\d))/g, NARROW_NBSP);
     } else if (match.length > 4) {
-      // Hors tableau (ou si inclus dans du texte d'en-tête) : uniquement si > 4 chiffres
       return match.replace(/\B(?=(\d{3})+(?!\d))/g, NARROW_NBSP);
     }
-    
     return match;
   });
 
+  value = value.replace(/(\d)\s*(%)/g, `$1${NARROW_NBSP}$2`);
 
-  // E. Unités, Pourcentages, Devises & Horaires
-// Pourcentage (%) : Espace fine insécable (approche esthétique moderne / Le Ramat)
-value = value.replace(/(\d)\s*(%)/g, `$1${NARROW_NBSP}$2`);
+  value = value.replace(
+    /(\d)\s*(m²|m³|°C|cm|mm|km|kg|mg|octets|ko|Mo|Go|To|kW|Hz|dB|min|m|g|t|L|V|W|B|s)(?![A-Za-zÀ-ÿ0-9])/g,
+    `$1${NARROW_NBSP}$2`
+  );
 
-// Unités physiques, informatiques, temporelles et géométriques
-// Ajouts : s (secondes), min (minutes), °C (degrés Celsius), m², m³
-value = value.replace(/(\d)\s*(m|cm|mm|km|m²|m³|g|kg|mg|t|L|V|W|kW|Hz|dB|B|octets|ko|Mo|Go|To|s|min|°C)\b/g, `$1${NARROW_NBSP}$2`);
+  value = value.replace(/(\d)\s*([€$£¥])/g, `$1${NBSP}$2`);
 
-// Devises : Espace-mot insécable (Le symbole monétaire agit comme un délimiteur/séparateur de valeur)
-value = value.replace(/(\d)\s*([€\$£¥])/g, `$1${NBSP}$2`);
+  value = value.replace(/(\d)\s*(h)\s*(\d+)/gi, `$1${NARROW_NBSP}$2${NARROW_NBSP}$3`);
+  value = value.replace(/(\d)\s*(h)(?![A-Za-zÀ-ÿ0-9])/gi, `$1${NARROW_NBSP}$2`);
 
-// Horaires : Passage en espace fine insécable de chaque côté du « h »
-// Évite le grand vide visuel de l'espace-mot tout en maintenant le bloc sémantique soudé
-value = value.replace(/(\d)\s*(h)\s*(\d+)/gi, `$1${NARROW_NBSP}$2${NARROW_NBSP}$3`);
-value = value.replace(/(\d)\s*(h)\b/gi, `$1${NARROW_NBSP}$2`);
+  value = value.replace(/([a-zA-ZÀ-ÿ])'(?=[a-zA-ZÀ-ÿ0-9«“]|$)/g, `$1${CURLY_APOS}`);
+  value = value.replace(/\.{3}/g, '…');
 
-// F. Apostrophes courbes & Éléments de structure
-// Remplacement de l'apostrophe droite informatique par l'apostrophe typo
-value = value.replace(/([a-zA-ZÀ-ÿ])'([a-zA-ZÀ-ÿ])/g, "$1’$2");
+  value = value.replace(
+    /\b(M\.|MM\.|Mme|Mmes|Mlle|Mlles|Dr|Drs|Pr|Prs|Me|Mes|Mgr|Mgrs|St|Ste|Sts|Stes|Ve|Vve)\s+(?=[A-ZÀ-ÖØ-Þ])/g,
+    `$1${NBSP}`
+  );
 
-// Remplacement des trois points juxtaposés par le caractère d'omission unique
-value = value.replace(/\.{3}/g, '…');
+  value = value.replace(/(^|\s)(?:--|-|–|—)\s+/g, (match, prefix) => `${prefix}${EM_DASH} `);
+  value = value.replace(new RegExp(`^${EM_DASH}\\s+`), `${EM_DASH}${NBSP}`);
+  value = value.replace(
+    new RegExp(`\\s${EM_DASH}\\s+([^${EM_DASH}]+?)\\s+${EM_DASH}(?=[\\s.,;:!?»]|$)`, 'g'),
+    ` ${EM_DASH}${NBSP}$1${NBSP}${EM_DASH}`
+  );
+  value = value.replace(
+    new RegExp(`\\s${EM_DASH}\\s+([^${EM_DASH}]+?)(?=[.!?…»]|$)`, 'g'),
+    ` ${EM_DASH}${NBSP}$1`
+  );
+
+  const moisFr = 'janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre';
+  value = value.replace(
+    new RegExp(`\\b([1-9]|[12][0-9]|3[01])(er)?\\s+(${moisFr})\\b`, 'gi'),
+    `$1$2${NBSP}$3`
+  );
+
+  value = value.replace(
+    /\b([IVXLCDM]+(?:er|e|ème)?)\s+(siècles?|millénaires?)\b/g,
+    `$1${NBSP}$2`
+  );
+
+  value = value.replace(
+    /\b(chapitre|tome|volume|partie|section|article|alinéa|page|p\.|figure|fig\.|tableau|annexe|numéro|n°)\s+([0-9IVXLCDM]+(?:er|e|ème)?)\b/gi,
+    `$1${NBSP}$2`
+  );
+
+  if (protectedTokens.length > 0) {
+    value = value.replace(/__TYPO_(\d+)__/g, (_, index) => protectedTokens[Number(index)]);
+  }
 
   return value;
 }
