@@ -106,7 +106,7 @@ const isCurrentPath = (href: string) =>
           <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.75" />
           <path d="m16 16 4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
         </svg>
-        <h2 id="site-search-title" class="sr-only">Search {siteConfig.name}</h2>
+        <h2 id="site-search-title" class="sr-only">Recherche {siteConfig.name}</h2>
         <label class="sr-only" for="site-search-input">Recherche d’articles</label>
         <input
           id="site-search-input"
@@ -135,7 +135,7 @@ const isCurrentPath = (href: string) =>
 
       <div class="search-foot" aria-hidden="true">
         <span><kbd>↑</kbd><kbd>↓</kbd> Naviguer</span>
-        <span><kbd>↵</kbd> Ouvrit</span>
+        <span><kbd>↵</kbd> Ouvrir</span>
         <span><kbd data-search-shortcut>Ctrl K</kbd> Basculer</span>
         <span class="ml-auto hidden sm:inline">Touche ENTRER pour tout rechercher</span>
       </div>
@@ -207,7 +207,7 @@ const isCurrentPath = (href: string) =>
 
       indexPromise ??= fetch("/search-index.json")
         .then((response) => {
-          if (!response.ok) throw new Error("Search index unavailable");
+          if (!response.ok) throw new Error("Index de recherche indisponible");
           return response.json();
         })
         .then((items) => {
@@ -282,12 +282,12 @@ const isCurrentPath = (href: string) =>
         .slice(0, 7)
         .map(({ item }) => item);
 
-      heading.textContent = "Results";
-      summary.textContent = `${matches.length} ${matches.length === 1 ? "result" : "results"} for “${raw}”.`;
+      heading.textContent = "Résultats";
+      summary.textContent = `${matches.length} ${matches.length === 1 ? "résultat" : "résultats"} pour “${raw}”.`;
       results.innerHTML =
         matches.length > 0
           ? matches.map(resultMarkup).join("")
-          : `<p class="search-empty">No posts match that yet. Try a title, topic, or author.</p>`;
+          : `<p class="search-empty">Aucun article ne correspond à cela. Essayez un titre, un sujet ou un auteur.</p>`;
     };
 
     const open = () => {
@@ -308,9 +308,9 @@ const isCurrentPath = (href: string) =>
       open();
     });
 
-    closeButton?.addEventListener("click", close);
+    closeButton?.addEventListener("cliquer", close);
 
-    dialog?.addEventListener("close", () => {
+    dialog?.addEventListener("fermer", () => {
       document.documentElement.classList.remove("has-open-search");
       toggle?.focus();
     });
