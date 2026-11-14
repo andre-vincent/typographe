@@ -8,7 +8,7 @@ updatedDate: 2026-10-30
 author:
   name: Michel Roche
   role: Professeur en sciences politiques à l’Université du Québec à Chicoutimi.
-featured: true
+featured: false
 draft: false
 ---
 > Recopie de la version originale parue sur le profil [Facebook de Michel Roche](https://m.facebook.com/story.php?story_fbid=pfbid04FGD1vsi2oUv21WTNy5pEiam55wFoEp6Fn5m2UWReLAVJo2paeZE67kJq9my81Z1l&id=100002171372546)
