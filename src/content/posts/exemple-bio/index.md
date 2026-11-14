@@ -6,8 +6,10 @@ author:
   name: "André Vincent"
   role: "Typographe, enseignant, syndicaliste"
 category: "Typographie"
+featured: true
 draft: false
 ---
+> Cette page est un exemple de biographie personnelle mise en évidence sur la page d’accueil par : featured: true
 
 Enseignant à la retraite, typographe, éditeur et militant syndical et politique québécois basé à Montréal, j'ai construit mon parcours professionnel et associatif autour d'un fil conducteur : tisser un lien continu entre l'engagement éditorial, la rigueur des arts graphiques traditionnels, la transmission pédagogique et les outils de publication numérique libre.
 
