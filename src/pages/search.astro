@@ -87,7 +87,7 @@ const searchItems = allPosts.map((post) => ({
         const found = query ? items.filter((item) => matches(item, query)) : [];
 
         summary.textContent = query
-          ? `${found.length} ${found.length === 1 ? "result" : "results"} for “${raw}”.`
+          ? `${found.length} ${found.length === 1 ? "résultat" : "résultats"} for “${raw}”.`
           : "";
 
         results.innerHTML = found
