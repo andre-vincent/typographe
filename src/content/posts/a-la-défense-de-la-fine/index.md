@@ -1,5 +1,5 @@
 ---
-title: "À la défence de la fine !"
+title: "À la défense de la fine !"
 excerpt: "Plaidoyer pour l’utilisation de l’espace fine insécable (U+202F) en typographie française sur le Web, un impératif sémantique, de lisibilité et d’accessibilité (WCAG AA) face à l’espace forte et au zéro espace."
 category: "Typographie"
 date: 2026-11-14
