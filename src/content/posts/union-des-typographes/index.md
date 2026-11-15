@@ -1,6 +1,5 @@
 ---
 title: La contribution des typographes au syndicalisme et aux idées socialistes
-  au Canada et au Québec
 excerpt: Analyse historique du rôle pionnier des typographes dans l'émergence du
   mouvement ouvrier, la diffusion des idées socialistes et l'action politique au
   Canada et au Québec, à travers les parcours d'Alphonse-Télesphore Lépine et de
