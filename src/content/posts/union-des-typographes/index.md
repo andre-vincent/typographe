@@ -71,5 +71,5 @@ Originaire de Bruxelles, en Belgique, [Gustave Francq](https://ftq.qc.ca/gustave
 | **Mode d'action privilégié** | Représentation parlementaire directe à Ottawa (1888-1896) | Presse syndicale (*Le Monde ouvrier*), Parti ouvrier et concertation avec l'État |
 | **Héritage majeur** | Ouverture de la scène politique fédérale aux revendications ouvrières | Création des structures de la FTQ, diffusion des idées socialistes et mise en place du salaire minimum |
 
-[1]: Voir la contribution de l’[Industrial Typographical Union](https://depts.washington.edu/moves/CIO_ITU_locals.shtml) au développement du syndicalisme nord-américain sur le site web de du projet «Mapping American Social Movement» de l’Université de Washington.
+ [^1]: Voir la contribution de l’[Industrial Typographical Union](https://depts.washington.edu/moves/CIO_ITU_locals.shtml) au développement du syndicalisme nord-américain sur le site web de du projet «Mapping American Social Movement» de l’Université de Washington.
 
