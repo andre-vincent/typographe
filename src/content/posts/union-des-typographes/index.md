@@ -20,7 +20,7 @@ Les typographes ont été les **véritables pionniers du mouvement ouvrier et de
 ### Pionniers de l'organisation syndicale
 
 - **Premières associations ouvrières.** Les imprimeurs et typographes fondent les tout premiers syndicats au pays, notamment à Québec en 1827, à York (Toronto) en 1832, ainsi qu'à Montréal et Hamilton en 1833.
-- **Syndicalisme international et pérenne.** L'adhésion à l'[International Typographical Union](https://en.wikipedia.org/wiki/International_Typographical_Union) établit un modèle de syndicalisme durable reliant les travailleurs canadiens aux structures nord-américaines. La Toronto Typographical Union[^1], active dès 1844, figure parmi les plus anciennes organisations syndicales continues en Amérique du Nord.
+- **Syndicalisme international et pérenne.** L'adhésion à l'[International Typographical Union](https://en.wikipedia.org/wiki/International_Typographical_Union) établit un modèle de syndicalisme durable reliant les travailleurs canadiens aux structures nord-américaines. La Toronto Typographical Union [^1], active dès 1844, figure parmi les plus anciennes organisations syndicales continues en Amérique du Nord.
 - **Affirmation francophone au Québec.** À Montréal, les tensions linguistiques mènent à la création en 1870 de l'[Union typographique Jacques-Cartier (section locale 145)](https://archivesdutravail.quebec/wp-content/uploads/2020/05/P8-Union-typogr.J-Cartier.pdf), première organisation dédiée spécifiquement aux typographes francophones.
 
 ### Conquêtes législatives et luttes historiques
