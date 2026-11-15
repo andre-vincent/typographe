@@ -6,7 +6,7 @@ excerpt: Analyse historique du rôle pionnier des typographes dans l'émergence 
   Gustave Francq.
 category: Typographie
 date: 2026-11-14
-updatedDate: 2026-11-14
+updatedDate: 2026-11-15
 author:
   name: André Vincent
   role: Typographe, enseignant, syndicaliste
