@@ -8,7 +8,7 @@ author:
   name: André Vincent
   role: Édimestre de ce site. Typographe, enseignant et militant syndical et
     politique
-featured: false
+featured: true
 draft: true
 ---
 ---
