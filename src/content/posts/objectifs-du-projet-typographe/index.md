@@ -8,7 +8,7 @@ author:
   name: "André Vincent"
   role: "Édimestre de ce site. Typographe, enseignant et militant syndical et politique"
 featured: false
-draft: true
+draft: false
 ---
 
 Le projet **Typographe** est né d’un constat simple : le Web contemporain privilégie trop souvent la lourdeur technique et l’agitation visuelle au détriment du texte, du confort de lecture et de la maîtrise éditoriale. Construit avec le cadre applicatif **Astro**, hébergé gratuitement sur **GitHub** et déployé sur **Cloudflare Pages**, ce modèle offre « un endroit calme pour l’écriture longue et soignée en français ».
@@ -17,11 +17,11 @@ Il repose sur la convergence entre deux disciplines indissociables : la **micro-
 
 ## 1. Une micro-typographie française sans compromis
 
-Sur le Web francophone, la typographie est fréquemment négligée par les outils de publication standards. Typographe réhabilite le savoir-faire des ateliers d’imprimerie en automatisant et en systématisant les règles ortho-typographiques dès la rédaction :
+Sur le Web francophone, la typographie est fréquemment négligée par les outils de publication standards. **Typographe** réhabilite le savoir-faire des ateliers d’imprimerie en automatisant et en systématisant les règles ortho-typographiques de base dès la rédaction pour une typographie soignée :
 
-* **La défense de l’espace fine insécable (`U+202F`) :** Contrairement à l’espace forte (`&nbsp;`) trop large ou à l’absence totale d’espace héritée des usages anglo-saxons, l’espace fine insécable garantit l’équilibre visuel avant les ponctuations hautes (`;`, `:`, `!`, `?`), les unités de mesure et les nombres. Elle constitue un impératif à la fois esthétique, sémantique et de lisibilité.
-* **La rigueur des signes et des abréviations :** Le système veille à l’usage systématique des guillemets français (« ») accompagnés de leurs espaces intérieures, des apostrophes courbes (’), des tirets cadratins ou demi-cadratins pour les incises, ainsi que des exposants appropriés pour les abréviations courantes et la datation.
-* **Une hiérarchie dédiée à l’écriture longue :** Le choix des polices, la justification ou l’alignement, la longueur optimale des lignes (la *justification* au sens typographique) et l’interlignage sont calibrés pour soutenir l’attention sur des essais de fond, sans fatigue oculaire.
+- **La défense de l’espace fine insécable (`U+202F`) :** Contrairement à l’espace forte (`&nbsp;`) trop large ou à l’absence totale d’espace héritée des usages anglo-saxons, l’espace fine insécable garantit l’équilibre visuel avant les ponctuations hautes (`;`, `:`, `!`, `?`), les unités de mesure et les nombres. Elle constitue un impératif à la fois esthétique, sémantique et de lisibilité.
+- **La rigueur des signes et des abréviations :** Le système veille à l’usage systématique des guillemets français (« ») accompagnés de leurs espaces intérieures, des apostrophes courbes (’), des tirets cadratins ou demi-cadratins pour les incises, ainsi que des exposants appropriés pour les abréviations courantes et la datation.
+- **Une hiérarchie dédiée à l’écriture longue :** Le choix des polices, la justification ou l’alignement, la longueur optimale des lignes (la *justification* au sens typographique) et l’interlignage sont calibrés pour soutenir l’attention sur des essais de fond, sans fatigue oculaire.
 
 ## 2. Un design web sobre, sémantique et accessible
 
