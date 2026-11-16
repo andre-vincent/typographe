@@ -9,7 +9,7 @@ author:
   role: Édimestre de ce site. Typographe, enseignant et militant syndical et
     politique
 featured: true
-draft: true
+draft: false
 ---
 ---
 title: "Objectifs du projet Typographe"
