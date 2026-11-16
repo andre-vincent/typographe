@@ -10,6 +10,10 @@ updatedDate: 2026-11-15
 author:
   name: André Vincent
   role: Typographe, enseignant, syndicaliste
+cover:
+  src: ../../../assets/images/union-des-typographes-1.jpg
+  alt: Atelier de typographes pionniers du syndicalisme en Amérique du Nord
+  creditName: Atelier de typographes pionniers du syndicalisme en Amérique du Nord
 featured: false
 draft: false
 ---
@@ -70,6 +74,7 @@ Originaire de Bruxelles, en Belgique, [Gustave Francq](https://ftq.qc.ca/gustave
 | **Sensibilité idéologique** | Réformisme ouvrier indépendant (programme des Chevaliers du travail) | Socialisme réformiste et démocratique (Parti ouvrier, internationale syndicale) |
 | **Mode d'action privilégié** | Représentation parlementaire directe à Ottawa (1888-1896) | Presse syndicale (*Le Monde ouvrier*), Parti ouvrier et concertation avec l'État |
 | **Héritage majeur** | Ouverture de la scène politique fédérale aux revendications ouvrières | Création des structures de la FTQ, diffusion des idées socialistes et mise en place du salaire minimum |
+
 
 ## Question nationale et autonomie syndicale au XIXe siècle
 
