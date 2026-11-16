@@ -1,6 +1,6 @@
 ---
 title: Objectifs du projet Typographe
-excerpt: Les critères d’un site web entièrement gratuit, pérenne, sémantique,
+excerpt: Les critères d’un site web entièrement gratuit, ultra performant, pérenne, sémantique,
   accessible, optimisé pour l’écriture en français et bénéficiant d’une
   typographie soignée selon les bonnes pratiques de la typographie francophone.
 category: Design Web
