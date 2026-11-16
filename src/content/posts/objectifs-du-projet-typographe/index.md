@@ -12,3 +12,5 @@ featured: false
 draft: true
 ---
 Les critères d’un site web entièrement gratuit, écoresponsable, pérenne, sémantique, accessible, optimisé pour l’écriture en français et bénéficiant d’un correcteur ortho-typographique pour une écriture soignée selon les règles et les bonnes pratiques de la typographie francophone.
+
+Le présent gabarit ou modèle (template) **Typographe** pour le générateur de site web statique (SSG) **Astro** est enregistré directement sur ***GitHub*** et déployé sur ***Cloudflare*** Pages.
