@@ -96,41 +96,44 @@ En sémiologie, une police de caractères agit comme un **signifiant visuel** do
 
 ### Helvetica (et son héritière directe, Inter)
 
-* **Classification :** Linéale néo-grotesque (*Sans-serif*).
-* **Origine et contexte :** Créée en 1957 en Suisse par Max Miedinger, puis adaptée aux interfaces numériques avec des variantes modernes comme **Inter** (Rasmus Andersson, 2017).
-* **Connotations sémiologiques :** **Neutralité, rationalité, efficacité et modernité.** Héritière du *Style typographique international*, elle cherche à effacer la main de l'artisan pour incarner une voix objective et institutionnelle. Sur le Web, elle signale une interface fonctionnelle, un outil fiable ou un espace technologique universel (souvent utilisé dans les systèmes d'exploitation et les applications).
-* **Piège sémiologique :** À force d'être partout, elle peut connoter une froideur bureaucratique ou un manque de personnalité.
+- **Classification :** Linéale néo-grotesque (*Sans-serif*).
+- **Origine et contexte :** Créée en 1957 en Suisse par Max Miedinger, puis adaptée aux interfaces numériques avec des variantes modernes comme **Inter** (Rasmus Andersson, 2017).
+- **Connotations sémiologiques :** **Neutralité, rationalité, efficacité et modernité.** Héritière du *Style typographique international*, elle cherche à effacer la main de l'artisan pour incarner une voix objective et institutionnelle. Sur le Web, elle signale une interface fonctionnelle, un outil fiable ou un espace technologique universel (souvent utilisé dans les systèmes d'exploitation et les applications).
+- **Piège sémiologique :** À force d'être partout, elle peut connoter une froideur bureaucratique ou un manque de personnalité.
 
 ### Garamond (ex. EB Garamond)
 
-* **Classification :** Garalde (*Serif* de la Renaissance).
-* **Origine et contexte :** Inspirée des poinçons de Claude Garamont au XVIᵉ siècle, largement numérisée pour le Web éditorial.
-* **Connotations sémiologiques :** **Érudition, légitimité culturelle, classicisme et humanisme.** Ses empattements doux et ses proportions inspirées de la calligraphie renvoient directement à l'histoire du livre imprimé et à l'édition littéraire. Sur un site Web, son emploi indique au lecteur qu'il quitte l'espace de la consommation rapide d'informations pour entrer dans un temps long de réflexion (revues culturelles, maisons d'édition, essais).
+- **Classification :** Garalde (*Serif* de la Renaissance).
+- **Origine et contexte :** Inspirée des poinçons de Claude Garamont au XVIᵉ siècle, largement numérisée pour le Web éditorial.
+- **Connotations sémiologiques :** **Érudition, légitimité culturelle, classicisme et humanisme.** Ses empattements doux et ses proportions inspirées de la calligraphie renvoient directement à l'histoire du livre imprimé et à l'édition littéraire. Sur un site Web, son emploi indique au lecteur qu'il quitte l'espace de la consommation rapide d'informations pour entrer dans un temps long de réflexion (revues culturelles, maisons d'édition, essais).
 
 ### Futura (et ses équivalents géométriques comme Montserrat ou Poppins)
 
-* **Classification :** Linéale géométrique (*Sans-serif*).
-* **Origine et contexte :** Dessinée par Paul Renner en 1927 dans l'esprit du Bauhaus.
-* **Connotations sémiologiques :** **Avant-garde, progrès, minimalisme et rigueur.** Construite à partir de formes géométriques pures (cercles parfaits, triangles, carrés), elle rejette l'ornementation historique. Sur le Web, elle est très prisée par les secteurs du design, de l'architecture, de la mode ou des jeunes entreprises technologiques qui souhaitent projeter une image tournée vers l'avenir, nette et audacieuse.
+- **Classification :** Linéale géométrique (*Sans-serif*).
+- **Origine et contexte :** Dessinée par Paul Renner en 1927 dans l'esprit du Bauhaus.
+- **Connotations sémiologiques :** **Avant-garde, progrès, minimalisme et rigueur.** Construite à partir de formes géométriques pures (cercles parfaits, triangles, carrés), elle rejette l'ornementation historique. Sur le Web, elle est très prisée par les secteurs du design, de l'architecture, de la mode ou des jeunes entreprises technologiques qui souhaitent projeter une image tournée vers l'avenir, nette et audacieuse.
 
 ### Georgia
 
-* **Classification :** Réale / Transitionnelle (*Serif* conçue pour l'écran).
-* **Origine et contexte :** Créée en 1993 par Matthew Carter spécifiquement pour la basse résolution des écrans de l'époque.
-* **Connotations sémiologiques :** **Crédibilité journalistique, sérieux et accessibilité.** Contrairement au Garamond qui évoque le livre ancien, Georgia possède une hauteur d'x généreuse et des formes robustes qui ancrent le texte dans le présent. Elle est devenue le signe visuel de la presse numérique de référence (comme le *New York Times* ou *The Guardian* à leurs débuts sur le Web), signifiant au lecteur que l'information est vérifiée et institutionnelle.
+- **Classification :** Réale / Transitionnelle (*Serif* conçue pour l'écran).
+- **Origine et contexte :** Créée en 1993 par Matthew Carter spécifiquement pour la basse résolution des écrans de l'époque.
+- **Connotations sémiologiques :** **Crédibilité journalistique, sérieux et accessibilité.** Contrairement au Garamond qui évoque le livre ancien, Georgia possède une hauteur d'x généreuse et des formes robustes qui ancrent le texte dans le présent. Elle est devenue le signe visuel de la presse numérique de référence (comme le *New York Times* ou *The Guardian* à leurs débuts sur le Web), signifiant au lecteur que l'information est vérifiée et institutionnelle.
 
 ### Courier (ou JetBrains Mono / Fira Code)
 
-* **Classification :** Mécane à chasse fixe (*Monospace*).
-* **Origine et contexte :** Conçue à l'origine pour les machines à écrire IBM dans les années 1950, puis adoptée par les terminaux informatiques.
-* **Connotations sémiologiques :** **Authenticité brute, code informatique, archive et travail en cours.** Le fait que chaque lettre occupe exactement la même largeur brise la fluidité esthétique de la typographie traditionnelle. Sur le Web, elle remplit deux fonctions sémiologiques distinctes : elle signale le langage technique (code source, données brutes) ou évoque un brouillon, un scénario ou un document d'archive non retouché, gage d'une forme de sincérité.
+- **Classification :** Mécane à chasse fixe (*Monospace*).
+- **Origine et contexte :** Conçue à l'origine pour les machines à écrire IBM dans les années 1950, puis adoptée par les terminaux informatiques.
+- **Connotations sémiologiques :** **Authenticité brute, code informatique, archive et travail en cours.** Le fait que chaque lettre occupe exactement la même largeur brise la fluidité esthétique de la typographie traditionnelle. Sur le Web, elle remplit deux fonctions sémiologiques distinctes : elle signale le langage technique (code source, données brutes) ou évoque un brouillon, un scénario ou un document d'archive non retouché, gage d'une forme de sincérité.
 
 ### Synthèse sémiologique
 
+
 | Police | Signifiant visuel | Signifié culturel (Connotation) | Usage type sur le Web |
-| :--- | :--- | :--- | :--- |
+| ----------------------- | ----------------------------------------- | ------------------------------------------- | -------------------------------------------- |
 | **Inter / Helvetica** | Tracés neutres, réguliers | Objectivité, universalité, fonction | Interfaces d'applications, SaaS, systèmes |
 | **Garamond** | Empattements fins, proportions classiques | Culture, histoire, littérature | Édition numérique, blogs littéraires, luxe |
 | **Futura / Montserrat** | Formes géométriques pures | Modernité, design, projection vers l'avenir | Marques créatives, mode, architecture |
 | **Georgia** | Empattements robustes, grande lisibilité | Autorité journalistique, sérieux | Médias d'information, articles de fond |
 | **Courier / Fira Code** | Chasse fixe, allure mécanique | Technicité, code, document brut | Documentation technique, portfolios créatifs |
+
+
