@@ -42,7 +42,7 @@ En France, les imprimeurs ont malgré tout maintenu cette pratique. L’Imprimer
 
 Le *Code typographique*, publié pour la première fois en 1928 par la Chambre syndicale des typographes, a gravé dans le marbre ce que les ateliers pratiquaient depuis quatre siècles. L’espace avant les signes doubles est devenu une norme officielle, enseignée dans les écoles de typographie et respectée par toute la presse. Cette particularité aurait pu disparaître avec l’arrivée des ordinateurs — c’est exactement l’inverse qui s’est produit.
 
-## **Le détail que personne ne remarque sur ton clavier**
+## **Le détail que personne ne remarque sur son clavier**
 
 Quand les premiers ordinateurs personnels sont arrivés en France dans les années 1980, un problème s’est posé. Les claviers américains ne prévoyaient aucune touche pour l’espace fine. Le clavier AZERTY, [dont l’agencement a sa propre histoire](https://www.letribunaldunet.fr/le-saviez-vous/pourquoi-lettres-clavier-azerty-pas-ordre-alphabetique-explication.html), ne disposait pas non plus de cette fonction.
 
