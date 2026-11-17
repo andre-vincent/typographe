@@ -3,7 +3,8 @@ import { applyFrenchTypoRules } from '../utils/typo.js';
 
 export function remarkFrenchTypography() {
   const ignoredMdxComponents = new Set(['CodeGroup', 'CodeGroupItem']);
-  const blockTypes = new Set(['paragraph', 'heading', 'tableCell', 'blockquote']);
+  const blockTypes = new Set(['paragraph', 'heading', 'tableCell', 'blockquote', 'listItem']);
+  const inlineSiblings = new Set(['inlineCode', 'strong', 'emphasis', 'link', 'delete', 'html']);
 
   return (tree, file) => {
     // 1. FRONTMATTER (title et excerpt)
@@ -17,14 +18,14 @@ export function remarkFrenchTypography() {
       }
     }
 
-    // Suivi de l'état des guillemets droits par bloc parent (gère le gras/italique imbriqué)
+    // Suivi de l'état d'ouverture/fermeture des guillemets droits par bloc conteneur
     const quoteStateByBlock = new WeakMap();
 
-    // 2. CORPS DU TEXTE (avec inspection de toute la chaîne d'ancêtres)
+    // 2. CORPS DU TEXTE (inspection de toute la chaîne d'ancêtres)
     visitParents(tree, 'text', (node, ancestors) => {
       if (!ancestors || ancestors.length === 0) return;
 
-      // Vérifie si l'un des ancêtres est un composant MDX ignoré
+      // Ignore les composants MDX dédiés au code
       const isInsideIgnoredComponent = ancestors.some(
         (ancestor) =>
           (ancestor.type === 'mdxJsxFlowElement' || ancestor.type === 'mdxJsxTextElement') &&
@@ -32,38 +33,50 @@ export function remarkFrenchTypography() {
       );
       if (isInsideIgnoredComponent) return;
 
-      // Vérifie si le texte est le libellé brut d'une URL (ex: <https://site.fr>)
+      // Ignore le texte brut d'une URL (ex: <https://site.fr> ou [www.site.fr](...))
       const directParent = ancestors[ancestors.length - 1];
-      if (directParent.type === 'link' && node.value === directParent.url) {
+      if (
+        directParent.type === 'link' &&
+        (node.value === directParent.url || /^(https?:\/\/|www\.)/i.test(node.value.trim()))
+      ) {
         return;
       }
 
-      // Vérifie si l'un des ancêtres est une cellule de tableau (même si le texte est en gras/italique)
+      // Détecte si le texte se trouve dans une cellule de tableau (même imbriqué dans du gras/italique)
       const isInsideTd = ancestors.some((ancestor) => ancestor.type === 'tableCell');
 
-      // Récupère le bloc conteneur le plus proche pour suivre l'ouverture/fermeture des guillemets "
+      // Récupère le bloc conteneur le plus proche pour suivre l'état des guillemets droits
       const currentBlock = [...ancestors].reverse().find((ancestor) => blockTypes.has(ancestor.type));
       let textValue = node.value;
 
-      if (currentBlock && /["“”]/.test(textValue)) {
+      // Conversion uniquement des guillemets droits (") en chevrons français (« »)
+      // Préserve les guillemets anglais (“ ”) et les balises <q> pour le 2e niveau
+      if (currentBlock && textValue.includes('"')) {
         let isOpen = quoteStateByBlock.get(currentBlock) || false;
-        textValue = textValue.replace(/["“”]/g, (quote) => {
-          if (quote === '“') {
-            isOpen = true;
-            return '«';
-          }
-          if (quote === '”') {
-            isOpen = false;
-            return '»';
-          }
+        textValue = textValue.replace(/"/g, () => {
           isOpen = !isOpen;
           return isOpen ? '«' : '»';
         });
         quoteStateByBlock.set(currentBlock, isOpen);
       }
 
-      // Appel de la fonction centrale
-      node.value = applyFrenchTypoRules(textValue, isInsideTd);
+      // Application des règles typographiques centrales (typo.js)
+      textValue = applyFrenchTypoRules(textValue, isInsideTd);
+
+      // Raccordement des ponctuations hautes et guillemets fermants juste après un élément inline
+      // (ex: **Pourquoi** ?, `U+202F` :, <sup>e</sup> ?, <q>citation</q> »)
+      if (directParent && Array.isArray(directParent.children)) {
+        const nodeIndex = directParent.children.indexOf(node);
+        const prevSibling = nodeIndex > 0 ? directParent.children[nodeIndex - 1] : null;
+
+        if (prevSibling && inlineSiblings.has(prevSibling.type)) {
+          textValue = textValue
+            .replace(/^[\s\u00A0\u202F]*([?!;»])/, '\u202F$1')
+            .replace(/^[\s\u00A0\u202F]*:(?!\/\/)/, '\u00A0:');
+        }
+      }
+
+      node.value = textValue;
     });
   };
 }
