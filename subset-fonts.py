@@ -19,7 +19,7 @@ UNICODES_LIST = (
     "U+0040-007E,"  # @, A-Z, [, \, ], ^, _, `, a-z, {, |, }, ~ (Tilde inclus)
     
     # --- Espaces Typographiques fines et insécables ---
-    "U+00A0,"       # Espace insécable (Devant le signe deux-points et les grands nombres)
+    "U+202F,"       # Espace fine insécable (Obligatoire en français à l'intérieur des guillemets « » et avant ;, !, ?)
     "U+202F,"       # Espace fine insécable (Obligatoire en français avant ;, !, ?)
     "U+2000-200A,"  # Espaces de tailles diverses (Cadratin, demi-cadratin, tiers de cadratin...)
     
@@ -53,6 +53,8 @@ UNICODES_LIST = (
     "U+2018-201B,"  # Apostrophes et guillemets simples (Courbe ’, inversée, culbutée)
     "U+201C-201D,"  # Guillemets anglais doubles (“ ”) pour les citations imbriquées
     "U+2026,"       # Points de suspension (…)
+    "U+2022,"       # Puce typographique (•)
+    "U+00B7,"       # Point médian (·) pour l'écriture épicène ou inclusive
     "U+00AB,"       # Guillemet français ouvrant («) - Correction de la coquille U+AB00
     "U+00BB,"       # Guillemet français fermant (»)
     
@@ -64,6 +66,11 @@ UNICODES_LIST = (
     "U+00B1,"       # Signe plus-ou-moins (±) pour les approximations (ex: ±50 pages)
     "U+00B2-00B3,"  # Exposants ² et ³
     "U+00BC-00BE,"  # Fractions courantes (¼, ½, ¾)
+    "U+00D7"        # Vrai signe mathématique de multiplication (×) pour les dimensions (ex: 14 × 21 cm)
+    "U+00BA,"       # Indicateur ordinal masculin (º) pour "1º", "2º" (distinct du degré °)
+    "U+2032-2033,"  # Prime (′) et double prime (″) pour les minutes/secondes d'arc ou pouces
+    "U+00A7,"       # Paragraphe (§) pour les renvois juridiques ou éditoriaux
+    "U+2020-2021,"  # Obèle (†) et double obèle (‡) pour les appels de notes éditoriales
     "U+00D7"        # Vrai signe mathématique de multiplication (×) pour les dimensions (ex: 14 × 21 cm)
 )
 
