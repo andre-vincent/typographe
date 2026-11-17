@@ -13,7 +13,7 @@ cover:
   creditName: "Crédit Photo : Le Tribunal du Net"
   creditUrl: https://www.letribunaldunet.fr/insolite/pourquoi-espace-avant-point-exclamation-francais-origine.html
 featured: false
-draft: false
+draft: true
 ---
 > Adaptation de l’article «[Pourquoi les Français mettent toujours un espace avant les points d’exclamation — aucune autre langue ne fait ça] (https://www.letribunaldunet.fr/insolite/pourquoi-espace-avant-point-exclamation-francais-origine.html)» rédigé par [Elsa Fanjul](https://www.letribunaldunet.fr/author/elsa).
 
