@@ -8,8 +8,9 @@ category: Économie
 date: 2026-10-19
 updatedDate: 2026-10-28
 author:
-  name: Gemini
-  role: Assistant dit d’Intelligence Artificielle (IA)
+  name: Camille
+  role: Pseudonyme d’assistance partielle ou totale dite d’Intelligence
+    Artificielle (IA). Revu et corrigé par l’éditeur de ce site.
 featured: false
 draft: false
 ---
@@ -129,7 +130,8 @@ En définitive, l'analyse systémique concorde : **la Mégadéduction à la prod
 Sur le plan socio-économique, elle concentre ses bénéfices financiers directs sur la rentabilité du capital et des actionnaires. Sur le plan humain et territorial, elle aggrave les inégalités environnementales en faisant peser les risques écologiques et climatiques de manière disproportionnée sur les populations les plus vulnérables. Enfin, en piétinant fréquemment le principe du consentement des Premières Nations pour accélérer la mise en valeur des ressources, ce modèle perpétue une dynamique d'extraction de la richesse, creusant le fossé entre les objectifs de réconciliation nationale et la réalité économique du terrain.
 
 ---
-<hr>
+
+---
 
 ## Notes
 
