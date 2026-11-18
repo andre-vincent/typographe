@@ -31,10 +31,10 @@ const authors = getAllAuthors(allPosts);
 
         <h2>Comment c’est écrit</h2>
         <p>
-Chaque article vise à être reproductible et fiable. Si quelque chose est erroné ou incorrect, sur simple signalement à l’auteur, des corrections seront apportées le plus promptement possible, avec la date de mise à jour affichée en haut de l'article.
+          Chaque article vise à être reproductible et fiable. Si quelque chose est erroné ou incorrect, sur simple signalement à l’auteur, des corrections seront apportées le plus promptement possible, avec la date de mise à jour affichée en haut de l'article.
         </p>
 
-        <h2>Qui écrit ici ?</h2>
+        <h2>Qui écrit ici&#8239;?</h2>
         <ul>
           {
             authors.map((author) => (
@@ -54,6 +54,28 @@ Chaque article vise à être reproductible et fiable. Si quelque chose est erron
             <p>Vous pouvez aussi poster un courriel directement à <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.</p>
           )
         }
+
+        <h2 id="conditions">Conditions de réutilisation et droit d’auteur</h2>
+        <p>
+          <strong>{siteConfig.name}</strong> (<a href="https://pages.dev">https://pages.dev</a>) est une publication indépendante à vocation éducative et documentaire.
+        </p>
+        <ul>
+          <li>
+            <strong>Contenus éditoriaux (usage non commercial libre)&#8239;:</strong> Sauf mention contraire, l’ensemble des textes de ce site peut être librement copié, modifié, adapté et diffusé à des fins éducatives, documentaires ou personnelles, sans obligation de citer l’auteur ou la source.
+          </li>
+          <li>
+            <strong>Interdiction commerciale sur les textes&#8239;:</strong> Toute exploitation commerciale, publicitaire ou lucrative de ces contenus éditoriaux, en tout ou en partie, est formellement interdite sans autorisation écrite préalable.
+          </li>
+          <li>
+            <strong>Contenus assistés par IA&#8239;:</strong> Certains articles signés sous le pseudonyme éditorial <em>Camille</em> sont rédigés avec l’assistance d’outils d’intelligence artificielle générative, puis relus, structurés et adaptés par l’éditeur humain du site.
+          </li>
+          <li>
+            <strong>Ouverture aux robots et à l’indexation&#8239;:</strong> Le moissonnage de données (<em>text and data mining</em>), l’indexation et l’archivage de ce site sont librement autorisés.
+          </li>
+          <li>
+            <strong>Code source du site (Licence MIT)&#8239;:</strong> Le code sous-jacent de ce thème Astro est un logiciel libre distribué selon les termes de la <a href="https://github.com">licence MIT</a> (les polices Geist et les icônes Bootstrap intégrées conservent leurs licences libres respectives).
+          </li>
+        </ul>
       </div>
     </div>
   </main>
