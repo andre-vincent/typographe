@@ -16,8 +16,7 @@ draft: false
 ---
 > Texte rédigé en grande partie par IA servant de test de rédaction en français au format Markdown: titres, sous-titres, paragraphes, listes, blocs de citation, tableaux, notes de bas de pages, etc. Vérification de la correction ortho-typographe automatique selon les règles de la typographie soignée en français.
 
-## Partie 1 :  
-Fonctionnement de la Mégadéduction et intérêt pour l'Europe
+## Partie 1 : Fonctionnement de la Mégadéduction et intérêt pour l'Europe
 
 ### Qu'est-ce que la superdéduction fiscale (Mégadéduction) ?
 
