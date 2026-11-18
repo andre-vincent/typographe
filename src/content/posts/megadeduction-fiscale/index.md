@@ -16,13 +16,14 @@ draft: false
 ---
 > Texte rédigé en grande partie par IA servant de test de rédaction en français au format Markdown: titres, sous-titres, paragraphes, listes, blocs de citation, tableaux, notes de bas de pages, etc. Vérification de la correction ortho-typographe automatique selon les règles de la typographie soignée en français.
 
-## Partie 1 : Fonctionnement de la Mégadéduction et intérêt pour l'Europe
+## Partie 1 :  
+Fonctionnement de la Mégadéduction et intérêt pour l'Europe
 
 ### Qu'est-ce que la superdéduction fiscale (Mégadéduction) ?
 
-La **Mégadéduction à la productivité** (initialement introduite de façon temporaire sous le nom de *superdéduction à la productivité* dans le Budget 2025[^1]) est une réforme fiscale structurelle majeure dévoilée à l'automne 2026 par le gouvernement fédéral canadien[^2]. 
+La **Mégadéduction à la productivité** (initialement introduite de façon temporaire sous le nom de *superdéduction à la productivité* dans le Budget 2025 [^1]) est une réforme fiscale structurelle majeure dévoilée à l'automne 2026 par le gouvernement fédéral canadien [^2]. 
 
-Cette mesure permet aux entreprises de **passer immédiatement en charges 100 % du coût de la quasi-totalité de leurs investissements en immobilisations** (matériel, technologies, infrastructures) dès la première année où les biens sont mis en service, éliminant ainsi les calendriers traditionnels d'amortissement de la Déduction pour amortissement (DPA)[^3].
+Cette mesure permet aux entreprises de **passer immédiatement en charges 100 % du coût de la quasi-totalité de leurs investissements en immobilisations** (matériel, technologies, infrastructures) dès la première année où les biens sont mis en service, éliminant ainsi les calendriers traditionnels d'amortissement de la Déduction pour amortissement (DPA) [^3].
 
 Cette incitation massive vise à pallier le retard historique du Canada en matière de productivité industrielle[^4]. Elle fait chuter le **taux effectif marginal d'imposition (TEMI) canadien sur les nouveaux investissements de 13 % à seulement 6,4 %**, propulsant le Canada au rang d'économie la plus compétitive du G7 face à une moyenne de 19 % au sein de l'OCDE[^5].
 
