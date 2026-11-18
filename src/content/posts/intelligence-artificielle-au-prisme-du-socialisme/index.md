@@ -8,8 +8,9 @@ category: Économie
 date: 2026-11-02
 updatedDate: 2026-11-02
 author:
-  name: André Vincent
-  role: Webmestre de ce site. Typographe, enseignant et syndicaliste.
+  name: Camille
+  role: Pseudonyme d’assistance partielle ou totale dite d’Intelligence
+    Artificielle (IA). Revu et corrigé par l’éditeur de ce site.
 featured: false
 draft: false
 ---
@@ -65,7 +66,7 @@ Les géants de la Tech capturent ensuite cette valeur en privatisant et en trans
 
 ---
 
-## Le General Intellect et Gramsci : L'IA comme outil d'hégémonie
+## Le «General Intellect» et Gramsci : L'IA comme outil d'hégémonie
 
 La convergence entre le concept de **General Intellect** chez Karl Marx et la théorie de l'**hégémonie culturelle** d'Antonio Gramsci permet de comprendre l'IA non plus seulement comme un outil économique, mais comme une infrastructure politique globale.
 
@@ -91,14 +92,17 @@ En combinant Marx et Gramsci, on comprend que l'enjeu de l'IA dépasse la simple
 
 #### Le Constat
 
-| Lecture Marxiste <br>(General Intellect) | Lecture Gramscienne <br>(Hégémonie) |
-| :--- | :--- |
+
+| Lecture Marxiste (General Intellect) | Lecture Gramscienne (Hégémonie) |
+| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
 | Le savoir de l'humanité est confisqué par les serveurs et les algorithmes de quelques monopoles. | L'IA façonne le langage et la culture pour légitimer l'ordre social existant. |
+
 
 #### La Sortie de Crise
 
-| Lecture Marxiste <br>(General Intellect) | Lecture Gramscienne <br>(Hégémonie) |
-| :--- | :--- |
+
+| Lecture Marxiste (General Intellect) | Lecture Gramscienne (Hégémonie) |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | Libérer le capital fixe : faire de l'IA un **commun universel** gratuit au service de l'émancipation et de la réduction du temps de travail. | Mener une **guerre de position** numérique : développer des IA open-source, souveraines et critiques pour briser le monopole idéologique. |
 
 
@@ -107,11 +111,13 @@ En combinant Marx et Gramsci, on comprend que l'enjeu de l'IA dépasse la simple
 Pour saisir la complexité actuelle des technologies algorithmiques, les chercheurs québécois Jonathan Durand Folco et Jonathan Martineau proposent, dans leur ouvrage *Le capital algorithmique*, une actualisation critique qui dialogue directement avec les thèses de Marx et Gramsci [^4]. Leur approche met en lumière d'importants points de convergence tout en introduisant des ruptures conceptuelles nécessaires face au capitalisme du XXIe siècle.
 
 ### Les convergences : L'appareil d'extraction et d'aliénation
-* **La privatisation du savoir social :** Durand Folco et Martineau rejoignent l'idée marxiste d'une capture du *General Intellect*. Ils démontrent comment le capital algorithmique procède à une extraction massive de données comportementales et de savoirs collectifs. L'IA transforme la vie quotidienne, les interactions et le langage en une matière première quantifiable, monopolisée par les GAFAM.
-* **L'hyper-subsomption et l'aliénation élargie :** Tout comme Marx décrivait la domination du travailleur par la machine industrielle, le concept de « régulation algorithmique » illustre une colonisation totale du temps. L'algorithme ne dicte plus seulement les cadences d'usine (taylorisme), il restructure la gestion managériale, le travail invisible de plateforme et s'immisce dans la sphère domestique.
-* **L'hégémonie codée :** Les auteurs valident la lecture gramscienne en insistant sur le rôle politique de ces infrastructures. La rationalité algorithmique s'étend désormais aux fonctions de l'État (comme la police prédictive) et agit comme un appareil hégémonique qui automatise une gouvernance purement managériale.
+
+- **La privatisation du savoir social :** Durand Folco et Martineau rejoignent l'idée marxiste d'une capture du *General Intellect*. Ils démontrent comment le capital algorithmique procède à une extraction massive de données comportementales et de savoirs collectifs. L'IA transforme la vie quotidienne, les interactions et le langage en une matière première quantifiable, monopolisée par les GAFAM.
+- **L'hyper-subsomption et l'aliénation élargie :** Tout comme Marx décrivait la domination du travailleur par la machine industrielle, le concept de « régulation algorithmique » illustre une colonisation totale du temps. L'algorithme ne dicte plus seulement les cadences d'usine (taylorisme), il restructure la gestion managériale, le travail invisible de plateforme et s'immisce dans la sphère domestique.
+- **L'hégémonie codée :** Les auteurs valident la lecture gramscienne en insistant sur le rôle politique de ces infrastructures. La rationalité algorithmique s'étend désormais aux fonctions de l'État (comme la police prédictive) et agit comme un appareil hégémonique qui automatise une gouvernance purement managériale.
 
 ### Les divergences : Le dépassement du marxisme orthodoxe
+
 Bien qu'ancrés dans la critique radicale, Durand Folco et Martineau proposent trois inflexions majeures qui élargissent le cadre classique :
 
 1. **De la production d'objets à la prédiction comportementale :** Pour Marx, la valeur d'échange prend racine dans le temps de travail cristallisé lors de la transformation physique d'une marchandise. Les auteurs soutiennent que le capital algorithmique extrait sa valeur d'un nouveau gisement : la **prédiction**. La valeur réside désormais dans la capacité des modèles à anticiper, modifier et monétiser les comportements futurs des individus.
