@@ -8,6 +8,11 @@ updatedDate: 2026-10-30
 author:
   name: Michel Roche
   role: Professeur en sciences politiques à l’Université du Québec à Chicoutimi.
+cover:
+  src: ./cover.jpeg
+  alt: Couverture du livre La fable des gagnants (Lux Éditeur).
+  creditName: Couverture du livre La fable des gagnants (Lux Éditeur).
+  creditUrl: https://luxediteur.com/catalogue/la-fable-des-gagnants/
 featured: false
 draft: false
 ---
