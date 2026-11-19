@@ -16,7 +16,7 @@ draft: false
 
 > Cette page de démonstration des capacités du gabarit (template) **Typographe** pour le générateur de site web statique **Astro** compte près de 6000 mots. La page s’affiche au complet en moins d’une seconde sur mobile et moins de 0,3 secondes sur ordinateur. Elle est sémantique et 100% accessible (AA). Elle est naturellement 100% optimisée pour les moteurs de recherche (SEO). Elle est éco-responsable. Elle utilise des polices de caractères optimisées pour la langue française. Elle applique automatiquement, grâce à un correcteur ortho-typographique, les meilleures pratiques de la typographie française.
 
-## Introduction : Les fondements du projet d'horizontalité du vivant
+## Introduction : les fondements du projet d'horizontalité du vivant
 
 Bâtir un monde sans hiérarchisation au sein du vivant exige une déconstruction radicale du modèle **anthropocentrique** traditionnel, qui positionne l'être humain au sommet d'une pyramide de domination légitime. Ce paradigme alternatif propose une transition vers des approches **biocentriques** ou **écocentriques**, stipulant que chaque entité biologique, du micro-organisme aux grands mammifères, possède une valeur intrinsèque absolue indépendante de son utilité socio-économique.
 
@@ -192,7 +192,7 @@ Au confluent de la théorie des systèmes complexes, de la philosophie biocentri
 
 ### Une reconfiguration ontologique : de l'environnement au tissu relationnel
 
-- **La fin de l'espace-décors :** « Faire monde » requiert l'abandon du concept même d'« environnement », terme qui présuppose l'existence d'un centre humain entouré d'une périphérie non humaine passive. La Terre cesse d'être appréhendée comme un stock de matières premières à exploiter ou comme un musée naturel à sanctuariser à distance.
+- **La fin de l'espace-décor :** « Faire monde » requiert l'abandon du concept même d'« environnement », terme qui présuppose l'existence d'un centre humain entouré d'une périphérie non humaine passive. La Terre cesse d'être appréhendée comme un stock de matières premières à exploiter ou comme un musée naturel à sanctuariser à distance.
 - **L'habitation connective :** Le concept substitue à l'ontologie des substances une ontologie des relations. S'appuyant sur la formule de Donna Haraway (*"Staying with the trouble"*), l'existence humaine est redéfinie comme un nœud de connexions interspécifiques inextricables [^15]. L'être humain ne vit pas *à côté* des plantes, du microbiote, des pollinisateurs ou des cycles fongiques : il est littéralement traversé, constitué et rendu biologiquement possible par eux. Politiser l'écologie consiste à prendre acte de cette imbrication charnelle.
 
 ### Une diplomatie écologique : l'art de la négociation interspécifique
@@ -205,7 +205,7 @@ Au confluent de la théorie des systèmes complexes, de la philosophie biocentri
 - **L'intégration économique aux cycles biogéochimiques :** Sur le plan de l'économie matérielle, « faire monde » exige d'aligner les infrastructures de production humaines sur les boucles de rétroaction de la biosphère. Il s'agit de clore les cycles de matière afin d'éliminer la production de déchets non assimilables par les écosystèmes récepteurs, réparant ainsi activement la faille métabolique théorisée par Marx.
 - **La visibilisation du travail non humain :** Ce paradigme reconnaît la contribution active et créatrice des agents non humains à l'habitabilité du globe. Le renouvellement des couches arables par les communautés lombrics, la régulation thermique opérée par les canopées forestières ou la purification des eaux par les zones humides ne sont plus considérés comme des services écosystémiques gratuits, mais comme une forme de co-travail vivant au sein de la communauté biotique, méritant le respect de ses propres temporalités de régénération.
 
-### L'éthique du soin (*Care*) : Vulnérabilité et responsabilité partagée
+### L'éthique du soin (*Care*) : vulnérabilité et responsabilité partagée
 
 - **La responsabilité réceptive (*Response-ability*) :** Élaborée par les courants féministes, l'éthique du *Care* appliquée au vivant postule que faire monde consiste à cultiver notre capacité à percevoir les besoins spécifiques des entités vulnérables non humaines et à y répondre de manière située.
 - **Le refus du sacrifice abstrait :** L'horizontalité se traduit ici par une attention méticuleuse portée aux conditions matérielles de survie des communautés d'espèces, refusant de sacrifier la pérennité d'un cours d'eau ou d'une population animale au nom d'un confort superflu, de l'indexation boursière ou d'impératifs technocratiques hors-sol.
