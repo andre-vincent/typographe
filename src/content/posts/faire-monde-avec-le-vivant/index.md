@@ -186,7 +186,7 @@ L'ambition d'édifier un modèle de société débarrassé des hiérarchies du v
 - **La convergence :** Les théoriciens décoloniaux (comme Walter Mignolo ou Arturo Escobar) dénoncent le "grand partage" cartésien entre Nature et Culture comme un outil d'hégémonie culturelle imposé par la colonisation européenne [^14]. Ils soutiennent le démantèlement de ce dualisme en s'appuyant sur les épistémologies alternatives issues des peuples racisés et opprimés, qui préservent des schèmes de cohabitation non destructeurs avec leur environnement.
 - **La divergence :** La pensée décoloniale formule une critique sévère à l'encontre de l'écologie profonde et du biocentrisme de facture universitaire occidentale. Elle y décèle une forme de **colonialisme vert** ou d'amnésie historique. Les mouvements de protection environnementale occidentaux ont fréquemment exigé la création d'espaces naturels dits "vierges" ou "sauvages" (*wilderness*) dans le Sud global, entraînant l'expulsion forcée et violente de communautés autochtones qui cohabitaient en symbiose avec ces milieux depuis des générations. Exiger une égalité face au vivant sans procéder préalablement aux réparations historiques dues aux crimes coloniaux et à l'impérialisme économique est perçu comme une stratégie de préservation des privilèges du Nord global sous couvert d'éthique universelle.
 
-## 6. L'Élucidation Conceptuelle : que signifie « Faire monde avec le vivant » ?
+## 6. L'élucidation conceptuelle : que signifie « Faire monde avec le vivant » ?
 
 Au confluent de la théorie des systèmes complexes, de la philosophie biocentrique et des théories critiques de la gauche radicale, l'expression **« Faire monde avec le vivant »** s'extirpe du registre de la métaphore poétique pour définir un programme ontologique, politique et matériel rigoureux. Ce concept, développé par des auteurs contemporains comme Baptiste Morizot, Donna Haraway ou Bruno Latour, s'articule autour de quatre dimensions fondamentales.
 
@@ -229,7 +229,7 @@ Comme l'a démontré l'anthropologue Philippe Descola dans son ouvrage de réfé
 
 Pour sortir de l'impasse eurocentrée, il convient de substituer à l'universalisme occidental le concept de **Plurivers** : un monde composé de plusieurs mondes.
 
-#### A. L'Afro-éco-communautarisme de l'*Ubuntu*
+#### A. L'afro-éco-communautarisme de l'*Ubuntu*
 
 Dérivé des langues bantoues d'Afrique australe et conceptualisé dans le champ environnemental par des penseurs comme Souleymane Bachir Diagne, l'**Ubuntu** (généralement résumé par *« Je suis parce que nous sommes »*) dépasse le cadre des relations strictement interhumaines [^19].
 
@@ -245,7 +245,7 @@ Issu des cosmologies amérindiennes des Andes septentrionales (notamment le *Sum
 
 ---
 
-## Synthèse : l'équilibre luriversel
+## Synthèse : l'équilibre pluriversel
 
 Bâtir un monde sans hiérarchisation au sein du vivant requiert une convergence transdisciplinaire qui évite l'écueil du réductionnisme scientifique comme celui de l'abstraction éthique eurocentrée. L'abolition des rapports de domination sur la biosphère ne se résout ni par un nivellement horizontal naïf ni par une sanctuarisation excluante. Elle s'opérationnalise à travers la reconnaissance de structures holarchiques et complexes où l'être humain assume une fonction relationnelle spécifique, nourrie par les sagesses écologiques de l'Ubuntu et du Buen Vivir.
 
