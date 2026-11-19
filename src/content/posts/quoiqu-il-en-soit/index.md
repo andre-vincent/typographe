@@ -8,9 +8,9 @@ author:
   name: André Vincent
   role: Édimestre de ce site. Typographe, enseignant, militant syndical et politique
 featured: false
-draft: true
+draft: false
 ---
-## Première réflexion 
+## Première réflexion
 
 À venir…
 
