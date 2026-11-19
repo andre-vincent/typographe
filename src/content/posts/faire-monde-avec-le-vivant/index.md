@@ -231,10 +231,10 @@ Pour sortir de l'impasse eurocentrée, il convient de substituer à l'universali
 
 #### A. L'afro-éco-communautarisme de l'*Ubuntu*
 
-Dérivé des langues bantoues d'Afrique australe et conceptualisé dans le champ environnemental par des penseurs comme Souleymane Bachir Diagne, l'**Ubuntu** (généralement résumé par *« Je suis parce que nous sommes »*) dépasse le cadre des relations strictement interhumaines [^19].
+L'**Ubuntu**, ancré dans les traditions bantoues d'Afrique australe et conceptualisé dans sa portée écologique par Mogobe B. Ramose, va au-delà d'une simple éthique interhumaine pour englober la relation au monde vivant et physique [^19].
 
-- **L'interconnexion des forces vitales :** Dans cette écosophie, l'identité d'un être ne s'arrête pas aux limites de son épiderme. L'humain partage une communauté de destin avec une communauté élargie englobant les humains vivants, les ancêtres défunts, les générations futures et l'ensemble des entités non humaines (animaux, plantes, cours d'eau).
-- **Une éthique de la responsabilité située :** L'humain n'est ni le despote de la nature, ni l'égal passif d'une bactérie ; il occupe une fonction spécifique de garant et d'arbitre conscient de l'équilibre cosmique. Porter atteinte à l'intégrité de la faune ou dégrader une forêt sacrée équivaut à introduire une rupture de ban dans la communauté des forces vitales, ce qui diminue directement l'humanité même de l'agresseur.
+- **L'interconnexion globale :** L'existence individuelle s'inscrit dans un réseau incluant la communauté humaine, les générations passées et futures, ainsi que les éléments naturels.
+- **Une responsabilité écologique :** L'humain agit comme un garant de l'équilibre cosmique, où toute dégradation de l'environnement affecte l'ensemble du tissu vital.
 
 #### B. Le constitutionalisme écologique du *Buen Vivir*
 
@@ -291,6 +291,6 @@ Voici l'appareil critique complet appuyant l'ensemble des analyses développées
 
 [^18]: **Moore, J. W.** (2015). *Capitalism in the Web of Life: Ecology and the Accumulation of Capital*. Verso. Critique du terme d'Anthropocène et proposition du concept de Capitalocène pour situer historiquement la responsabilité de la crise biosphérique dans l'organisation de l'accumulation globale de capital.
 
-[^19]: **Diagne, S. B.** (2022). *De langue à langue : L'hospitalité de la traduction*. Albin Michel. Analyse philosophique développant les fondements métaphysiques de l'Ubuntu africain réinterprété sous l'angle d'une écosophie de la relation et de l'interdépendance élargie à la biosphère.
+[^19]: **Ramose, M. B.** (1999). *African Philosophy Through Ubuntu*. Mond Books. Ouvrage fondamental analysant l'ontologie relationnelle et l'éthique environnementale inhérentes à l'*Ubuntu*.
 
-[^20]: **Acosta, A.** (2013). *Le Buen Vivir : Pour imaginer d'autres mondes*. Utopia. Analyse politique et juridique synthétisant l'émergence constitutionnelle du Buen Vivir en Amérique latine comme modèle de rupture décolonial face à l'idéologie occidentale du développement extractiviste.
+[^20]: **Acosta, A.** (2014). *Le Buen Vivir : Pour imaginer d'autres mondes*. Éditions Utopia. Étude sur l'intégration politique et juridique du *Buen Vivir* en Amérique latine face au modèle de développement extractiviste.
