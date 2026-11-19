@@ -24,6 +24,11 @@ RELEASE_CHECKLIST.md
 # Ghost theme kept locally as a design reference, not part of this theme
 Journal-main/
 
+# Environment variables
+.env
+.env.*
+!.env.example
+
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars
