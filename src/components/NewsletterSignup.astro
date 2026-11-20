@@ -36,7 +36,7 @@ const isDemo = isEnabled && action.length === 0;
       class="field"
     />
     <button type="submit" disabled={!isEnabled} class="btn btn-solid btn-block">
-      {isEnabled ? "Subscribe" : "Coming soon"}
+      {isEnabled ? "S’abonner" : "À venir bientôt"}
     </button>
     <p
       class="newsletter-status text-xs leading-relaxed text-muted-foreground"
@@ -47,7 +47,7 @@ const isDemo = isEnabled && action.length === 0;
     </p>
     {!isEnabled && (
       <p class="text-xs leading-relaxed text-muted-foreground">
-        Signup is disabled until a newsletter provider is configured.
+        L’inscription est désactivée jusqu’à ce qu'un fournisseur d’infolettre soit configuré.
       </p>
     )}
   </form>
@@ -62,7 +62,7 @@ const isDemo = isEnabled && action.length === 0;
           const status = form.querySelector("[data-newsletter-status]");
           if (status) {
             status.textContent =
-              "Thanks. This demo form is not connected to a provider yet, so nothing was sent.";
+              "Merci. Ce formulaire de démonstration n’est pas encore connecté à un fournisseur, donc rien n’a été envoyé.";
           }
           form.reset();
         });
