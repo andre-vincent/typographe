@@ -10,7 +10,7 @@ author:
   name: André Vincent
   role: Édimestre de ce site. Typographe, enseignant et militant syndical et
     politique
-featured: false
+featured: true
 draft: false
 ---
 Le projet **Typographe** est né d’un constat simple : le Web contemporain privilégie trop souvent la lourdeur technique et l’agitation visuelle au détriment du texte, du confort de lecture et de la maîtrise éditoriale. Construit avec le cadre applicatif **Astro**, hébergé gratuitement sur **GitHub** et déployé sur **Cloudflare Pages**, ce modèle offre « un endroit calme pour l’écriture longue et soignée en français ».
