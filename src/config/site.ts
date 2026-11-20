@@ -51,6 +51,6 @@ export const navigation = [
 /** Navigation secondaire rendue dans le pied de page. */
 export const footerNavigation = [
   { label: "Contact", href: "/contact/" },
-  { label: "Confidentialité", href: "/privacy/" },
   { label: "RSS", href: "/rss.xml" },
+  { label: "Confidentialité", href: "/privacy/" },
 ];
