@@ -285,3 +285,15 @@ advice. They use `.prose` inside `.canvas`, so new pages can copy either as a te
 The fourteen demo posts and their Unsplash covers are placeholders. Delete
 `src/content/posts/*` and add your own before launching; the build fails loudly if any frontmatter
 stops matching the schema.
+
+## Sécurité et bonnes pratiques
+
+Ce gabarit génère un site entièrement statique (sans base de données ni serveur complexe), ce qui le protège naturellement contre la grande majorité des piratages courants. Des règles de sécurité essentielles sont déjà préconfigurées dans le fichier `public/_headers`.
+
+Pour garder votre blogue et vos comptes bien protégés, voici quatre réflexes simples à adopter :
+
+* **Protégez vos accès (double authentification).** Activez l'authentification à deux facteurs (2FA) sur votre compte **GitHub** et votre compte **Cloudflare**. C'est la meilleure protection contre le piratage de votre blogue.
+* **Ne publiez jamais vos clés privées.** Si vous ajoutez un service externe nécessitant une clé secrète ou un jeton d'accès, ne l'écrivez jamais directement dans les fichiers du site. Renseignez-la uniquement dans les *Variables d'environnement* des paramètres de votre projet sur Cloudflare Pages (et évitez le préfixe `PUBLIC_` pour toute donnée confidentielle).
+* **Filtrez les pourriels (spam) sur vos formulaires.** Lorsque vous connecterez les formulaires de contact ou d'infolettre à un service tiers (Formspree, Brevo, Buttondown, etc.), pensez à activer leur option anti-spam intégrée ou un champ piège (*honeypot*) pour éviter les envois automatisés.
+* **Limitez les accès de votre éditeur visuel.** Si vous utilisez **PagesCMS** (ou un outil similaire) pour rédiger vos articles, autorisez-le uniquement à accéder au dépôt de votre blogue plutôt qu'à l'ensemble de votre compte GitHub.
+
