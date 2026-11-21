@@ -66,14 +66,14 @@ Pour isoler une proposition incise — comme celle-ci — ou pour lister des él
 
 ### 7. L’écriture correcte des nombres
 
-Pour faciliter la lecture, les grands nombres s’écrivent par groupes de trois chiffres, séparés non pas par des points ou des virgules (comme en anglais), mais par des **espaces insécables**.
+Pour faciliter la lecture, les grands nombres s’écrivent par groupes de trois chiffres, séparés non pas par des points ou des virgules (comme en anglais), mais par des **espaces fines insécables** pour tout chiffre plus grand que 9999 afin de préserver les dates en un seul bloc.
 
-- **Correct** : 15 000 000 €
+- **Correct** : 15 000 000 € en l’an 2026
 - **Incorrect** : 15,000,000 € ou 15.000.000 €
 
 ### 8. Les ligatures obligatoires
 
-Certaines associations de lettres doivent fusionner graphiquement en français. Ne pas les lier est considéré comme une faute d’orthographe typographique. Oeuvre.
+Certaines associations de lettres doivent fusionner graphiquement en français. Ne pas les lier est considéré comme une faute d’orthographe typographique.
 
 - **Les combinaisons** : Le **œ** (dans *cœur*, *œuf*, *œuvre*) et le **æ** (dans *ex æquo*).
 
