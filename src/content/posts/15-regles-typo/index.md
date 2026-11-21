@@ -73,7 +73,7 @@ Pour faciliter la lecture, les grands nombres s’écrivent par groupes de trois
 
 ### 8. Les ligatures obligatoires
 
-Certaines associations de lettres doivent fusionner graphiquement en français. Ne pas les lier est considéré comme une faute d’orthographe typographique.
+Certaines associations de lettres doivent fusionner graphiquement en français. Ne pas les lier est considéré comme une faute d’orthographe typographique. Oeuvre.
 
 - **Les combinaisons** : Le **œ** (dans *cœur*, *œuf*, *œuvre*) et le **æ** (dans *ex æquo*).
 
