@@ -9,66 +9,230 @@ author:
 featured: true
 ---
 
-Ce fichier permet de valider visuellement si le plugin applique correctement les règles de l'*Imprimerie nationale* et du *Ramat de la typographie* sur Cloudflare Pages.
+Cette page valide l'application automatique des normes typographiques françaises sur notre site Astro.
 
-## 1. Ponctuation double, guillemets et apostrophes
-* Est-ce que le système fonctionne comme prévu ? (Attendu : espace fine insécable `\u202F` devant ?)
-* C'est incroyable ! (Attendu : espace fine insécable `\u202F` devant !)
-* Chapitre 1 : la règle s'applique après un chiffre. (Attendu : espace forte insécable `\u00A0` devant :)
-* Il dit : "Le projet Astro est génial". (Attendu : «\u202FLe projet Astro est génial\u202F»)
-* Il dit : "Le projet **Astro** est *vraiment* génial". (Attendu : guillemets français conservés malgré le gras/italique imbriqué)
-* Il dit : "Le projet <q>Astro</q> est vraiment génial". (Attendu : guillemets anglais pour citations imbrigués de 2e niveau)
-* C'est l'arbre de l'**étudiant** d'aujourd'hui. (Attendu : apostrophes courbes ’ y compris avant `**étudiant**`)
-* Une fin de phrase avec des points de suspension... (Attendu : … en un seul caractère)
+## 1. L'apostrophe courbe et les points de suspension
 
-## 2. Tirets d'incise, civilités, dates et siècles
-* — Bonjour, dit-il en entrant. (Attendu : tiret cadratin suivi d'une espace forte insécable `\u00A0`)
-* Cette règle — à mon **humble** avis — est indispensable. (Attendu : espaces insécables `\u00A0` à l'intérieur des tirets malgré le gras)
-* Veuillez contacter M. Dupont, Mme Martin ou le Dr Lefèvre. (Attendu : espace forte insécable `\u00A0` après M., Mme, Dr)
-* La prise de la Bastille eut lieu le 14 juillet 1789 et la fête du travail le 1er mai. (Attendu : `14\u00A0juillet` et `1er\u00A0mai`)
-* Au XXe siècle, le chapitre 4 et le tome II font référence. (Attendu : `XXe\u00A0siècle`, `chapitre\u00A04`, `tome\u00A0II`)
-* Lien brut à protéger : https://exemple.fr (Attendu : aucune espace insécable devant `?`)
+### Pourquoi ?
+L'apostrophe droite (`'`) est un héritage des machines à écrire. En typographie française fine, l'apostrophe courbe (`’`) et l'ellipse unique (`…`) assurent l'harmonie du texte.
 
-## 3. Unités de mesure, devises et pourcentages
-* Le taux de réussite est de 85% ou de 12 %. (Attendu : espace fine insécable `\u202F` devant %)
-* Le livre coûte 45€ (ou 45 €), soit environ 50\$. (Attendu : espace forte insécable `\u00A0` devant € et \$)
-* L'appartement fait 75m² et la pièce est chauffée à 21°C. (Attendu : espace fine insécable `\u202F` devant m² et °C)
-* Le rendez-vous est fixé à 14h30 précises, ou à 18h. (Attendu : espaces fines insécables autour du h : `14\u202Fh\u202F30` et `18\u202Fh`)
-
-| Catégorie | Écriture Markdown (Avant) | Rendu Attendu (Après) | Espace insécable |
-| :--- | :--- | :--- | :--- |
-| **Pourcentages** | `100%` ou `100 %` | 100 % | Fine (`\u202F`) |
-| **Distances & Surfaces** | `12km`, `5m`, `45cm`, `8mm` | 12 km, 5 m, 45 cm, 8 mm | Fine (`\u202F`) |
-| | `75m²` ou `2m³` | 75 m² ou 2 m³ | Fine (`\u202F`) |
-| **Poids & Volume** | `2t`, `50kg`, `350g`, `500mg`, `1L` | 2 t, 50 kg, 350 g, 500 mg, 1 L | Fine (`\u202F`) |
-| **Physique & Élec.** | `21°C`, `60Hz`, `90dB`, `230V`, `4kW` | 21 °C, 60 Hz, 90 dB, 230 V, 4 kW | Fine (`\u202F`) |
-| **Stockage** | `4Go`, `700Mo`, `1To`, `512B`, `20octets` | 4 Go, 700 Mo, 1 To, 512 B, 20 octets | Fine (`\u202F`) |
-| **Devises** | `45€`, `100$`, `10£`, `5000¥` | 45 €, 100 $, 10 £, 5000 ¥ | Forte (`\u00A0`) |
-| **Horaires & Durées** | `14h30`, `20h`, `5min`, `30s` | 14 h 30, 20 h, 5 min, 30 s | Fine (`\u202F`) |
-
-## 4. Grands nombres et décimales (Hors tableau vs Dans tableau)
-* La population est de 9999 habitants en 2026. (Attendu : RESTE COMPACT à 4 chiffres hors tableau)
-* Le budget s'élève à 12500 € pour 1450250 clics et π ≈ 3,14159. (Attendu : `12\u202F500`, `1\u202F450\u202F250`, mais `3,14159` intact)
-
-| Produit | Quantité (Seuil > 9999) | Prix |
-| :--- | :--- | :--- |
-| Référence 135 | 950 | 10 € |
-| Référence 259 | 1250 | 1200 € |
-| Référence 371 | 15400 | 14500 € |
-
-## 5. Zones d'exclusion strictes (Ne doivent PAS être modifiées)
-
-```javascript
-// Bloc de code : guillemets, apostrophes et modulo (%) doivent rester bruts
-const message = "Hello World!";
-let ratio = 100 % 3;
+**Exemple brut :**
+```text
+C'est l'arbre de l'étudiant qui grandit aujourd'hui...
 ```
 
-Un texte contenant du code en ligne `let total = 45;` ou une commande `npm run astro -- --help`.
+**Exemple corrigé :**
+<div class="typo-demo">
 
-<p class="no-typo">Ce paragraphe porte la classe no-typo : l'apostrophe droite ('), le point ! et le nombre 12500 doivent rester bruts.</p>
+C'est l'arbre de l'étudiant qui grandit aujourd'hui...
 
-<p lang="en">Is this working properly? "Yes", it is! It costs 50\$ and 100% of features are on.</p>
+</div>
+
+---
+
+## 2. La ponctuation double et le raccordement inline
+
+### Pourquoi ?
+Les signes `;`, `!` et `?` requièrent une espace fine insécable (`\u202F`). Le deux-points (`:`) exige une espace insécable normale (`\u00A0`), y compris après un élément formaté.
+
+**Exemple brut :**
+```text
+Incroyable! Est-ce vrai? Regardez ceci: un point-virgule; et **Pourquoi** ?
+```
+
+**Exemple corrigé :**
+<div class="typo-demo">
+
+Incroyable! Est-ce vrai? Regardez ceci: un point-virgule; et **Pourquoi** ?
+
+</div>
+
+---
+
+## 3. Les guillemets français
+
+### Pourquoi ?
+La typographie française emploie les chevrons (`« »`) accompagnés d'espaces fines insécables intérieures plutôt que les guillemets droits (`" "`), tout en préservant les guillemets courbes (`“ ”`) au second rang.
+
+**Exemple brut :**
+```text
+Il a dit : "Le projet est validé, même avec “cette nuance” importante" au directeur.
+```
+
+**Exemple corrigé :**
+<div class="typo-demo">
+
+Il a dit : "Le projet est validé, même avec “cette nuance” importante" au directeur.
+
+</div>
+
+---
+
+## 4. Devises, pourcentages et heures
+
+### Pourquoi ?
+Les symboles monétaires, les pourcentages et les notations horaires (règle stricte de l'Imprimerie nationale : `14 h 30` → `14 h30`) restent solidaires du nombre qui les précède.
+
+**Exemple brut :**
+```text
+Le taux est de 5,5 % pour 1500 €, 250 $ ou 180 £, à 9 h et 14 h 30.
+```
+
+**Exemple corrigé :**
+<div class="typo-demo">
+
+Le taux est de 5,5 % pour 1500 €, 250 \$ ou 180 £, à 9 h et 14 h 30.
+
+</div>
+
+---
+
+## 5. Unités de mesure (SI)
+
+### Pourquoi ?
+Les unités physiques forment un bloc indissociable avec la valeur numérique grâce à l'espace fine insécable (`\u202F`).
+
+**Exemple brut :**
+```text
+Une distance de 15 km à 22 °C, une surface de 80 m², un fichier de 25 Mo ou 4 Go en 45 min.
+```
+
+**Exemple corrigé :**
+<div class="typo-demo">
+
+Une distance de 15 km à 22 °C, une surface de 80 m², un fichier de 25 Mo ou 4 Go en 45 min.
+
+</div>
+
+---
+
+## 6. Tirets cadratins (dialogues et incises)
+
+### Pourquoi ?
+En typographie française, les dialogues s'ouvrent par un tiret cadratin (`—`) suivi d'une espace insécable, et les incises sont encadrées par des tirets cadratins liés au texte intérieur.
+
+**Exemple brut :**
+```text
+- Bonjour, dit-il.
+-- Comment allez-vous ?
+L'informatique - discipline exigeante -- demande de la rigueur.
+```
+
+**Exemple corrigé :**
+<div class="typo-demo">
+
+- Bonjour, dit-il.
+-- Comment allez-vous ?
+L'informatique - discipline exigeante -- demande de la rigueur.
+
+</div>
+
+---
+
+## 7. Grands nombres et tableaux
+
+### Pourquoi ?
+Les nombres se découpent par tranches de trois chiffres dès **5 chiffres** dans le texte courant (préservant les années à 4 chiffres comme `1872`), mais dès **4 chiffres** dans les cellules de tableau (`<td>`).
+
+**Exemple brut :**
+```text
+En 1872, on comptait 2500 étudiants et 12500 livres.
+```
+
+**Exemple corrigé :**
+<div class="typo-demo">
+
+En 1872, on comptait 2500 étudiants et 12500 livres.
+
+| Donnée brute | Rendu corrigé |
+| :--- | :--- |
+| `8500` | 8500 |
+| `142000,75` | 142000,75 |
+
+</div>
+
+---
+
+## 8. Dates, civilités et références éditoriales
+
+### Pourquoi ?
+Une espace insécable forte (`\u00A0`) empêche la séparation en fin de ligne des quantièmes de mois, des titres de civilité et des numéros de chapitres ou de pages.
+
+**Exemple brut :**
+```text
+Le 1er octobre 1870, M. Lépine et Mme Francq ont consulté le chapitre 4, page 45 et n° 145.
+```
+
+**Exemple corrigé :**
+<div class="typo-demo">
+
+Le 1er octobre 1870, M. Lépine et Mme Francq ont consulté le chapitre 4, page 45 et n° 145.
+
+</div>
+
+---
+
+## 9. Petites capitales et exposants (automatiques et manuels)
+
+### Pourquoi ?
+Les sigles (2 majuscules ou plus) et les chiffres romains se composent en petites capitales (`<span class="petite-capitale">`), tandis que les ordinaux se placent en exposant (`<sup>`). L'article « Le » est préservé.
+
+**Exemple brut :**
+```text
+La FTQ, la CSN et l'ONU au XIXe siècle, sous la Ve République et le 1^er^ mai (Le Monde ouvrier).
+```
+
+**Exemple corrigé :**
+<div class="typo-demo">
+
+La FTQ, la CSN et l'ONU au XIXe siècle, sous la Ve République et le 1^er^ mai (Le Monde ouvrier).
+
+</div>
+
+---
+
+## 10. Exclusions automatiques (URLs, courriels et code)
+
+### Pourquoi ?
+Les liens hypertextes, adresses courriel, code en ligne et blocs de code ne doivent jamais être altérés par les règles typographiques.
+
+**Exemple vérifié :**
+<div class="typo-demo">
+
+Lien intact : https://pages.dev — Courriel : contact@typographe.pages.dev — Code : `"Bonjour : ?!"`
+
+</div>
+
+<style is:global>
+  .petite-capitale {
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.04em;
+  }
+
+  sup {
+    line-height: 0;
+    font-size: 0.75em;
+  }
+
+  .typo-demo {
+    padding: 1rem 1.25rem;
+    margin: 0.75rem 0 1.5rem;
+    border-left: 3px solid currentColor;
+    background-color: color-mix(in srgb, currentColor 5%, transparent);
+    border-radius: 0 0.375rem 0.375rem 0;
+  }
+
+  .typo-demo > :first-child {
+    margin-top: 0;
+  }
+
+  .typo-demo > :last-child {
+    margin-bottom: 0;
+  }
+</style>
+
+
+
 
 <style>
 /* Cible votre tableau dans le corps de l'article */
