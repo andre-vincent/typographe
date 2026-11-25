@@ -154,6 +154,11 @@ export function remarkFrenchTypography() {
       for (const match of node.value.matchAll(tokenRegex)) {
         const [fullMatch, romanWithOrdinal, ordinalSuffix, singleRomanContext, upperBlock] = match;
 
+        // Ignore l'article français "Le" (faux positif pour le chiffre romain L + ordinal e)
+        if (fullMatch === 'Le') {
+          continue;
+        }
+
         // Ignore les URLs et courriels
         const surrounding = node.value.slice(Math.max(0, match.index - 10), match.index + fullMatch.length + 10);
         if (/https?:\/\/|www\.|@/.test(surrounding)) continue;
