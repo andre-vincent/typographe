@@ -145,19 +145,15 @@ export function remarkFrenchTypography() {
         return;
       }
 
+      // Exclut explicitement l'article "Le" via (?!Le\b)
       const tokenRegex =
-        /(?<![A-Za-zÀ-ÿ0-9_-])(?:([IVXLCDM]+)(er|e|ème)\b|([IVXLCDM])(?=[\s\u00A0](?:siècles?|millénaires?|arrondissements?|République|Empire|chapitres?|tomes?|volumes?|actes?|scènes?)\b)|([A-ZÀ-ÖØ-Þ]{2,}))(?![A-Za-zÀ-ÿ0-9_-])/g;
+        /(?<![A-Za-zÀ-ÿ0-9_-])(?!Le\b)(?:([IVXLCDM]+)(er|e|ème)\b|([IVXLCDM])(?=[\s\u00A0](?:siècles?|millénaires?|arrondissements?|République|Empire|chapitres?|tomes?|volumes?|actes?|scènes?)\b)|([A-ZÀ-ÖØ-Þ]{2,}))(?![A-Za-zÀ-ÿ0-9_-])/g;
 
       const parts = [];
       let lastIndex = 0;
 
       for (const match of node.value.matchAll(tokenRegex)) {
         const [fullMatch, romanWithOrdinal, ordinalSuffix, singleRomanContext, upperBlock] = match;
-
-        // Ignore l'article français "Le" (faux positif pour le chiffre romain L + ordinal e)
-        if (fullMatch === 'Le') {
-          continue;
-        }
 
         // Ignore les URLs et courriels
         const surrounding = node.value.slice(Math.max(0, match.index - 10), match.index + fullMatch.length + 10);
