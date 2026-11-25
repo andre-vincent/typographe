@@ -993,3 +993,17 @@ q::before {
 q::after {
   content: close-quote;
 }
+
+/* ==========================================================================
+   Style des petites capitales généré par /src/plugins/...
+   ========================================================================== */
+
+.petite-capitale {
+  font-variant-caps: all-small-caps;
+  letter-spacing: 0.04em;
+}
+
+sup {
+  line-height: 0;
+  font-size: 0.75em;
+}
