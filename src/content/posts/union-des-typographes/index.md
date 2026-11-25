@@ -43,7 +43,7 @@ Les typographes ont été les **véritables pionniers du mouvement ouvrier et de
 
 ## Figures marquantes : Alphonse-Télesphore Lépine et Gustave Francq
 
-**Gustave Francq** et **Alphonse-Télesphore Lépine** sont deux typographes montréalais qui ont façonné l'action syndicale et politique des travailleurs au Canada et au Québec entre la fin du XIXe siècle et le milieu du <abbr>XX</abbr><sup>e</sup> siècle. Alors que Lépine a ouvert les portes du Parlement aux revendications ouvrières dès 1888, Francq a structuré le syndicalisme international, le Parti ouvrier et la législation sociale québécoise pendant près de quarante ans.
+**Gustave Francq** et **Alphonse-Télesphore Lépine** sont deux typographes montréalais qui ont façonné l'action syndicale et politique des travailleurs au Canada et au Québec entre la fin du XIX^e^ siècle et le milieu du XX^e^ siècle. Alors que Lépine a ouvert les portes du Parlement aux revendications ouvrières dès 1888, Francq a structuré le syndicalisme international, le Parti ouvrier et la législation sociale québécoise pendant près de quarante ans.
 
 ### Alphonse-Télesphore Lépine (1855-1943) : le pionnier parlementaire
 
