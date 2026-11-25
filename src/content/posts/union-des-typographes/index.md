@@ -17,7 +17,7 @@ cover:
 featured: false
 draft: false
 ---
-Les typographes ont été les **véritables pionniers du mouvement ouvrier et de la pensée socialiste au Canada et au Québec**, jetant les bases des premières organisations syndicales, de la législation du travail et de l'action politique ouvrière dès le <abbr>XIX</abbr><sup>e</sup> siècle. Leur haut niveau d'alphabétisation et leur proximité quotidienne avec les presses et les médias d'information leur ont conféré un rôle d'avant-garde intellectuelle, organisationnelle et idéologique.
+Les typographes ont été les **véritables pionniers du mouvement ouvrier et de la pensée socialiste au Canada et au Québec**, jetant les bases des premières organisations syndicales, de la législation du travail et de l'action politique ouvrière dès le XIX^e^ siècle. Leur haut niveau d'alphabétisation et leur proximité quotidienne avec les presses et les médias d'information leur ont conféré un rôle d'avant-garde intellectuelle, organisationnelle et idéologique.
 
 ## Le rôle fondateur des typographes dans le mouvement ouvrier
 
