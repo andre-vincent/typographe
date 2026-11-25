@@ -90,7 +90,14 @@ export function remarkFrenchTypography() {
         return;
       }
 
-      const isInsideTd = ancestors.some((ancestor) => ancestor.type === 'tableCell');
+      const isStartOfBlock = Boolean(
+        currentBlock &&
+        Array.isArray(currentBlock.children) &&
+        currentBlock.children[0] === node
+      );
+
+      textValue = applyFrenchTypoRules(textValue, isInsideTd, isStartOfBlock);
+
       const currentBlock = [...ancestors].reverse().find((ancestor) => blockTypes.has(ancestor.type));
       let textValue = node.value;
 
