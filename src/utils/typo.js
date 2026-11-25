@@ -1,10 +1,11 @@
-export function applyFrenchTypoRules(text, isInsideTd = false) {
+export function applyFrenchTypoRules(text, isInsideTd = false, isStartOfBlock = true) {
   if (typeof text !== 'string' || text.length === 0) return text;
 
   const NARROW_NBSP = '\u202F';
   const NBSP = '\u00A0';
   const CURLY_APOS = '\u2019';
   const EM_DASH = '\u2014';
+  const EN_DASH = '\u2013';
 
   // 1. Protection des URL et adresses courriel
   const protectedTokens = [];
@@ -67,17 +68,12 @@ export function applyFrenchTypoRules(text, isInsideTd = false) {
     `$1${NBSP}`
   );
 
-  // 9. Tirets cadratins (dialogues et incises)
-  value = value.replace(/(^|\s)(?:--|-|–|—)\s+/g, (match, prefix) => `${prefix}${EM_DASH} `);
-  value = value.replace(new RegExp(`^${EM_DASH}\\s+`), `${EM_DASH}${NBSP}`);
-  value = value.replace(
-    new RegExp(`\\s${EM_DASH}\\s+([^${EM_DASH}]+?)\\s+${EM_DASH}(?=[\\s.,;:!?»]|$)`, 'g'),
-    ` ${EM_DASH}${NBSP}$1${NBSP}${EM_DASH}`
-  );
-  value = value.replace(
-    new RegExp(`\\s${EM_DASH}\\s+([^${EM_DASH}]+?)(?=[.,;:!?…»]|$)`, 'g'),
-    ` ${EM_DASH}${NBSP}$1`
-  );
+  // 9. Tirets : cadratin pour les dialogues, demi-cadratin pour les incises
+  if (isStartOfBlock) {
+    value = value.replace(/^(?:--|-|–|—)\s+/, `${EM_DASH}${NBSP}`);
+  }
+  value = value.replace(/(\S)\s+(?:--|-|–|—)(?=[.,;:!?…»)]|\s|$)/g, `$1${NBSP}${EN_DASH}`);
+  value = value.replace(/(\s)(?:--|-|–|—)\s+(?=\S)/g, `$1${EN_DASH}${NBSP}`);
 
   // 10. Dates, siècles, millénaires et références éditoriales
   const moisFr = 'janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre';
