@@ -40,26 +40,25 @@ export function remarkFrenchTypography() {
       const regex = /\^([^\s^][^^]*?)\^/g;
       const parts = [];
       let lastIndex = 0;
-      let match;
 
-      while ((match = regex.exec(node.value)) !== null) {
+      for (const match of node.value.matchAll(regex)) {
+        const [fullMatch, supContent] = match;
         if (match.index > lastIndex) {
           parts.push({ type: 'text', value: node.value.slice(lastIndex, match.index) });
         }
         parts.push({
           type: 'sup',
           data: { hName: 'sup' },
-          // match[1] correspond au texte capturé entre les deux ^
-          children: [{ type: 'text', value: match[1] }],
+          children: [{ type: 'text', value: supContent }],
         });
-        lastIndex = regex.lastIndex;
+        lastIndex = match.index + fullMatch.length;
       }
 
       if (parts.length > 0) {
         if (lastIndex < node.value.length) {
           parts.push({ type: 'text', value: node.value.slice(lastIndex) });
         }
-        supReplacements.push({ parent: ancestors[ancestors.length - 1], node, parts });
+        supReplacements.push({ parent: ancestors.at(-1), node, parts });
       }
     });
 
@@ -83,7 +82,7 @@ export function remarkFrenchTypography() {
       );
       if (isInsideIgnoredComponent) return;
 
-      const directParent = ancestors[ancestors.length - 1];
+      const directParent = ancestors.at(-1);
       if (
         directParent.type === 'link' &&
         (node.value === directParent.url || /^(https?:\/\/|www\.)/i.test(node.value.trim()))
@@ -108,7 +107,7 @@ export function remarkFrenchTypography() {
 
       if (directParent && Array.isArray(directParent.children)) {
         const nodeIndex = directParent.children.indexOf(node);
-        const prevSibling = nodeIndex > 0 ? directParent.children[nodeIndex - 1] : null;
+        const prevSibling = nodeIndex > 0 ? directParent.children.at(nodeIndex - 1) : null;
 
         if (prevSibling && inlineSiblings.has(prevSibling.type)) {
           textValue = textValue
@@ -138,7 +137,7 @@ export function remarkFrenchTypography() {
       );
       if (isIgnored) return;
 
-      const directParent = ancestors[ancestors.length - 1];
+      const directParent = ancestors.at(-1);
       if (
         directParent.type === 'link' &&
         (node.value === directParent.url || /^(https?:\/\/|www\.)/i.test(node.value.trim()))
@@ -146,24 +145,14 @@ export function remarkFrenchTypography() {
         return;
       }
 
-      // Groupes de capture :
-      // match[1] : Chiffre romain (ex: "XIX")
-      // match[2] : Ordinal collé (ex: "e", "er", "ème")
-      // match[3] : Chiffre romain d'une lettre en contexte (ex: "V" dans "V République")
-      // match[4] : Sigle ou chiffre romain de 2+ majuscules (ex: "FTQ", "XXI")
       const tokenRegex =
         /(?<![A-Za-zÀ-ÿ0-9_-])(?:([IVXLCDM]+)(er|e|ème)\b|([IVXLCDM])(?=[\s\u00A0](?:siècles?|millénaires?|arrondissements?|République|Empire|chapitres?|tomes?|volumes?|actes?|scènes?)\b)|([A-ZÀ-ÖØ-Þ]{2,}))(?![A-Za-zÀ-ÿ0-9_-])/g;
 
       const parts = [];
       let lastIndex = 0;
-      let match;
 
-      while ((match = tokenRegex.exec(node.value)) !== null) {
-        const fullMatch = match[0];
-        const romanWithOrdinal = match[1];
-        const ordinalSuffix = match[2];
-        const singleRomanContext = match[3];
-        const upperBlock = match[4];
+      for (const match of node.value.matchAll(tokenRegex)) {
+        const [fullMatch, romanWithOrdinal, ordinalSuffix, singleRomanContext, upperBlock] = match;
 
         // Ignore les URLs et courriels
         const surrounding = node.value.slice(Math.max(0, match.index - 10), match.index + fullMatch.length + 10);
@@ -179,7 +168,6 @@ export function remarkFrenchTypography() {
         }
 
         if (romanWithOrdinal && ordinalSuffix) {
-          // Ex: "XIXe" -> <span class="petite-capitale">XIX</span><sup>e</sup>
           parts.push({
             type: 'span',
             data: {
@@ -194,7 +182,6 @@ export function remarkFrenchTypography() {
             children: [{ type: 'text', value: ordinalSuffix }],
           });
         } else {
-          // Ex: "FTQ", "XXI" ou "V"
           const targetWord = singleRomanContext || upperBlock;
           parts.push({
             type: 'span',
@@ -206,7 +193,7 @@ export function remarkFrenchTypography() {
           });
         }
 
-        lastIndex = tokenRegex.lastIndex;
+        lastIndex = match.index + fullMatch.length;
       }
 
       if (parts.length > 0) {
