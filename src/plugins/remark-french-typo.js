@@ -6,7 +6,7 @@ export function remarkFrenchTypography() {
   const blockTypes = new Set(['paragraph', 'heading', 'tableCell', 'blockquote', 'listItem']);
   const inlineSiblings = new Set(['inlineCode', 'strong', 'emphasis', 'link', 'delete', 'html', 'sup', 'span']);
 
-  // Validation stricte d'un chiffre romain (1 à 3999) pour distinguer "XIXe" d'un mot comme "FIXe"
+  // Validation stricte d'un chiffre romain (1 à 3999)
   const ROMAN_REGEX = /^(?=[IVXLCDM]+$)M{0,3}(?:CM|CD|D?C{0,3})(?:XC|XL|L?X{0,3})(?:IX|IV|V?I{0,3})$/;
 
   return (tree, file) => {
@@ -49,7 +49,8 @@ export function remarkFrenchTypography() {
         parts.push({
           type: 'sup',
           data: { hName: 'sup' },
-          children: [{ type: 'text', value: match }],
+          // match[1] correspond au texte capturé entre les deux ^
+          children: [{ type: 'text', value: match[1] }],
         });
         lastIndex = regex.lastIndex;
       }
@@ -120,10 +121,6 @@ export function remarkFrenchTypography() {
     });
 
     // 4. PETITES CAPITALES ET EXPOSANTS AUTOMATIQUES
-    // Gère :
-    // - Les chiffres romains avec ordinal collé : XIXe -> <span class="petite-capitale">XIX</span><sup>e</sup>
-    // - Les chiffres romains seuls en contexte : I siècle, V République
-    // - Les sigles (≥ 2 majuscules) : FTQ, CSN, UQAM -> <span class="petite-capitale">FTQ</span>
     const scReplacements = [];
 
     visitParents(tree, 'text', (node, ancestors) => {
@@ -149,10 +146,11 @@ export function remarkFrenchTypography() {
         return;
       }
 
-      // Capture :
-      // Groupe 1 & 2 : Chiffre romain + ordinal collé (ex: "XIX" et "e" dans "XIXe", ou "I" et "er" dans "Ier")
-      // Groupe 3 : Chiffre romain d'une lettre suivi d'un nom contextuel (ex: "V" dans "V République")
-      // Groupe 4 : Tout sigle ou chiffre romain de 2+ majuscules (ex: "FTQ", "XIV", "XXI")
+      // Groupes de capture :
+      // match[1] : Chiffre romain (ex: "XIX")
+      // match[2] : Ordinal collé (ex: "e", "er", "ème")
+      // match[3] : Chiffre romain d'une lettre en contexte (ex: "V" dans "V République")
+      // match[4] : Sigle ou chiffre romain de 2+ majuscules (ex: "FTQ", "XXI")
       const tokenRegex =
         /(?<![A-Za-zÀ-ÿ0-9_-])(?:([IVXLCDM]+)(er|e|ème)\b|([IVXLCDM])(?=[\s\u00A0](?:siècles?|millénaires?|arrondissements?|République|Empire|chapitres?|tomes?|volumes?|actes?|scènes?)\b)|([A-ZÀ-ÖØ-Þ]{2,}))(?![A-Za-zÀ-ÿ0-9_-])/g;
 
@@ -161,17 +159,17 @@ export function remarkFrenchTypography() {
       let match;
 
       while ((match = tokenRegex.exec(node.value)) !== null) {
-        const fullMatch = match;
-        const romanWithOrdinal = match;
-        const ordinalSuffix = match;
-        const singleRomanContext = match;
-        const upperBlock = match;
+        const fullMatch = match[0];
+        const romanWithOrdinal = match[1];
+        const ordinalSuffix = match[2];
+        const singleRomanContext = match[3];
+        const upperBlock = match[4];
 
         // Ignore les URLs et courriels
         const surrounding = node.value.slice(Math.max(0, match.index - 10), match.index + fullMatch.length + 10);
         if (/https?:\/\/|www\.|@/.test(surrounding)) continue;
 
-        // Si c'est un mot majuscule suivi d'un ordinal (ex: XIXe), vérifie que c'est bien un chiffre romain valide
+        // Vérifie que le préfixe d'un ordinal est bien un chiffre romain valide
         if (romanWithOrdinal && !ROMAN_REGEX.test(romanWithOrdinal)) {
           continue;
         }
@@ -196,7 +194,7 @@ export function remarkFrenchTypography() {
             children: [{ type: 'text', value: ordinalSuffix }],
           });
         } else {
-          // Ex: "FTQ", "XXI" (suivi de ^e^ déjà traité à l'étape 2), ou "V" (dans "V République")
+          // Ex: "FTQ", "XXI" ou "V"
           const targetWord = singleRomanContext || upperBlock;
           parts.push({
             type: 'span',
