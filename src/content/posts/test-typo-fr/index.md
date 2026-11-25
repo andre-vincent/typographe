@@ -146,7 +146,7 @@ En 1872, on comptait 2500 étudiants et 12500 livres.
 
 | Donnée brute | Rendu corrigé |
 | :--- | :--- |
-| `8500` | 8500 |
+| `8500,21` | 8500,21 |
 | `142000,75` | 142000,75 |
 
 </div>
@@ -185,7 +185,7 @@ La FTQ, la CSN et l'ONU au XIXe siècle, sous la Ve République et le 1^er^ mai 
 **Exemple corrigé :**
 <div class="typo-demo">
 
-La FTQ, la CSN et l'ONU au XIXe siècle, sous la Ve République et le 1^er^ mai (Le Monde ouvrier).
+La FTQ, la CSN et l'ONU 1er au XIXe siècle, sous la Ve République et le 1^er^ mai (Le Monde ouvrier).
 
 </div>
 
