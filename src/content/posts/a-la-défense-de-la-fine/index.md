@@ -10,7 +10,7 @@ featured: true
 draft: false
 ---
 
-Il est temps d’en finir avec le sabotage silencieux de la typographie française en ligne. Depuis des années, le Web francophone capitule devant la facilité technique et le nivellement par le bas. D’un côté, les adeptes de l’espace insécable forte (`&nbsp;`) massacrent le gris typographique à coups de béances grossières. De l’autre, les partisans du zéro espace — abrités derrière les recommandations de l’Office québécois de la langue française (OQLF) — alignent servilement le français sur les standards anglo-saxons. Ces deux approches sont des hérésies visuelles et techniques. L’espace fine insécable (`&#8239;` ou `U+202F`) n’est pas un caprice d’esthète passéiste : c’est une exigence sémantique, de lisibilité et d’accessibilité.
+Il est temps d’en finir avec le sabotage silencieux de la typographie française en ligne. Depuis des années, le Web francophone capitule devant la facilité technique et le nivellement par le bas. D’un côté, les adeptes de l’espace insécable forte (`&nbsp;`) massacrent le gris typographique à coups de béances grossières. De l’autre, les partisans du zéro espace — abrités derrière une mauvaise interprétation des recommandations de l’Office québécois de la langue française (OQLF) — alignent servilement le français sur les standards anglo-saxons. Ces deux approches sont des hérésies visuelles et techniques. L’espace fine insécable (`&#8239;` ou `U+202F`) n’est pas un caprice d’esthète passéiste : c’est une exigence sémantique, de lisibilité et d’accessibilité.
 
 ## La double imposture : le gouffre et l’étouffement
 
