@@ -7,11 +7,11 @@ author:
   name: "André Vincent"
   role: "Développeur & Typographe"
 cover:
-  src: ./espace-fine.jpeg
-  alt: Gros plan sur des caractères mobiles d'imprimerie en plomb serrés dans un composteur en laiton : de gauche à droite, un point-virgule, une fine lamelle métallique représentant l'espace fine, la lettre « l » et la ligature « fi » en miroir.
-  creditName: Image générée par Gemini (Nano Banana 2) sur instructions de l’auteur.
-  creditUrl: https://openart.ai/fr/ai-model/nano-banana-2-1/
-featured: true
+  src: "./espace-fine.jpeg"
+  alt: "Gros plan sur des caractères mobiles d’imprimerie en plomb serrés dans un composteur en laiton : de gauche à droite, un point-virgule, une fine lamelle métallique représentant l’espace fine, la lettre «l» et la ligature «fi» en miroir."
+  creditName: "Image générée par Gemini (Nano Banana 2) sur instructions de l’auteur"
+  creditUrl: "https://openart.ai/fr/ai-model/nano-banana-2-1/"
+featured: false
 draft: false
 ---
 
