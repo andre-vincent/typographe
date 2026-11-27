@@ -92,7 +92,7 @@ export function remarkFrenchTypography() {
 
       // 1. Déclarations en premier
       const currentBlock = [...ancestors].reverse().find((ancestor) => blockTypes.has(ancestor.type));
-      const isInsideTd = ancestors.some((ancestor) => ancestor.type === 'tableCell'); // À conserver uniquement si non défini plus haut
+      const isInsideTd = ancestors.some((ancestor) => ancestor.type === 'tableCell');
       let textValue = node.value;
 
       // 2. Conversion des guillemets droits en chevrons français avant les règles d'espacement
