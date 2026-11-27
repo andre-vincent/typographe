@@ -13,66 +13,31 @@ SOURCE_DIR = "src/fonts/src"
 OUTPUT_DIR = "public/fonts"
 
 # 2. Plage Unicode Éditoriale Française Complète (Haute Qualité Éditoriale)
-UNICODES_LIST = (
-    # --- Ponctuation, Symboles de base et Tilde (ASCII) ---
-    "U+0020-003F,"  # Espace, !, ", #, $, %, &, ', (, ), *, +, ,, -, ., /, 0-9, :, ;, <, =, >, ?
-    "U+0040-007E,"  # @, A-Z, [, \, ], ^, _, `, a-z, {, |, }, ~ (Tilde inclus)
-    
-    # --- Espaces Typographiques fines et insécables ---
-    "U+202F,"       # Espace fine insécable (Obligatoire en français à l'intérieur des guillemets « » et avant ;, !, ?)
-    "U+202F,"       # Espace fine insécable (Obligatoire en français avant ;, !, ?)
-    "U+2000-200A,"  # Espaces de tailles diverses (Cadratin, demi-cadratin, tiers de cadratin...)
-    
-    # --- Diacritiques et Lettres Françaises (Minuscules & Majuscules) ---
-    "U+00A2-00A5,"  # Symboles monétaires courants (¢, £, ¤, ¥)
-    "U+00C0,"       # À
-    "U+00C2,"       # Â
-    "U+00C6,"       # Æ
-    "U+00C7,"       # Ç
-    "U+00C8-00CB,"  # È, É, Ê, Ë
-    "U+00CE-00CF,"  # Î, Ï
-    "U+00D4,"       # Ô
-    "U+00D9,"       # Ù
-    "U+00DB-00DC,"  # Û, Ü
-    "U+0152-0153,"  # Œ, œ
-    "U+00E0,"       # à
-    "U+00E2,"       # â
-    "U+00E6,"       # æ
-    "U+00E7,"       # ç
-    "U+00E8-00EB,"  # è, é, ê, ë
-    "U+00EE-00EF,"  # î, ï
-    "U+00F4,"       # ô
-    "U+00F9,"       # ù
-    "U+00FB-00FC,"  # û, ü
-    "U+0178,"       # Ÿ
-    "U+00FF,"       # ÿ
-    
-    # --- Signes de Ponctuation Éditoriale et Tirets ---
-    "U+2010-2011,"  # Trait d'union et trait d'union insécable
-    "U+2013-2014,"  # Tiret demi-cadratin (–) et Tiret cadratin (—)
-    "U+2018-201B,"  # Apostrophes et guillemets simples (Courbe ’, inversée, culbutée)
-    "U+201C-201D,"  # Guillemets anglais doubles (“ ”) pour les citations imbriquées
-    "U+2026,"       # Points de suspension (…)
-    "U+2022,"       # Puce typographique (•)
-    "U+00B7,"       # Point médian (·) pour l'écriture épicène ou inclusive
-    "U+00AB,"       # Guillemet français ouvrant («) - Correction de la coquille U+AB00
-    "U+00BB,"       # Guillemet français fermant (»)
-    
-    # --- Symboles, Monnaie, Signes d'édition et Indicateurs Ordinaux ---
-    "U+20AC,"       # Symbole Euro (€)
-    "U+2116,"       # Symbole Numéro (№)
-    "U+00AA,"       # Indicateur ordinal féminin (ª) pour "1re" en lettrine
-    "U+00B0,"       # Signe degré (°)
-    "U+00B1,"       # Signe plus-ou-moins (±) pour les approximations (ex: ±50 pages)
-    "U+00B2-00B3,"  # Exposants ² et ³
-    "U+00BC-00BE,"  # Fractions courantes (¼, ½, ¾)
-    "U+00D7"        # Vrai signe mathématique de multiplication (×) pour les dimensions (ex: 14 × 21 cm)
-    "U+00BA,"       # Indicateur ordinal masculin (º) pour "1º", "2º" (distinct du degré °)
-    "U+2032-2033,"  # Prime (′) et double prime (″) pour les minutes/secondes d'arc ou pouces
-    "U+00A7,"       # Paragraphe (§) pour les renvois juridiques ou éditoriaux
-    "U+2020-2021,"  # Obèle (†) et double obèle (‡) pour les appels de notes éditoriales
-    "U+00D7"        # Vrai signe mathématique de multiplication (×) pour les dimensions (ex: 14 × 21 cm)
-)
+UNICODES_LIST = ",".join([
+    # --- ASCII de base, chiffres et alphabet (couvre l'anglais) ---
+    "U+0020-007E",  # Ponctuation, chiffres et alphabet latin non accentué
+
+    # --- Espaces et devises ---
+    "U+00A0", "U+202F", "U+2000-200A",  # Espace insécable, fine insécable, espaces cadratins
+    "U+00A2-00A5", "U+20AC",           # Symboles monétaires (¢, £, ¤, ¥, €)
+
+    # --- Diacritiques et ligatures (FR, EN, ES, PT, DE, IT) ---
+    "U+00C0-00FF",  # Bloc Latin-1 Supplement complet (À-ÿ, ß, Ñ, Ã, Õ, Ä, Ö, Ü, Ì, Ç, etc.)
+    "U+0152-0153",  # Ligatures françaises Œ, œ
+    "U+0178",       # Majuscule Ÿ
+    "U+1E9E",       # Eszett majuscule allemand (ẞ)
+
+    # --- Guillemets, ponctuation éditoriale et symboles ---
+    "U+00A1", "U+00BF",                 # Ponctuation inversée espagnole (¡, ¿)
+    "U+00AB", "U+00BB",                 # Guillemets chevrons doubles (« »)
+    "U+2039-203A",                      # Guillemets chevrons simples (‹ ›)
+    "U+2010-2026",                      # Tirets, apostrophes, guillemets (“ ” „ ‚), puce (•), ellipse (…)
+    "U+00B7", "U+2116",                 # Point médian (·), symbole Numéro (№)
+    "U+00AA-00BE",                      # Indicateurs ordinaux (ª, º), degré (°), fractions (¼-¾), ±, ², ³
+    "U+00D7",                           # Signe de multiplication (×)
+    "U+2032-2033",                      # Prime (′) et double prime (″)
+    "U+00A7", "U+2020-2021"             # Paragraphe (§), obèles (†, ‡)
+])
 
 def is_variable_font(font_path):
     """Détecte si la police contient des variations d'axes OpenType via la table fvar."""
