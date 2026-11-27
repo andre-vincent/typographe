@@ -69,7 +69,7 @@ export function remarkFrenchTypography() {
       }
     }
 
-    // 3. RÈGLES TYPOGRAPHIQUES DU CORPS DU TEXTE
+// 3. RÈGLES TYPOGRAPHIQUES DU CORPS DU TEXTE
     const quoteStateByBlock = new WeakMap();
 
     visitParents(tree, 'text', (node, ancestors) => {
@@ -90,17 +90,12 @@ export function remarkFrenchTypography() {
         return;
       }
 
-      const isStartOfBlock = Boolean(
-        currentBlock &&
-        Array.isArray(currentBlock.children) &&
-        currentBlock.children[0] === node
-      );
-
-      textValue = applyFrenchTypoRules(textValue, isInsideTd, isStartOfBlock);
-
+      // 1. Déclarations en premier
       const currentBlock = [...ancestors].reverse().find((ancestor) => blockTypes.has(ancestor.type));
+      const isInsideTd = ancestors.some((ancestor) => ancestor.type === 'tableCell'); // À conserver uniquement si non défini plus haut
       let textValue = node.value;
 
+      // 2. Conversion des guillemets droits en chevrons français avant les règles d'espacement
       if (currentBlock && textValue.includes('"')) {
         let isOpen = quoteStateByBlock.get(currentBlock) || false;
         textValue = textValue.replace(/"/g, () => {
@@ -110,7 +105,14 @@ export function remarkFrenchTypography() {
         quoteStateByBlock.set(currentBlock, isOpen);
       }
 
-      textValue = applyFrenchTypoRules(textValue, isInsideTd);
+      // 3. Détection du début de bloc et application unique des règles typographiques
+      const isStartOfBlock = Boolean(
+        currentBlock &&
+        Array.isArray(currentBlock.children) &&
+        currentBlock.children[0] === node
+      );
+
+      textValue = applyFrenchTypoRules(textValue, isInsideTd, isStartOfBlock);
 
       if (directParent && Array.isArray(directParent.children)) {
         const nodeIndex = directParent.children.indexOf(node);
