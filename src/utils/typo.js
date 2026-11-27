@@ -62,15 +62,15 @@ export function applyFrenchTypoRules(text, isInsideTd = false, isStartOfBlock = 
   value = value.replace(/([a-zA-ZÀ-ÿ«\u202F])'(?=[a-zA-ZÀ-ÿ0-9«“]|$)/g, `$1${CURLY_APOS}`);
   value = value.replace(/\s*\.{3,}/g, '…');
 
-  // 8. Titres de civilité et abréviations usuelles
+  // 8. Titres de civilité et abréviations usuelles (retire "Ve" pour éviter la collision avec "Ve République")
   value = value.replace(
-    /\b(M\.|MM\.|Mme|Mmes|Mlle|Mlles|Dr|Drs|Pr|Prs|Me|Mes|Mgr|Mgrs|St|Ste|Sts|Stes|Ve|Vve)\s+(?=[A-ZÀ-ÖØ-Þ])/g,
+    /\b(M\.|MM\.|Mme|Mmes|Mlle|Mlles|Dr|Drs|Pr|Prs|Me|Mes|Mgr|Mgrs|St|Ste|Sts|Stes|Vve)\s+(?=[A-ZÀ-ÖØ-Þ])/g,
     `$1${NBSP}`
   );
 
   // 9. Tirets : cadratin pour les dialogues, demi-cadratin pour les incises
   if (isStartOfBlock) {
-    value = value.replace(/^(?:--|-|–|—)\s+/, `${EM_DASH}${NBSP}`);
+    value = value.replace(/^(?:--|-|–|—)\s*/, `${EM_DASH}${NBSP}`);
   }
   value = value.replace(/(\S)\s+(?:--|-|–|—)(?=[.,;:!?…»)]|\s|$)/g, `$1${NBSP}${EN_DASH}`);
   value = value.replace(/(\s)(?:--|-|–|—)\s+(?=\S)/g, `$1${EN_DASH}${NBSP}`);
