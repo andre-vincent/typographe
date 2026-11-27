@@ -160,8 +160,9 @@ export function remarkFrenchTypography() {
       // 2. Ordinaux arabes : (\d+)(er|re|res|e|es|ème|èmes)
       // 3. Chiffres romains isolés suivis d'un nom d'unité éditoriale/historique
       // 4. Sigles/acronymes en capitales de 2 lettres ou plus
-      const tokenRegex =
-        /(?<![A-Za-zÀ-ÿ0-9_-])(?!Le\b)(?:([IVXLCDM]+)(er|re|res|e|es|ème|èmes)\b|(\d+)(er|re|res|e|es|ème|èmes)\b|([IVXLCDM])(?=[\s\u00A0](?:siècles?|millénaires?|arrondissements?|République|Empire|chapitres?|tomes?|volumes?|actes?|scènes?)\b)|([A-ZÀ-ÖØ-Þ]{2,}))(?![A-Za-zÀ-ÿ0-9_-])/g;
+      // Exclut explicitement les articles, pronoms et prépositions courants (Le, Les, De, Des, Ce, Ces, Me, Mes, Ve)
+    const tokenRegex =
+      /(?<![A-Za-zÀ-ÿ0-9_-])(?!(?:Le|Les|De|Des|Ce|Ces|Me|Mes|Ve)\b)(?:([IVXLCDM]+)(er|re|res|e|es|ème|èmes)\b|(\d+)(er|re|res|e|es|ème|èmes)\b|([IVXLCDM])(?=[\s\u00A0](?:siècles?|millénaires?|arrondissements?|République|Empire|chapitres?|tomes?|volumes?|actes?|scènes?)\b)|([A-ZÀ-ÖØ-Þ]{2,}))(?![A-Za-zÀ-ÿ0-9_-])/g;
 
       const parts = [];
       let lastIndex = 0;
