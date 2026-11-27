@@ -3,6 +3,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import mdx from "@astrojs/mdx";
+import { unified } from "@astrojs/markdown-remark";
 import rehypeSlug from "rehype-slug";
 
 import { siteConfig } from "./src/config/site.ts";
@@ -22,22 +23,19 @@ export default defineConfig({
     sitemap({
       filter: (page) => page !== new URL("/search/", siteConfig.siteUrl).toString(),
     }),
-    // 💡 OPTIMISATION MDX : On lui force à hériter des plugins Remark/Rehype globaux
-    // et à appliquer les règles typographiques avant l'analyse JSX.
+    // Hérite automatiquement de la configuration du processeur Markdown ci-dessous
     mdx({
       extendMarkdownConfig: true,
     }),
   ],
   markdown: {
-    // Désactive les guillemets/tirets anglais par défaut d'Astro au profit de votre plugin français
-    smartypants: false,
-    // Exécuté en premier pour traiter le texte brut avant les autres transformations
-    remarkPlugins: [
-      remarkFrenchTypography
-    ],
-    rehypePlugins: [
-      rehypeSlug
-    ],
+    processor: unified({
+      // Désactive les guillemets/tirets anglais par défaut d'Astro au profit de votre plugin français
+      smartypants: false,
+      // Exécuté en premier pour traiter le texte brut avant les autres transformations
+      remarkPlugins: [remarkFrenchTypography],
+      rehypePlugins: [rehypeSlug],
+    }),
     shikiConfig,
   },
   vite: {
