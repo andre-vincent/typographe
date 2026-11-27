@@ -1,7 +1,7 @@
 ---
-title: "Intégrer l’espace fine insécable (U+202F) en typographie web francophone"
+title: "À la défense de la fine"
 excerpt: "Des origines de l’imprimerie au plomb à son intégration numérique : analyse historique, technique et ergonomique de l’espace fine insécable (U+202F) et automatisation en JavaScript."
-category: "Typographie & Développement"
+category: "Typographie"
 date: 2026-11-14
 author:
   name: "André Vincent"
