@@ -255,7 +255,7 @@ export function remarkFrenchTypography() {
       }
     }
   };
-}
+
     // 5. ATTRIBUTION DES CITATIONS (> — Auteur, *Œuvre* -> <footer>— Auteur, <cite>Œuvre</cite></footer>)
     visitParents(tree, 'blockquote', (blockquoteNode) => {
       if (!Array.isArray(blockquoteNode.children) || blockquoteNode.children.length === 0) return;
@@ -281,4 +281,5 @@ export function remarkFrenchTypography() {
         }
       }
     });
+}
 
