@@ -179,13 +179,34 @@ Les sigles (2 majuscules ou plus) et les chiffres romains se composent en petite
 
 **Exemple brut :**
 ```text
-La FTQ, la CSN et l'ONU 1er au XIXe siècle, sous la Ve République du 1^er^ mai au 1er juin (Le Monde ouvrier).
+La FTQ, la CSN et l'ONU 1er au XIXe siècle, sous la Ve République du 1^er^ mai au 1er juin (*Le Monde ouvrier*).
 ```
 
 **Exemple corrigé :**
 <div class="typo-demo">
 
-La FTQ, la CSN et l'ONU 1er au XIXe siècle, sous la Ve République du 1^er^ mai au 1er juin (Le Monde ouvrier).
+La FTQ, la CSN et l'ONU 1er au XIXe siècle, sous la Ve République du 1^er^ mai au 1er juin (*Le Monde ouvrier*).
+
+</div>
+
+---
+
+## 10. Bloc de citation avec référence (auteur, oeuvre avec ou sans lien URL).
+
+**Exemple brut :**
+```text
+> La simplicité est la sophistication suprême.
+>
+> -- Léonard de Vinci, *Carnets*
+```
+
+**Exemple corrigé :**
+<div class="typo-demo">
+
+> La simplicité est la sophistication suprême.
+>
+> -- Léonard de Vinci, *Carnets*
+
 
 </div>
 
