@@ -254,7 +254,6 @@ export function remarkFrenchTypography() {
         parent.children.splice(index, 1, ...parts);
       }
     }
-  };
 
     // 5. ATTRIBUTION DES CITATIONS (> — Auteur, *Œuvre* -> <footer>— Auteur, <cite>Œuvre</cite></footer>)
     visitParents(tree, 'blockquote', (blockquoteNode) => {
@@ -263,9 +262,9 @@ export function remarkFrenchTypography() {
       const lastChild = blockquoteNode.children.at(-1);
 
       if (lastChild && lastChild.type === 'paragraph' && Array.isArray(lastChild.children) && lastChild.children.length > 0) {
-        const firstInline = lastChild.children;
+        const firstInline = lastChild.children.at(0);
 
-        if (firstInline.type === 'text' && /^—[\s\u00A0\u202F]/.test(firstInline.value)) {
+        if (firstInline && firstInline.type === 'text' && /^—[\s\u00A0\u202F]/.test(firstInline.value)) {
           lastChild.data = {
             ...lastChild.data,
             hName: 'footer',
@@ -281,5 +280,5 @@ export function remarkFrenchTypography() {
         }
       }
     });
+  };
 }
-
